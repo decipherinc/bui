@@ -1,0 +1,188 @@
+// Google font inport
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,600);
+@{typo-prefix} {
+
+  font-family: "Open Sans", Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", Tahoma, sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    margin: 1.2rem 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: .8rem;
+  }
+  h6 {
+    font-size: .6rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: @color-blue;
+    &:hover, :focus {
+      color: lighten(@color-blue, 10%);
+      text-decoration: underline;
+      .transition;
+    }
+    &:active {
+      color: darken(@color-blue, 5%);
+      text-decoration: underline;
+    }
+    &.hover-state {
+      color: lighten(@color-blue, 10%);
+      text-decoration: underline;
+      margin-left: 1em;
+      &:active {
+        color: darken(@color-blue, 5%);
+        text-decoration: underline;
+      }
+    }
+    &.disabled {
+      margin-left: 1em;
+      .disabled-opacity;
+      &:hover, :active {
+        color: @color-blue;
+        text-decoration: none;
+      }
+    }
+  }
+
+  small {
+    font-size: .8em;
+  }
+
+  .caps {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .label {
+    background-color: @color-button;
+    color: @color-base;
+    padding: .2em .8em;
+    border-radius: 25px;
+  }
+
+  .tag {
+    background-color: @color-tag;
+    padding: .2em .4em .2em .5em;
+    border-radius: 3px;
+    a {
+      font-size: .9em;
+      margin: 0 0 0 .3em;
+      color: darken(@color-tag, 15);
+      text-decoration: none;
+      &:hover, &:focus {
+        color: @color-red;
+        cursor: pointer;
+      }
+      &:active {
+        color: darken(@color-red, 10);
+      }
+    }
+  }
+
+  /***********************************************/
+  /*
+  /*	Lists
+  /*
+  /***********************************************/
+
+  ul.unstyled {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul.inline {
+    padding: 0;
+  }
+
+  ul.inline > li {
+    list-style: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+  }
+
+  dl dt {
+    font-weight: bold;
+  }
+
+  dl dd {
+    margin-left: .5em;
+  }
+
+  // ******* Library Specific ******* //
+  code {
+    background-color: lighten(@color-frame, 30%);
+    padding: .1em .4em;
+    line-height: 1.5em;
+    border: 1px solid @color-frame;
+  }
+
+  .thrsx {
+    font-size: 36px;
+  }
+  .thr {
+    font-size: 30px;
+  }
+  .twfr {
+    font-size: 24px;
+  }
+  .twone {
+    font-size: 21px;
+  }
+  .eightt {
+    font-size: 18px;
+  }
+  .sixt {
+    font-size: 16px;
+  }
+  .twelve {
+    font-size: 12px;
+  }
+  .ten {
+    font-size: 10px;
+  }
+  .number-ref {
+    color: @color-disabled;
+    font-size: .6rem;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  .inline {
+    margin: 1em 0;
+  }
+}
+// ******************************** //

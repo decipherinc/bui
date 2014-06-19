@@ -1,0 +1,76 @@
+@body: ~'html';
+@prefix-word: ~'.bui';
+@prefix: ~'@{body}@{prefix-word}';
+
+@grid-class: ~'.bui-grid';
+@grid-prefix: ~'@{prefix-word}@{grid-class}';
+
+@menu-class: ~'.bui-menu';
+@menu-prefix: ~'@{prefix-word}@{menu-class}';
+
+@typo-class: ~'.bui-typography';
+@typo-prefix: ~'@{prefix-word}@{typo-class}';
+
+@base-class: ~'.bui-base';
+@base-prefix: ~'@{prefix-word}@{base-class}';
+
+@icon-class: ~'.bui-icons';
+@icon-prefix: ~'@{prefix-word}@{icon-class}';
+
+@modal-class: ~'.bui-modals';
+@modal-prefix: ~'@{prefix-word}@{modal-class}';
+
+@button-class: ~'.bui-buttons';
+@button-prefix: ~'@{prefix-word}@{button-class}';
+
+@color-class: ~'.bui-colors';
+@color-prefix: ~'@{prefix-word}@{color-class}';
+
+@normal-class: ~'.bui-normalize';
+@normal-prefix: ~'@{prefix-word}@{normal-class}';
+
+@color-bg: #fff;
+@color-base: #333;
+@color-remove: #777;
+@color-red: #9e0b0f;
+@color-disabled: #bbb;
+@color-frame: #ddd;
+@color-blue: #0086ab;
+@color-orange: #ff9117;
+@color-green: #76bd23;
+@color-highlight: #fff200;
+@color-active: #fffbcc;
+@color-tag: #c5e8f6;
+@color-button: #e7e7e7;
+
+.transition {
+	-webkit-transition: all 100ms ease-in-out;
+	-moz-transition: all 100ms ease-in-out;
+	-ms-transition: all 100ms ease-in-out;
+	-o-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
+}
+
+.disabled-opacity {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+	filter: alpha(opacity=20);
+	-moz-opacity: 0.2;
+	-khtml-opacity: 0.2;
+	opacity: 0.2;
+	&:hover {
+		cursor: not-allowed;
+	}
+}
+
+.nav-shadow {
+	height: .5em;
+	background: #eeeeee;
+	background: -moz-linear-gradient(top,  #eeeeee 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top,  #eeeeee 0%,#ffffff 100%);
+	background: -o-linear-gradient(top,  #eeeeee 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top,  #eeeeee 0%,#ffffff 100%);
+	background: linear-gradient(to bottom,  #eeeeee 0%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
+	margin-bottom: 1em;
+}

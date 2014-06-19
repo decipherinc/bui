@@ -1,0 +1,1198 @@
+<!doctype html>
+<html lang="en" class="beacon dux-buttons dux-menu dux-grid dux-modals dux-colors dux-icons dux-typography dux-normalize">
+<head>
+	<meta charset="UTF-8">
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Beacon Pattern Library</title>
+	
+	<link rel="stylesheet" href="bootstrap-3.1.1/dist/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.control-panel button').on('click', function() {
+                var me = $(this);
+                var thisTarget = me.data('target');
+                var body = $('html');
+                if (body.hasClass(thisTarget)) {
+                    body.removeClass(thisTarget);
+                    me.removeClass('btn-special');
+                } else {
+                    body.addClass(thisTarget);
+                    me.addClass('btn-special');
+                }
+            });
+        });
+    </script>
+    <style type="text/css">
+        .control-panel {
+            background-color: #333333;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="control-panel">
+    <button type="button" data-target="beacon" title="Toggle Beacon Pattern" class="btn btn-special">Everything</button>
+    <button type="button" data-target="dux-buttons" title="Toggle Buttons" class="btn btn-special">Buttons</button>
+    <button type="button" data-target="dux-menu" title="Toggle Menus" class="btn btn-special">Menus</button>
+    <button type="button" data-target="dux-grid" title="Toggle Grid" class="btn btn-special">Grid</button>
+    <button type="button" data-target="dux-modals" title="Toggle Modals" class="btn btn-special">Modals</button>
+    <button type="button" data-target="dux-colors" title="Toggle Colors" class="btn btn-special">Colors</button>
+    <button type="button" data-target="dux-icons" title="Toggle Icons" class="btn btn-special">Icons</button>
+    <button type="button" data-target="dux-typography" title="Toggle Typography" class="btn btn-special">Typography</button>
+    <button type="button" data-target="dux-normalize" title="Toggle Normalize" class="btn btn-special">Normalize</button>
+</div>
+
+<header>
+	<h1>Beacon Pattern Library</h1>
+</header>
+<div class="nav-shadow"></div>
+
+<a href="#menu" id="menu-button" class="icon-menu"></a>
+<nav role="Navigation" class="main-nav">
+	<ul>
+		<a href="#orientation"><li>Orientation</li></a>
+		<!-- <a href="#framework"><li>Framework</li></a> -->
+		<a href="#colorPalette"><li>Color Palette</li></a>
+		<a href="#iconsAndImages"><li>Icons &amp; Images</li></a>
+		<a href="#buttons"><li>Buttons</li></a>
+		<!-- <a href="#statusBarsAndIndicators"><li>Status Bars &amp; Indicators</li></a> -->
+		<!-- <a href="#applicationChartsAndGraphs"><li>Application Charts &amp; Graphs</li></a> -->
+		<!-- <a href="#menusAndNavs"><li>Menus &amp; Navs</li></a> -->
+		<!-- <a href="#panels"><li>Panels</li></a>
+		<a href="#tables"><li>Tables</li></a>
+		<a href="#formsAndLabels"><li>Forms &amp; Labels</li></a> -->
+		<a href="#modals"><li>Modals</li></a>
+		<!-- <a href="#tooltips"><li>Tooltips</li></a>
+		<a href="#alerts"><li>Alerts</li></a> -->
+		<a href="#typography"><li>Typography</li></a>
+		<a href="#lists"><li>Lists</li></a>
+		<!-- <a href="#languageAndGrammar"><li>Language &amp; Grammar</li></a> -->
+	</ul>
+</nav>
+
+<!--************* ORIENTATION *************-->
+<div class="container">
+<section>
+	<h1><a name="orientation">Orientation</a></h1>
+	<h2>Welcome!</h2>
+</section>
+
+<!--************* FRAMEWORK *************-->
+
+<section>
+	<h1><a name="framework">Framework</a></h1>
+	<p>24 column grid system with a single breakpoint at 768px. Based on <a href="http://responsive.gs/">Responsive Grid System</a>.</p>
+
+	<div class="row gutters">
+		<div class="col span_1">
+			<p class="framework-box">1</p>
+		</div>
+		<div class="col span_23">
+			<p class="framework-box">23</p>
+		</div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_2">
+			<p class="framework-box">2</p>
+		</div>
+		<div class="col span_22">
+			<p class="framework-box">22</p>
+		</div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_3">
+			<p class="framework-box">3</p>
+		</div>
+		<div class="col span_21">
+			<p class="framework-box">21</p>
+		</div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_4">
+			<p class="framework-box">4</p>
+		</div>
+		<div class="col span_20">
+			<p class="framework-box">20</p>
+		</div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_5">
+			<p class="framework-box">5</p>
+		</div>
+		<div class="col span_19">
+			<p class="framework-box">19</p>
+		</div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_6">
+			<p class="framework-box">6</p>
+		</div>
+		<div class="col span_18">
+			<p class="framework-box">18</p>
+		</div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_7">
+			<p class="framework-box">7</p>
+		</div>
+		<div class="col span_17">
+			<p class="framework-box">17</p>
+		</div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_8">
+			<p class="framework-box">8</p>
+		</div>
+		<div class="col span_16">
+			<p class="framework-box">16</p>
+		</div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_9">
+			<p class="framework-box">9</p>
+		</div>
+		<div class="col span_15">
+			<p class="framework-box">15</p>
+		</div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_10">
+			<p class="framework-box">10</p>
+		</div>
+		<div class="col span_14">
+			<p class="framework-box">14</p>
+		</div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_11">
+			<p class="framework-box">11</p>
+		</div>
+		<div class="col span_13">
+			<p class="framework-box">13</p>
+		</div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_12">
+			<p class="framework-box">12</p>
+		</div>
+		<div class="col span_12">
+			<p class="framework-box">12</p>
+		</div>
+	</div>
+
+	<div class="row gutters">
+		<div class="col span_8"><p class="framework-box">8</p></div>
+		<div class="col span_8"><p class="framework-box">8</p></div>
+		<div class="col span_8"><p class="framework-box">8</p></div>
+	</div>
+	<div class="row gutters">
+		<div class="col span_16"><p class="framework-box">16</p></div>
+		<div class="col span_8"><p class="framework-box">8</p></div>
+	</div>
+
+</section>
+
+<!--************* COLOR PALETTE *************-->
+
+<section class="clr">
+	<h1><a name="colorPalette">Color Palette</a></h1>
+	<p>These are the main colors for Beacon applications. Use as described.</p>
+	<div class="color-container clr">
+		<div class="color-swatch color-bg">
+			Bg
+		</div>
+		<div class="color-info">
+			<h4>General Background Color</h4>
+			<p>HEX: #ffffff</p>
+			<p>LESS: @color-bg</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	<div class="color-container clr color-break">
+		<div class="color-swatch color-t">
+			T
+		</div>
+		<div class="color-info">
+			<h4>Base Text Color</h4>
+			<p>HEX: #333333</p>
+			<p>LESS: @color-base</p>
+			<p>class=""</p>
+		</div>
+	</div>
+
+	<div class="color-container clr">
+		<div class="color-swatch color-7">
+			7
+		</div>
+		<div class="color-info">
+			<h4>Cancel &amp; Remove Button</h4>
+			<p>HEX: #777777</p>
+			<p>LESS: @color-remove</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	<div class="color-container clr color-break">
+		<div class="color-swatch color-b">
+			B
+		</div>
+		<div class="color-info">
+			<h4>Disabled</h4>
+			<p>HEX: #bbbbbb</p>
+			<p>LESS: @color-disabled</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	
+	<div class="color-container clr">
+		<div class="color-swatch color-d">
+			D
+		</div>
+		<div class="color-info">
+			<h4>Structural</h4>
+			<em><p>Divider Lines &amp; Borders</p></em>
+			<p>HEX: #dddddd</p>
+			<p>LESS: @color-frame</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	<div class="color-container clr color-break">
+		<div class="color-swatch color-bt">
+			Bt
+		</div>
+		<div class="color-info">
+			<h4>Standard Buttons</h4>
+			<p>HEX: #e7e7e7</p>
+			<p>LESS: @color-button</p>
+			<p>class=""</p>
+		</div>
+	</div>
+
+	<div class="color-container clr">
+		<div class="color-swatch color-bl">
+			Bl
+		</div>
+		<div class="color-info">
+			<h4>Primary</h4>
+			<em><p>Buttons/Links/Drop-Down</p></em>
+			<p>HEX: #0086ab</p>
+			<p>LESS: @color-blue</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	<div class="color-container clr color-break">
+		<div class="color-swatch color-bh">
+			Bh
+		</div>
+		<div class="color-info">
+			<h4>Primary Hover</h4>
+			<p>HEX: #009ac4</p>
+			<p>LESS: lighten(@color-blue, 5%)</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	
+	<div class="color-container clr">
+		<div class="color-swatch color-o">
+			O
+		</div>
+		<div class="color-info">
+			<h4>Controls</h4>
+			<em><p>Interface Icons / Active Tabs / Selectables</p></em>
+			<p>HEX: #ff9117</p>
+			<p>LESS: @color-orange</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	<div class="color-container clr color-break">
+		<div class="color-swatch color-g">
+			G
+		</div>
+		<div class="color-info">
+			<h4>Special Action</h4>
+			<em><p>Max, one per page</p></em>
+			<p>HEX: #76bd23</p>
+			<p>LESS: @color-green</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	
+	<div class="color-container clr">
+		<div class="color-swatch color-gh">
+			Gh
+		</div>
+		<div class="color-info">
+			<h4>Special Action Hover</h4>
+			<p>HEX: #83d327</p>
+			<p>LESS: lighten(@color-green, 5%)</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	<div class="color-container clr color-break">
+		<div class="color-swatch color-h">
+			H
+		</div>
+		<div class="color-info">
+			<h4>Highlight</h4>
+			<p>HEX: #fff200</p>
+			<p>LESS: @color-highlight</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	
+	<div class="color-container clr">
+		<div class="color-swatch color-i">
+			A
+		</div>
+		<div class="color-info">
+			<h4>Active Text Input</h4>
+			<p>HEX: #fffbcc</p>
+			<p>LESS: @color-active</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	<div class="color-container clr color-break">
+		<div class="color-swatch color-c">
+			C
+		</div>
+		<div class="color-info">
+			<h4>Cancel Hover</h4>
+			<p>HEX: #9e0b0f</p>
+			<p>LESS: @color-red</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	
+	<div class="color-container clr">
+		<div class="color-swatch color-tg">
+			Tg
+		</div>
+		<div class="color-info">
+			<h4>Tags</h4>
+			<p>HEX: #c5e8f6</p>
+			<p>LESS: @color-tag</p>
+			<p>class=""</p>
+		</div>
+	</div>
+	<div class="color-container clr color-break">
+		<div class="color-swatch color-gt">
+			Gt
+		</div>
+		<div class="color-info">
+			<h4>Group Tag</h4>
+			<p>HEX: #83ceec</p>
+			<p>LESS: darken(@color-tag, 15%)</p>
+			<p>class=""</p>
+		</div>
+	</div>
+
+</section>
+
+<!--************* ICONS & IMAGES *************-->
+
+<section>
+	<h1><a name="iconsAndImages">Icons &amp; Images</a></h1>
+	<h2>Beacon Icons</h2>
+	<p>Every icon has an intended use. In most cases the name of the icon will make it clear what its intended use is. It’s important to stay consistent with the use of an icon throughout all the applications, so the user can rely on them to symbolize a predictable action.</p>
+	<div class="iconsContainer row gutters">
+		<div class="col span_8">
+			<p><i class="icon-portal"></i> icon-portal (e867)</p>
+			<p><i class="icon-distribute"></i> icon-distribute (e874)</p>
+			<p><i class="icon-build"></i> icon-build (e878)</p>
+			<p><i class="icon-report"></i> icon-report (e86a)</p>
+			<p><i class="icon-test"></i> icon-test (e862)</p>
+			<p><i class="icon-menu"></i> icon-menu (e815)</p>
+			<p><i class="icon-full"></i> icon-full (e86b)</p>
+			<p><i class="icon-list"></i> icon-list (e840)</p>
+			<p><i class="icon-tile"></i> icon-tile (e841)</p>
+			<p><i class="icon-sort-by"></i> icon-sort-by (e83f)</p>
+			<p><i class="icon-tag"></i> icon-tag (e818)</p>
+			<p><i class="icon-tags"></i> icon-tags (e819)</p>
+			<p><i class="icon-directory"></i> icon-directory (e80c)</p>
+			<p><i class="icon-company"></i> icon-company (e816)</p>
+			<p><i class="icon-file"></i> icon-file (e809)</p>
+			<p><i class="icon-copy"></i> icon-copy (e875)</p>
+			<p><i class="icon-folder"></i> icon-folder (e80b)</p>
+			<p><i class="icon-folder-open"></i> icon-folder-open (e80a)</p>
+			<p><i class="icon-error"></i> icon-error (e828)</p>
+			<p><i class="icon-alert"></i> icon-alert (e827)</p>
+			<p><i class="icon-help"></i> icon-help (e823)</p>
+			<p><i class="icon-info"></i> icon-info (e845)</p>
+			<p><i class="icon-kb"></i> icon-kb (e844)</p>
+			<p><i class="icon-success"></i> icon-success (e829)</p>
+			<p><i class="icon-save"></i> icon-save (e803)</p>
+			<p><i class="icon-lock"></i> icon-lock (e807)</p>
+			<p><i class="icon-unlock"></i> icon-unlock (e808)</p>
+			<p><i class="icon-favorite-empty"></i> icon-favorite-empty (e82d)</p>
+			<p><i class="icon-favorite-full"></i> icon-favorite-full (e82e)</p>
+			<p><i class="icon-pin"></i> icon-pin (e82f)</p>
+			<p><i class="icon-chart"></i> icon-chart (e830)</p>
+			<p><i class="icon-table"></i> icon-table (e832)</p>
+
+			<p><i class="icon-rte-bold"></i> icon-rte-bold (e879)</p>
+			<p><i class="icon-rte-italic"></i> icon-rte-italic (e87a)</p>
+			<p><i class="icon-rte-underline"></i> icon-rte-underline (e87b)</p>
+			<p><i class="icon-rte-strike"></i> icon-rte-strike (e886)</p>
+			<p><i class="icon-rte-superscript"></i> icon-rte-superscript (e887)</p>
+			<p><i class="icon-rte-subscript"></i> icon-rte-subscript (e888)</p>
+			<p><i class="icon-rte-align-left"></i> icon-rte-align-left (e87c)</p>
+			<p><i class="icon-rte-align-center"></i> icon-rte-align-center (e87d)</p>
+			<p><i class="icon-rte-align-right"></i> icon-rte-align-right (e87e)</p>
+			<p><i class="icon-rte-align-justify"></i> icon-rte-align-justify (e87f)</p>
+			<p><i class="icon-rte-unordered-list"></i> icon-rte-unordered-list (e880)</p>
+			<p><i class="icon-rte-ordered-list"></i> icon-rte-ordered-list (e881)</p>
+			<p><i class="icon-rte-indent-right"></i> icon-rte-indent-right (e882)</p>
+			<p><i class="icon-rte-indent-left"></i> icon-rte-indent-left (e883)</p>
+			<p><i class="icon-rte-special-char"></i> icon-rte-special-char (e88a)</p>
+			<p><i class="icon-rte-line"></i> icon-rte-line (e885)</p>
+			<p><i class="icon-rte-paste-plain"></i> icon-rte-paste-plain (e88b)</p>
+			<p><i class="icon-rte-clear-formatting"></i> icon-rte-clear-formatting (e88c)</p>
+
+		</div>
+		<div class="col span_8">
+			<p><i class="icon-user"></i> icon-user (e85e)</p>
+			<p><i class="icon-user-group"></i> icon-user-group (e85f)</p>
+			<p><i class="icon-sample-source"></i> icon-sample-source (e863)</p>
+			<p><i class="icon-sample-source-multi"></i> icon-sample-source-multi (e866)</p>
+			<p><i class="icon-search"></i> icon-search (e806)</p>
+			<p><i class="icon-action"></i> icon-action (e82a)</p>
+			<p><i class="icon-settings"></i> icon-settings (e82b)</p>
+			<p><i class="icon-edit"></i> icon-edit (e81d)</p>
+			<p><i class="icon-image"></i> icon-image (e811)</p>
+			<p><i class="icon-launch"></i> icon-launch (e820)</p>
+			<p><i class="icon-add"></i> icon-add (e800)</p>
+			<p><i class="icon-remove"></i> icon-remove (e801)</p>
+			<p><i class="icon-close"></i> icon-close (e802)</p>
+			<p><i class="icon-term"></i> icon-term (e805)</p>
+			<p><i class="icon-check"></i> icon-check (e831)</p>
+			<p><i class="icon-go-to"></i> icon-go-to (e814)</p>
+			<p><i class="icon-domain"></i> icon-domain (e855)</p>
+			<p><i class="icon-box-up"></i> icon-box-up (e837)</p>
+			<p><i class="icon-box-right"></i> icon-box-right (e838)</p>
+			<p><i class="icon-box-left"></i> icon-box-left (e839)</p>
+			<p><i class="icon-box-down"></i> icon-box-down (e836)</p>
+			<p><i class="icon-view"></i> icon-view (e82c)</p>
+			<p><i class="icon-page-break"></i> icon-page-break (e847)</p>
+			<p><i class="icon-library"></i> icon-library (e846)</p>
+			<p><i class="icon-language"></i> icon-language (e817)</p>
+			<p><i class="icon-single-select"></i> icon-single-select (e84d)</p>
+			<p><i class="icon-multi-select"></i> icon-multi-select (e84e)</p>
+			<p><i class="icon-text"></i> icon-text (e842)</p>
+			<p><i class="icon-number"></i> icon-number (e843)</p>
+			<p><i class="icon-comment"></i> icon-comment (e849)</p>
+			<p><i class="icon-quota"></i> icon-quota (e84f)</p>
+			<p><i class="icon-autofill"></i> icon-autofill (e84a)</p>
+			<p><i class="icon-section"></i> icon-section (e851)</p>
+			<p><i class="icon-loop"></i> icon-loop (e852)</p>
+			<p><i class="icon-block"></i> icon-block (e84b)</p>
+			<p><i class="icon-skip"></i> icon-skip (e850)</p>
+			<p><i class="icon-exit-page"></i> icon-exit-page (e848)</p>
+			<p><i class="icon-tasks"></i> icon-tasks (e81a)</p>
+			<p><i class="icon-unfinished-task"></i> icon-unfinished-task (e81b)</p>
+			<p><i class="icon-recorder"></i> icon-recorder (e81c)</p>
+			<p><i class="icon-link"></i> icon-link (e80d)</p>
+			<p><i class="icon-unlink"></i> icon-unlink (e884)</p>
+			<p><i class="icon-print"></i> icon-print (e81e)</p>
+			<p><i class="icon-mail"></i> icon-mail (e81f)</p>
+			<p><i class="icon-download"></i> icon-download (e833)</p>
+			<p><i class="icon-upload"></i> icon-upload (e834)</p>
+			<p><i class="icon-mobile"></i> icon-mobile (e80e)</p>
+			<p><i class="icon-tablet"></i> icon-tablet (e80f)</p>
+			<p><i class="icon-desktop"></i> icon-desktop (e810)</p>
+			<p><i class="icon-code"></i> icon-code (e821)</p>
+		</div>
+		<div class="col span_8">
+			<p><i class="icon-notification-empty"></i> icon-notification-empty (e825)</p>
+			<p><i class="icon-notification-full"></i> icon-notification-full (e826)</p>
+			<p><i class="icon-theme"></i> icon-theme (e822)</p>
+			<p><i class="icon-audio"></i> icon-audio (e853)</p>
+			<p><i class="icon-video"></i> icon-video (e824)</p>
+			<p><i class="icon-return"></i> icon-return (e812)</p>
+			<p><i class="icon-forward"></i> icon-forward (e813)</p>
+			<p><i class="icon-caret"></i> icon-caret (e835)</p>
+			<p><i class="icon-sort-up-down"></i> icon-sort-up-down (e83e)</p>
+			<p><i class="icon-sort-up"></i> icon-sort-up (e83d)</p>
+			<p><i class="icon-sort-right"></i> icon-sort-right (e83c)</p>
+			<p><i class="icon-sort-down"></i> icon-sort-down (e83a)</p>
+			<p><i class="icon-sort-left"></i> icon-sort-left (e83b)</p>
+			<p><i class="icon-undo"></i> icon-undo (e804)</p>
+			<p><i class="icon-redo"></i> icon-redo (e854)</p>
+			<p><i class="icon-dq"></i> icon-dq (e84c)</p>
+			<p><i class="icon-dq-button-select"></i> icon-dq-button-select (e86f)</p>
+			<p><i class="icon-dq-button-multi-select"></i> icon-dq-button-multi-select (e870)</p>
+			<p><i class="icon-dq-button-select-grid"></i> icon-dq-button-select-grid (e86d)</p>
+			<p><i class="icon-dq-button-multi-select-grid"></i> icon-dq-button-multi-select-grid (e871)</p>
+			<p><i class="icon-dq-button-rating"></i> icon-dq-button-rating (e856)</p>
+			<p><i class="icon-dq-rank-sort"></i> icon-dq-rank-sort (e85d)</p>
+			<p><i class="icon-dq-rating-scale"></i> icon-dq-rating-scale (e85c)</p>
+			<p><i class="icon-dq-card-sort"></i> icon-dq-card-sort (e869)</p>
+			<p><i class="icon-dq-card-multi-sort"></i> icon-dq-card-multi-sort (e86c)</p>
+			<p><i class="icon-dq-fancy-boxes"></i> icon-dq-fancy-boxes (e868)</p>
+			<p><i class="icon-dq-page-turner"></i> icon-dq-page-turner (e861)</p>
+			<p><i class="icon-dq-image-map"></i> icon-dq-image-map (e865)</p>
+			<p><i class="icon-dq-shopping-cart"></i> icon-dq-shopping-cart (e85b)</p>
+			<p><i class="icon-dq-quester-itb"></i> icon-dq-quester-itb (e860)</p>
+			<p><i class="icon-dq-timer-ad"></i> icon-dq-timer-ad (e873)</p>
+			<p><i class="icon-dq-star-rating"></i> icon-dq-star-rating (e857)</p>
+			<p><i class="icon-dq-slider"></i> icon-dq-slider (e858)</p>
+			<p><i class="icon-dq-slider-decimal"></i> icon-dq-slider-decimal (e85a)</p>
+			<p><i class="icon-dq-slider-points"></i> icon-dq-slider-points (e859)</p>
+			<p><i class="icon-dq-this-or-that"></i> icon-dq-this-or-that (e876)</p>
+			<p><i class="icon-dq-text-highlighter"></i> icon-dq-text-highlighter (e877)</p>
+			<p><i class="icon-dq-media-evaluator"></i> icon-dq-media-evaluator (e864)</p>
+			<p><i class="icon-dq-video-hosted"></i> icon-dq-video-hosted (e872)</p>
+			<p><i class="icon-dq-fulcrum"></i> icon-dq-fulcrum (e86e)</p>
+			<p><i class="icon-cati-phone"></i> icon-cati-phone (e88d)</p>
+			<p><i class="icon-ct-single-segment"></i> icon-ct-single-segment (e890)</p>
+			<p><i class="icon-ct-multi-segment"></i> icon-ct-multi-segment (e88f)</p>
+			<p><i class="icon-ct-group-segment"></i> icon-ct-group-segment (e88e)</p>
+			<p><i class="icon-calendar"></i> icon-calendar (e889)</p>
+			<p><i class="icon-spinner"></i> icon-spinner (e893)</p>
+			<p><i class="icon-field-merge"></i> icon-field-merge (e892)</p>
+			<p><i class="icon-piping"></i> icon-piping (e891)</p>
+		</div>
+	</div>
+<!-- 
+	<h2>Image Handeling</h2>
+	<p>Responsive images &amp; show/hide on different size screens. User profile images, etc.</p> -->
+</section>
+
+<!--************* BUTTONS *************-->
+
+<section>
+	<h1><a name="buttons">Buttons</a></h1>
+	<h2>Button Types</h2>
+	<p>Use as described. Remember that <a href="http://www.karlgroves.com/2013/05/14/links-are-not-buttons-neither-are-divs-and-spans/">links, divs and spans are not buttons</a>.</p>
+	<h3>Standard</h3>
+	<p><strong>Usage:</strong> Used as a generic button. Should have simple text that describes the action.</p>
+	<p><strong>Rules:</strong> May include an appropriate icon with text.</p>
+	<div class="example">
+		<button type="button" title="Standard Button" class="btn">Standard</button>
+		<button type="button" title="Standard Button on Hover" class="btn hover-state">Hover</button>
+		<button type="button" title="Standard Button when Disabled" class="btn disabled">Disabled</button>
+		<button type="button" title="Standard Button with an Icon" class="btn"><span class="icon-add"></span> Icon + Text</button>
+	</div>
+
+	<h3>Primary</h3>
+	<p><strong>Usage:</strong> Used when there’s a need for a suggested action, like the “Done” button in a modal or an obvious "next step".</p>
+	<p><strong>Rules:</strong> There shouldn’t be more than one primary button in any dialog/modal/interface.</p>
+	<div class="example">
+		<button type="button" title="Primary Button" class="btn btn-primary">Primary</button>
+		<button type="button" title="Primary Button on Hover" class="btn btn-primary hover-state">Hover</button>
+		<button type="button" title="Primary Button when Disabled" class="btn btn-primary disabled">Disabled</button>
+	</div>
+
+	<h3>Icon + Label</h3>
+	<p><strong>Usage:</strong> Used to indicate a supporting action, typically inside of a tab or accordion menu.</p>
+	<p><strong>Rules:</strong> To avoid being confused with a standard link, these buttons must always be accompanied with an appropriate icon.</p>
+	<div class="example">
+		<button type="button" title="Icon with Label Button" class="btn-with-label icon-info">Icon + Label</button>
+		<button type="button" title="Icon with Label Button on Hover" class="btn-with-label icon-info hover-state">Hover</button>
+		<button type="button" title="Icon with Label Button when Disabled" class="btn-with-label icon-info disabled">Disabled</button>
+	</div>
+	
+	<h3>Special Action</h3>
+	<p><strong>Usage:</strong> Used in an application to denote a special action. It has a “go” connotation, so it should be used to initiate a journey of some sort (like “new project”, “new campaign”, “launch campaign”).</p>
+	<p><strong>Rules:</strong> Maximum of one per application (although having none is fine).</p>
+	<div class="example">
+		<button type="button" title="Special Action Button" class="btn btn-special">Special</button>
+		<button type="button" title="Special Action on Hover" class="btn btn-special hover-state">Hover</button>
+		<button type="button" title="Special Action when Disabled" class="btn btn-special disabled">Disabled</button>
+	</div>
+
+	<h3>Cancel</h3>
+	<p><strong>Usage:</strong> Used in any dialog box/modal/menu where actions require a commit button, there should always be an option to cancel as well. Cancel should back out any changes that occurred and leave it in the previous state.</p>
+	<p><strong>Rules:</strong> Should always be placed to the left of a Primary of standard button.</p>
+	<div class="example">
+		<button type="button" title="Cancel Button" class="btn-cancel">Cancel</button>
+		<button type="button" title="Cancel Button on Hover" class="btn-cancel hover-state">Cancel</button>
+		<button type="button" title="Cancel Button when Disabled" class="btn-cancel disabled">Cancel</button>
+	</div>
+
+	<h3>Delete or Remove</h3>
+	<p><strong>Usage:</strong> A stand alone “x” icon (never the letter "x" or "X") used to remove or delete an item.</p>
+	<p><strong>Rules:</strong> Typically placed on the far right side in table rows. It may be appropriate to have a confirmation alert if the action cannot be undone.</p>
+	<div class="example">
+		<button class="delete icon-remove" title="Delete Button"></button>
+		<button class="delete icon-remove hover-state" title="Delete Button on Hover"></button>
+		<button class="delete icon-remove disabled" title="Delete Button when Disabled"></button>
+	</div>
+
+	<h3>Icon Buttons</h3>
+	<p><strong>Usage:</strong> Only for commonly used and easy to understand actions in the main area of an application, otherwise use a standard or “icon + label” button with descriptive text.</p>
+	<p><strong>Rules:</strong> No accompanying text with an icon button. Icon buttons must have descriptive tooltips that should appear on hover after a short delay.</p>
+	<div class="example">
+		<button role="button" title="Icon Button" class="btn-icon icon-sort-by"></button>
+		<button role="button" title="Icon Button on Hover" class="btn-icon icon-sort-by hover-state"></button>
+		<button role="button" title="Icon Button when Disabled" class="btn-icon icon-sort-by disabled"></button>
+		<button role="button" title="Icon Button when Selected" class="btn-icon icon-sort-by selected"></button>
+	</div>
+
+	<h3>Links</h3>
+	<p><strong>Usage:</strong> Links send the user away from the current page to somewhere else.</p>
+	<p><strong>Rules:</strong></p>
+	<ul>
+		<li>Links should not look like buttons, they always display an underline on hover.</li>
+		<li>When a link’s destination is to another Beacon application, it may be accompanied with the “internal-link” icon, otherwise a link should not have any associated icons.</li>
+		<li>Whereas buttons, used for performing an action, use a &lt;button&gt; tag in the markup, a link should always use the &lt;a href=”#”&gt; markup.</li>
+	</ul>
+	<div class="example">
+		<a href="#0" title="Link Style">Link</a>
+		<a href="#0" title="Link on Hover" class="hover-state">Hover</a>
+		<a href="#0" title="Link when Disabled" class="disabled">Disabled</a>
+	</div>
+
+
+
+	<h2>Button Sizing</h2>
+	<p>The default size should be used in most cases, but these are also available when necessary.</p>
+	<div class="example">
+		<button type="button" class="btn btn-small">Small</button>
+		<button type="button" class="btn">Default</button>
+		<button type="button" class="btn btn-large">Large</button>
+	</div>
+</section>
+
+<!--********** STATS BARS & INDICATORS **********-->
+<!-- 
+<section>
+	<h1><a name="statusBarsAndIndicators">Status Bars &amp; Indicators</a></h1>
+</section>
+ -->
+<!--************* APPLICATION CHARTS & GRAPHS *************-->
+<!-- 
+<section>
+	<h1><a name="applicationChartsAndGraphs">Application Charts &amp; Graphs</a></h1>
+</section>
+ -->
+<!--************* MENUS & NAVS *************-->
+<!-- 
+<section>
+	<h1><a name="menusAndNavs">Menus &amp; Navs</a></h1>
+	<h2>Main Navs</h2>
+	<h3>Research Hub Nav</h3>
+	<p><strong>Usage:</strong> This is the top navigation in the Research Hub.</p>
+	<p><strong>Contents:</strong></p>
+	<ul>
+		<li>Current working company</li>
+		<li>Link to the “company page” if using a supervisor account.</li>
+		<li>Search</li>
+		<li>User settings</li>
+		<li>Notifications</li>
+		<li>Help</li>
+	</ul>
+	<div class="example">
+		<nav class="research-hub">
+			<h1>Company<span class="icon-sort-down"></span></h1>
+		
+			<div class="search-bar">
+				<div class="advanced-dropdown">
+					
+				</div>
+				<div class="search-field">
+					
+				</div>
+				<div class="search-button">
+					
+				</div>
+			</div>
+
+			<span class="icon-help"></span>
+			<span class="icon-notification-empty"></span>
+			<img src="img/self.jpg" alt="">
+		</nav>
+		<div class="nav-shadow"></div>
+	</div>
+
+
+	<h3>Application Nav</h3>
+	<p><strong>Usage:</strong> In all applications other than the Research Hub, the Application Nav appears at the top.</p>
+	<p><strong>Contents:</strong></p>
+	<ul>
+		<li>Link to the Research Hub</li>
+		<li>Projects menu button</li>
+		<li>Application specific menu items (actions, visibility, etc)</li>
+			<ul>
+				<li>Rules: (when to use icons, when to add “. . .”, etc)</li>
+			</ul>
+		<li>Survey name (links to current surveys’ full view) &amp; state</li>
+		<li>Status area (area where status messages appear)</li>
+		<li>User settings</li>
+		<li>Notifications</li>
+		<li>Help</li>
+	</ul>
+	<div class="example">
+		<nav class="application">
+			<p>yo</p>
+		</nav>
+		<div class="nav-shadow"></div>
+	</div>
+
+	<h3>Project Controls Menu</h3>
+	<p><strong>Usage:</strong> To access the other applications for a project. This menu is accessible from any application.</p>
+	<p><strong>Access:</strong> Click the Project Menu Icon to open the menu.</p>
+	<p><strong>Appearance:</strong> Only one hovering menu may be open on screen at a time. Menus appear immediately below the clicked button unless the menu content would be off-screen at the bottom of the page, in which case, it will appear above the clicked button.</p>
+	<p><strong>Dismissal:</strong> Menus disappear after the user: <em>1)</em> mouse leaves the menu area for a period of time <em>2)</em> clicks outside of the menu <em>3)</em> presses the ESC key <em>4)</em> triggers an action from the menu. Menus are also removed upon navigating away from the page or significantly changing the page view.</p>
+	<div class="example"></div>
+
+	<h2>Menus</h2>
+	<h3>Drop-Down Dialog Menu (text with a caret)</h3>
+	<p><strong>Usage:</strong> For menus that change what or how things are being displayed, like sorting options or list filters. They contain text and a drop-down caret. The text should read the current selected setting of the menu.</p>
+	<p><strong>Access:</strong> Click the text with the drop-down caret to open the menu.</p>
+	<p><strong>Appearance:</strong> (Same as Project Controls Menu)</p>
+	<p><strong>Dismissal:</strong> (Same as Project Controls Menu)</p>
+	<div class="example"></div>
+
+	<h3>Icon Drop-Down Dialog Menus</h3>
+	<p><strong>Usage:</strong> For accessing commonly used settings and features. Icon menus help to clear clutter by reducing the amount of text being displayed.</p>
+	<p><strong>Access:</strong> Click the icon to open the menu.</p>
+	<p><strong>Appearance:</strong> (Same as Project Controls Menu)</p>
+	<p><strong>Dismissal:</strong> (Same as Project Controls Menu)</p>
+	<div class="example"></div>
+
+	<h3>Tabs</h3>
+	<p><strong>Usage:</strong> For presenting separate modes of interaction in a single space.</p>
+	<p><strong>Access:</strong> Only one tab can be active at a time. The user may switch between tabs at any time.</p>
+	<p><strong>Functionality:</strong> If information has been entered in one tab (such as a text in a form) and switches to another tab, that information should still be there if they switch back. Information should only clear if the user navigates away from the page or significantly changes the page view.</p>
+	<div class="example"></div>
+
+	<h3>Accordions</h3>
+	<p><strong>Usage:</strong> For showing or hiding separate modes of interaction in an area.</p>
+	<p><strong>Access:</strong> Click a menu title to display it’s available options, click again to hide the options. If all menus are collapsed, all menus may be opened by clicking the down arrow to the left of the main accordion title. If menus are open, all menus may be collapsed by clicking the up arrow to the left of the main accordion title.</p>
+	<p><strong>Functionality:</strong> Multiple menus from the same accordian may be open at the same time. Accordions appear collapsed on first encounter, unless a single accordion menu contains extra important options, it may appear open on first encounter. Accordions should remember their open or collapsed states when the user leaves and revisits the application.</p>
+	<div class="example"></div>
+
+	<h3>Multi-Action Dialog Menu</h3>
+	<p><strong>Usage:</strong> Use this menu type when the user has to make a series of decisions or inputs before applying or canceling the settings</p>
+	<p><strong>Buttons:</strong> Menu has a primary button to apply settings (clicking applies settings and closes menu - newly created objects, if appropriate, get highlight animation) and a cancel button (closes the menu and discards any changes).</p>
+	<p><strong>Menu dismissal:</strong> The menu only goes away if the user: 1) clicks the apply or cancel buttons 2) presses ESC on their keyboard or 3) navigates away or changes their view. The menu remains visible if the user mouses away from it or clicks outside of it.</p>
+	<div class="example"></div>
+
+</section>
+ -->
+<!--************* PANELS *************-->
+<!-- 
+<section>
+	<h1><a name="panels">Panels</a></h1>
+</section>
+ -->
+<!--************* TABLES *************-->
+<!-- 
+<section>
+	<h1><a name="tables">Tables</a></h1>
+</section>
+ -->
+<!--************* FORMS & LABELS *************-->
+<!-- 
+<section>
+	<h1><a name="formsAndLabels">Forms &amp; Labels</a></h1>
+</section>
+ -->
+<!--************* MODALS *************-->
+
+<section>
+	<h1><a name="modals">Modals</a></h1>
+	<h2>Header</h2>
+	<h3>Title + Optional Drop-Down Menu:</h3>
+	<p><strong>Usage:</strong> The title should be short and descriptive. This title may be displayed as a Drop-Down menu in situations where the modal features a number of categories (e.g. the project menu in the survey building app).</p>
+	<h3>Help Resources</h3>
+	<p><strong>Usage:</strong> There may be a “Learn More” link or help icon right aligned in the header.</p>
+	<h3>Close "x" Button</h3>
+	<p><strong>Usage:</strong> A stand alone “x” icon (never the letter "x" or "X") used to close out of a modal, should always appear in the top right corner.</p>
+	<p><strong>Rules:</strong> Equivalent to cancel, any changes made and not executed should be backed out to the previous state.</p>
+	<div class="example popup-bg">
+		<div class="ex-modal-header clr">
+			<h3>Header Text</h3>
+			<button type="button" class="close icon-close"></button>
+			<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
+		</div>
+	</div>
+
+	<h2>Content Area</h2>
+	<p><strong>Usage:</strong> Any associated content should be displayed in here.</p>
+	<p><strong>Rules:</strong> Do not use panel or accordion menus inside modals.</p>
+	<div class="example popup-bg">
+		<div class="ex-modal-body">
+			<p>This is the body of a modal.</p>
+		</div>
+	</div>
+	<!-- 
+	<h3>Forms Inside Modals</h3>
+	<div class="example"></div>
+	<h3>Tables Inside Modals</h3>
+	<div class="example"></div>
+	<h3>Alerts Inside Modals</h3>
+	<div class="example"></div>
+ -->
+	<h2>Footer</h2>
+	<p><strong>Usage:</strong> The footer of a modal should contain any buttons related to submitting, canceling, or saving the content. There may also be checkboxes that appear for settings related to the modal (e.g. “Show this screen for new projects”).</p>
+	<p><strong>Rules:</strong> The primary button should always be the furthest right aligned, with secondary buttons to the left of that, and a cancel button to the left of all buttons. Any checkboxes in the footer should be aligned to the left.</p>
+	<div class="example popup-bg">
+		<div class="ex-modal-footer clr">
+			<p><input type="checkbox">Set as Default.</p>
+			<button type="button" title="Save" class="btn btn-primary">Save</button>
+			<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
+		</div>
+	</div>
+
+	<h2>Sizes</h2>
+	<p>All size selections are responsive, relying on a max-width setting.</p>
+	<h3>Small</h3>
+	<div class="example popup-bg">
+		<div class="modal modal-small">
+			<div class="modal-header clr">
+				<h3>Header Text</h3>
+				<button type="button" class="close icon-close"></button>
+				<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
+			</div>
+			<div class="modal-body clr">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id recusandae autem debitis possimus consequuntur aperiam distinctio necessitatibus accusamus deserunt iste.</p>
+			</div>
+			<div class="modal-footer clr">
+				<p><input type="checkbox">Set as Default.</p>
+				<button type="button" title="Save" class="btn btn-primary">Save</button>
+				<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
+			</div>
+		</div>
+	</div>
+
+	<h3>Default</h3>
+	<div class="example popup-bg">
+		<div class="modal">
+			<div class="modal-header clr">
+				<h3>Header Text</h3>
+				<button type="button" class="close icon-close"></button>
+				<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
+			</div>
+			<div class="modal-body clr">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, id a similique odio architecto quae deleniti eius tenetur rerum dolorem obcaecati quis porro necessitatibus minima recusandae veritatis hic possimus iste pariatur nostrum eligendi! Beatae, laudantium, impedit repellendus voluptatibus blanditiis doloribus maiores libero optio nostrum sed dolorem ipsum illo voluptates modi?</p>
+			</div>
+			<div class="modal-footer clr">
+				<p><input type="checkbox">Set as Default.</p>
+				<button type="button" title="Save" class="btn btn-primary">Save</button>
+				<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
+			</div>
+		</div>
+	</div>
+
+	<h3>Large</h3>
+	<div class="example popup-bg">
+		<div class="modal modal-large">
+			<div class="modal-header clr">
+				<h3>Header Text</h3>
+				<button type="button" class="close icon-close"></button>
+				<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
+			</div>
+			<div class="modal-body clr">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, id a similique odio architecto quae deleniti eius tenetur rerum dolorem obcaecati quis porro necessitatibus minima recusandae veritatis hic possimus iste pariatur nostrum eligendi! Beatae, laudantium, impedit repellendus voluptatibus blanditiis doloribus maiores libero optio nostrum sed dolorem ipsum illo voluptates modi?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, soluta, excepturi, deserunt explicabo animi veritatis necessitatibus ratione iure ducimus officiis at aperiam sequi rerum voluptatum eveniet aspernatur accusamus fugit odio aut nam. Expedita, exercitationem, asperiores atque alias fuga cupiditate nihil consectetur voluptates debitis nesciunt ratione omnis odio ut veritatis veniam. At, et, cum architecto corporis enim consequatur hic assumenda excepturi tempora laborum distinctio nostrum veniam animi voluptatibus odit. Temporibus, pariatur, aut optio consequuntur accusantium harum veniam eaque dicta ipsum suscipit commodi totam cum eligendi quaerat deleniti fugit quae alias porro fuga laudantium vel ex magnam natus libero praesentium. Dicta, accusamus!</p>
+			</div>
+			<div class="modal-footer clr">
+				<p><input type="checkbox">Set as Default.</p>
+				<button type="button" title="Save" class="btn btn-primary">Save</button>
+				<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
+			</div>
+		</div>
+	</div>
+
+	<h2>Animation</h2>
+	<h3>Standard Appear &amp; Disappear</h3>
+	<div class="example">
+		<button role="button" class="btn btn-primary standard-appear-show">Standard Animation Demo</button>
+		<div id="standard" class="standard-appear hidden">
+			<div class="modal">
+				<div class="modal-header clr">
+					<h3>Header Text</h3>
+					<button type="button" class="close icon-close"></button>
+					<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
+				</div>
+				<div class="modal-body clr">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, id a similique odio architecto quae deleniti eius tenetur rerum dolorem obcaecati quis porro necessitatibus minima recusandae veritatis hic possimus iste pariatur nostrum eligendi! Beatae, laudantium, impedit repellendus voluptatibus blanditiis doloribus maiores libero optio nostrum sed dolorem ipsum illo voluptates modi?</p>
+				</div>
+				<div class="modal-footer clr">
+					<p><input type="checkbox">Set as Default.</p>
+					<button type="button" title="Save" class="btn btn-primary">Save</button>
+					<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h3>Alert Appear</h3>
+	<p>To be used when an unrequested modal appears to deliver a critical message.</p>
+	<div class="example">
+		<button role="button" class="btn btn-primary alert-appear-show">Alert Animation Demo</button>
+		<div class="alert-appear hidden">
+			<div class="modal">
+				<div class="modal-header clr">
+					<h3>Header Text</h3>
+					<button type="button" class="close icon-close"></button>
+					<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
+				</div>
+				<div class="modal-body clr">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, id a similique odio architecto quae deleniti eius tenetur rerum dolorem obcaecati quis porro necessitatibus minima recusandae veritatis hic possimus iste pariatur nostrum eligendi! Beatae, laudantium, impedit repellendus voluptatibus blanditiis doloribus maiores libero optio nostrum sed dolorem ipsum illo voluptates modi?</p>
+				</div>
+				<div class="modal-footer clr">
+					<p><input type="checkbox">Set as Default.</p>
+					<button type="button" title="Save" class="btn btn-primary">Save</button>
+					<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h3>Failed Validation</h3>
+	<p>Triggered when a form inside of a modal fails to validate.</p>
+	<div class="example">
+		<button role="button" class="btn btn-primary failed-validate-show">Failed Validate Demo</button>
+		<div id="failed-validate" class="standard-appear hidden">
+			<div id="failed-validate-box" class="modal">
+				<div class="modal-header clr">
+					<h3>Header Text</h3>
+					<button type="button" class="close icon-close"></button>
+					<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
+				</div>
+				<div class="modal-body clr">
+					<p>Click "Save" to see the failed validation animation.</p>
+				</div>
+				<div class="modal-footer clr">
+					<button type="button" title="Save" id="btn-failed-validate" class="btn btn-primary">Save</button>
+					<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--************* TOOLTIPS *************-->
+<!-- 
+<section>
+	<h1><a name="tooltips">Tooltips</a></h1>
+</section>
+ -->
+<!--************* ALERTS *************-->
+<!-- 
+<section>
+	<h1><a name="alerts">Alerts</a></h1>
+</section>
+ -->
+<!--************* TYPOGRAPHY *************-->
+
+<section>
+	<h1><a name="typography">Typography</a></h1>
+	<h2>Fonts</h2>
+	<p>The base font-size should be 14px. All other font-sizes should be set using em or rem units so that the relative font size can be adjusted for different viewports.</p>
+	<p>The font weights available are 400 (+ italic), 600 (semi-bold), and 700.</p>
+
+	<p>The font family used for Beacon is <strong>Open Sans</strong>.</p>
+	<div class="example">
+		<p class="thrsx"><span class="number-ref">36px </span>The five boxing wizards jump quickly.</p>
+		<p class="thr"><span class="number-ref">30px </span>The five boxing wizards jump quickly.</p>
+		<p class="twfr"><span class="number-ref">24px </span>The five boxing wizards jump quickly.</p>
+		<p class="twone"><span class="number-ref">21px </span>The five boxing wizards jump quickly.</p>
+		<p class="eightt"><span class="number-ref">18px </span>The five boxing wizards jump quickly.</p>
+		<p class="sixt"><span class="number-ref">16px </span>The five boxing wizards jump quickly.</p>
+		<p><span class="number-ref">14px </span>The five boxing wizards jump quickly.</p>
+		<p class="twelve"><span class="number-ref">12px </span>The five boxing wizards jump quickly.</p>
+		<p class="ten"><span class="number-ref">10px </span>The five boxing wizards jump quickly.</p>
+	</div>
+	<div class="example-demo">
+		<p><code>font-family: "Open Sans", Tahoma, sans-serif;</code></p>
+		<p><code>font-weight: 400;</code></p>
+	</div>
+
+	<h2>Headings</h2>
+	<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are styled and available.</p>
+	<div class="example">
+		<h1>H1 Heading</h1>
+		<h2>H2 Heading</h2>
+		<h3>H3 Heading</h3>
+		<h4>H4 Heading</h4>
+		<h5>H5 Heading</h5>
+		<h6>H6 Heading</h6>
+	</div>
+	<div class="example-demo">
+		<p><code>&lt;h1&gt;</code> H1 Heading <code>&lt;/h1&gt;</code></p>
+		<p><code>&lt;h2&gt;</code> H2 Heading <code>&lt;/h2&gt;</code></p>
+		<p><code>&lt;h3&gt;</code> H3 Heading <code>&lt;/h3&gt;</code></p>
+		<p><code>&lt;h4&gt;</code> H4 Heading <code>&lt;/h4&gt;</code></p>
+		<p><code>&lt;h5&gt;</code> H5 Heading <code>&lt;/h5&gt;</code></p>
+		<p><code>&lt;h6&gt;</code> H6 Heading <code>&lt;/h6&gt;</code></p>
+	</div>
+
+	<p>All headers and titles should be written using <strong>title casing</strong>. As there are a few different ways of applying title casing, <a href="http://titlecapitalization.com/">you can use this handy tool</a> to make sure you’ve got it right. The rules we use for title casing come from the Chicago Manual of Style.</p>
+
+	<h2>Emphasis</h2>
+	<p>You can use HTML's default emphasis tags.</p>
+	<h3>Small</h3>
+	<p>Use the <code>&lt;small&gt;</code> tag for de-emphasizing text.</p>
+	<div class="example">
+		<p><small>This might be useful for fine print text.</small></p>
+	</div>
+	<div class="example-demo">
+		<code>&lt;small&gt;</code> . . . <code>&lt;/small&gt;</code>
+	</div>
+
+	<h3>Bold</h3>
+	<p>Use the <code>&lt;strong&gt;</code> tag for bold emphasis.</p>
+	<div class="example">
+		<p>Making text <strong>bold</strong> is great for emphasis. Just remember, if too much text is <strong>bold</strong>, no text is <strong>bold</strong>.</p>
+	</div>
+	<div class="example-demo">
+		<code>&lt;strong&gt;</code> . . . <code>&lt;/strong&gt;</code>
+	</div>
+
+	<h3>Italic</h3>
+	<p>Use the <code>&lt;em&gt;</code> tag for italic emphasis.</p>
+	<div class="example">
+		<p><em>Italic text is good for emphasising a single word, or a whole phrase.</em></p>
+	</div>
+	<div class="example-demo">
+		<code>&lt;em&gt;</code> . . . <code>&lt;/em&gt;</code>
+	</div>
+
+	<h3>All Caps</h3>
+	<p>Add <code>class="caps"</code> for all caps.</p>
+	<div class="example">
+		<p class="caps">All caps are good for certain section titles - they're loud, so use sparingly</p>
+	</div>
+	<div class="example-demo">
+		<code>&lt;h4 class="caps"&gt;</code> . . . <code>&lt;/h4&gt;</code>
+	</div>
+
+	<h3>Underline</h3>
+	<p>Never use underline. Links underline themselves on hover, that's it.</p>
+
+	<h2>Alignment</h2>
+	<p><small>Use align properties sparingly, especially for paragraphs. Center or right aligned paragraphs are very bad for readability.</small></p>
+	<p>Text is aligned left by default or you can force text to align left by adding <code>class="text-left"</code>, you can center align text with a <code>class="text-center"</code> or right align text with a <code>class="text-right"</code>.</p>
+	<div class="example">
+		<p class="text-left">Left aligned text.</p>
+		<p class="text-center">Center aligned text.</p>
+		<p class="text-right">Right aligned text.</p>
+	</div>
+	<div class="example-demo">
+		<p><code>&lt;p class="text-left"&gt;</code> Left aligned text. <code>&lt;/p&gt;</code></p>
+		<p><code>&lt;p class="text-center"&gt;</code> Center aligned text. <code>&lt;/p&gt;</code></p>
+		<p><code>&lt;p class="text-right"&gt;</code> Right aligned text. <code>&lt;/p&gt;</code></p>
+	</div>
+
+	<h2>Labels</h2>
+	<p>Style labels by adding a <code>class=”label”</code>. Labels can be used for things like the survey state (dev, test, live, closed) or for other needs, like labeling something as “new”.</p>
+	<div class="example">
+		<p><span class="label">Dev</span> <span class="label">Test</span> <span class="label">Live</span> <span class="label">Closed</span></p>	
+	</div>
+	<div class="example-demo">
+		<p><code>&lt;span class="label"&gt;</code> . . . <code>&lt;/span&gt;</code></p>
+	</div>
+
+	<h3>Tags</h3>
+	<p>Tags are used for organizing projects. You can style a tag by giving it a <code>class=”tag”</code>.</p>
+	<div class="example">
+		<span class="tag">Decipher Inc<a class="icon-remove" href="#0"></a></span>
+	</div>
+</section>
+
+<!--************* LISTS *************-->
+
+<section>
+	
+	<h1><a name="lists">Lists</a></h1>
+	<h2>Unordered</h2>
+	<p>A list of items in which the order is <em>not</em> explicitly important</p>
+	<div class="example">
+		<ul>
+			<li>List item 1</li>
+			<li>List item 2</li>
+				<ul>
+					<li>List item 2.1</li>
+					<li>List item 2.2</li>
+				</ul>
+			<li>List item 3</li>
+		</ul>
+	</div>
+	<div class="example-demo">
+		<p><code>&lt;ul&gt;</code></p>
+		<p><code>&lt;li&gt;</code> . . . <code>&lt;/li&gt;</code></p>
+		<p><code>&lt;/ul&gt;</code></p>
+	</div>
+
+	<h2>Ordered</h2>
+	<p>A list of items in which the order <em>is</em> explicitly important</p>
+	<div class="example">
+		<ol>
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+		</ol>
+	</div>
+	<div class="example-demo">
+		<p><code>&lt;ol&gt;</code></p>
+		<p><code>&lt;li&gt;</code> . . . <code>&lt;/li&gt;</code></p>
+		<p><code>&lt;/ol&gt;</code></p>
+	</div>
+
+	<h2>Unstyled</h2>
+	<p>Remove the default <code>list-style</code> and left padding on list items (immediate children only). Do this by assigning <code>&lt;ul class="unstyled"&gt;</code>.</p>
+	<div class="example">
+		<ul class="unstyled">
+			<li>List item 1</li>
+			<li>List item 2</li>
+				<ul>
+					<li>List item 2.1</li>
+					<li>List item 2.2</li>
+				</ul>
+			<li>List item 3</li>
+		</ul>	
+	</div>
+
+	<h2>Inline</h2>
+	<p>Make all list items <code>inline-block</code> by adding <code>&lt;ul class="inline"&gt;</code>.</p>
+	<div class="example">
+		<ul class="inline">
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+		</ul>		
+	</div>
+	<div class="example-demo">
+		<p><code>&lt;ul class="inline"&gt;</code></p>
+		<p><code>&lt;li&gt;</code> . . . <code>&lt;/li&gt;</code></p>
+		<p><code>&lt;/ul&gt;</code></p>
+	</div>
+
+	<h2>Description</h2>
+	<p>A list of terms with associated descriptions.</p>
+	<div class="example">
+		<dl>
+			<dt>Description Item</dt>
+			<dd>Definition Item</dd>
+			<dt>Description Item</dt>
+			<dd>Definition Item</dd>
+		</dl>
+	</div>
+	<div class="example-demo">
+		<p><code>&lt;dl&gt;</code></p>
+		<p><code>&lt;dt&gt;</code> Description <code>&lt;/dt&gt;</code></p>
+		<p><code>&lt;/dd&gt;</code> Definition <code>&lt;/dd&gt;</code></p>
+		<p><code>&lt;/dl&gt;</code></p>
+	</div>
+</section>
+
+
+<!--************* LANGUAGE & GRAMMAR *************-->
+<!-- 
+<section>
+	<h1><a name="languageAndGrammar">Language &amp; Grammar</a></h1>
+</section>
+ -->
+</div> <!-- end container -->
+<footer>
+	
+</footer>
+</body>
+</html>

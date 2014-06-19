@@ -1,0 +1,133 @@
+@{base-prefix} * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@{base-prefix}  {
+	margin: 0;
+	padding: 0;
+	color: @color-base;
+	background-color: @color-bg;
+}
+
+@{base-prefix} .container {
+	padding: 0 2%;
+	margin: 0 auto 2em;
+}
+
+@{base-prefix} section {
+	border-top: 1px solid @color-frame;
+	margin-top: 3rem;
+	&:first-child {
+		border-top: 0;
+		margin-top: 0;
+	}
+
+    > p {
+      margin: 1em 0;
+    }
+}
+
+@{base-prefix} header {
+	background-color: @color-bg;
+	border-bottom: 1px solid @color-frame;
+}
+
+@{base-prefix} header h1 {
+	font-size: 1.5em;
+	margin-left: .8em;
+	margin-bottom: .8em;
+	color: @color-orange;
+}
+
+@{base-prefix} h1 a {
+	color: @color-orange;
+	text-decoration: none;
+	
+	&:hover, :focus {
+		color: @color-orange;
+		text-decoration: none;
+	}
+}
+
+@{base-prefix} .example {
+	background-color: @color-bg;
+	padding: 2em 1em 1em;
+	position: relative;
+	border:1px solid @color-frame;
+	&:after {
+		content: "Example";
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: @color-bg;
+		font-size: .8em;
+		padding: .05em .3em;
+		background-color: @color-frame;
+	}
+	h1 {
+		margin-top: 0;
+		color:black;
+	}
+}
+
+@{base-prefix} .example-demo {
+	font-size: .8em;
+	background-color: lighten(@color-frame, 10%);
+	padding: 1.2em 1em 1em 1em;
+	margin-top: -.4em;
+	border:1px solid @color-frame;
+	p {
+		margin-bottom: -.5em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@{base-prefix} .example-comment {
+	color: @color-base;
+	margin-top: 2em;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@media (min-width: 768px) {
+    @{prefix-word} .container {
+        width: 730px;
+    }
+}
+
+@media (min-width: 800px) {
+	html @{prefix-word} {
+		font-size:100%;
+	}
+	html @{prefix-word} .container {
+		max-width: 65em;
+	}
+	html @{prefix-word} header h1 {
+		font-size: 2.3em;
+		margin-left: .8em;
+		margin-bottom: .8em;
+	}
+}
+
+@media (min-width: 992px) {
+    @{prefix-word} .container {
+        width: 950px;
+    }
+}
+@media (min-width: 1200px) {
+    @{prefix-word} .container {
+        width: 1150px;
+    }
+}
