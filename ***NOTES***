@@ -1,0 +1,22 @@
+Need a base 12 col bootstrap grid, then a prefix override 24 col bootstrap grid.
+
+
+
+
+
+
+You can create a simple task that spawns grunt in the folder you want:
+
+grunt.registerTask('run-grunt', function () {
+    var done = this.async();
+    grunt.util.spawn({
+        grunt: true,
+        args: [''],
+        opts: {
+            cwd: 'app/components/jquery'
+        }
+    }, function (err, result, code) {
+        done();
+    });
+});
+

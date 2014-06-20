@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="beacon dux-buttons dux-menu dux-grid dux-modals dux-colors dux-icons dux-typography dux-normalize">
+<html lang="en" class="bui bui-buttons bui-menu bui-grid bui-modals bui-colors bui-icons bui-typography bui-normalize">
 <head>
 	<meta charset="UTF-8">
 	<!-- Mobile Specific Metas
@@ -9,48 +9,19 @@
 	<title>Beacon Pattern Library</title>
 	
 	<link rel="stylesheet" href="bootstrap-3.1.1/dist/css/bootstrap.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-        $(function() {
-            $('.control-panel button').on('click', function() {
-                var me = $(this);
-                var thisTarget = me.data('target');
-                var body = $('html');
-                if (body.hasClass(thisTarget)) {
-                    body.removeClass(thisTarget);
-                    me.removeClass('btn-special');
-                } else {
-                    body.addClass(thisTarget);
-                    me.addClass('btn-special');
-                }
-            });
-        });
-    </script>
-    <style type="text/css">
-        .control-panel {
-            background-color: #333333;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
 </head>
 <body>
 <div class="control-panel">
-    <button type="button" data-target="beacon" title="Toggle Beacon Pattern" class="btn btn-special">Everything</button>
-    <button type="button" data-target="dux-buttons" title="Toggle Buttons" class="btn btn-special">Buttons</button>
-    <button type="button" data-target="dux-menu" title="Toggle Menus" class="btn btn-special">Menus</button>
-    <button type="button" data-target="dux-grid" title="Toggle Grid" class="btn btn-special">Grid</button>
-    <button type="button" data-target="dux-modals" title="Toggle Modals" class="btn btn-special">Modals</button>
-    <button type="button" data-target="dux-colors" title="Toggle Colors" class="btn btn-special">Colors</button>
-    <button type="button" data-target="dux-icons" title="Toggle Icons" class="btn btn-special">Icons</button>
-    <button type="button" data-target="dux-typography" title="Toggle Typography" class="btn btn-special">Typography</button>
-    <button type="button" data-target="dux-normalize" title="Toggle Normalize" class="btn btn-special">Normalize</button>
+    <button type="button" data-target="bui" title="Toggle Beacon Pattern" class="btn btn-special">Everything</button>
+    <button type="button" data-target="bui-buttons" title="Toggle Buttons" class="btn btn-special">Buttons</button>
+    <button type="button" data-target="bui-menu" title="Toggle Menus" class="btn btn-special">Menus</button>
+    <button type="button" data-target="bui-grid" title="Toggle Grid" class="btn btn-special">Grid</button>
+    <button type="button" data-target="bui-modals" title="Toggle Modals" class="btn btn-special">Modals</button>
+    <button type="button" data-target="bui-colors" title="Toggle Colors" class="btn btn-special">Colors</button>
+    <button type="button" data-target="bui-icons" title="Toggle Icons" class="btn btn-special">Icons</button>
+    <button type="button" data-target="bui-typography" title="Toggle Typography" class="btn btn-special">Typography</button>
+    <button type="button" data-target="bui-normalize" title="Toggle Normalize" class="btn btn-special">Normalize</button>
 </div>
-
-<header>
-	<h1>Beacon Pattern Library</h1>
-</header>
-<div class="nav-shadow"></div>
 
 <a href="#menu" id="menu-button" class="icon-menu"></a>
 <nav role="Navigation" class="main-nav">
@@ -570,7 +541,7 @@
 	<h3>Standard</h3>
 	<p><strong>Usage:</strong> Used as a generic button. Should have simple text that describes the action.</p>
 	<p><strong>Rules:</strong> May include an appropriate icon with text.</p>
-	<div class="example">
+	<div class="bui-lib-example">
 		<button type="button" title="Standard Button" class="btn">Standard</button>
 		<button type="button" title="Standard Button on Hover" class="btn hover-state">Hover</button>
 		<button type="button" title="Standard Button when Disabled" class="btn disabled">Disabled</button>
@@ -1192,7 +1163,30 @@
  -->
 </div> <!-- end container -->
 <footer>
-	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.control-panel button').on('click', function() {
+                var me = $(this);
+                var thisTarget = me.data('target');
+                var body = $('html');
+                if (body.hasClass(thisTarget)) {
+                    body.removeClass(thisTarget);
+                    me.removeClass('btn-special');
+                } else {
+                    body.addClass(thisTarget);
+                    me.addClass('btn-special');
+                }
+            });
+        });
+    </script>
+    <style type="text/css">
+        .control-panel {
+            background-color: #333333;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>	
 </footer>
 </body>
 </html>

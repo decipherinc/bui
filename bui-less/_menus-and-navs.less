@@ -1,66 +1,67 @@
 // ************ Pattern Library Nav ************* //
-@{menu-prefix} #menu-button {
-	color: @color-orange;
-	font-size: 2em;
-	position: fixed;
-	top: 5px;
-	right: 5px;
-	z-index: 1000;
-	&:hover {
+@{menu-prefix} {
+	#menu-button {
 		color: @color-orange;
-		text-decoration: none;
-	}
-}
-
-@{menu-prefix} .main-nav {
-	position: fixed;
-	top: -10%;
-	width: 100%;
-	max-height: 0%;
-	background-color: @color-bg;
-	border: 1px solid @color-frame;
-	overflow: scroll;
-	overflow-x: hidden;
-	overflow-y: auto;
-	z-index: 900;
-	.transition;
-	ul {
-		padding: 0;
-		a {
-			color: @color-base;
-			font-weight: bold;
+		font-size: 2em;
+		position: fixed;
+		top: 5px;
+		right: 5px;
+		z-index: 1000;
+		&:hover {
+			color: @color-orange;
 			text-decoration: none;
-			&:hover {
+		}
+	}
+
+	.main-nav {
+		position: fixed;
+		top: -10%;
+		width: 100%;
+		max-height: 0%;
+		background-color: @color-bg;
+		border: 1px solid @color-frame;
+		overflow: scroll;
+		overflow-x: hidden;
+		overflow-y: auto;
+		z-index: 900;
+		.transition;
+		ul {
+			padding: 0;
+			a {
+				color: @color-base;
+				font-weight: bold;
 				text-decoration: none;
-			}
-		
-			li {
-				list-style: none;
-				text-align: center;
-				background-color: @color-button;
-				border-radius: 4px;
-				width: 80%;
-				font-size: 1.5em;
-				padding: .5em;
-				margin: 5px auto;
-				&:hover, :focus{
-					background-color: @color-frame;
-					.transition;
+				&:hover {
+					text-decoration: none;
 				}
-				&:active {
-					background-color: darken(@color-frame, 5%);
+			
+				li {
+					list-style: none;
+					text-align: center;
+					background-color: @color-button;
+					border-radius: 4px;
+					width: 80%;
+					font-size: 1.5em;
+					padding: .5em;
+					margin: 5px auto;
+					&:hover, :focus{
+						background-color: @color-frame;
+						.transition;
+					}
+					&:active {
+						background-color: darken(@color-frame, 5%);
+					}
 				}
 			}
 		}
+		&.main-nav-show {
+			max-height: 100%;
+			top: 0;
+			box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+			.transition;
+		}
 	}
-	&.main-nav-show {
-		max-height: 100%;
-		top: 0;
-		box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
-		.transition;
-	}
-}
-
+} // end @{menu-prefix}
 @media (min-width: 800px) { 
 	@{menu-prefix} #menu-button {
 		top: 20px;
