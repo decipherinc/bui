@@ -24,9 +24,6 @@
 @button-class: ~'.bui-buttons';
 @button-prefix: ~'@{prefix-word}@{button-class}';
 
-@color-class: ~'.bui-colors';
-@color-prefix: ~'@{prefix-word}@{color-class}';
-
 @normal-class: ~'.bui-normalize';
 @normal-prefix: ~'@{prefix-word}@{normal-class}';
 
@@ -59,28 +56,4 @@
   -ms-transition: all 100ms ease-in-out;
   -o-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
-}
-
-.disabled-opacity {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-  filter: alpha(opacity=20);
-  -moz-opacity: 0.2;
-  -khtml-opacity: 0.2;
-  opacity: 0.2;
-  &:hover {
-    cursor: not-allowed;
-  }
-}
-
-.nav-shadow {
-  height: .5em;
-  background: #eeeeee;
-  background: -moz-linear-gradient(top,  #eeeeee 0%, #ffffff 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff));
-  background: -webkit-linear-gradient(top,  #eeeeee 0%,#ffffff 100%);
-  background: -o-linear-gradient(top,  #eeeeee 0%,#ffffff 100%);
-  background: -ms-linear-gradient(top,  #eeeeee 0%,#ffffff 100%);
-  background: linear-gradient(to bottom,  #eeeeee 0%,#ffffff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
-  margin-bottom: 1em;
 }

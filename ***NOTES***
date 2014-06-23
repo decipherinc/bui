@@ -8,27 +8,10 @@ Don't worry about the .codekit-config or cache folder, Brandon uses it only for 
 
 TODO:
 
-Need a base 12 col bootstrap grid, then a prefix override 24 col bootstrap grid.
+Buttons - link buttons need to look more disabled when they are so.
 
-update btn class names (like btn-lg) to be in line with bootstrap
-
-
+Need prefix on bootstrap overrides in _variables
 
 
-BRANDON'S SCRAP NOTES:
 
-You can create a simple task that spawns grunt in the folder you want:
-
-grunt.registerTask('run-grunt', function () {
-    var done = this.async();
-    grunt.util.spawn({
-        grunt: true,
-        args: [''],
-        opts: {
-            cwd: 'app/components/jquery'
-        }
-    }, function (err, result, code) {
-        done();
-    });
-});
 
