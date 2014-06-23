@@ -1,9 +1,21 @@
+NOTES TO YOU:
+Don't worry about the .codekit-config or cache folder, Brandon uses it only for running a local server and seeing results update in the browser. Nothing is compiled with it, compiling less and js is done by using the grunt file in /bootstrap.
+
+
+
+
+
+
+TODO:
+
 Need a base 12 col bootstrap grid, then a prefix override 24 col bootstrap grid.
 
+update btn class names (like btn-lg) to be in line with bootstrap
 
 
 
 
+BRANDON'S SCRAP NOTES:
 
 You can create a simple task that spawns grunt in the folder you want:
 

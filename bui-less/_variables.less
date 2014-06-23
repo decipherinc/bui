@@ -1,3 +1,4 @@
+// bui prefix
 @body: ~'html';
 @prefix-word: ~'.bui';
 @prefix: ~'@{body}@{prefix-word}';
@@ -29,6 +30,7 @@
 @normal-class: ~'.bui-normalize';
 @normal-prefix: ~'@{prefix-word}@{normal-class}';
 
+// colors
 @color-bg: #fff;
 @color-base: #333;
 @color-remove: #777;
@@ -42,6 +44,14 @@
 @color-active: #fffbcc;
 @color-tag: #c5e8f6;
 @color-button: #e7e7e7;
+
+// grid
+@bui-grid-columns: 24;
+
+// bootstrap overrides
+@grid-gutter-width: 1em;
+
+
 
 .transition {
   -webkit-transition: all 100ms ease-in-out;
