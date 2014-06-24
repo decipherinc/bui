@@ -8,10 +8,9 @@ NOTES TO YOU:
 
 
 
+
+/////// customize modal animations (in bui's _modal.less).
+
 TODO:
 
 Need prefix on bootstrap overrides in _variables
-
-
-
-

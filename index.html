@@ -12,12 +12,14 @@
 </head>
 <body class="library-specific">
 <div class="control-panel">
-    <button type="button" data-target="bui" title="Toggle Beacon Pattern" class="btn">Everything</button>
-    <button type="button" data-target="bui-buttons" title="Toggle Buttons" class="btn">Buttons</button>
+		<span style="color: white; margin-right:0.5em;">Toggle BUI styles:</span>
+		<button type="button" data-target="bui" title="Toggle Beacon Pattern" class="btn">Everything</button>
+		<button type="button" data-target="bui-normalize" title="Toggle Normalize" class="btn">Normalize</button>
     <button type="button" data-target="bui-grid" title="Toggle Grid" class="btn">Grid</button>
     <button type="button" data-target="bui-icons" title="Toggle Icons" class="btn">Icons</button>
+    <button type="button" data-target="bui-buttons" title="Toggle Buttons" class="btn">Buttons</button>
+    <button type="button" data-target="bui-modals" title="Toggle Modals" class="btn">Modals</button>
     <button type="button" data-target="bui-typography" title="Toggle Typography" class="btn">Typography</button>
-    <button type="button" data-target="bui-normalize" title="Toggle Normalize" class="btn">Normalize</button>
 </div>
 
 <nav role="Navigation" class="bs-sidebar affix">
@@ -27,7 +29,7 @@
 		<li><a href="#colorPalette">Color Palette</a></li>
 		<li><a href="#iconsAndImages">Icons &amp; Images</a></li>
 		<li><a href="#buttons">Buttons</a></li>
-		<!-- <a href="#modals"><li>Modals</li></a> -->
+		<li><a href="#modals">Modals</a></li>
 		<!-- <a href="#typography"><li>Typography</li></a> -->
 		<!-- <a href="#lists"><li>Lists</li></a> -->
 	</ul>
@@ -703,8 +705,48 @@
  -->
 <!--************* MODALS *************-->
 
-<!-- <section>
+<section>
 	<h1><a name="modals">Modals</a></h1>
+	<p>The markup for bui modals are very similar to standard bootstrap modals. The close 'x' button and cancel buttons have bui specific classes.</p>
+	<div class="bui-lib-example">
+		<div class="modal fade in" style="display:block; position: static; z-index: 5;">
+		  <div class="modal-dialog" style="z-index: 10;">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"></button>
+		        <h4 class="modal-title">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p>One fine body&hellip;</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="modal-backdrop fade in" style="position: absolute; z-index: 1;"></div>
+	</div>
+	<pre class="bui-lib-example-comment">
+		&lt;div class="modal fade" id="bui-lib-example-modal"&gt;
+		  &lt;div class="modal-dialog"&gt;
+		    &lt;div class="modal-content"&gt;
+		      &lt;div class="modal-header"&gt;
+		        &lt;button type="button" class="close" data-dismiss="modal"&gt;&lt;/button&gt;
+		        &lt;h4 class="modal-title"&gt;Modal title&lt;/h4&gt;
+		      &lt;/div&gt;
+		      &lt;div class="modal-body"&gt;
+		        &lt;p&gt;One fine body&hellip;&lt;/p&gt;
+		      &lt;/div&gt;
+		      &lt;div class="modal-footer"&gt;
+		        &lt;button type="button" class="btn btn-cancel" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+		        &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+		      &lt;/div&gt;
+		    &lt;/div&gt;&lt;!-- /.modal-content --&gt;
+		  &lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
+		&lt;/div&gt;&lt;!-- /.modal --&gt;
+	</pre>
 	<h2>Header</h2>
 	<h3>Title + Optional Drop-Down Menu:</h3>
 	<p><strong>Usage:</strong> The title should be short and descriptive. This title may be displayed as a Drop-Down menu in situations where the modal features a number of categories (e.g. the project menu in the survey building app).</p>
@@ -713,162 +755,117 @@
 	<h3>Close "x" Button</h3>
 	<p><strong>Usage:</strong> A stand alone “x” icon (never the letter "x" or "X") used to close out of a modal, should always appear in the top right corner.</p>
 	<p><strong>Rules:</strong> Equivalent to cancel, any changes made and not executed should be backed out to the previous state.</p>
-	<div class="example popup-bg">
-		<div class="ex-modal-header clr">
-			<h3>Header Text</h3>
-			<button type="button" class="close icon-close"></button>
-			<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
-		</div>
-	</div>
-
 	<h2>Content Area</h2>
 	<p><strong>Usage:</strong> Any associated content should be displayed in here.</p>
 	<p><strong>Rules:</strong> Do not use panel or accordion menus inside modals.</p>
-	<div class="example popup-bg">
-		<div class="ex-modal-body">
-			<p>This is the body of a modal.</p>
-		</div>
-	</div>
-
 	<h2>Footer</h2>
 	<p><strong>Usage:</strong> The footer of a modal should contain any buttons related to submitting, canceling, or saving the content. There may also be checkboxes that appear for settings related to the modal (e.g. “Show this screen for new projects”).</p>
 	<p><strong>Rules:</strong> The primary button should always be the furthest right aligned, with secondary buttons to the left of that, and a cancel button to the left of all buttons. Any checkboxes in the footer should be aligned to the left.</p>
-	<div class="example popup-bg">
-		<div class="ex-modal-footer clr">
-			<p><input type="checkbox">Set as Default.</p>
-			<button type="button" title="Save" class="btn btn-primary">Save</button>
-			<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
-		</div>
-	</div>
 
 	<h2>Sizes</h2>
-	<p>All size selections are responsive, relying on a max-width setting.</p>
+	<p>Use bootstraps native modal sizes.</p>
 	<h3>Small</h3>
-	<div class="example popup-bg">
-		<div class="modal modal-small">
-			<div class="modal-header clr">
-				<h3>Header Text</h3>
-				<button type="button" class="close icon-close"></button>
-				<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
-			</div>
-			<div class="modal-body clr">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id recusandae autem debitis possimus consequuntur aperiam distinctio necessitatibus accusamus deserunt iste.</p>
-			</div>
-			<div class="modal-footer clr">
-				<p><input type="checkbox">Set as Default.</p>
-				<button type="button" title="Save" class="btn btn-primary">Save</button>
-				<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
-			</div>
-		</div>
-	</div>
-
-	<h3>Default</h3>
-	<div class="example popup-bg">
-		<div class="modal">
-			<div class="modal-header clr">
-				<h3>Header Text</h3>
-				<button type="button" class="close icon-close"></button>
-				<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
-			</div>
-			<div class="modal-body clr">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, id a similique odio architecto quae deleniti eius tenetur rerum dolorem obcaecati quis porro necessitatibus minima recusandae veritatis hic possimus iste pariatur nostrum eligendi! Beatae, laudantium, impedit repellendus voluptatibus blanditiis doloribus maiores libero optio nostrum sed dolorem ipsum illo voluptates modi?</p>
-			</div>
-			<div class="modal-footer clr">
-				<p><input type="checkbox">Set as Default.</p>
-				<button type="button" title="Save" class="btn btn-primary">Save</button>
-				<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
-			</div>
-		</div>
+	<p>Add <code>modal-sm</code> class to <code>modal-dialog</code>.</p>
+	<div class="bui-lib-example">
+		<div class="modal fade in" style="display:block; position: static; z-index: 5;">
+		  <div class="modal-dialog modal-sm" style="z-index: 10;">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"></button>
+		        <h4 class="modal-title">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p>One small body&hellip;</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="modal-backdrop fade in" style="position: absolute; z-index: 1;"></div>
 	</div>
 
 	<h3>Large</h3>
-	<div class="example popup-bg">
-		<div class="modal modal-large">
-			<div class="modal-header clr">
-				<h3>Header Text</h3>
-				<button type="button" class="close icon-close"></button>
-				<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
-			</div>
-			<div class="modal-body clr">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, id a similique odio architecto quae deleniti eius tenetur rerum dolorem obcaecati quis porro necessitatibus minima recusandae veritatis hic possimus iste pariatur nostrum eligendi! Beatae, laudantium, impedit repellendus voluptatibus blanditiis doloribus maiores libero optio nostrum sed dolorem ipsum illo voluptates modi?</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, soluta, excepturi, deserunt explicabo animi veritatis necessitatibus ratione iure ducimus officiis at aperiam sequi rerum voluptatum eveniet aspernatur accusamus fugit odio aut nam. Expedita, exercitationem, asperiores atque alias fuga cupiditate nihil consectetur voluptates debitis nesciunt ratione omnis odio ut veritatis veniam. At, et, cum architecto corporis enim consequatur hic assumenda excepturi tempora laborum distinctio nostrum veniam animi voluptatibus odit. Temporibus, pariatur, aut optio consequuntur accusantium harum veniam eaque dicta ipsum suscipit commodi totam cum eligendi quaerat deleniti fugit quae alias porro fuga laudantium vel ex magnam natus libero praesentium. Dicta, accusamus!</p>
-			</div>
-			<div class="modal-footer clr">
-				<p><input type="checkbox">Set as Default.</p>
-				<button type="button" title="Save" class="btn btn-primary">Save</button>
-				<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
-			</div>
-		</div>
+	<p>Add <code>modal-lg</code> class to <code>modal-dialog</code>.</p>
+	<div class="bui-lib-example">
+		<div class="modal fade in" style="display:block; position: static; z-index: 5;">
+		  <div class="modal-dialog modal-lg" style="z-index: 10;">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"></button>
+		        <h4 class="modal-title">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p>One large body&hellip;</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="modal-backdrop fade in" style="position: absolute; z-index: 1;"></div>
 	</div>
 
-	<h2>Animation</h2>
-	<h3>Standard Appear &amp; Disappear</h3>
-	<div class="example">
-		<button role="button" class="btn btn-primary standard-appear-show">Standard Animation Demo</button>
-		<div id="standard" class="standard-appear hidden">
-			<div class="modal">
-				<div class="modal-header clr">
-					<h3>Header Text</h3>
-					<button type="button" class="close icon-close"></button>
-					<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
-				</div>
-				<div class="modal-body clr">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, id a similique odio architecto quae deleniti eius tenetur rerum dolorem obcaecati quis porro necessitatibus minima recusandae veritatis hic possimus iste pariatur nostrum eligendi! Beatae, laudantium, impedit repellendus voluptatibus blanditiis doloribus maiores libero optio nostrum sed dolorem ipsum illo voluptates modi?</p>
-				</div>
-				<div class="modal-footer clr">
-					<p><input type="checkbox">Set as Default.</p>
-					<button type="button" title="Save" class="btn btn-primary">Save</button>
-					<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
-				</div>
-			</div>
-		</div>
+	<h2>Placement</h2>
+	<p>The standard modal is placed 30px from the top and will allow scrolling if the modals content is long (or if the user is on a device with a small viewport).</p>
+	<p>If your modal has very little content and you're sure the user won't need the ability to scroll, you can apply the custom BUI <code>modal-centered</code> class to <code>.modal</code>, and center the modal in the window.</p>
+	<div class="bui-lib-example">
+		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-centered">Centered Modal Demo</button>
+		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-top">Standard Modal With Scroll Demo</button>
+
+		<div class="modal fade modal-centered" id="bui-modal-demo-centered">
+		  <div class="modal-dialog modal-sm">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"></button>
+		        <h4 class="modal-title">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p>A tiny modal that will never scroll.</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="modal fade" id="bui-modal-demo-top">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"></button>
+		        <h4 class="modal-title">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        <h4>A big long modal!</h4>
+		        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At unde, porro assumenda neque tempore commodi provident sapiente dolorem labore voluptates laboriosam quasi laudantium recusandae quaerat perspiciatis accusantium sit ad quia cupiditate est! Nobis maxime repellat obcaecati sequi dolorum voluptatum tempora dignissimos accusamus magnam nisi eos harum, nesciunt rerum fugit adipisci consectetur laborum vel pariatur reprehenderit consequatur animi neque omnis architecto. Ducimus nemo non dolore cumque corporis dolorum magni earum quasi, ut minus illum distinctio! Ad illum quos esse pariatur, animi sequi enim ullam iste assumenda voluptatem perspiciatis, ducimus delectus. Dolores, nam laboriosam ab assumenda natus consequuntur accusantium esse quo, corrupti iure quasi! Adipisci soluta ratione eos sed pariatur hic nihil aliquam iure incidunt, ducimus ipsam enim facere, libero officia quas animi corporis eveniet magnam. Provident voluptatum sit mollitia, inventore rem doloribus aspernatur eligendi, alias dolores eaque sint, molestiae tenetur perferendis eum obcaecati deserunt sequi reprehenderit cumque maxime facere, modi ex ipsam aut optio! Repellat accusantium accusamus vel, ratione fugit vero possimus ab eum ipsa voluptas ullam suscipit aliquam atque minus! Ut quod, officiis necessitatibus laborum expedita eveniet deleniti. Tempore, ratione provident commodi natus beatae obcaecati explicabo. Expedita cupiditate temporibus fugiat est quos earum necessitatibus autem soluta odio enim quas illum unde dignissimos cumque voluptate ipsa amet labore quis eos commodi dicta vitae quibusdam tempora, maxime. Illo laboriosam quibusdam neque repellendus ab soluta perspiciatis nam deleniti aliquid accusantium omnis alias vero fugiat sunt ex ea, nemo atque dolorem odio, at sapiente. Quae quaerat explicabo veritatis eum, praesentium voluptatum mollitia ratione magni soluta officiis aliquid suscipit unde maiores dolore in possimus et. Debitis laboriosam nostrum perferendis magnam. Harum officia, beatae fugit eos. Illum rerum eum minus accusamus, reprehenderit quas qui similique assumenda ipsum cumque unde, a, sequi veniam ex dolorem doloribus voluptas temporibus deleniti autem consequuntur aliquid maiores voluptate. Magnam, quaerat nihil fugit velit accusantium eligendi pariatur minima consequatur esse, voluptates, dignissimos possimus, facilis sit eos adipisci provident aut dolorem. Laborum libero architecto dicta sunt esse saepe sint mollitia quidem quo minima, voluptatum aperiam error! Tempore aperiam quis repellat doloremque. Quis aliquam quaerat rerum totam qui atque cupiditate, inventore deserunt nihil aliquid animi enim hic vel ducimus dicta beatae voluptate facere voluptates commodi nostrum nemo non, temporibus doloremque. Libero qui aliquam, ad natus unde cupiditate similique, ex eaque. Tenetur corporis hic mollitia dicta velit molestiae consequatur, pariatur dolores voluptate accusamus fugit quisquam porro, omnis possimus explicabo ea id deleniti repudiandae fuga nobis!</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 	</div>
+
+
+
+<!-- 	<h2>Animation</h2>
+	<h3>Standard Appear &amp; Disappear</h3>
 
 	<h3>Alert Appear</h3>
 	<p>To be used when an unrequested modal appears to deliver a critical message.</p>
-	<div class="example">
-		<button role="button" class="btn btn-primary alert-appear-show">Alert Animation Demo</button>
-		<div class="alert-appear hidden">
-			<div class="modal">
-				<div class="modal-header clr">
-					<h3>Header Text</h3>
-					<button type="button" class="close icon-close"></button>
-					<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
-				</div>
-				<div class="modal-body clr">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, id a similique odio architecto quae deleniti eius tenetur rerum dolorem obcaecati quis porro necessitatibus minima recusandae veritatis hic possimus iste pariatur nostrum eligendi! Beatae, laudantium, impedit repellendus voluptatibus blanditiis doloribus maiores libero optio nostrum sed dolorem ipsum illo voluptates modi?</p>
-				</div>
-				<div class="modal-footer clr">
-					<p><input type="checkbox">Set as Default.</p>
-					<button type="button" title="Save" class="btn btn-primary">Save</button>
-					<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<h3>Failed Validation</h3>
-	<p>Triggered when a form inside of a modal fails to validate.</p>
-	<div class="example">
-		<button role="button" class="btn btn-primary failed-validate-show">Failed Validate Demo</button>
-		<div id="failed-validate" class="standard-appear hidden">
-			<div id="failed-validate-box" class="modal">
-				<div class="modal-header clr">
-					<h3>Header Text</h3>
-					<button type="button" class="close icon-close"></button>
-					<button type="button" class="btn-with-label"><span class="icon-kb"></span>Learn More</button>
-				</div>
-				<div class="modal-body clr">
-					<p>Click "Save" to see the failed validation animation.</p>
-				</div>
-				<div class="modal-footer clr">
-					<button type="button" title="Save" id="btn-failed-validate" class="btn btn-primary">Save</button>
-					<button type="button" title="Cancel" class="btn btn-cancel">Cancel</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
+	<p>Triggered when a form inside of a modal fails to validate.</p> -->
+
+</section>
 
 <!--************* TOOLTIPS *************-->
 <!-- 
@@ -1095,6 +1092,7 @@
 </div> <!-- end container -->
 <footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="bootstrap-3.1.1/dist/js/bootstrap.min.js"></script>
     <script>
         $(function() {
             $('.control-panel button').on('click', function() {
@@ -1109,7 +1107,7 @@
                     me.removeClass('hover-state');
                 }
             });
-        });
+        });        
     </script>
     <style type="text/css">
         .control-panel {
@@ -1117,7 +1115,7 @@
             text-align: center;
             padding: 20px;
         }
-    </style>	
+    </style>
 </footer>
 </body>
 </html>

@@ -6655,267 +6655,116 @@ fieldset[disabled] .bui.bui-buttons .btn-link {
   font-size: 1.4em;
 }
 .bui.bui-modals .modal {
-  max-width: 45em;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 4px 5px 4px 4px;
-  box-shadow: 0 1px 15px 6px rgba(0, 0, 0, .25);
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
 }
-.bui.bui-modals .modal .modal-header {
+.bui.bui-modals .modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+     -moz-transition:    -moz-transform .3s ease-out;
+       -o-transition:      -o-transform .3s ease-out;
+          transition:         transform .3s ease-out;
+  -webkit-transform: translate(0, -25%);
+      -ms-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+}
+.bui.bui-modals .modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.bui.bui-modals .modal.fade.modal-centered .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+     -moz-transition:    -moz-transform .3s ease-out;
+       -o-transition:      -o-transform .3s ease-out;
+          transition:         transform .3s ease-out;
+  -webkit-transform: translate(-50%, -75%);
+      -ms-transform: translate(-50%, -75%);
+          transform: translate(-50%, -75%);
+}
+.bui.bui-modals .modal.in.modal-centered .modal-dialog {
+  -webkit-transform: translate(-50, -50);
+      -ms-transform: translate(-50, -50);
+          transform: translate(-50, -50);
+}
+.bui.bui-modals .modal-centered {
+  overflow-y: hidden;
+}
+.bui.bui-modals .modal-centered .modal-dialog {
   position: relative;
-  padding: .8rem 1rem;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+}
+.bui.bui-modals .modal-content {
+  background-color: #fff;
+  border: 0;
+  border-radius: 7px;
+}
+.bui.bui-modals .modal-header {
+  padding: 1.2em 1.5em;
   border-bottom: 1px solid #ddd;
 }
-.bui.bui-modals .modal .modal-header h3 {
-  float: left;
+.bui.bui-modals .modal-title {
   padding: 0;
   margin: 0;
   font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1em;
 }
-.bui.bui-modals .modal .modal-header button {
-  float: right;
-  padding: 2px;
-  margin: 0;
-}
-.bui.bui-modals .modal .modal-header button span {
-  margin-right: .1em;
-}
-.bui.bui-modals .modal .modal-header button.icon-close {
-  float: right;
-  padding: 0;
-  margin-left: 1em;
-  font-size: 1rem;
+.bui.bui-modals .modal-header .close {
+  margin-top: -.1em;
   color: #777;
-  background-color: transparent;
-}
-.bui.bui-modals .modal .modal-header button.icon-close:hover,
-.bui.bui-modals .modal .modal-header button.icon-close:focus {
-  color: #9e0b0f;
-  -webkit-transition: all 100ms ease-in-out;
-     -moz-transition: all 100ms ease-in-out;
-      -ms-transition: all 100ms ease-in-out;
-       -o-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out;
-}
-.bui.bui-modals .modal .modal-header button.icon-close:active {
-  color: #6e080a;
-  -webkit-transition: all 100ms ease-in-out;
-     -moz-transition: all 100ms ease-in-out;
-      -ms-transition: all 100ms ease-in-out;
-       -o-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out;
-}
-.bui.bui-modals .modal .modal-body {
-  padding: .5rem 1rem;
-}
-.bui.bui-modals .modal .modal-footer {
-  padding: .8rem 1rem;
-}
-.bui.bui-modals .modal .modal-footer button {
-  float: right;
-  margin-left: 1em;
-}
-.bui.bui-modals .modal .modal-footer p {
-  float: left;
-  margin: 4px 0 0;
-}
-.bui.bui-modals .modal .modal-footer p input {
-  position: relative;
-  bottom: 2px;
-  margin-right: .3em;
-}
-.bui.bui-modals .modal.modal-small {
-  max-width: 30em;
-}
-.bui.bui-modals .modal.modal-large {
-  max-width: 60em;
-}
-.bui.bui-modals .standard-appear {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1500;
-  width: 100%;
-  height: 100%;
-  padding: 2%;
-  background-color: rgba(0, 0, 0, .5);
-}
-.bui.bui-modals .standard-appear .modal {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  z-index: 2000;
-  margin: 0;
-}
-.bui.bui-modals .standard-appear.hidden {
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 100ms ease-in-out;
-     -moz-transition: all 100ms ease-in-out;
-      -ms-transition: all 100ms ease-in-out;
-       -o-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out;
-}
-.bui.bui-modals .standard-appear.hidden .modal {
-  -webkit-transition: all 100ms ease-in-out;
-     -moz-transition: all 100ms ease-in-out;
-      -ms-transition: all 100ms ease-in-out;
-       -o-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out;
-  transform: translate(-50%, -75%);
-}
-.bui.bui-modals .standard-appear.shown {
-  visibility: visible;
+  filter: alpha(opacity=100);
   opacity: 1;
-  -webkit-transition: all 100ms ease-in-out;
-     -moz-transition: all 100ms ease-in-out;
-      -ms-transition: all 100ms ease-in-out;
-       -o-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out;
 }
-.bui.bui-modals .standard-appear.shown .modal {
-  transition: all 200ms ease;
-  transform: translate(-50%, -50%);
+.bui.bui-modals .modal-header .close:before {
+  margin-right: .2rem;
+  font-family: "beacon-icons";
+  content: '\e802';
 }
-.bui.bui-modals .alert-appear {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1500;
-  width: 100%;
-  height: 100%;
-  padding: 2%;
-  background-color: rgba(0, 0, 0, .5);
-}
-.bui.bui-modals .alert-appear .modal {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  z-index: 2000;
-  margin: 0;
-  transform: translate(-50%, -50%);
-}
-.bui.bui-modals .alert-appear.hidden {
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 100ms ease-in-out;
-     -moz-transition: all 100ms ease-in-out;
-      -ms-transition: all 100ms ease-in-out;
-       -o-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out;
-}
-.bui.bui-modals .alert-appear.hidden .modal {
-  transition: all 50ms ease;
-  transform: scale(.7) translate(-70%, -70%);
-}
-.bui.bui-modals .alert-appear.shown {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: all 100ms ease-in-out;
-     -moz-transition: all 100ms ease-in-out;
-      -ms-transition: all 100ms ease-in-out;
-       -o-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out;
-}
-.bui.bui-modals .alert-appear.shown .modal {
-  transition: all 50ms ease;
-  transform: scale(1) translate(-50%, -50%);
-}
-.bui.bui-modals .shake {
-  animation: shake 300ms ease;
-}
-@keyframes shake {
-  0%,
-  100% {
-    transform: translate(-50%, -50%);
-  }
-  20%,
-  60% {
-    transform: translate(-52%, -50%);
-  }
-  40%,
-  80% {
-    transform: translate(-48%, -50%);
-  }
-}
-.bui.bui-modals .popup-bg {
-  background-color: rgba(0, 0, 0, .55);
-}
-.bui.bui-modals .ex-modal-header {
-  max-width: 40em;
-  padding: 1em 1.3em;
-  margin: 0 auto;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-  border-radius: 4px 5px 0 0;
-  box-shadow: 0 1px 15px 6px rgba(0, 0, 0, .25);
-}
-.bui.bui-modals .ex-modal-header h3 {
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-.bui.bui-modals .ex-modal-header button {
-  float: right;
-  padding: 2px;
-  margin: 0;
-}
-.bui.bui-modals .ex-modal-header button span {
-  margin-right: .1em;
-}
-.bui.bui-modals .ex-modal-header button.icon-close {
-  float: right;
-  padding: 0;
-  margin-left: .5em;
-  font-size: 1rem;
-  color: #777;
-  background-color: transparent;
-}
-.bui.bui-modals .ex-modal-header button.icon-close:hover,
-.bui.bui-modals .ex-modal-header button.icon-close:focus {
+.bui.bui-modals .modal-header .close:hover,
+.bui.bui-modals .modal-header .close:focus {
   color: #9e0b0f;
+  text-decoration: none;
+  cursor: pointer;
   -webkit-transition: all 100ms ease-in-out;
      -moz-transition: all 100ms ease-in-out;
       -ms-transition: all 100ms ease-in-out;
        -o-transition: all 100ms ease-in-out;
           transition: all 100ms ease-in-out;
 }
-.bui.bui-modals .ex-modal-header button.icon-close:active {
-  color: #6e080a;
-  -webkit-transition: all 100ms ease-in-out;
-     -moz-transition: all 100ms ease-in-out;
-      -ms-transition: all 100ms ease-in-out;
-       -o-transition: all 100ms ease-in-out;
-          transition: all 100ms ease-in-out;
+.bui.bui-modals .modal-header .close:active,
+.bui.bui-modals .modal-header .close.active {
+  color: #86090d;
 }
-.bui.bui-modals .ex-modal-body {
-  max-width: 40em;
-  padding: 1em 1.3em;
-  margin: 0 auto;
-  background-color: #fff;
-  box-shadow: 0 1px 15px 6px rgba(0, 0, 0, .25);
+.bui.bui-modals .modal-header .close.disabled,
+.bui.bui-modals .modal-header .close[disabled],
+fieldset[disabled] .bui.bui-modals .modal-header .close {
+  color: #bbb;
+  filter: alpha(opacity=100);
+  opacity: 1;
 }
-.bui.bui-modals .ex-modal-footer {
-  max-width: 40em;
-  padding: 1em 1.3em;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 0 0 4px 4px;
-  box-shadow: 0 1px 15px 6px rgba(0, 0, 0, .25);
+.bui.bui-modals .modal-header .close.disabled:hover,
+.bui.bui-modals .modal-header .close[disabled]:hover,
+fieldset[disabled] .bui.bui-modals .modal-header .close:hover,
+.bui.bui-modals .modal-header .close.disabled:focus,
+.bui.bui-modals .modal-header .close[disabled]:focus,
+fieldset[disabled] .bui.bui-modals .modal-header .close:focus,
+.bui.bui-modals .modal-header .close.disabled:active,
+.bui.bui-modals .modal-header .close[disabled]:active,
+fieldset[disabled] .bui.bui-modals .modal-header .close:active {
+  color: #bbb;
+  text-decoration: none;
 }
-.bui.bui-modals .ex-modal-footer button {
-  float: right;
-  margin-left: 1em;
+.bui.bui-modals .modal-body {
+  padding: 1.2rem 1.5rem;
 }
-.bui.bui-modals .ex-modal-footer p {
-  float: left;
-  padding: .3em;
-  margin: 0;
-}
-.bui.bui-modals .ex-modal-footer p input {
-  position: relative;
-  bottom: 1.5px;
-  margin-right: .3em;
+.bui.bui-modals .modal-footer {
+  padding: 1.2rem 1.5rem;
+  margin-top: 15px;
+  text-align: right;
+  border-top: 0;
 }
 .bui.bui-grid .container {
   padding-right: .5em;
