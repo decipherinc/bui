@@ -5633,7 +5633,6 @@ button.close {
 .bui.bui-normalize textarea {
   margin: 0;
   font: inherit;
-  color: inherit;
 }
 .bui.bui-normalize button {
   overflow: visible;
@@ -5734,13 +5733,6 @@ button.close {
   text-transform: none;
 
   speak: none;
-}
-.bui.bui-icons .iconsContainer i {
-  display: inline-block;
-  width: 1.2em;
-  font-family: 'beacon-icons';
-  font-style: normal;
-  text-align: center;
 }
 .bui.bui-icons .icon-build:before {
   content: '\e878';
@@ -8297,6 +8289,13 @@ fieldset[disabled] .bui.bui-buttons .btn-link:focus {
   .library-specific .color-info p {
     margin-bottom: -1em;
   }
+}
+.library-specific .iconsContainer i {
+  display: inline-block;
+  width: 1.2em;
+  font-family: 'beacon-icons';
+  font-style: normal;
+  text-align: center;
 }
 .library-specific .btn-default.hover-state {
   background-color: #efefef;
