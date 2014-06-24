@@ -20,13 +20,13 @@
     <button type="button" data-target="bui-normalize" title="Toggle Normalize" class="btn">Normalize</button>
 </div>
 
-<nav role="Navigation" class="main-nav">
-	<ul>
-		<a href="#orientation"><li>Orientation</li></a>
-		<a href="#framework"><li>Framework</li></a>
-		<a href="#colorPalette"><li>Color Palette</li></a>
-		<a href="#iconsAndImages"><li>Icons &amp; Images</li></a>
-		<a href="#buttons"><li>Buttons</li></a>
+<nav role="Navigation" class="bs-sidebar affix">
+	<ul class="nav bs-sidenav">
+		<li class="active"><a href="#orientation">Orientation</a></li>
+		<li><a href="#framework">Framework</a></li>
+		<li><a href="#colorPalette">Color Palette</a></li>
+		<li><a href="#iconsAndImages">Icons &amp; Images</a></li>
+		<li><a href="#buttons">Buttons</a></li>
 		<!-- <a href="#modals"><li>Modals</li></a> -->
 		<!-- <a href="#typography"><li>Typography</li></a> -->
 		<!-- <a href="#lists"><li>Lists</li></a> -->
@@ -446,7 +446,6 @@
 	<p><strong>Rules:</strong> May include an appropriate icon with text.</p>
 	<div class="bui-lib-example">
 		<button type="button" title="Standard Button" class="btn btn-default">Standard</button>
-		<button type="button" title="Standard Button on Hover" class="btn btn-default hover-state">Hover</button>
 		<button type="button" title="Standard Button when Disabled" class="btn btn-default" disabled="disabled">Disabled</button>
 		<button type="button" title="Standard Button with an Icon" class="btn btn-default"><span class="icon-add"> Icon + Text</span></button>
 	</div>
@@ -461,7 +460,6 @@
 	<p><strong>Rules:</strong> There shouldn’t be more than one primary button in any dialog/modal/interface.</p>
 	<div class="bui-lib-example">
 		<button type="button" title="Primary Button" class="btn btn-primary">Primary</button>
-		<button type="button" title="Primary Button on Hover" class="btn btn-primary hover-state">Hover</button>
 		<button type="button" title="Primary Button when Disabled" class="btn btn-primary" disabled="disabled">Disabled</button>
 	</div>
 	<div class="bui-lib-example-comment">
@@ -474,7 +472,6 @@
 	<p><strong>Rules:</strong> To avoid being confused with a standard link, these buttons must always be accompanied with an appropriate icon.</p>
 	<div class="bui-lib-example">
 		<button type="button" title="Icon with Label Button" class="btn btn-text icon-info">Icon + Label</button>
-		<button type="button" title="Icon with Label Button on Hover" class="btn btn-text icon-info hover-state">Hover</button>
 		<button type="button" title="Icon with Label Button when Disabled" class="btn btn-text icon-info" disabled="disabled">Disabled</button>
 	</div>
 	<div class="bui-lib-example-comment">
@@ -487,7 +484,6 @@
 	<p><strong>Rules:</strong> Maximum of one per application (although having none is fine).</p>
 	<div class="bui-lib-example">
 		<button type="button" title="Special Action Button" class="btn btn-special">Special</button>
-		<button type="button" title="Special Action on Hover" class="btn btn-special hover-state">Hover</button>
 		<button type="button" title="Special Action when Disabled" class="btn btn-special" disabled="disabled">Disabled</button>
 	</div>
 	<div class="bui-lib-example-comment">
@@ -499,9 +495,8 @@
 	<p><strong>Usage:</strong> Used in any dialog box/modal/menu where actions require a commit button, there should always be an option to cancel as well. Cancel should back out any changes that occurred and leave it in the previous state.</p>
 	<p><strong>Rules:</strong> Should always be placed to the left of a Primary of standard button.</p>
 	<div class="bui-lib-example">
-		<button type="button" title="Cancel Button" class="btn-cancel">Cancel</button>
-		<button type="button" title="Cancel Button on Hover" class="btn-cancel hover-state">Cancel</button>
-		<button type="button" title="Cancel Button when Disabled" class="btn-cancel" disabled="disabled">Cancel</button>
+		<button type="button" title="Cancel Button" class="btn btn-cancel">Cancel</button>
+		<button type="button" title="Cancel Button when Disabled" class="btn btn-cancel" disabled="disabled">Cancel</button>
 	</div>
 	<div class="bui-lib-example-comment">
 		<p>&lt;button class="btn btn-cancel"&gt;Cancel&lt;/button&gt;</p>
@@ -513,7 +508,6 @@
 	<p><strong>Rules:</strong> Typically placed on the far right side in table rows. It may be appropriate to have a confirmation alert if the action cannot be undone.</p>
 	<div class="bui-lib-example">
 		<button class="btn btn-remove" title="Delete Button"></button>
-		<button class="btn btn-remove hover-state" title="Delete Button on Hover"></button>
 		<button class="btn btn-remove" disabled="disabled" title="Delete Button when Disabled"></button>
 	</div>
 	<div class="bui-lib-example-comment">
@@ -526,7 +520,6 @@
 	<p><strong>Rules:</strong> No accompanying text with an icon button. Icon buttons must have descriptive tooltips that should appear on hover after a short delay.</p>
 	<div class="bui-lib-example">
 		<button role="button" title="Icon Button" class="btn btn-icon icon-sort-by"></button>
-		<button role="button" title="Icon Button on Hover" class="btn btn-icon icon-sort-by hover-state"></button>
 		<button role="button" title="Icon Button when Disabled" class="btn btn-icon icon-sort-by" disabled="disabled"></button>
 		<button role="button" title="Icon Button when Selected" class="btn btn-icon icon-sort-by active"></button>
 	</div>
@@ -546,7 +539,6 @@
 	</ul>
 	<div class="bui-lib-example">
 		<button type="button" class="btn btn-link">Button Link</button>
-		<button type="button" class="btn btn-link hover-state">Hover</button>
 		<button type="button" class="btn btn-link" disabled="disabled">Disabled</button>
 	</div>
 	<div class="bui-lib-example-comment">

@@ -9,9 +9,13 @@
 
 	.btn {
 		&:active, &.active {
-			-webkit-box-shadow: 0 0 0 0;
-			box-shadow: 0 0 0 0;
+			.box-shadow(none);
 		}
+	  &.disabled,
+	  &[disabled],
+	  fieldset[disabled] & {
+	    .opacity(.45);
+	  }
 	}
 
 	.btn-default {
@@ -97,6 +101,16 @@
 			color: darken(@color-red, 5%);
 			text-decoration: underline;
 		}
+	  &.disabled,
+	  &[disabled],
+	  fieldset[disabled] & {
+			color: @color-frame;
+			.opacity(1);
+			&:hover, &:focus, &:active {
+				text-decoration: none;
+				color: @color-frame;
+			}
+	  }
 	}
 
 	.btn-remove {
@@ -115,11 +129,10 @@
 			font-family: "beacon-icons";
 	    font-style: normal;
 	    font-weight: normal;
-	    speak: none;
+	    speak: "Remove";
 	    display: inline-block;
 	    text-decoration: inherit;
 	    width: 1em;
-	    margin-right: .2em;
 	    text-align: center;
 	    font-variant: normal;
 	    text-transform: none;
@@ -127,6 +140,12 @@
 	    margin-left: .2em;
 			content: '\e801';
 		}
+	  &.disabled,
+	  &[disabled],
+	  fieldset[disabled] & {
+			color: @color-frame;
+			.opacity(1);
+	  }
 	}
 
 	.btn-icon {
@@ -151,6 +170,12 @@
 				background-color: transparent;
 			}
 		}
+	  &.disabled,
+	  &[disabled],
+	  fieldset[disabled] & {
+			color: @color-frame;
+			.opacity(1);
+	  }
 	}
 
 	.btn-link {
@@ -180,11 +205,7 @@
 	  &.disabled,
 	  &[disabled],
 	  fieldset[disabled] & {
-	    &:hover,
-	    &:focus {
-	    	color: #000;
-	      text-decoration: none;
-	    }
+	    .opacity(.35);
 	  }
 	}
 

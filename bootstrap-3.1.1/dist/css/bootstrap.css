@@ -6367,8 +6367,14 @@ button.close {
 }
 .bui.bui-buttons .btn:active,
 .bui.bui-buttons .btn.active {
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.bui.bui-buttons .btn.disabled,
+.bui.bui-buttons .btn[disabled],
+fieldset[disabled] .bui.bui-buttons .btn {
+  filter: alpha(opacity=45);
+  opacity: .45;
 }
 .bui.bui-buttons .btn-default {
   padding: 5px 10px;
@@ -6498,6 +6504,25 @@ button.close {
   color: #86090d;
   text-decoration: underline;
 }
+.bui.bui-buttons .btn-cancel.disabled,
+.bui.bui-buttons .btn-cancel[disabled],
+fieldset[disabled] .bui.bui-buttons .btn-cancel {
+  color: #ddd;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+.bui.bui-buttons .btn-cancel.disabled:hover,
+.bui.bui-buttons .btn-cancel[disabled]:hover,
+fieldset[disabled] .bui.bui-buttons .btn-cancel:hover,
+.bui.bui-buttons .btn-cancel.disabled:focus,
+.bui.bui-buttons .btn-cancel[disabled]:focus,
+fieldset[disabled] .bui.bui-buttons .btn-cancel:focus,
+.bui.bui-buttons .btn-cancel.disabled:active,
+.bui.bui-buttons .btn-cancel[disabled]:active,
+fieldset[disabled] .bui.bui-buttons .btn-cancel:active {
+  color: #ddd;
+  text-decoration: none;
+}
 .bui.bui-buttons .btn-remove {
   padding: 0;
   font-size: 1.5rem;
@@ -6520,7 +6545,6 @@ button.close {
 .bui.bui-buttons .btn-remove:before {
   display: inline-block;
   width: 1em;
-  margin-right: .2em;
   margin-left: .2em;
   font-family: "beacon-icons";
   font-style: normal;
@@ -6532,7 +6556,14 @@ button.close {
   text-transform: none;
   content: '\e801';
 
-  speak: none;
+  speak: "Remove";
+}
+.bui.bui-buttons .btn-remove.disabled,
+.bui.bui-buttons .btn-remove[disabled],
+fieldset[disabled] .bui.bui-buttons .btn-remove {
+  color: #ddd;
+  filter: alpha(opacity=100);
+  opacity: 1;
 }
 .bui.bui-buttons .btn-icon {
   padding: 2px 2px;
@@ -6562,6 +6593,13 @@ button.close {
   color: #777;
   background-color: transparent;
 }
+.bui.bui-buttons .btn-icon.disabled,
+.bui.bui-buttons .btn-icon[disabled],
+fieldset[disabled] .bui.bui-buttons .btn-icon {
+  color: #ddd;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
 .bui.bui-buttons .btn-link {
   font-weight: normal;
   color: #0086ab;
@@ -6588,28 +6626,11 @@ fieldset[disabled] .bui.bui-buttons .btn-link {
   text-decoration: underline;
   background-color: transparent;
 }
-.bui.bui-buttons .btn-link.disabled:hover,
-.bui.bui-buttons .btn-link[disabled]:hover,
-fieldset[disabled] .bui.bui-buttons .btn-link:hover,
-.bui.bui-buttons .btn-link.disabled:focus,
-.bui.bui-buttons .btn-link[disabled]:focus,
-fieldset[disabled] .bui.bui-buttons .btn-link:focus {
-  color: #000;
-  text-decoration: none;
-}
-.bui.bui-buttons .btn-xs {
-  padding: 2px 6px;
-  font-size: .8em;
-  border-radius: 2px;
-}
-.bui.bui-buttons .btn-sm {
-  padding: 2px 6px;
-  font-size: .9em;
-  border-radius: 2px;
-}
-.bui.bui-buttons .btn-lg {
-  padding: 5px 12px;
-  font-size: 1.4em;
+.bui.bui-buttons .btn-link.disabled,
+.bui.bui-buttons .btn-link[disabled],
+fieldset[disabled] .bui.bui-buttons .btn-link {
+  filter: alpha(opacity=35);
+  opacity: .35;
 }
 .bui.bui-modals .modal {
   max-width: 45em;
@@ -8296,73 +8317,6 @@ fieldset[disabled] .bui.bui-buttons .btn-link:focus {
   font-family: 'beacon-icons';
   font-style: normal;
   text-align: center;
-}
-.library-specific .btn-default.hover-state {
-  background-color: #efefef;
-}
-.library-specific .btn-default.hover-state:hover,
-.library-specific .btn-default.hover-state:focus {
-  background-color: #efefef;
-}
-.library-specific .btn-default.hover-state:active {
-  background-color: #dfdfdf;
-}
-.library-specific .btn-primary.hover-state {
-  color: #fff;
-  background: linear-gradient(to bottom, #009ac4 0%, #009ac4 100%);
-}
-.library-specific .btn-primary.hover-state:active {
-  background: linear-gradient(to bottom, #008eb5 0%, #0092ba 100%);
-}
-.library-specific .btn-with-label.hover-state {
-  color: #009ac4;
-}
-.library-specific .btn-with-label.hover-state:active {
-  color: #007ea1;
-}
-.library-specific .btn-special.hover-state {
-  color: #fff;
-  background-image: -webkit-linear-gradient(top, #83d327 0%, #83d327 100%);
-  background-image:         linear-gradient(to bottom, #83d327 0%, #83d327 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff83d327', endColorstr='#ff83d327', GradientType=0);
-  background-repeat: repeat-x;
-}
-.library-specific .btn-special.hover-state:active {
-  background-image: -webkit-linear-gradient(top, #7bc625 0%, #7eca25 100%);
-  background-image:         linear-gradient(to bottom, #7bc625 0%, #7eca25 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7bc625', endColorstr='#ff7eca25', GradientType=0);
-  background-repeat: repeat-x;
-}
-.library-specific .btn-cancel.hover-state {
-  color: #9e0b0f;
-  text-decoration: underline;
-  cursor: pointer;
-  background-color: transparent;
-}
-.library-specific .btn-cancel.hover-state:active {
-  color: #86090d;
-  text-decoration: underline;
-}
-.library-specific .btn-remove.hover-state {
-  color: #9e0b0f;
-}
-.library-specific .btn-remove.hover-state:active {
-  color: #6e080a;
-}
-.library-specific .btn-icon.hover-state {
-  color: white;
-  background-color: #ff9117;
-          border-radius: 4px;
-
-  -webkit-border-radius: 4px;
-}
-.library-specific .btn-icon.hover-state:active {
-  background-color: #fc8500;
-}
-.library-specific .btn-link.hover-state {
-  color: #00aede;
-  text-decoration: underline;
-  background-color: transparent;
 }
 .library-specific .bui-lib-example-block {
   max-width: 400px;
