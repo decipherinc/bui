@@ -1,5 +1,7 @@
 NOTES TO YOU:
-Don't worry about the .codekit-config or cache folder, Brandon uses it only for running a local server and seeing results update in the browser. Nothing is compiled with it, compiling less and js is done by using the grunt file in /bootstrap.
+
+.codekit-config ?
+      Don't worry about the .codekit-config or cache folder, Brandon uses it only for running a local server and seeing results update in the browser. Nothing is compiled with it, compiling less and js is done by using the grunt file in /bootstrap.
 
 
 
@@ -7,8 +9,6 @@ Don't worry about the .codekit-config or cache folder, Brandon uses it only for 
 
 
 TODO:
-
-Buttons - link buttons need to look more disabled when they are so.
 
 Need prefix on bootstrap overrides in _variables
 
