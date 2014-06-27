@@ -6546,7 +6546,8 @@ fieldset[disabled] .bui.bui-buttons .btn-cancel:active {
   color: #9e0b0f;
 }
 .bui.bui-buttons .btn-remove:active,
-.bui.bui-buttons .btn-remove.active {
+.bui.bui-buttons .btn-remove.active,
+.bui.bui-buttons .btn-remove.selected {
   color: #6e080a;
 }
 .bui.bui-buttons .btn-remove:before {
@@ -6606,6 +6607,28 @@ fieldset[disabled] .bui.bui-buttons .btn-icon {
   color: #bbb;
   filter: alpha(opacity=100);
   opacity: 1;
+}
+.bui.bui-buttons .btn-toggle {
+  padding: 3px 6px;
+  font-size: .8em;
+  background-color: #e7e7e7;
+  border-radius: 3px;
+}
+.bui.bui-buttons .btn-toggle:hover,
+.bui.bui-buttons .btn-toggle:focus {
+  background-color: #efefef;
+  -webkit-transition: all 100ms ease-in-out;
+     -moz-transition: all 100ms ease-in-out;
+      -ms-transition: all 100ms ease-in-out;
+       -o-transition: all 100ms ease-in-out;
+          transition: all 100ms ease-in-out;
+}
+.bui.bui-buttons .btn-toggle:active,
+.bui.bui-buttons .btn-toggle.active,
+.bui.bui-buttons .btn-toggle.selected {
+  color: #fff;
+  background-color: #ff9117;
+  outline: 0;
 }
 .bui.bui-buttons .btn-link {
   font-weight: normal;
@@ -6758,11 +6781,11 @@ fieldset[disabled] .bui.bui-modals .modal-header .close:active {
   text-decoration: none;
 }
 .bui.bui-modals .modal-body {
-  padding: 1.2rem 1.5rem;
+  padding: .2rem 1.5rem;
 }
 .bui.bui-modals .modal-footer {
-  padding: 1.2rem 1.5rem;
-  margin-top: 15px;
+  padding: .5rem 1.5rem 1.2rem;
+  margin-top: 0;
   text-align: right;
   border-top: 0;
 }
@@ -8009,58 +8032,58 @@ fieldset[disabled] .bui.bui-modals .modal-header .close:active {
     margin-left: 0;
   }
 }
-.library-specific .container {
+.bui-library .library-specific .container {
   padding-bottom: 2em;
 }
-.library-specific section {
+.bui-library .library-specific section {
   margin-top: 3em;
 }
-.library-specific section h1 a {
+.bui-library .library-specific section h1 a {
   color: #333;
 }
-.library-specific section h1 a:hover,
-.library-specific section h1 a:focus,
-.library-specific section h1 a:active {
+.bui-library .library-specific section h1 a:hover,
+.bui-library .library-specific section h1 a:focus,
+.bui-library .library-specific section h1 a:active {
   color: #333;
   text-decoration: none;
   cursor: normal;
 }
 @media (min-width: 768px) {
-  .library-specific .bui .container {
+  .bui-library .library-specific .bui .container {
     width: 730px;
   }
 }
 @media (min-width: 800px) {
-  .library-specific html .bui {
+  .bui-library .library-specific html .bui {
     font-size: 100%;
   }
-  .library-specific html .bui .container {
+  .bui-library .library-specific html .bui .container {
     max-width: 65em;
   }
-  .library-specific html .bui header h1 {
+  .bui-library .library-specific html .bui header h1 {
     margin-bottom: .8em;
     margin-left: .8em;
     font-size: 2.3em;
   }
 }
 @media (min-width: 992px) {
-  .library-specific .bui .container {
+  .bui-library .library-specific .bui .container {
     width: 950px;
   }
 }
 @media (min-width: 1200px) {
-  .library-specific .bui .container {
+  .bui-library .library-specific .bui .container {
     width: 1150px;
   }
 }
-.library-specific .bui-lib-example {
+.bui-library .library-specific .bui-lib-example {
   position: relative;
   padding: 2rem 1rem 1rem 1rem;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
-.library-specific .bui-lib-example:before {
+.bui-library .library-specific .bui-lib-example:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -8071,7 +8094,7 @@ fieldset[disabled] .bui.bui-modals .modal-header .close:active {
   background-color: #ddd;
   border-radius: 4px 0 4px 0;
 }
-.library-specific .bui-lib-example-comment {
+.bui-library .library-specific .bui-lib-example-comment {
   position: relative;
   z-index: 5;
   width: 100%;
@@ -8081,15 +8104,22 @@ fieldset[disabled] .bui.bui-modals .modal-header .close:active {
   border: 1px solid #ddd;
   border-radius: 0 0 4px 4px;
 }
-.library-specific .example-framework-col {
+.bui-library .library-specific code {
+  color: #333;
+}
+.bui-library .library-specific code span {
+  font-style: default;
+  color: #ff9117;
+}
+.bui-library .library-specific .example-framework-col {
   text-align: center;
   background-color: #f1f1f1;
   border: 1px solid #ddd;
 }
-.library-specific .color-swatches .row .col-sm-12 {
+.bui-library .library-specific .color-swatches .row .col-sm-12 {
   margin-bottom: 2em;
 }
-.library-specific .color-swatch {
+.bui-library .library-specific .color-swatch {
   float: left;
   width: 5rem;
   height: 5rem;
@@ -8099,97 +8129,97 @@ fieldset[disabled] .bui.bui-modals .modal-header .close:active {
   color: #fff;
   text-align: center;
 }
-.library-specific .color-info {
+.bui-library .library-specific .color-info {
   margin-top: -1.3em;
   margin-left: 7rem;
 }
-.library-specific .color-info h4 {
+.bui-library .library-specific .color-info h4 {
   margin-top: 1em;
   margin-bottom: -1em;
 }
-.library-specific .color-info p {
+.bui-library .library-specific .color-info p {
   margin-top: 1em;
   margin-bottom: -1em;
 }
-.library-specific .color-swatch.color-bg {
+.bui-library .library-specific .color-swatch.color-bg {
   color: #333;
   background: #fff;
   border: 1px solid #ddd;
 }
-.library-specific .color-swatch.color-t {
+.bui-library .library-specific .color-swatch.color-t {
   background: #333;
 }
-.library-specific .color-swatch.color-7 {
+.bui-library .library-specific .color-swatch.color-7 {
   background: #777;
 }
-.library-specific .color-swatch.color-b {
+.bui-library .library-specific .color-swatch.color-b {
   background: #bbb;
 }
-.library-specific .color-swatch.color-d {
+.bui-library .library-specific .color-swatch.color-d {
   background: #ddd;
 }
-.library-specific .color-swatch.color-bl {
+.bui-library .library-specific .color-swatch.color-bl {
   background: #0086ab;
 }
-.library-specific .color-swatch.color-bh {
+.bui-library .library-specific .color-swatch.color-bh {
   background: #009ac4;
 }
-.library-specific .color-swatch.color-o {
+.bui-library .library-specific .color-swatch.color-o {
   background: #ff9117;
 }
-.library-specific .color-swatch.color-g {
+.bui-library .library-specific .color-swatch.color-g {
   background: #76bd23;
 }
-.library-specific .color-swatch.color-gh {
+.bui-library .library-specific .color-swatch.color-gh {
   background: #83d327;
 }
-.library-specific .color-swatch.color-h {
+.bui-library .library-specific .color-swatch.color-h {
   color: #333;
   background: #fff200;
 }
-.library-specific .color-swatch.color-i {
+.bui-library .library-specific .color-swatch.color-i {
   color: #333;
   background: #fffbcc;
 }
-.library-specific .color-swatch.color-c {
+.bui-library .library-specific .color-swatch.color-c {
   background: #9e0b0f;
 }
-.library-specific .color-swatch.color-tg {
+.bui-library .library-specific .color-swatch.color-tg {
   color: #333;
   background: #c5e8f6;
 }
-.library-specific .color-swatch.color-gt {
+.bui-library .library-specific .color-swatch.color-gt {
   color: #333;
   background: #83ceec;
 }
-.library-specific .color-swatch.color-bt {
+.bui-library .library-specific .color-swatch.color-bt {
   color: #333;
   background: #e7e7e7;
 }
 @media (min-width: 800px) {
-  .library-specific .color-container {
+  .bui-library .library-specific .color-container {
     float: left;
     width: 49%;
     margin-right: 1%;
   }
-  .library-specific .color-container:last-child {
+  .bui-library .library-specific .color-container:last-child {
     margin-right: 0;
   }
-  .library-specific .color-info h4 {
+  .bui-library .library-specific .color-info h4 {
     margin-bottom: -1em;
   }
-  .library-specific .color-info p {
+  .bui-library .library-specific .color-info p {
     margin-bottom: -1em;
   }
 }
-.library-specific .iconsContainer i {
+.bui-library .library-specific .iconsContainer i {
   display: inline-block;
   width: 1.2em;
   font-family: 'beacon-icons';
   font-style: normal;
   text-align: center;
 }
-.library-specific .bui-lib-example-block {
+.bui-library .library-specific .bui-lib-example-block {
   max-width: 400px;
   padding: 1em;
   margin: 1em;

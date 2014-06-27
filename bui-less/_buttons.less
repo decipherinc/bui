@@ -128,7 +128,7 @@
 		&:hover, &:focus {
 			color: @color-red;
 		}
-		&:active, &.active {
+		&:active, &.active, &.selected {
 			color: darken(@color-red, 10%);
 		}
 		&:before {
@@ -182,6 +182,22 @@
 			color: @color-disabled;
 			.opacity(1);
 	  }
+	}
+
+	.btn-toggle {
+		background-color: @color-button;
+		font-size: 0.8em;
+		padding: 3px 6px;
+		border-radius: 3px;
+		&:hover, &:focus{
+			background-color: lighten(@color-button, 3);
+			.transition;
+		}
+		&:active, &.active, &.selected {
+			background-color: @color-orange;
+			color: @color-bg;
+			outline: 0;
+		}
 	}
 
 	.btn-link {

@@ -1,221 +1,225 @@
-.library-specific {
-  .container {
-    padding-bottom: 2em;
-  }
+.bui-library {
+  .library-specific {
+    .container {
+      padding-bottom: 2em;
+    }
 
-  section {
-    margin-top: 3em;
-    h1 {
-      a {
-        color: @color-base;
-        &:hover, &:focus, &:active {
+    section {
+      margin-top: 3em;
+      h1 {
+        a {
           color: @color-base;
-          text-decoration: none;
-          cursor: normal;
+          &:hover, &:focus, &:active {
+            color: @color-base;
+            text-decoration: none;
+            cursor: normal;
+          }
         }
       }
     }
-  }
 
-  @media (min-width: 768px) {
-      @{prefix-word} .container {
-          width: 730px;
+    @media (min-width: 768px) {
+        @{prefix-word} .container {
+            width: 730px;
+        }
+    }
+
+    @media (min-width: 800px) {
+      html @{prefix-word} {
+        font-size:100%;
       }
-  }
-
-  @media (min-width: 800px) {
-    html @{prefix-word} {
-      font-size:100%;
-    }
-    html @{prefix-word} .container {
-      max-width: 65em;
-    }
-    html @{prefix-word} header h1 {
-      font-size: 2.3em;
-      margin-left: .8em;
-      margin-bottom: .8em;
-    }
-  }
-
-  @media (min-width: 992px) {
-      @{prefix-word} .container {
-          width: 950px;
+      html @{prefix-word} .container {
+        max-width: 65em;
       }
-  }
-  @media (min-width: 1200px) {
-      @{prefix-word} .container {
-          width: 1150px;
-      }
-  }
-
-  .bui-lib-example {
-    background-color: @color-bg;
-    border: 1px solid @color-frame;
-    border-radius: 4px;
-    padding: 2rem 1rem 1rem 1rem;
-    position: relative;
-    &:before {
-      content: "Example";
-      position: absolute;
-      font-size: 0.8rem;
-      top: 0;
-      left: 0;
-      padding: 0.25em 0.5em;
-      background-color: @color-frame;
-      color: @color-bg;
-      border-radius: 4px 0 4px 0;
-    }
-  }
-  .bui-lib-example-comment {
-    background-color: lighten(@color-frame, 10);
-    width: 100%;
-    border: 1px solid @color-frame;
-    border-radius: 0 0 4px 4px;
-    padding: 0.5em 1em;
-    margin-top: -5px;
-    position: relative;
-    z-index: 5;
-  }
-
-  // framework
-  .example-framework-col {
-    background-color: lighten(@color-frame, 8);
-    border: 1px solid @color-frame;
-    text-align: center;
-  }
-  
-
-  // colors
-  .color-swatches {
-    .row {
-      .col-sm-12 {
-        margin-bottom: 2em;
+      html @{prefix-word} header h1 {
+        font-size: 2.3em;
+        margin-left: .8em;
+        margin-bottom: .8em;
       }
     }
-  }
 
-  .color-swatch {
-    float: left;
-    width: 5rem;
-    height: 5rem;
-    line-height: 2.25em;
-    color: #fff;
-    text-align: center;
-    font-size: 2.25rem;
-    margin-left: 1rem;
-  }
-
-  .color-info {
-    margin-left: 7rem;
-    margin-top: -1.3em; // Had to add -margin, Wasn't aligning to top
-    h4 {
-      margin-top: 1em;
-      margin-bottom: -1em;
+    @media (min-width: 992px) {
+        @{prefix-word} .container {
+            width: 950px;
+        }
     }
-    p {
-      margin-top: 1em;
-      margin-bottom: -1em;
+    @media (min-width: 1200px) {
+        @{prefix-word} .container {
+            width: 1150px;
+        }
     }
-  }
 
-  .color-swatch.color-bg {
-    background: @color-bg;
-    color: @color-base;
-    border: 1px solid @color-frame;
-  }
-  .color-swatch.color-t {
-    background: @color-base;
-  }
-  .color-swatch.color-7 {
-    background: @color-remove;
-  }
-  .color-swatch.color-b {
-    background: @color-disabled;
-  }
-  .color-swatch.color-d {
-    background: @color-frame;
-  }
-  .color-swatch.color-bl {
-    background: @color-blue;
-  }
-  .color-swatch.color-bh {
-    background: lighten(@color-blue, 5%);
-  }
-  .color-swatch.color-o {
-    background: @color-orange;
-  }
-  .color-swatch.color-g {
-    background: @color-green;
-  }
-  .color-swatch.color-gh {
-    background: lighten(@color-green, 5%);
-  }
-  .color-swatch.color-h {
-    background: @color-highlight;
-    color: @color-base;
-  }
-  .color-swatch.color-i {
-    background: @color-active;
-    color: @color-base;
-  }
-  .color-swatch.color-c {
-    background: @color-red;
-  }
-  .color-swatch.color-tg {
-    background: @color-tag;
-    color: @color-base;
-  }
-  .color-swatch.color-gt {
-    background: darken(@color-tag, 15%);
-    color: @color-base
-  }
-  .color-swatch.color-bt {
-    background: @color-button;
-    color: @color-base;
-  }
+    .bui-lib-example {
+      background-color: @color-bg;
+      border: 1px solid @color-frame;
+      border-radius: 4px;
+      padding: 2rem 1rem 1rem 1rem;
+      position: relative;
+      &:before {
+        content: "Example";
+        position: absolute;
+        font-size: 0.8rem;
+        top: 0;
+        left: 0;
+        padding: 0.25em 0.5em;
+        background-color: @color-frame;
+        color: @color-bg;
+        border-radius: 4px 0 4px 0;
+      }
+    }
+    .bui-lib-example-comment {
+      background-color: lighten(@color-frame, 10);
+      width: 100%;
+      border: 1px solid @color-frame;
+      border-radius: 0 0 4px 4px;
+      padding: 0.5em 1em;
+      margin-top: -5px;
+      position: relative;
+      z-index: 5;
+    }
 
-  @media (min-width: 800px) {
-    .color-container {
+    code {
+      color: @color-base;
+      span {
+        color: @color-orange;
+        font-style: default;
+      }
+    }
+
+    // framework
+    .example-framework-col {
+      background-color: lighten(@color-frame, 8);
+      border: 1px solid @color-frame;
+      text-align: center;
+    }
+    
+
+    // colors
+    .color-swatches {
+      .row {
+        .col-sm-12 {
+          margin-bottom: 2em;
+        }
+      }
+    }
+
+    .color-swatch {
       float: left;
-      width: 49%;
-      margin-right: 1%;
-      &:last-child {
-        margin-right: 0;
-      }
+      width: 5rem;
+      height: 5rem;
+      line-height: 2.25em;
+      color: #fff;
+      text-align: center;
+      font-size: 2.25rem;
+      margin-left: 1rem;
     }
 
     .color-info {
+      margin-left: 7rem;
+      margin-top: -1.3em; // Had to add -margin, Wasn't aligning to top
       h4 {
+        margin-top: 1em;
         margin-bottom: -1em;
       }
       p {
+        margin-top: 1em;
         margin-bottom: -1em;
       }
     }
-  }
 
-  // icons
-  .iconsContainer {
-    i {
-      font-family: 'beacon-icons';
-      font-style: normal;
-      display: inline-block;
-      width: 1.2em;
-      text-align: center;
+    .color-swatch.color-bg {
+      background: @color-bg;
+      color: @color-base;
+      border: 1px solid @color-frame;
+    }
+    .color-swatch.color-t {
+      background: @color-base;
+    }
+    .color-swatch.color-7 {
+      background: @color-remove;
+    }
+    .color-swatch.color-b {
+      background: @color-disabled;
+    }
+    .color-swatch.color-d {
+      background: @color-frame;
+    }
+    .color-swatch.color-bl {
+      background: @color-blue;
+    }
+    .color-swatch.color-bh {
+      background: lighten(@color-blue, 5%);
+    }
+    .color-swatch.color-o {
+      background: @color-orange;
+    }
+    .color-swatch.color-g {
+      background: @color-green;
+    }
+    .color-swatch.color-gh {
+      background: lighten(@color-green, 5%);
+    }
+    .color-swatch.color-h {
+      background: @color-highlight;
+      color: @color-base;
+    }
+    .color-swatch.color-i {
+      background: @color-active;
+      color: @color-base;
+    }
+    .color-swatch.color-c {
+      background: @color-red;
+    }
+    .color-swatch.color-tg {
+      background: @color-tag;
+      color: @color-base;
+    }
+    .color-swatch.color-gt {
+      background: darken(@color-tag, 15%);
+      color: @color-base
+    }
+    .color-swatch.color-bt {
+      background: @color-button;
+      color: @color-base;
+    }
+
+    @media (min-width: 800px) {
+      .color-container {
+        float: left;
+        width: 49%;
+        margin-right: 1%;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .color-info {
+        h4 {
+          margin-bottom: -1em;
+        }
+        p {
+          margin-bottom: -1em;
+        }
+      }
+    }
+
+    // icons
+    .iconsContainer {
+      i {
+        font-family: 'beacon-icons';
+        font-style: normal;
+        display: inline-block;
+        width: 1.2em;
+        text-align: center;
+      }
+    }
+
+    // buttons
+    .bui-lib-example-block {
+      background-color: lighten(@color-orange, 35);
+      max-width: 400px;
+      margin: 1em;
+      padding: 1em;
     }
   }
-
-  // buttons
-  .bui-lib-example-block {
-    background-color: lighten(@color-orange, 35);
-    max-width: 400px;
-    margin: 1em;
-    padding: 1em;
-  }
 }
-
-
-
-
-
-

@@ -13,4 +13,33 @@ NOTES TO YOU:
 
 TODO:
 
+Add Grunt File: 
+Gregs grunt file: https://github.com/ggoforth/pencilem/blob/master/Gruntfile.js
+// spawning another grunt file
+grunt.registerTask('run-grunt', function () {
+    var done = this.async();
+    grunt.util.spawn({
+        grunt: true,
+        args: [''],
+        opts: {
+            cwd: 'app/components/jquery'
+        }
+    }, function (err, result, code) {
+        done();
+    });
+});
+
+Update icon button styling.
+
+Evaluate if bui should even be compiled with bootstrap.. or just added as a sepperate css file. It could reference bootstraps variables and mixens.
+
+
 Need prefix on bootstrap overrides in _variables
+
+Define the use of esc key to exit modals.
+
+
+
+
+PATTERN LIBRARY ADDITIONS:
+On/off buttons (languages in pattern lib full page) (called a toggle button)
