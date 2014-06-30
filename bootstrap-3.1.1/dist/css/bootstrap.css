@@ -6582,8 +6582,7 @@ fieldset[disabled] .bui.bui-buttons .btn-remove {
 }
 .bui.bui-buttons .btn-icon:hover,
 .bui.bui-buttons .btn-icon:focus {
-  color: white;
-  background-color: #ff9117;
+  color: #ffa94a;
   -webkit-transition: all 100ms ease-in-out;
      -moz-transition: all 100ms ease-in-out;
       -ms-transition: all 100ms ease-in-out;
@@ -6591,15 +6590,18 @@ fieldset[disabled] .bui.bui-buttons .btn-remove {
           transition: all 100ms ease-in-out;
 }
 .bui.bui-buttons .btn-icon:active {
-  background-color: #fc8500;
+  color: white;
+  background-color: #ff9117;
+  outline: 0;
 }
 .bui.bui-buttons .btn-icon.active {
-  color: #777;
-  background-color: transparent;
+  color: white;
+  background-color: #ff9117;
+  outline: 0;
 }
 .bui.bui-buttons .btn-icon.active:hover {
-  color: #777;
-  background-color: transparent;
+  color: white;
+  background-color: #ff9117;
 }
 .bui.bui-buttons .btn-icon.disabled,
 .bui.bui-buttons .btn-icon[disabled],
@@ -8032,58 +8034,161 @@ fieldset[disabled] .bui.bui-modals .modal-header .close:active {
     margin-left: 0;
   }
 }
-.bui-library .library-specific .container {
+.bui.bui-library .menu-btn {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 9999;
+  font-size: 1.4em;
+}
+.bui.bui-library .container {
   padding-bottom: 2em;
 }
-.bui-library .library-specific section {
+.bui.bui-library .menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -250px;
+  z-index: 9000;
+  width: 250px;
+  padding: 1em;
+  background-color: rgba(252, 252, 252, .8);
+  border-right: 1px solid #ddd;
+}
+.bui.bui-library .menu .navigation {
+  margin-top: 5em;
+}
+.bui.bui-library .menu .navigation ul {
+  padding: 0;
+}
+.bui.bui-library .menu .navigation ul li {
+  display: block;
+  margin-bottom: .8em;
+  list-style: none;
+}
+.bui.bui-library .menu .control-panel {
+  margin-top: 2em;
+}
+.bui.bui-library .menu .control-panel button {
+  display: block;
+  width: 100%;
+  margin-bottom: .5em;
+}
+.bui.bui-library .menu-open {
+  left: 0;
+  overflow-y: auto;
+  transition: all 200ms ease;
+}
+.bui.bui-library .library-header {
+  background-color: #efefef;
+  border-bottom: 1px solid #ddd;
+}
+.bui.bui-library .library-header .header-container {
+  max-width: 570px;
+  padding: 2em 0;
+  margin: 0 auto;
+}
+.bui.bui-library .library-header .bui-logo {
+  width: 100px;
+  height: 165px;
+  margin: 0 auto;
+}
+.bui.bui-library .library-header .header-title {
+  width: 100%;
+  text-align: center;
+}
+.bui.bui-library .library-header .header-title h1 {
+  margin-top: -.05em;
+  margin-bottom: 0;
+  font-size: 9em;
+  font-weight: bold;
+}
+.bui.bui-library .library-header .header-title h2 {
+  margin: 0;
+  font-size: 1.3em;
+}
+.bui.bui-library .library-header .header-title p {
+  max-width: 200px;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .bui.bui-library .library-header .header-container {
+    padding: 7em 0;
+  }
+  .bui.bui-library .library-header .bui-logo {
+    width: 200px;
+    height: 330px;
+    margin-right: 20px;
+  }
+  .bui.bui-library .library-header .header-title {
+    width: 350px;
+    text-align: left;
+  }
+  .bui.bui-library .library-header .header-title h1 {
+    font-size: 15em;
+  }
+  .bui.bui-library .library-header .header-title h2 {
+    margin: 0 0 0 .4em;
+    font-size: 2.15em;
+  }
+  .bui.bui-library .library-header .header-title p {
+    max-width: 100%;
+    padding: 0 1.1em;
+    text-align: left;
+  }
+}
+.bui.bui-library section {
   margin-top: 3em;
 }
-.bui-library .library-specific section h1 a {
+.bui.bui-library section h1 a {
   color: #333;
 }
-.bui-library .library-specific section h1 a:hover,
-.bui-library .library-specific section h1 a:focus,
-.bui-library .library-specific section h1 a:active {
+.bui.bui-library section h1 a:hover,
+.bui.bui-library section h1 a:focus,
+.bui.bui-library section h1 a:active {
   color: #333;
   text-decoration: none;
   cursor: normal;
 }
 @media (min-width: 768px) {
-  .bui-library .library-specific .bui .container {
+  .bui.bui-library .bui .container {
     width: 730px;
   }
 }
 @media (min-width: 800px) {
-  .bui-library .library-specific html .bui {
+  .bui.bui-library html .bui {
     font-size: 100%;
   }
-  .bui-library .library-specific html .bui .container {
+  .bui.bui-library html .bui .container {
     max-width: 65em;
   }
-  .bui-library .library-specific html .bui header h1 {
+  .bui.bui-library html .bui header h1 {
     margin-bottom: .8em;
     margin-left: .8em;
     font-size: 2.3em;
   }
 }
 @media (min-width: 992px) {
-  .bui-library .library-specific .bui .container {
+  .bui.bui-library .bui .container {
     width: 950px;
   }
 }
 @media (min-width: 1200px) {
-  .bui-library .library-specific .bui .container {
+  .bui.bui-library .bui .container {
     width: 1150px;
   }
 }
-.bui-library .library-specific .bui-lib-example {
+.bui.bui-library .bui-lib-example {
   position: relative;
   padding: 2rem 1rem 1rem 1rem;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
-.bui-library .library-specific .bui-lib-example:before {
+.bui.bui-library .bui-lib-example:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -8094,7 +8199,7 @@ fieldset[disabled] .bui.bui-modals .modal-header .close:active {
   background-color: #ddd;
   border-radius: 4px 0 4px 0;
 }
-.bui-library .library-specific .bui-lib-example-comment {
+.bui.bui-library .bui-lib-example-comment {
   position: relative;
   z-index: 5;
   width: 100%;
@@ -8104,22 +8209,22 @@ fieldset[disabled] .bui.bui-modals .modal-header .close:active {
   border: 1px solid #ddd;
   border-radius: 0 0 4px 4px;
 }
-.bui-library .library-specific code {
+.bui.bui-library code {
   color: #333;
 }
-.bui-library .library-specific code span {
+.bui.bui-library code span {
   font-style: default;
-  color: #ff9117;
+  color: #e37700;
 }
-.bui-library .library-specific .example-framework-col {
+.bui.bui-library .example-framework-col {
   text-align: center;
   background-color: #f1f1f1;
   border: 1px solid #ddd;
 }
-.bui-library .library-specific .color-swatches .row .col-sm-12 {
+.bui.bui-library .color-swatches .row .col-sm-12 {
   margin-bottom: 2em;
 }
-.bui-library .library-specific .color-swatch {
+.bui.bui-library .color-swatch {
   float: left;
   width: 5rem;
   height: 5rem;
@@ -8129,97 +8234,97 @@ fieldset[disabled] .bui.bui-modals .modal-header .close:active {
   color: #fff;
   text-align: center;
 }
-.bui-library .library-specific .color-info {
+.bui.bui-library .color-info {
   margin-top: -1.3em;
   margin-left: 7rem;
 }
-.bui-library .library-specific .color-info h4 {
+.bui.bui-library .color-info h4 {
   margin-top: 1em;
   margin-bottom: -1em;
 }
-.bui-library .library-specific .color-info p {
+.bui.bui-library .color-info p {
   margin-top: 1em;
   margin-bottom: -1em;
 }
-.bui-library .library-specific .color-swatch.color-bg {
+.bui.bui-library .color-swatch.color-bg {
   color: #333;
   background: #fff;
   border: 1px solid #ddd;
 }
-.bui-library .library-specific .color-swatch.color-t {
+.bui.bui-library .color-swatch.color-t {
   background: #333;
 }
-.bui-library .library-specific .color-swatch.color-7 {
+.bui.bui-library .color-swatch.color-7 {
   background: #777;
 }
-.bui-library .library-specific .color-swatch.color-b {
+.bui.bui-library .color-swatch.color-b {
   background: #bbb;
 }
-.bui-library .library-specific .color-swatch.color-d {
+.bui.bui-library .color-swatch.color-d {
   background: #ddd;
 }
-.bui-library .library-specific .color-swatch.color-bl {
+.bui.bui-library .color-swatch.color-bl {
   background: #0086ab;
 }
-.bui-library .library-specific .color-swatch.color-bh {
+.bui.bui-library .color-swatch.color-bh {
   background: #009ac4;
 }
-.bui-library .library-specific .color-swatch.color-o {
+.bui.bui-library .color-swatch.color-o {
   background: #ff9117;
 }
-.bui-library .library-specific .color-swatch.color-g {
+.bui.bui-library .color-swatch.color-g {
   background: #76bd23;
 }
-.bui-library .library-specific .color-swatch.color-gh {
+.bui.bui-library .color-swatch.color-gh {
   background: #83d327;
 }
-.bui-library .library-specific .color-swatch.color-h {
+.bui.bui-library .color-swatch.color-h {
   color: #333;
   background: #fff200;
 }
-.bui-library .library-specific .color-swatch.color-i {
+.bui.bui-library .color-swatch.color-i {
   color: #333;
   background: #fffbcc;
 }
-.bui-library .library-specific .color-swatch.color-c {
+.bui.bui-library .color-swatch.color-c {
   background: #9e0b0f;
 }
-.bui-library .library-specific .color-swatch.color-tg {
+.bui.bui-library .color-swatch.color-tg {
   color: #333;
   background: #c5e8f6;
 }
-.bui-library .library-specific .color-swatch.color-gt {
+.bui.bui-library .color-swatch.color-gt {
   color: #333;
   background: #83ceec;
 }
-.bui-library .library-specific .color-swatch.color-bt {
+.bui.bui-library .color-swatch.color-bt {
   color: #333;
   background: #e7e7e7;
 }
 @media (min-width: 800px) {
-  .bui-library .library-specific .color-container {
+  .bui.bui-library .color-container {
     float: left;
     width: 49%;
     margin-right: 1%;
   }
-  .bui-library .library-specific .color-container:last-child {
+  .bui.bui-library .color-container:last-child {
     margin-right: 0;
   }
-  .bui-library .library-specific .color-info h4 {
+  .bui.bui-library .color-info h4 {
     margin-bottom: -1em;
   }
-  .bui-library .library-specific .color-info p {
+  .bui.bui-library .color-info p {
     margin-bottom: -1em;
   }
 }
-.bui-library .library-specific .iconsContainer i {
+.bui.bui-library .iconsContainer i {
   display: inline-block;
   width: 1.2em;
   font-family: 'beacon-icons';
   font-style: normal;
   text-align: center;
 }
-.bui-library .library-specific .bui-lib-example-block {
+.bui.bui-library .bui-lib-example-block {
   max-width: 400px;
   padding: 1em;
   margin: 1em;

@@ -161,19 +161,21 @@
 		padding: 2px 2px;
 		border-radius: 4px;
 		&:hover, &:focus {
-			color: white;
-			background-color: @color-orange;
+			color: lighten(@color-orange, 10);
 			.transition;
 		}
 		&:active {
-			background-color: darken(@color-orange, 5%);
+			color: white;
+			background-color: @color-orange;
+			outline: 0;
 		}
 		&.active {
-			color: @color-remove;
-			background-color: transparent;
+			color: white;
+			background-color: @color-orange;
+			outline: 0;
 			&:hover {
-				color: @color-remove;
-				background-color: transparent;
+				color: white;
+				background-color: @color-orange;
 			}
 		}
 	  &.disabled,

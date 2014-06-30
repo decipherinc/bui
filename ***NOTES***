@@ -13,6 +13,10 @@ NOTES TO YOU:
 
 TODO:
 
+
+"everything" toggle is revealing a fullscreen bg div.
+
+
 Add Grunt File: 
 Gregs grunt file: https://github.com/ggoforth/pencilem/blob/master/Gruntfile.js
 // spawning another grunt file
@@ -29,7 +33,6 @@ grunt.registerTask('run-grunt', function () {
     });
 });
 
-Update icon button styling.
 
 Evaluate if bui should even be compiled with bootstrap.. or just added as a sepperate css file. It could reference bootstraps variables and mixens.
 
