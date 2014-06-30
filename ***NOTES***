@@ -4,34 +4,12 @@ NOTES TO YOU:
       Don't worry about the .codekit-config or cache folder, Brandon uses it only for running a local server and seeing results update in the browser. Nothing is compiled with it, compiling less and js is done by using the grunt file in /bootstrap.
 
 
+When adding: Make sure the style.less file references the bootstrap variables and mixens
 
 
 
-
-
-/////// customize modal animations (in bui's _modal.less).
 
 TODO:
-
-
-"everything" toggle is revealing a fullscreen bg div.
-
-
-Add Grunt File: 
-Gregs grunt file: https://github.com/ggoforth/pencilem/blob/master/Gruntfile.js
-// spawning another grunt file
-grunt.registerTask('run-grunt', function () {
-    var done = this.async();
-    grunt.util.spawn({
-        grunt: true,
-        args: [''],
-        opts: {
-            cwd: 'app/components/jquery'
-        }
-    }, function (err, result, code) {
-        done();
-    });
-});
 
 
 Evaluate if bui should even be compiled with bootstrap.. or just added as a sepperate css file. It could reference bootstraps variables and mixens.
@@ -40,9 +18,3 @@ Evaluate if bui should even be compiled with bootstrap.. or just added as a sepp
 Need prefix on bootstrap overrides in _variables
 
 Define the use of esc key to exit modals.
-
-
-
-
-PATTERN LIBRARY ADDITIONS:
-On/off buttons (languages in pattern lib full page) (called a toggle button)
