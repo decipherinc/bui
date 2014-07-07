@@ -12,25 +12,28 @@
     font-family: "Open Sans", Tahoma, sans-serif;
     line-height: 1;
     margin: 1.2rem 0;
+    font-weight: bold;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
   h2 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   h5 {
-    font-size: .8rem;
+    font-size: 1.1rem;
+    color: lighten(@color-base, 20);
   }
   h6 {
-    font-size: .6rem;
+    font-size: 1rem;
+    color: lighten(@color-base, 40);
   }
 
   a {
@@ -73,28 +76,18 @@
     font-weight: 400;
   }
 
-  .text-left {
-    text-align: left;
-  }
-
-  .text-center {
-    text-align: center;
-  }
-
-  .text-right {
-    text-align: right;
-  }
-
   .label {
     background-color: @color-button;
     color: @color-base;
     padding: .2em .8em;
+    -webkit-border-radius: 25px;
     border-radius: 25px;
   }
 
   .tag {
     background-color: @color-tag;
     padding: .2em .4em .2em .5em;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     a {
       font-size: .9em;
@@ -139,50 +132,5 @@
 
   dl dd {
     margin-left: .5em;
-  }
-
-  // ******* Library Specific ******* //
-  code {
-    background-color: lighten(@color-frame, 30%);
-    padding: .1em .4em;
-    line-height: 1.5em;
-    border: 1px solid @color-frame;
-  }
-
-  .thrsx {
-    font-size: 36px;
-  }
-  .thr {
-    font-size: 30px;
-  }
-  .twfr {
-    font-size: 24px;
-  }
-  .twone {
-    font-size: 21px;
-  }
-  .eightt {
-    font-size: 18px;
-  }
-  .sixt {
-    font-size: 16px;
-  }
-  .twelve {
-    font-size: 12px;
-  }
-  .ten {
-    font-size: 10px;
-  }
-  .number-ref {
-    color: @color-disabled;
-    font-size: .6rem;
-  }
-
-  p {
-    margin: 1em 0;
-  }
-
-  .inline {
-    margin: 1em 0;
   }
 } // end @{typo-prefix}

@@ -4,7 +4,7 @@ NOTES TO YOU:
       Don't worry about the .codekit-config or cache folder, Brandon uses it only for running a local server and seeing results update in the browser. Nothing is compiled with it, compiling less and js is done by using the grunt file in /bootstrap.
 
 
-When adding: Make sure the style.less file references the bootstrap variables and mixens
+When editing: Make sure the style.less file references the bootstrap variables and mixens
 
 
 
@@ -12,8 +12,10 @@ When adding: Make sure the style.less file references the bootstrap variables an
 TODO:
 
 
-Evaluate if bui should even be compiled with bootstrap.. or just added as a sepperate css file. It could reference bootstraps variables and mixens.
+Get Seth's help - extend the bs tooltip and popover functions to allow for data-learn-more="http://learnMoreLink"
 
+
+Make example of disabled toggle button
 
 Need prefix on bootstrap overrides in _variables
 

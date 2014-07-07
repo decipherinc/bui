@@ -1,5 +1,5 @@
 /*!
- * Bui's Gruntfile - Triggers Bootstrap Gruntfile when compiling.
+ * Bui's Gruntfile - handles bui's less files and demo-page-specific files (for the pattern library website)
  * http://decipher-design.com/bui
  */
 

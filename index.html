@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bui bui-normalize bui-grid bui-typography bui-icons bui-modals bui-buttons bui-library">
+<html lang="en" class="bui bui-normalize bui-grid bui-typography bui-icons bui-modals bui-buttons bui-tooltips bui-library">
 <head>
 	<meta charset="UTF-8">
 	<!-- Mobile Specific Metas
@@ -24,9 +24,9 @@
 			<li><a href="#colorPalette">Color Palette</a></li>
 			<li><a href="#iconsAndImages">Icons &amp; Images</a></li>
 			<li><a href="#buttons">Buttons</a></li>
+			<li><a href="#tooltips">Tooltips</a></li>
 			<li><a href="#modals">Modals</a></li>
-			<!-- <a href="#typography"><li>Typography</li></a> -->
-			<!-- <a href="#lists"><li>Lists</li></a> -->
+			<li><a href="#typography">Typography</a></li>
 		</ul>
 	</nav>
 
@@ -614,7 +614,96 @@
 		<p><code>&lt;button class="btn btn-default <span>btn-lg</span>"&gt;Large&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-default <span>btn-block</span>"&gt;Block&lt;/button&gt;</code></p>
 	</div>
+
+	<h2>Tags</h2>
+	<small>Concider this as just a style guideline for now. The actual implementation method needs to be fleshed out.</small>
+	<p>Tags are used for organizing projects. You can style a tag by giving it a <code>class=”tag”</code>.</p>
+	<div class="bui-lib-example">
+		<span class="tag">Decipher Inc<a class="icon-remove" href="#0"></a></span>
+	</div>
 </section>
+
+<!--************* TOOLTIPS *************-->
+
+<section>
+	<h1><a name="tooltips">Tooltips</a></h1>
+	<p>These definitions are for actual tooltips, styled and defined separately from tooltip menus/modals.</p>
+	<h2>Instant Tooltip</h2>
+	<p>A tooltip that appears on hover with no delay, containing minimal text. This type of tooltip should be used in instances where the interaction method isn’t immediately discernible, such as with icon buttons that don’t have supporting text.</p>
+	<p>This tooltip method requires strong visual contrast. Informing the user of the expected result from a potentially illusive interaction method is key to providing the intended efficiency benefits (and reducing possible frustrations).</p>
+	<div class="bui-lib-example">
+		<button class="btn btn-icon icon-menu tooltip-ex-static" data-toggle="tooltip" data-placement="top" title="Project Menu"></button>
+	</div>
+	<h3>Verbage</h3>
+	<p>Because this tooltip appears instantly, very minimal verbiage should be used. The user may experience multiple tooltips appearing as they rove around the page, so 4 to 5 words at the most is acceptable. Ideally, 1 or 2 words should be used.</p>
+	<h3>Placement and Animation</h3>
+	<p>For this tooltip method to be successful, it needs to be informative yet unobtrusive. Since these appear instantly on hover, there is a potential that a user may trigger multiple instances of these as they rove around the interface. Tooltips should preferably appear over whitespace without covering other UI elements (especially other interactive ones), but should also have a certain amount of consistency. For example, three icon buttons next to each other should have tooltips appear in the same direction, not in three different ones.</p>
+	<div class="bui-lib-example">
+		<h4>Bad.</h4>
+		<button class="btn btn-icon icon-list tooltip-ex-static" data-toggle="tooltip" data-placement="left" title="List View"></button>
+		<button class="btn btn-icon icon-tile tooltip-ex-static" data-toggle="tooltip" data-placement="bottom" title="Tile View"></button>
+		<button class="btn btn-icon icon-full tooltip-ex-static" data-toggle="tooltip" data-placement="right" title="Full View"></button>
+		<h4 style="margin-top:4em;">Good!</h4>
+		<p><small>Hover for tooltip:</small></p>
+		<button class="btn btn-icon icon-list bui-instant-tooltip" data-toggle="tooltip" data-placement="bottom" title="List View"></button>
+		<button class="btn btn-icon icon-tile bui-instant-tooltip" data-toggle="tooltip" data-placement="bottom" title="Tile View"></button>
+		<button class="btn btn-icon icon-full bui-instant-tooltip" data-toggle="tooltip" data-placement="bottom" title="Full View"></button>
+	</div>
+	<p>Although this tooltip is meant to appear instantly, to avoid confusing the user a very fast 100ms fade in helps tell the user that the tooltip has appeared. This also creates enough subtle motion to attract the eye. When the mouse leaves the hover area activating the tooltip, the tooltip fades away for 100ms.</p>
+	<div class="bui-lib-example" style="padding-top:4em;">
+		<button class="btn btn-text btn-large icon-add bui-instant-tooltip" data-toggle="tooltip" data-placement="auto" title="Awesome Tooltip">Hover Here</button>
+	</div>
+	<div class="bui-lib-example-comment">
+		<code>&lt;button class="btn btn-text btn-large icon-add <span>bui-instant-tooltip</span>" <span>data-toggle="tooltip" data-placement="auto" title="Awesome Tooltip"</span>&gt;Hover Here&lt;/button&gt;</code>
+	</div>
+	<p><strong>Code Note:</strong> Bootstrap powered tooltips must be initialized manually. To make things easier, add the class <code>bui-instant-tooltip</code> and the tooltip will be initialized automatically <em>(as long as your document includes bui-scripts.js)</em>. When dynamically creating contant that needs a tooltip, just run <code>buiTooltipInit();</code> to initialize any new tooltips.</p>
+	<p>Placement is set with the <code>data-placement=""</code> attribute. <code>"auto"</code> will make the tooltip appear on top unless it encounters a constraint in the viewport, at which point it will push to bottom, left, etc. The other available attributes are <code>"top"</code>, <code>"right"</code>, <code>"bottom"</code> or <code>"left"</code>.</p>
+
+	<h2 style="color:red;">Delayed Tooltip</h2>
+	<small style="color:red;">Being Developed</small>
+	<p>A tooltip that appears on hover after a short delay, possibly containing detailed information or even links to KB articles, etc. This type of tooltip should be used when an interaction method has some sort of label or cue to the expected outcome, but where more detailed information may be desirable. It can help to educate users in context.</p>
+	<p>Similar use of contrast as the instant tooltip, which will help differentiate informational tooltips from menu tooltips. A delayed tooltip contains a title (or main text), this may be the only content in the tooltip.</p>
+	<div class="bui-lib-example">
+		(EXAMPLE: static tooltip with just a title)
+	</div>
+	<p>If the interaction method is complicated or unique enough, there may be a need to include further information in the tooltip. An optional sentence or two may be added below the title, containing links if need be. A link may also appear in the top right for an easily visible “learn more” opportunity.</p>
+	<div class="bui-lib-example">
+		(EXAMPLE: static tooltip with title, further description and learn more link)
+	</div>
+	<h3>Verbage</h3>
+	<p>The tooltip title should be short and descriptive, preferably 1 or 2 words with a max of 4 or 5. Further information in paragraph form below the title should not be more than 1 or 2 sentences.</p>
+	<h3>Placement and Animation</h3>
+	<p>Because this tooltip has a delay before appearing, there is more forgiveness if it happens to cover other UI elements (it’s size may require it anyway). Therefore this tooltip should have more consistent placement, always appearing above the hovered element unless obstructed by the bounds of the viewport.</p>
+	<p>The tooltip should animate in after a 700ms delay, fading in for 200ms. When the mouse exits, the tooltip should immediately fade out for 100ms.</p>
+	<div class="bui-lib-example">
+		<p style="color:red; font-weight:bold;">Temporary Example:</p>
+		<img src="bui-img/temp-delayed-tooltip-ex.jpg" width="241" height="auto">
+	</div>
+	<div class="bui-lib-example-comment">
+		code
+	</div>
+	<h3>Note on Info Buttons</h3>
+	<p>The info button (<span class="icon-info" style="color:#0086AB;"></span>) tooltip content should appear after a standard delay, <strong>or</strong> immediately on click.</p>
+
+	<h2>Static</h2>
+	<p>A static tooltip not dependent on a hover action, usually appearing on an initial screen to guide a user toward an intended first action. This tooltip can easily be considered obstructive or distracting. It should only be used if user testing has demonstrated its usefulness.</p>
+	<p>Because this tooltip is static and meant to clearly direct users to a desired action, the text is larger and more prominent. </p>
+	<div class="bui-lib-example" style="padding: 3em 0;">
+		<div class="tooltip-static right" style="top:40%;left:5%;"><div class="tooltip-arrow"></div><div class="tooltip-inner">A Static Tooltip</div></div>
+	</div>
+	<pre class="bui-lib-example-comment">
+<code>&lt;div class="<span><strong>tooltip-static</strong> right</span>" <span>style="top: 40%; left: 5%;"</span>&gt;</code> &lt;!-- Position is 'absolute' by default --&gt;
+	<code>&lt;div class="<span>tooltip-arrow</span>"&gt;&lt;/div&gt;</code>
+	<code>&lt;div class="<span>tooltip-inner</span>">A Static Tooltip&lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+	</pre>
+	<h3>Verbage</h3>
+	<p>Verbage should be as short as possible while clearly describing the intended action. It will likely include action cues like “Select an option to…”, or “Start by adding…”.</p>
+	<h3>Placement and Animation</h3>
+	<p>Since this tooltip is static, it absolutely must not cover any UI elements or text.</p>
+	<p>After a user has made any action on the screen, this tooltip should fade out for 150ms.</p>
+</section>
+
 
 <!--********** STATS BARS & INDICATORS **********-->
 <!-- 
@@ -777,23 +866,23 @@
 		<div class="modal-backdrop fade in" style="position: absolute; z-index: 1;"></div>
 	</div>
 	<pre class="bui-lib-example-comment">
-		<code>&lt;div class="<span>modal fade</span>" id="bui-lib-example-modal"&gt;</code>
-		  <code>&lt;div class="<span>modal-dialog</span>"&gt;</code>
-		    <code>&lt;div class="<span>modal-content</span>"&gt;</code>
-		      <code>&lt;div class="<span>modal-header</span>"&gt;</code>
-		        <code>&lt;button type="button" class="<span>close</span>" <span>data-dismiss="modal"</span>&gt;&lt;/button&gt;</code>
-		        <code>&lt;<span>h4</span> class="<span>modal-title</span>"&gt;Modal title&lt;/h4&gt;</code>
-		      <code>&lt;/div&gt;</code>
-		      <code>&lt;div class="<span>modal-body</span>"&gt;</code>
-		        <code>&lt;p&gt;One fine body&hellip;&lt;/p&gt;</code>
-		      &lt;/div&gt;
-		      <code>&lt;div class="<span>modal-footer</span>"&gt;</code>
-		        <code>&lt;button type="button" class="<span>btn btn-cancel</span>" <span>data-dismiss="modal"</span>&gt;Cancel&lt;/button&gt;</code>
-		        <code>&lt;button type="button" class="<span>btn btn-primary</span>"&gt;Save changes&lt;/button&gt;</code>
-		      <code>&lt;/div&gt;</code>
-		    <code>&lt;/div&gt;&lt;!-- /.modal-content --&gt;</code>
-		  <code>&lt;/div&gt;&lt;!-- /.modal-dialog --&gt;</code>
-		<code>&lt;/div&gt;&lt;!-- /.modal --&gt;</code>
+<code>&lt;div class="<span>modal fade</span>" id="bui-lib-example-modal"&gt;</code>
+  <code>&lt;div class="<span>modal-dialog</span>"&gt;</code>
+    <code>&lt;div class="<span>modal-content</span>"&gt;</code>
+      <code>&lt;div class="<span>modal-header</span>"&gt;</code>
+        <code>&lt;button type="button" class="<span>close</span>" <span>data-dismiss="modal"</span>&gt;&lt;/button&gt;</code>
+        <code>&lt;<span>h4</span> class="<span>modal-title</span>"&gt;Modal title&lt;/h4&gt;</code>
+      <code>&lt;/div&gt;</code>
+      <code>&lt;div class="<span>modal-body</span>"&gt;</code>
+        <code>&lt;p&gt;One fine body&hellip;&lt;/p&gt;</code>
+      &lt;/div&gt;
+      <code>&lt;div class="<span>modal-footer</span>"&gt;</code>
+        <code>&lt;button type="button" class="<span>btn btn-cancel</span>" <span>data-dismiss="modal"</span>&gt;Cancel&lt;/button&gt;</code>
+        <code>&lt;button type="button" class="<span>btn btn-primary</span>"&gt;Save changes&lt;/button&gt;</code>
+      <code>&lt;/div&gt;</code>
+    <code>&lt;/div&gt;&lt;!-- /.modal-content --&gt;</code>
+  <code>&lt;/div&gt;&lt;!-- /.modal-dialog --&gt;</code>
+<code>&lt;/div&gt;&lt;!-- /.modal --&gt;</code>
 	</pre>
 	<h2>Header</h2>
 	<h3>Title + Optional Drop-Down Menu:</h3>
@@ -901,26 +990,8 @@
 		  </div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
 	</div>
-
-
-
-<!-- 	<h2>Animation</h2>
-	<h3>Standard Appear &amp; Disappear</h3>
-
-	<h3>Alert Appear</h3>
-	<p>To be used when an unrequested modal appears to deliver a critical message.</p>
-
-	<h3>Failed Validation</h3>
-	<p>Triggered when a form inside of a modal fails to validate.</p> -->
-
 </section>
 
-<!--************* TOOLTIPS *************-->
-<!-- 
-<section>
-	<h1><a name="tooltips">Tooltips</a></h1>
-</section>
- -->
 <!--************* ALERTS *************-->
 <!-- 
 <section>
@@ -929,32 +1000,18 @@
  -->
 <!--************* TYPOGRAPHY *************-->
 
-<!-- <section>
+<section>
 	<h1><a name="typography">Typography</a></h1>
-	<h2>Fonts</h2>
-	<p>The base font-size should be 14px. All other font-sizes should be set using em or rem units so that the relative font size can be adjusted for different viewports.</p>
-	<p>The font weights available are 400 (+ italic), 600 (semi-bold), and 700.</p>
+	<p>Most of this uses the same markup as bootstrap, but it's worth reading through as it also provides some best practice tips.</p>
+	<h2>Font</h2>
+	<p>The base font-size is 14px. All other font-sizes should be set using em or rem units so that the relative font size can be adjusted for different viewports.</p>
+	<p>The font weights available are <strong>400</strong> (+ italic), <strong>600</strong> (semi-bold), and <strong>700</strong>.</p>
 
 	<p>The font family used for Beacon is <strong>Open Sans</strong>.</p>
-	<div class="example">
-		<p class="thrsx"><span class="number-ref">36px </span>The five boxing wizards jump quickly.</p>
-		<p class="thr"><span class="number-ref">30px </span>The five boxing wizards jump quickly.</p>
-		<p class="twfr"><span class="number-ref">24px </span>The five boxing wizards jump quickly.</p>
-		<p class="twone"><span class="number-ref">21px </span>The five boxing wizards jump quickly.</p>
-		<p class="eightt"><span class="number-ref">18px </span>The five boxing wizards jump quickly.</p>
-		<p class="sixt"><span class="number-ref">16px </span>The five boxing wizards jump quickly.</p>
-		<p><span class="number-ref">14px </span>The five boxing wizards jump quickly.</p>
-		<p class="twelve"><span class="number-ref">12px </span>The five boxing wizards jump quickly.</p>
-		<p class="ten"><span class="number-ref">10px </span>The five boxing wizards jump quickly.</p>
-	</div>
-	<div class="example-demo">
-		<p><code>font-family: "Open Sans", Tahoma, sans-serif;</code></p>
-		<p><code>font-weight: 400;</code></p>
-	</div>
 
 	<h2>Headings</h2>
 	<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are styled and available.</p>
-	<div class="example">
+	<div class="bui-lib-example">
 		<h1>H1 Heading</h1>
 		<h2>H2 Heading</h2>
 		<h3>H3 Heading</h3>
@@ -962,7 +1019,7 @@
 		<h5>H5 Heading</h5>
 		<h6>H6 Heading</h6>
 	</div>
-	<div class="example-demo">
+	<div class="bui-lib-example-comment">
 		<p><code>&lt;h1&gt;</code> H1 Heading <code>&lt;/h1&gt;</code></p>
 		<p><code>&lt;h2&gt;</code> H2 Heading <code>&lt;/h2&gt;</code></p>
 		<p><code>&lt;h3&gt;</code> H3 Heading <code>&lt;/h3&gt;</code></p>
@@ -977,158 +1034,52 @@
 	<p>You can use HTML's default emphasis tags.</p>
 	<h3>Small</h3>
 	<p>Use the <code>&lt;small&gt;</code> tag for de-emphasizing text.</p>
-	<div class="example">
+	<div class="bui-lib-example">
 		<p><small>This might be useful for fine print text.</small></p>
 	</div>
-	<div class="example-demo">
+	<div class="bui-lib-example-comment">
 		<code>&lt;small&gt;</code> . . . <code>&lt;/small&gt;</code>
 	</div>
 
 	<h3>Bold</h3>
 	<p>Use the <code>&lt;strong&gt;</code> tag for bold emphasis.</p>
-	<div class="example">
+	<div class="bui-lib-example">
 		<p>Making text <strong>bold</strong> is great for emphasis. Just remember, if too much text is <strong>bold</strong>, no text is <strong>bold</strong>.</p>
 	</div>
-	<div class="example-demo">
+	<div class="bui-lib-example-comment">
 		<code>&lt;strong&gt;</code> . . . <code>&lt;/strong&gt;</code>
 	</div>
 
 	<h3>Italic</h3>
 	<p>Use the <code>&lt;em&gt;</code> tag for italic emphasis.</p>
-	<div class="example">
+	<div class="bui-lib-example">
 		<p><em>Italic text is good for emphasising a single word, or a whole phrase.</em></p>
 	</div>
-	<div class="example-demo">
+	<div class="bui-lib-example-comment">
 		<code>&lt;em&gt;</code> . . . <code>&lt;/em&gt;</code>
 	</div>
 
 	<h3>All Caps</h3>
 	<p>Add <code>class="caps"</code> for all caps.</p>
-	<div class="example">
-		<p class="caps">All caps are good for certain section titles - they're loud, so use sparingly</p>
+	<div class="bui-lib-example">
+		<p class="caps">All caps may be good for certain section titles - they're loud, so use sparingly</p>
 	</div>
-	<div class="example-demo">
-		<code>&lt;h4 class="caps"&gt;</code> . . . <code>&lt;/h4&gt;</code>
+	<div class="bui-lib-example-comment">
+		<code>&lt;h4 class="<span>caps</span>"&gt;</code> . . . <code>&lt;/h4&gt;</code>
 	</div>
 
 	<h3>Underline</h3>
 	<p>Never use underline. Links underline themselves on hover, that's it.</p>
 
-	<h2>Alignment</h2>
-	<p><small>Use align properties sparingly, especially for paragraphs. Center or right aligned paragraphs are very bad for readability.</small></p>
-	<p>Text is aligned left by default or you can force text to align left by adding <code>class="text-left"</code>, you can center align text with a <code>class="text-center"</code> or right align text with a <code>class="text-right"</code>.</p>
-	<div class="example">
-		<p class="text-left">Left aligned text.</p>
-		<p class="text-center">Center aligned text.</p>
-		<p class="text-right">Right aligned text.</p>
-	</div>
-	<div class="example-demo">
-		<p><code>&lt;p class="text-left"&gt;</code> Left aligned text. <code>&lt;/p&gt;</code></p>
-		<p><code>&lt;p class="text-center"&gt;</code> Center aligned text. <code>&lt;/p&gt;</code></p>
-		<p><code>&lt;p class="text-right"&gt;</code> Right aligned text. <code>&lt;/p&gt;</code></p>
-	</div>
-
 	<h2>Labels</h2>
-	<p>Style labels by adding a <code>class=”label”</code>. Labels can be used for things like the survey state (dev, test, live, closed) or for other needs, like labeling something as “new”.</p>
-	<div class="example">
+	<p>Style labels by adding a <code>class=”label”</code>. Labels can be used for things like the survey state (dev, test, live, closed).</p>
+	<div class="bui-lib-example">
 		<p><span class="label">Dev</span> <span class="label">Test</span> <span class="label">Live</span> <span class="label">Closed</span></p>	
 	</div>
-	<div class="example-demo">
-		<p><code>&lt;span class="label"&gt;</code> . . . <code>&lt;/span&gt;</code></p>
+	<div class="bui-lib-example-comment">
+		<p><code>&lt;span class="<span>label</span>"&gt;</code> . . . <code>&lt;/span&gt;</code></p>
 	</div>
-
-	<h3>Tags</h3>
-	<p>Tags are used for organizing projects. You can style a tag by giving it a <code>class=”tag”</code>.</p>
-	<div class="example">
-		<span class="tag">Decipher Inc<a class="icon-remove" href="#0"></a></span>
-	</div>
-</section> -->
-
-<!--************* LISTS *************-->
-
-<!-- <section>
-	
-	<h1><a name="lists">Lists</a></h1>
-	<h2>Unordered</h2>
-	<p>A list of items in which the order is <em>not</em> explicitly important</p>
-	<div class="example">
-		<ul>
-			<li>List item 1</li>
-			<li>List item 2</li>
-				<ul>
-					<li>List item 2.1</li>
-					<li>List item 2.2</li>
-				</ul>
-			<li>List item 3</li>
-		</ul>
-	</div>
-	<div class="example-demo">
-		<p><code>&lt;ul&gt;</code></p>
-		<p><code>&lt;li&gt;</code> . . . <code>&lt;/li&gt;</code></p>
-		<p><code>&lt;/ul&gt;</code></p>
-	</div>
-
-	<h2>Ordered</h2>
-	<p>A list of items in which the order <em>is</em> explicitly important</p>
-	<div class="example">
-		<ol>
-			<li>List item 1</li>
-			<li>List item 2</li>
-			<li>List item 3</li>
-		</ol>
-	</div>
-	<div class="example-demo">
-		<p><code>&lt;ol&gt;</code></p>
-		<p><code>&lt;li&gt;</code> . . . <code>&lt;/li&gt;</code></p>
-		<p><code>&lt;/ol&gt;</code></p>
-	</div>
-
-	<h2>Unstyled</h2>
-	<p>Remove the default <code>list-style</code> and left padding on list items (immediate children only). Do this by assigning <code>&lt;ul class="unstyled"&gt;</code>.</p>
-	<div class="example">
-		<ul class="unstyled">
-			<li>List item 1</li>
-			<li>List item 2</li>
-				<ul>
-					<li>List item 2.1</li>
-					<li>List item 2.2</li>
-				</ul>
-			<li>List item 3</li>
-		</ul>	
-	</div>
-
-	<h2>Inline</h2>
-	<p>Make all list items <code>inline-block</code> by adding <code>&lt;ul class="inline"&gt;</code>.</p>
-	<div class="example">
-		<ul class="inline">
-			<li>List item 1</li>
-			<li>List item 2</li>
-			<li>List item 3</li>
-		</ul>		
-	</div>
-	<div class="example-demo">
-		<p><code>&lt;ul class="inline"&gt;</code></p>
-		<p><code>&lt;li&gt;</code> . . . <code>&lt;/li&gt;</code></p>
-		<p><code>&lt;/ul&gt;</code></p>
-	</div>
-
-	<h2>Description</h2>
-	<p>A list of terms with associated descriptions.</p>
-	<div class="example">
-		<dl>
-			<dt>Description Item</dt>
-			<dd>Definition Item</dd>
-			<dt>Description Item</dt>
-			<dd>Definition Item</dd>
-		</dl>
-	</div>
-	<div class="example-demo">
-		<p><code>&lt;dl&gt;</code></p>
-		<p><code>&lt;dt&gt;</code> Description <code>&lt;/dt&gt;</code></p>
-		<p><code>&lt;/dd&gt;</code> Definition <code>&lt;/dd&gt;</code></p>
-		<p><code>&lt;/dl&gt;</code></p>
-	</div>
-</section> -->
+</section>
 
 
 <!--************* LANGUAGE & GRAMMAR *************-->
@@ -1141,7 +1092,9 @@
 <footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="bootstrap-3.1.1/dist/js/bootstrap.min.js"></script>
+<script src="bui-js/bui-scripts.js"></script>
     <script>
+    		// bui style toggles
         $(function() {
             $('.control-panel button').on('click', function() {
                 var me = $(this);
@@ -1156,9 +1109,16 @@
                 }
             });
         });
+        // menu button
         $(".menu-btn").on('click', function() {
         	$(".menu").toggleClass('menu-open');
         });
+        // tooltips
+			$('.tooltip-ex-static').tooltip({
+				trigger: 'manual',
+				animation: false
+			});
+			$('.tooltip-ex-static').tooltip('show');
     </script>
 </footer>
 </body>

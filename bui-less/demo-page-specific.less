@@ -73,6 +73,7 @@
       h2 {
         margin: 0;
         font-size: 1.3em;
+        font-weight: 400;
       }
       p {
         text-align: center;
@@ -112,6 +113,9 @@
 
   section {
     margin-top: 3em;
+    border: 1px solid lighten(@color-frame, 7);
+    padding: 0 1em 1em;
+    border-radius: 7px;
     h1 {
       a {
         color: @color-base;
@@ -186,6 +190,7 @@
 
   code {
     color: @color-base;
+    white-space: pre-wrap;
     span {
       color: darken(@color-orange, 10);
       font-style: default;
@@ -225,7 +230,7 @@
     margin-top: -1.3em; // Had to add -margin, Wasn't aligning to top
     h4 {
       margin-top: 1em;
-      margin-bottom: -1em;
+      margin-bottom: 0;
     }
     p {
       margin-top: 1em;
@@ -301,7 +306,7 @@
 
     .color-info {
       h4 {
-        margin-bottom: -1em;
+        margin-bottom: 0;
       }
       p {
         margin-bottom: -1em;
@@ -321,11 +326,57 @@
       }
     }
   }
+
   // buttons
   .bui-lib-example-block {
     background-color: lighten(@color-orange, 35);
     max-width: 400px;
     margin: 1em;
     padding: 1em;
+  }
+
+  // typography
+  code {
+    background-color: lighten(@color-frame, 30%);
+    padding: .1em .4em;
+    line-height: 1.5em;
+    border: 1px solid @color-frame;
+  }
+
+  .thrsx {
+    font-size: 36px;
+  }
+  .thr {
+    font-size: 30px;
+  }
+  .twfr {
+    font-size: 24px;
+  }
+  .twone {
+    font-size: 21px;
+  }
+  .eightt {
+    font-size: 18px;
+  }
+  .sixt {
+    font-size: 16px;
+  }
+  .twelve {
+    font-size: 12px;
+  }
+  .ten {
+    font-size: 10px;
+  }
+  .number-ref {
+    color: @color-disabled;
+    font-size: .6rem;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  .inline {
+    margin: 1em 0;
   }
 }
