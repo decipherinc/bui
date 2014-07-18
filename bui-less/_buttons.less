@@ -25,7 +25,6 @@
 		border-radius: 4px;
 		&:hover, &:focus{
 			background-color: lighten(@color-button, 3);
-			.transition;
 		}
 		&:active, &.active {
 			background-color: darken(@color-button, 3);
@@ -43,7 +42,6 @@
 		color: #fff;
 		&:hover, &:focus{
 			#gradient > .vertical(lighten(@color-blue, 5); lighten(@color-blue, 5));
-			.transition;
 		}
 		&:active, &.active {
 			#gradient > .vertical(lighten(@color-blue, 2); lighten(@color-blue, 3));
@@ -61,7 +59,6 @@
 		cursor: pointer;
 		&:hover, &:focus {
 			color: lighten(@color-blue, 5%);
-			.transition;
 		}
 		&:active, &.active {
 			color: darken(@color-blue, 2%);
@@ -84,7 +81,6 @@
 		color: #fff;
 		&:hover, &:focus {
 			#gradient > .vertical(lighten(@color-green, 5); lighten(@color-green, 5));
-			.transition;
 		}
 		&:active, &.active {
 			#gradient > .vertical(lighten(@color-green, 2), lighten(@color-green, 3));
@@ -101,7 +97,6 @@
 			background-color: transparent;
 			color: @color-red;
 			text-decoration: underline;
-			.transition;
 		}
 		&:active, &.active {
 			color: darken(@color-red, 5%);
@@ -124,7 +119,6 @@
 		font-size: 1.5rem;	
 		color: @color-remove;
 		padding: 0;
-		.transition;
 		&:hover, &:focus {
 			color: @color-red;
 		}
@@ -158,18 +152,19 @@
 		background-color: transparent;
 		font-size: 1rem;
 		color: @color-orange;
-		padding: 2px 2px;
+		width: 2em;
+		text-align: center;
+		padding: 6px 0;
 		border-radius: 4px;
 		&:hover, &:focus {
 			color: darken(@color-orange, 7);
-			.transition;
 		}
 		&:active {
 			color: white;
 			background-color: @color-orange;
 			outline: 0;
 		}
-		&.active {
+		&.active, &.selected {
 			color: white;
 			background-color: @color-orange;
 			outline: 0;
@@ -193,7 +188,6 @@
 		border-radius: 3px;
 		&:hover, &:focus{
 			background-color: lighten(@color-button, 3);
-			.transition;
 		}
 		&:active, &.active, &.selected {
 			background-color: @color-orange;
