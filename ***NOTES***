@@ -15,7 +15,6 @@ Icons - Add return key icon
       - Audit new pan menu elements for icons
 
 Buttons - Make a red button pattern for deleting
-        - Make sure icons in buttons have right padding
         - Check disabled rules (think i'm good here, using bootstrap variables, check with anthony)
         - add btn-flush to strip all margins - audit margins (instead of button flush, how about button w/margins? btn-margins class or something?)
 
