@@ -14,22 +14,13 @@ TODO:
 Icons - Add return key icon
       - Audit new pan menu elements for icons
 
-Buttons - Make a red button pattern for deleting
-        - Check disabled rules (think i'm good here, using bootstrap variables, check with anthony)
-        - add btn-flush to strip all margins - audit margins (instead of button flush, how about button w/margins? btn-margins class or something?)
-
 Tooltips - Define header+details pattern for instant tooltips
     -Make bui-instant-tooltip instantiation allow for html
     -Define adding tooltips usinb angular "tooltip-html-unsafe"
     -Add warning about anything other than static content in html enabled tooltips
+    - Get Seth's help - extend the bs tooltip and popover functions to allow for data-learn-more="http://learnMoreLink"
 
 Inputs - add hover effect
 
-
-
-Get Seth's help - extend the bs tooltip and popover functions to allow for data-learn-more="http://learnMoreLink"
-
-
-Need prefix on bootstrap overrides in _variables
-
-Define the use of esc key to exit modals.
+Buttons - Make a red button pattern for deleting
+        - add btn-flush to strip all margins - audit margins (instead of button flush, how about button w/margins? btn-margins class or something?)
