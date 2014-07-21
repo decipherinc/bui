@@ -19,21 +19,17 @@ Buttons - Make a red button pattern for deleting
         - Check disabled rules (think i'm good here, using bootstrap variables, check with anthony)
         - add btn-flush to strip all margins - audit margins (instead of button flush, how about button w/margins? btn-margins class or something?)
 
-Typography - Make an unbolded header class
-
 Tooltips - Define header+details pattern for instant tooltips
     -Make bui-instant-tooltip instantiation allow for html
     -Define adding tooltips usinb angular "tooltip-html-unsafe"
     -Add warning about anything other than static content in html enabled tooltips
 
-Inputs - add hover effect, sharpen inset shadow (like google chrome address bar)
+Inputs - add hover effect
 
 
 
 Get Seth's help - extend the bs tooltip and popover functions to allow for data-learn-more="http://learnMoreLink"
 
-
-Make example of disabled toggle button
 
 Need prefix on bootstrap overrides in _variables
 

@@ -152,9 +152,9 @@
 		background-color: transparent;
 		font-size: 1rem;
 		color: @color-orange;
-		width: 2em;
+		width: 2.1em;
 		text-align: center;
-		padding: 6px 0;
+		padding: 0.36em 0;
 		border-radius: 4px;
 		&:hover, &:focus {
 			color: darken(@color-orange, 7);
@@ -229,19 +229,28 @@
 	}
 
 	.btn-xs {
-		font-size: .8em;
-		border-radius: 2px;
+		font-size: 0.75em;
+		border-radius: 3px;
 		padding: 2px 6px;
+		&.btn-icon {
+			padding: 0.25em 0;
+		}
 	}
 
 	.btn-sm {
 		font-size: .9em;
-		border-radius: 2px;
+		border-radius: 3px;
 		padding: 2px 6px;
+		&.btn-icon {
+			padding: 0.25em 0;
+		}
 	}
 
 	.btn-lg {
 		font-size: 1.4em;
 		padding: 5px 12px;
+		&.btn-icon {
+			padding: 0.3em 0;
+		}
 	}
 } // end @{button-prefix}
