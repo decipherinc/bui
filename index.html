@@ -556,14 +556,15 @@
 		<button type="button" title="Standard Button" class="btn btn-default">Standard</button>
 		<button type="button" title="Standard Button when Disabled" class="btn btn-default" disabled="disabled">Disabled</button>
 		<button type="button" title="Standard Button with an Icon" class="btn btn-default icon-add">Icon + Text</button>
-		<button type="button" title="Standard Button with an Icon" class="btn btn-default"><span class="icon-add">Text w/ Icon as Span</span></button>
+		<button type="button" title="Standard Button with an Icon" class="btn btn-default"><i class="icon-add"></i>Text w/ Icon in 'i' tag</button>
 	</div>
 	<div class="bui-lib-example-comment">
 		<p><code>&lt;button class="<span>btn btn-default</span>"&gt;</code>Standard<code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-default" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-default <span>icon-add</span>"&gt;</code>Icon + Text<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-default"&gt;</code><code><span>&lt;span class="<strong>icon-add</strong>"&gt;</span></code>Icon + Text<code><span>&lt;/span&gt;</span></code><code>&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-default"&gt;</code><code><span>&lt;i class="<strong>icon-add</strong>"&gt;</span></code><code><span>&lt;/i&gt;</span></code>Text w/ Icon in 'i' tag<code>&lt;/button&gt;</code></p>
 	</div>
+	<p class="small"><strong>Note:</strong> Both an <code>&lt;i&gt;</code> tag or a <code>&lt;span&gt;</code> tag can be used for icon.</p>
 
 	<h3>Primary</h3>
 	<p><strong>Usage:</strong> Used when there’s a need for a suggested action, like the “Done” button in a modal or an obvious "next step".</p>
@@ -596,6 +597,7 @@
 		<p><code>&lt;button class="btn btn-text"&gt;</code><code><span>&lt;span class="<strong>icon-info</strong>"&gt;</span></code>Label with icon in span<code><span>&lt;/span&gt;</span></code><code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-text icon-info" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
 	</div>
+	<p class="small"><strong>Note:</strong> Both an <code>&lt;i&gt;</code> tag or a <code>&lt;span&gt;</code> tag can be used for icon.</p>
 	
 	<h3>Special Action</h3>
 	<p><strong>Usage:</strong> Used in an application to denote a special action. It has a “go” connotation, so it should be used to initiate a journey of some sort (like “new project”, “new campaign”, “launch campaign”).</p>
@@ -641,14 +643,14 @@
 		<button role="button" title="Icon Button when Disabled" class="btn btn-icon icon-sort-by" disabled="disabled"></button>
 		<button role="button" title="Icon Button when Selected" class="btn btn-icon icon-sort-by active"></button>
 		<br>
-		<p>&lt;!-- You can also add the icon inside the &lt;button&gt; tags --&gt;</p>
+		<p>&lt;!-- You can also add the icon inside the <code>&lt;button&gt;</code> tags using an <code>&lt;i&gt;</code> tag or <code>&lt;span&gt;</code> tag --&gt;</p>
 		<button role="button" title="Icon button with the icon added inside the button tags." class="btn btn-icon"><span class="icon-sort-by"></span></button>
 	</div>
 	<div class="bui-lib-example-comment">
 		<p><code>&lt;button class="<span>btn btn-icon icon-sort-by</span>"&gt;&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-icon icon-sort-by" <span>disabled="disabled"</span>&gt;&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-icon icon-sort-by <span>active</span>"&gt;&lt;/button&gt;</code></p>
-		<p>&lt;!-- You can also add the icon inside the &lt;button&gt; tags --&gt;</p>
+		<p>&lt;!-- You can also add the icon inside the &lt;button&gt; tags using an &lt;i&gt; tag or &lt;span&gt; tag --&gt;</p>
 		<p><code>&lt;button class="<span>btn btn-icon</span>"&gt;&lt;span class="icon-sort-by"&gt;&lt;/span&gt;&lt;/button&gt;</code></p>
 	</div>
 

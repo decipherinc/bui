@@ -29,7 +29,7 @@
 		&:active, &.active {
 			background-color: darken(@color-button, 3);
 		}
-		&:before, span:before {
+		&:before, span:before, i:before {
 			margin-left: -0.25em;
 			margin-right: 0.35em;
 		}
@@ -46,9 +46,9 @@
 		&:active, &.active {
 			#gradient > .vertical(lighten(@color-blue, 2); lighten(@color-blue, 3));
 		}
-		& span {
-			margin-left: -.4em;
-			margin-right: -.2em;
+		&:before, span:before, i:before {
+			margin-left: -0.25em;
+			margin-right: 0.35em;
 		}
 		&.dangerous {
 			background-color: @color-red;
@@ -71,7 +71,7 @@
 		&:active, &.active {
 			color: darken(@color-blue, 2%);
 		}
-		span:before {
+		span:before, i:before {
 			margin-right: 0.1em;
 		}
 		&.disabled,
@@ -87,6 +87,10 @@
 		#gradient > .vertical(lighten(@color-green, 2); darken(@color-green, 2));
 		border: 1px solid darken(@color-green, 1);
 		color: #fff;
+		&:before, span:before, i:before {
+			margin-left: -0.25em;
+			margin-right: 0.35em;
+		}
 		&:hover, &:focus {
 			#gradient > .vertical(lighten(@color-green, 5); lighten(@color-green, 5));
 		}
