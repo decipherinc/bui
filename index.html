@@ -480,7 +480,8 @@
 <!--************* INPUT TYPES *************-->
 
 <section>
-	<h1><a name="inputs">Inputs</a></h1>
+	<h1><a name="inputs" style="color:red;">Inputs</a></h1>
+	<p style="color:red;">Being Developed</p>
 	<h3>Text Input</h3>
 	<ul>
 		<li>They always span the full width of parent div</li>
@@ -583,6 +584,37 @@
 		<p><code>&lt;button class="btn btn-primary <span>dangerous</span>"&gt;</code>Primary<code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-primary dangerous" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
 	</div>
+	
+	<h3>Special Action</h3>
+	<p><strong>Usage:</strong> Used in an application to denote a special action. It has a “go” connotation, so it should be used to initiate a journey of some sort (like “new project”, “new campaign”, “launch campaign”).</p>
+	<p><strong>Rules:</strong> Maximum of one per application (although having none is fine).</p>
+	<div class="bui-lib-example">
+		<button type="button" title="Special Action Button" class="btn btn-special">Special</button>
+		<button type="button" title="Special Action when Disabled" class="btn btn-special" disabled="disabled">Disabled</button>
+	</div>
+	<div class="bui-lib-example-comment">
+		<p><code>&lt;button class="<span>btn btn-special</span>"&gt;</code>Special<code>&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-special" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
+	</div>
+
+	<h3>Icon Buttons</h3>
+	<p><strong>Usage:</strong> Only for commonly used and easy to understand actions in the main area of an application, otherwise use a standard or “icon + label” button with descriptive text.</p>
+	<p><strong>Rules:</strong> Icon buttons must have descriptive tooltips that should appear on hover after a short delay.</p>
+	<div class="bui-lib-example">
+		<button role="button" title="Icon Button" class="btn btn-icon icon-sort-by"></button>
+		<button role="button" title="Icon Button when Selected" class="btn btn-icon icon-sort-by active"></button>
+		<button role="button" title="Icon Button when Disabled" class="btn btn-icon icon-sort-by" disabled="disabled"></button>
+		<br>
+		<p>You can also add the icon inside the <code>&lt;button&gt;</code> tags using an <code>&lt;i&gt;</code> tag or <code>&lt;span&gt;</code> tag</p>
+		<button role="button" title="Icon button with the icon added inside the button tags." class="btn btn-icon"><span class="icon-sort-by"></span></button>
+	</div>
+	<div class="bui-lib-example-comment">
+		<p><code>&lt;button class="<span>btn btn-icon icon-sort-by</span>"&gt;&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-icon icon-sort-by <span>active</span>"&gt;&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-icon icon-sort-by" <span>disabled="disabled"</span>&gt;&lt;/button&gt;</code></p>
+		<p>&lt;!-- An example button using a &lt;span&gt; tag inside the button for the icon --&gt;</p>
+		<p><code>&lt;button class="<span>btn btn-icon</span>"&gt;&lt;span class="icon-sort-by"&gt;&lt;/span&gt;&lt;/button&gt;</code></p>
+	</div>
 
 	<h3>Icon + Label</h3>
 	<p><strong>Usage:</strong> Used to indicate a supporting action, typically inside of a tab or accordion menu.</p>
@@ -599,60 +631,27 @@
 	</div>
 	<p class="small"><strong>Note:</strong> Both an <code>&lt;i&gt;</code> tag or a <code>&lt;span&gt;</code> tag can be used for icon.</p>
 	
-	<h3>Special Action</h3>
-	<p><strong>Usage:</strong> Used in an application to denote a special action. It has a “go” connotation, so it should be used to initiate a journey of some sort (like “new project”, “new campaign”, “launch campaign”).</p>
-	<p><strong>Rules:</strong> Maximum of one per application (although having none is fine).</p>
+	<h3>Show / Hide Toggle Button</h3>
+	<p><strong>Usage:</strong> Used for toggeling content in or out of the viewport.</p>
+	<p><strong>Rules:</strong> The box arrow icon should always point in the direction that content will animate in from.</p>
 	<div class="bui-lib-example">
-		<button type="button" title="Special Action Button" class="btn btn-special">Special</button>
-		<button type="button" title="Special Action when Disabled" class="btn btn-special" disabled="disabled">Disabled</button>
+		<button id="example-btn-text-toggle" class="btn btn-text-toggle down">Click to show content below</button>
+		<div id="example-btn-text-toggle-content" style="display:none;background-color:#bcbcbc;padding:1em;text-align:center;color:#ffffff;">
+			<h3>Some fancy content.</h3>
+		</div>
 	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-special</span>"&gt;</code>Special<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-special" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
-	</div>
+	<pre class="bui-lib-example-comment">
+<code>&lt;button class="btn <span>btn-text-toggle down</span>" id="example-toggle-button"&gt;</code>Click to show content below<code>&lt;/button&gt;</code>
+<code>&lt;div id="example-content"&gt;</code>Some fancy content.<code>&lt;/div&gt;</code>
 
-	<h3>Cancel</h3>
-	<p><strong>Usage:</strong> Used in any dialog box/modal/menu where actions require a commit button, there should always be an option to cancel as well. Cancel should back out any changes that occurred and leave it in the previous state.</p>
-	<p><strong>Rules:</strong> Should always be placed to the left of a Primary of standard button.</p>
-	<div class="bui-lib-example">
-		<button type="button" title="Cancel Button" class="btn btn-cancel">Cancel</button>
-		<button type="button" title="Cancel Button when Disabled" class="btn btn-cancel" disabled="disabled">Cancel</button>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-cancel</span>"&gt;</code>Cancel<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-cancel" <span>disabled="disabled"</span>&gt;</code>Cancel<code>&lt;/button&gt;</code></p>
-	</div>
-
-	<h3>Delete or Remove</h3>
-	<p><strong>Usage:</strong> A stand alone “x” icon (never the letter "x" or "X") used to remove or delete an item.</p>
-	<p><strong>Rules:</strong> Typically placed on the far right side in table rows. It may be appropriate to have a confirmation alert if the action cannot be undone.</p>
-	<div class="bui-lib-example">
-		<button class="btn btn-remove" title="Delete Button"></button>
-		<button class="btn btn-remove" disabled="disabled" title="Delete Button when Disabled"></button>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-remove" <span>disabled="disabled"</span>&gt;&lt;/button&gt;</code></p>
-	</div>
-
-	<h3>Icon Buttons</h3>
-	<p><strong>Usage:</strong> Only for commonly used and easy to understand actions in the main area of an application, otherwise use a standard or “icon + label” button with descriptive text.</p>
-	<p><strong>Rules:</strong> Icon buttons must have descriptive tooltips that should appear on hover after a short delay.</p>
-	<div class="bui-lib-example">
-		<button role="button" title="Icon Button" class="btn btn-icon icon-sort-by"></button>
-		<button role="button" title="Icon Button when Disabled" class="btn btn-icon icon-sort-by" disabled="disabled"></button>
-		<button role="button" title="Icon Button when Selected" class="btn btn-icon icon-sort-by active"></button>
-		<br>
-		<p>&lt;!-- You can also add the icon inside the <code>&lt;button&gt;</code> tags using an <code>&lt;i&gt;</code> tag or <code>&lt;span&gt;</code> tag --&gt;</p>
-		<button role="button" title="Icon button with the icon added inside the button tags." class="btn btn-icon"><span class="icon-sort-by"></span></button>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-icon icon-sort-by</span>"&gt;&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-icon icon-sort-by" <span>disabled="disabled"</span>&gt;&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-icon icon-sort-by <span>active</span>"&gt;&lt;/button&gt;</code></p>
-		<p>&lt;!-- You can also add the icon inside the &lt;button&gt; tags using an &lt;i&gt; tag or &lt;span&gt; tag --&gt;</p>
-		<p><code>&lt;button class="<span>btn btn-icon</span>"&gt;&lt;span class="icon-sort-by"&gt;&lt;/span&gt;&lt;/button&gt;</code></p>
-	</div>
+<code>&lt;script&gt;</code>
+ <code>$('#example-toggle-button').on('click', function() {</code>
+  <code>$(this).toggleClass('down').toggleClass('up');</code>
+  <code>$('#example-content').slideToggle();</code>
+ <code>});</code>
+<code>&lt;/script&gt;</code>
+	</pre>
+	<p><strong>Code Note:</strong> To animate and change the direction of the arrow box, just add/change it's directional class (arrow points right by default or with now direction declared). <code>.up</code>, <code>.right</code>, <code>.down</code>, and <code>.left</code> are all available. So in the example above, the button has the <code>.down</code> class added by default, then when the user clicks, the <code>.down</code> class is removed and the <code>.up</code> class is added <em>(sweet css animations built in!)</em>.</p>
 
 	<h3>Toggle Buttons</h3>
 	<p><strong>Usage:</strong> Used like a checkbox to filter viewport information.</p>
@@ -682,6 +681,30 @@
 		<p><code>&lt;button class="btn btn-link" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
 	</div>
 
+	<h3>Cancel</h3>
+	<p><strong>Usage:</strong> Used in any dialog box/modal/menu where actions require a commit button, there should always be an option to cancel as well. Cancel should back out any changes that occurred and leave it in the previous state.</p>
+	<p><strong>Rules:</strong> Should always be placed to the left of a Primary of standard button.</p>
+	<div class="bui-lib-example">
+		<button type="button" title="Cancel Button" class="btn btn-cancel">Cancel</button>
+		<button type="button" title="Cancel Button when Disabled" class="btn btn-cancel" disabled="disabled">Cancel</button>
+	</div>
+	<div class="bui-lib-example-comment">
+		<p><code>&lt;button class="<span>btn btn-cancel</span>"&gt;</code>Cancel<code>&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-cancel" <span>disabled="disabled"</span>&gt;</code>Cancel<code>&lt;/button&gt;</code></p>
+	</div>
+
+	<h3>Delete or Remove</h3>
+	<p><strong>Usage:</strong> A stand alone “x” icon (never the letter "x" or "X") used to remove or delete an item.</p>
+	<p><strong>Rules:</strong> Typically placed on the far right side in table rows. It may be appropriate to have a confirmation alert if the action cannot be undone.</p>
+	<div class="bui-lib-example">
+		<button class="btn btn-remove" title="Delete Button"></button>
+		<button class="btn btn-remove" disabled="disabled" title="Delete Button when Disabled"></button>
+	</div>
+	<div class="bui-lib-example-comment">
+		<p><code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-remove" <span>disabled="disabled"</span>&gt;&lt;/button&gt;</code></p>
+	</div>
+
 	<h2>Button Sizing</h2>
 	<p>The default size should be used in most cases, but these are also available when necessary.</p>
 	<div class="bui-lib-example">
@@ -696,26 +719,44 @@
 		<button role="button" title="" class="btn btn-sm btn-icon icon-full active"></button>
 		<button role="button" title="" class="btn btn-icon icon-full active"></button>
 		<button role="button" title="" class="btn btn-lg btn-icon icon-full active"></button>
+		<br>
+		<br>
+		<button class="btn btn-xs btn-remove" title="Delete Button"></button>
+		<button class="btn btn-sm btn-remove" title="Delete Button"></button>
+		<button class="btn btn-remove" title="Delete Button"></button>
+		<button class="btn btn-lg btn-remove" title="Delete Button"></button>
 	</div>
 	<div class="bui-lib-example-comment">
+		<p>&lt;!-- Standard Buttons --&gt;</p>
 		<p><code>&lt;button class="btn btn-default <span>btn-xs</span>"&gt;</code>Extra Small<code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-default <span>btn-sm</span>"&gt;</code>Small<code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-default"&gt;</code>Default<code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-default <span>btn-lg</span>"&gt;</code>Large<code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-default <span>btn-block</span>"&gt;</code>Block<code>&lt;/button&gt;</code></p>
 		<br>
+		<p>&lt;!-- Icon Buttons --&gt;</p>
 		<p><code>&lt;button class="btn btn-icon icon-full <span>btn-xs</span> active"&gt;</code><code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-icon icon-full <span>btn-sm</span> active"&gt;</code><code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-icon icon-full active"&gt;</code><code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-icon icon-full <span>btn-lg</span> active"&gt;</code><code>&lt;/button&gt;</code></p>
+		<br>
+		<p>&lt;!-- Delete/Remove Buttons --&gt;</p>
+		<p><code>&lt;button class="btn btn-remove <span>btn-xs</span>"&gt;</code><code>&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-remove <span>btn-sm</span>"&gt;</code><code>&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-remove"&gt;</code><code>&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-remove <span>btn-lg</span>"&gt;</code><code>&lt;/button&gt;</code></p>
 	</div>
 
 	<h2>Tags</h2>
-	<small style="color:red;">Concider this as just a style guideline for now. The actual implementation method needs to be fleshed out.</small>
-	<p>Tags are used for organizing projects. You can style a tag by giving it a <code>class=”tag”</code>.</p>
+	<p><strong>Usage:</strong> Tags are used for representing data attributes on an object of some sort. In the Portal, they're used for classifying and organizing projects, while in other areas of Beacon they may be used for displaying applied filters.</p>
+	<p><strong>Rules:</strong> Tags are modular and must always be removable by hovering over the tag and clicking the remove button.</p>
 	<div class="bui-lib-example">
-		<span class="tag">Decipher Inc<a class="icon-remove" href="#0"></a></span>
+		<div class="tag">Decipher Inc<button class="btn btn-remove"></button></div>
 	</div>
+	<div class="bui-lib-example-comment">
+		<code>&lt;div class="<span>tag</span>"&gt;</code>Decipher Inc<code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;/button&gt;&lt;/div&gt;</code>
+	</div>
+	<p><strong>Code Note:</strong> You can turn a div, list item or other container into a tag, but a <code>btn-remove</code> <em>(don't worry about sizing)</em> needs to exist inside after the tag's name for the remove button to work.</p>
 </section>
 
 <!--************* TOOLTIPS *************-->
@@ -1077,11 +1118,16 @@
         	$(".menu").toggleClass('menu-open');
         });
         // tooltips
-			$('.tooltip-ex-static').tooltip({
-				trigger: 'manual',
-				animation: false
-			});
-			$('.tooltip-ex-static').tooltip('show');
+				$('.tooltip-ex-static').tooltip({
+					trigger: 'manual',
+					animation: false
+				});
+				$('.tooltip-ex-static').tooltip('show');
+				// show / hide toggle button
+				$('#example-btn-text-toggle').on('click', function() {
+					$(this).toggleClass('down').toggleClass('up');
+					$('#example-btn-text-toggle-content').slideToggle();
+				});
     </script>
 </footer>
 </body>
