@@ -126,6 +126,12 @@
         }
       }
     }
+    h2 {
+      margin-top: 1em;
+    }
+    h3, h4 {
+      margin-top: 2em;
+    }
   }
 
   @media (min-width: 768px) {
@@ -186,6 +192,7 @@
     margin-top: -5px;
     position: relative;
     z-index: 5;
+    word-wrap: break-word;
   }
 
   code {
@@ -236,6 +243,10 @@
       margin-top: 1em;
       margin-bottom: -1em;
     }
+    em {
+      display: block;
+      margin-bottom: -1em;
+    }
   }
 
   .color-swatch.color-bg {
@@ -255,6 +266,14 @@
   .color-swatch.color-d {
     background: @color-frame;
   }
+  .color-swatch.color-bc {
+    background: @color-frame-dark;
+  }
+  .color-swatch.color-ct {
+    background: @color-container;
+    color: @color-base;
+    border: 1px solid @color-frame;
+  }
   .color-swatch.color-bl {
     background: @color-blue;
   }
@@ -272,10 +291,6 @@
   }
   .color-swatch.color-h {
     background: @color-highlight;
-    color: @color-base;
-  }
-  .color-swatch.color-i {
-    background: @color-active;
     color: @color-base;
   }
   .color-swatch.color-c {
@@ -343,33 +358,10 @@
     border: 1px solid @color-frame;
   }
 
-  .thrsx {
-    font-size: 36px;
-  }
-  .thr {
-    font-size: 30px;
-  }
-  .twfr {
-    font-size: 24px;
-  }
-  .twone {
-    font-size: 21px;
-  }
-  .eightt {
-    font-size: 18px;
-  }
-  .sixt {
-    font-size: 16px;
-  }
-  .twelve {
-    font-size: 12px;
-  }
-  .ten {
-    font-size: 10px;
-  }
-  .number-ref {
-    color: @color-disabled;
-    font-size: .6rem;
+  .bui-lib-example {
+    h1, h2, h3, h4 {
+      margin-top: 0;
+    }
   }
 
   p {
