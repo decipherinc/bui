@@ -11,9 +11,6 @@ When editing: Make sure the style.less file references the bootstrap variables a
 
 TODO:
 
-Icons - Add return key icon
-      - Audit new pan menu elements for icons
-
 Tooltips - Define header+details pattern for instant tooltips
     -Make bui-instant-tooltip instantiation allow for html
     -Define adding tooltips usinb angular "tooltip-html-unsafe"
@@ -22,5 +19,5 @@ Tooltips - Define header+details pattern for instant tooltips
 
 Inputs - add hover effect
 
-Buttons - Make a red button pattern for deleting
-        - add btn-flush to strip all margins - audit margins (instead of button flush, how about button w/margins? btn-margins class or something?)
+Buttons 
+    - add btn-flush to strip all margins - audit margins (instead of button flush, how about button w/margins? btn-margins class or something?)

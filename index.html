@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bui bui-normalize bui-grid bui-typography bui-icons bui-modals bui-buttons bui-inputs bui-tooltips bui-library">
+<html lang="en" class="bui bui-grid bui-typography bui-icons bui-modals bui-buttons bui-inputs bui-tooltips bui-library">
 <head>
 	<meta charset="UTF-8">
 	<!-- Mobile Specific Metas
@@ -8,7 +8,7 @@
 
 	<title>Beacon Pattern Library</title>
 	<link rel="icon" type="image/x-con" href="favicon.ico">
-	<link rel="stylesheet" href="bootstrap-3.1.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-3.2.0/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bui-css/bui-styles.css">
 	<link rel="stylesheet" href="demo-page-css/demo-page-styles.css">
 </head>
@@ -766,9 +766,10 @@
 	<p>For this tooltip method to be successful, it needs to be informative yet unobtrusive. Since these appear instantly on hover, there is a potential that a user may trigger multiple instances of these as they rove around the interface. Tooltips should preferably appear over whitespace without covering other UI elements (especially other interactive ones), but should also have a certain amount of consistency. For example, three icon buttons next to each other should have tooltips appear in the same direction, not in three different ones.</p>
 	<div class="bui-lib-example">
 		<h4>Bad.</h4>
-		<button class="btn btn-icon icon-list tooltip-ex-static" data-toggle="tooltip" data-placement="left" title="List View"></button>
-		<button class="btn btn-icon icon-tile tooltip-ex-static" data-toggle="tooltip" data-placement="bottom" title="Tile View"></button>
-		<button class="btn btn-icon icon-full tooltip-ex-static" data-toggle="tooltip" data-placement="right" title="Full View"></button>
+		<p class="small"><em>Hover for tooltip:</em></p>
+		<button class="btn btn-icon icon-list bui-instant-tooltip" data-toggle="tooltip" data-placement="left" title="List View"></button>
+		<button class="btn btn-icon icon-tile bui-instant-tooltip" data-toggle="tooltip" data-placement="bottom" title="Tile View"></button>
+		<button class="btn btn-icon icon-full bui-instant-tooltip" data-toggle="tooltip" data-placement="right" title="Full View"></button>
 		<h4 style="margin-top:4em;">Good!</h4>
 		<p><small>Hover for tooltip:</small></p>
 		<button class="btn btn-icon icon-list bui-instant-tooltip" data-toggle="tooltip" data-placement="bottom" title="List View"></button>
@@ -812,8 +813,13 @@
 	<p>The info button (<span class="icon-info" style="color:#0086AB;"></span>) tooltip content should appear after a standard delay, <strong>or</strong> immediately on click.</p>
 
 	<h2>Static</h2>
-	<p>A static tooltip not dependent on a hover action, usually appearing on an initial screen to guide a user toward an intended first action. This tooltip can easily be considered obstructive or distracting. It should only be used if user testing has demonstrated its usefulness.</p>
+	<p><strong>Usage:</strong> A static tooltip is not dependent on a hover action, it usually appears on an initial screen to guide a user toward an intended first action. This tooltip can easily be considered obstructive or distracting. It should only be used if user testing has demonstrated its need.</p>
 	<p>Because this tooltip is static and meant to clearly direct users to a desired action, the text is larger and more prominent. </p>
+	<h3>Verbage</h3>
+	<p>Verbage should be as short as possible while clearly describing the intended action. It will likely include action cues like “Select an option to…”, or “Start by adding…”.</p>
+	<h3>Placement and Animation</h3>
+	<p>Since this tooltip is static, it absolutely must not cover any UI elements or text.</p>
+	<p>After a user has made any action on the screen, this tooltip should fade out for 150ms.</p>
 	<div class="bui-lib-example" style="padding: 3em 0;">
 		<div class="tooltip-static right" style="top:40%;left:5%;"><div class="tooltip-arrow"></div><div class="tooltip-inner">A Static Tooltip</div></div>
 	</div>
@@ -823,11 +829,6 @@
 	<code>&lt;div class="<span>tooltip-inner</span>"></code>A Static Tooltip<code>&lt;/div&gt;</code>
 <code>&lt;/div&gt;</code>
 	</pre>
-	<h3>Verbage</h3>
-	<p>Verbage should be as short as possible while clearly describing the intended action. It will likely include action cues like “Select an option to…”, or “Start by adding…”.</p>
-	<h3>Placement and Animation</h3>
-	<p>Since this tooltip is static, it absolutely must not cover any UI elements or text.</p>
-	<p>After a user has made any action on the screen, this tooltip should fade out for 150ms.</p>
 </section>
 
 
@@ -1085,7 +1086,7 @@
 </div> <!-- end container -->
 <footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="bootstrap-3.1.1/dist/js/bootstrap.min.js"></script>
+<script src="bootstrap-3.2.0/dist/js/bootstrap.min.js"></script>
 <script src="bui-js/bui-scripts.js"></script>
     <script>
     		// bui style toggles
