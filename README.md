@@ -15,7 +15,7 @@ BUI is built to be modular. An application can load regular bootstrap, then when
 To use:
 
 ```sh
-bower install bui
+bower install decipher-bui
 ```
 
 ## Installation (For Developers)
