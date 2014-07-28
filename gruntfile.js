@@ -2,12 +2,12 @@
  * Bui's Gruntfile - handles bui's less files and demo-page-specific files (for the pattern library website)
  * http://decipher-design.com/bui
  */
+'use strict';
 
 module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
         less: {
             lib: {
                 options: {
@@ -47,14 +47,20 @@ module.exports = function(grunt) {
                     nospawn: true
                 }
             }
+        },
+        'bower-install-simple': {
+            options: {
+                directory: 'support/'
+            }
         }
     });
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-bower-install-simple');
 
     // Default task(s).
-    grunt.registerTask('default', ['watch', 'less']);
+    grunt.registerTask('default', ['bower-install-simple', 'less']);
 
 };
