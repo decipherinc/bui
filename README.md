@@ -12,7 +12,16 @@ BUI is built to be modular. An application can load regular bootstrap, then when
 
 ## Installation
 
+To use:
+
 ```sh
+bower install bui
+```
+
+## Installation (For Developers)
+
+```sh
+git clone git://github.com/decipherinc/bui.git && cd bui
 npm install
 ```
 
