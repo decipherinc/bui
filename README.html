@@ -1,0 +1,74 @@
+<h1>BUI - Beacon User Interface</h1>
+
+<p>To add BUI styles to bootstrap, just link to the bui-styles.css file in bui-css. The style overrides have been built using bootstrap 3.1.1.</p>
+
+<p>If adding styles, use the Gruntfile.js in the root of the bui folder to compile less.</p>
+
+<p>BUI is built to be modular. An application can load regular bootstrap, then when ready, adding classes to the <code>&lt;html&gt;</code> tag will activate the bui style overrides.</p>
+
+<h2>Demo</h2>
+
+<p><a href="">http://decipher-design.com/bui/</a></p>
+
+<h2>Currently Available Overrides</h2>
+
+<p><code>sh
+bui bui-grid bui-typography bui-icons bui-buttons bui-modals
+</code></p>
+
+<h3>Partially Available (Being Developed)</h3>
+
+<p><code>sh
+bui-inputs bui-tooltips
+</code></p>
+
+<h2>Installation</h2>
+
+<p>To use:</p>
+
+<p><code>sh
+bower install decipher-bui
+</code></p>
+
+<h2>Installation (For Developers)</h2>
+
+<p><code>sh
+git clone git://github.com/decipherinc/bui.git &amp;&amp; cd bui
+npm install
+</code></p>
+
+<p>The above command will install client-side dependencies.</p>
+
+<p>From there, you can build the <code>.css</code> files by executing:</p>
+
+<p><code>sh
+grunt
+</code></p>
+
+<p>To automatically compile <code>.less</code> files as you work, execute:</p>
+
+<p><code>sh
+grunt watch
+</code></p>
+
+<h2>Notes</h2>
+
+<h3>NOTES TO YOU:</h3>
+
+<p><code>.codekit-config</code>?</p>
+
+<p>Don&rsquo;t worry about the <code>.codekit-config</code> or <code>cache</code> folder, Brandon uses it only for running a local server and seeing results update in the browser. Nothing is compiled with it, compiling less and js is done by using <code>grunt</code>.</p>
+
+<p>When editing: Make sure the style.less file references the bootstrap variables and mixens</p>
+
+<h2>Copyright</h2>
+
+<p>2014 Decipher, Inc.</p>
+
+<h2>License</h2>
+
+<p>MIT</p>
+
+<h2>Author</h2>
+
+<p><a href="http://github.com/brandonreid">Brandon Reid</a></p>

@@ -4,6 +4,7 @@
 		height: 100%;
 		overflow-y: auto;
 		&.fade .modal-dialog {
+			//width: 90%;
 	    .translate(0, -25%);
 	    .transition-transform(~"0.3s ease-out");
 	  }
@@ -26,6 +27,9 @@
 			top: 50%;
 			left: 50%;
 			margin: 0;
+			@media (max-width: 768px) {
+				width: 90%;
+			}
 		}
 	}
 

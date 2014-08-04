@@ -140,12 +140,15 @@
 
 	.btn-icon {
 		background-color: transparent;
-		font-size: 1rem;
+		font-size: 1em;
 		color: @color-orange;
-		width: 2em;
+		width: 1.75em;
 		text-align: center;
-		padding: 0.34em 0;
+		padding: 2px 0;
 		border-radius: 4px;
+		&:before, & i:before, & span:before {
+			margin: 0;
+		}
 		&:hover, &:focus {
 			color: darken(@color-orange, 7);
 		}
@@ -217,7 +220,6 @@
 		font-size: 1.2rem;	
 		color: @color-remove;
 		padding: 0;
-		vertical-align: top;
 		&:hover, &:focus {
 			color: @color-red;
 		}
@@ -307,7 +309,9 @@
 		border-radius: 3px;
 		padding: 2px 6px;
 		&.btn-icon {
-			padding: 0.25em 0;
+			font-size: 0.75rem;
+			padding: 1px 0;
+			width: 1.25rem;
 		}
 		&.btn-remove {
 			padding: 0;
@@ -322,7 +326,9 @@
 		border-radius: 3px;
 		padding: 2px 6px;
 		&.btn-icon {
-			padding: 0.25em 0;
+			font-size: 0.85rem;
+			padding: 1px 0;
+			width: 1.4rem;
 		}
 		&.btn-remove {
 			padding: 0;
@@ -336,7 +342,9 @@
 		font-size: 1.4em;
 		padding: 5px 12px;
 		&.btn-icon {
-			padding: 0.27em 0;
+			font-size: 1.4rem;
+			width: 2.3rem;
+			padding: 2px 0;
 		}
 		&.btn-remove {
 			padding: 0;

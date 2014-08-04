@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<button class="btn btn-icon icon-menu menu-btn" data-toggle="button"></button>
+<button class="btn btn-lg btn-icon icon-menu menu-btn" data-toggle="button"></button>
 <div class="menu">
 	<nav role="Navigation" class="navigation">
 		<h4>Skip Menu</h4>
@@ -694,11 +694,14 @@
 		<div class="row bui-lib-example-block">
 			<button type="button" class="btn btn-default btn-block">Block</button>
 		</div>
-		<button role="button" title="" class="btn btn-xs btn-icon icon-full active"></button>
-		<button role="button" title="" class="btn btn-sm btn-icon icon-full active"></button>
-		<button role="button" title="" class="btn btn-icon icon-full active"></button>
-		<button role="button" title="" class="btn btn-lg btn-icon icon-full active"></button>
+		<button role="button" title="" class="btn btn-xs btn-icon icon-dq-image-map active"></button>
+		<button role="button" title="" class="btn btn-sm btn-icon icon-dq-image-map active"></button>
+		<button role="button" title="" class="btn btn-icon icon-dq-image-map active"></button>
+		<button role="button" title="" class="btn btn-lg btn-icon icon-dq-image-map active"></button>
 		<br>
+		<button role="button" title="" class="btn btn-icon btn-flush icon-user"></button>
+		<button role="button" title="" class="btn btn-icon btn-flush icon-copy"></button>
+		<button role="button" title="" class="btn btn-icon btn-flush icon-edit"></button>
 		<br>
 		<button class="btn btn-xs btn-remove" title="Delete Button"></button>
 		<button class="btn btn-sm btn-remove" title="Delete Button"></button>
@@ -837,7 +840,7 @@
 <section>
 	<h1><a name="modals">Modals</a></h1>
 	<p>The markup for bui modals are very similar to standard bootstrap modals. The close 'x' button and cancel buttons have bui specific classes.</p>
-	<div class="bui-lib-example">
+	<div class="bui-lib-example dark-bg">
 		<div class="modal fade in" style="display:block; position: static; z-index: 5;">
 		  <div class="modal-dialog" style="z-index: 10;">
 		    <div class="modal-content">
@@ -855,7 +858,6 @@
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
-		<div class="modal-backdrop fade in" style="position: absolute; z-index: 1;"></div>
 	</div>
 	<pre class="bui-lib-example-comment">
 <code>&lt;div class="<span>modal fade</span>" id="bui-lib-example-modal"&gt;</code>
@@ -895,7 +897,7 @@
 	<p>Use bootstraps native modal sizes.</p>
 	<h3>Small</h3>
 	<p>Add <code>modal-sm</code> class to <code>modal-dialog</code>.</p>
-	<div class="bui-lib-example">
+	<div class="bui-lib-example dark-bg">
 		<div class="modal fade in" style="display:block; position: static; z-index: 5;">
 		  <div class="modal-dialog modal-sm" style="z-index: 10;">
 		    <div class="modal-content">
@@ -913,12 +915,11 @@
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
-		<div class="modal-backdrop fade in" style="position: absolute; z-index: 1;"></div>
 	</div>
 
 	<h3>Large</h3>
 	<p>Add <code>modal-lg</code> class to <code>modal-dialog</code>.</p>
-	<div class="bui-lib-example">
+	<div class="bui-lib-example dark-bg">
 		<div class="modal fade in" style="display:block; position: static; z-index: 5;">
 		  <div class="modal-dialog modal-lg" style="z-index: 10;">
 		    <div class="modal-content">
@@ -936,16 +937,14 @@
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
-		<div class="modal-backdrop fade in" style="position: absolute; z-index: 1;"></div>
 	</div>
 
 	<h2>Placement</h2>
 	<p>The standard modal is placed 30px from the top and will allow scrolling if the modals content is long (or if the user is on a device with a small viewport).</p>
-	<p>If your modal has very little content and you're sure the user won't need the ability to scroll, you can apply the custom BUI <code>modal-centered</code> class to <code>.modal</code>, and center the modal in the window.</p>
+	<p>If your modal has very little content and you're sure the user won't need the ability to scroll, you can apply the custom BUI <code>modal-centered</code> class to <code>.modal</code>, and center the modal in the window. Don't use this for any modal containing complex menues of any sort. The centered modal uses the transform: translate hack and can cause alignment anomalies.</p>
 	<div class="bui-lib-example">
 		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-centered">Centered Modal Demo</button>
 		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-top">Standard Modal With Scroll Demo</button>
-
 		<div class="modal fade modal-centered" id="bui-modal-demo-centered">
 		  <div class="modal-dialog modal-sm">
 		    <div class="modal-content">
