@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     // target.css file: source.less file
-                    "demo-page-css/demo-page-styles.css": "bui-less/demo-page-specific.less"
+                    "demo-page-css/demo-page-styles.css": "less/demo-page-specific.less"
                 }
             },
             bui: {
@@ -28,20 +28,20 @@ module.exports = function(grunt) {
                 },
                 files: {
                     // target.css file: source.less file
-                    "bui-css/bui-styles.css": "bui-less/style.less"
+                    "bui-css/bui-styles.css": "less/style.less"
                 }
             }
         },
         watch: {
             libSpecificStyles: {
-                files: ['bui-less/demo-page-specific.less'],
+                files: ['less/demo-page-specific.less'],
                 tasks: ['less:lib'],
                 options: {
                     nospawn: true
                 }
             },
             bui: {
-                files: ['bui-less/*.less', '!bui-less/demo-page-specific.less'],
+                files: ['less/*.less', '!less/demo-page-specific.less'],
                 tasks: ['less:bui'],
                 options: {
                     nospawn: true

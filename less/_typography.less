@@ -1,0 +1,48 @@
+// Google font inport
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700);
+@{typo-prefix} {
+  font-size: 87.5%;
+
+  body {
+    font-family: "Open Sans", Tahoma, sans-serif;
+    color: @color-base;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", Tahoma, sans-serif;
+    font-weight: bold;
+    &.unbold {
+      font-weight: 400;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: @color-blue;
+    &:hover, :focus {
+      color: lighten(@color-blue, 10%);
+      text-decoration: underline;
+    }
+    &:active {
+      color: darken(@color-blue, 5%);
+      text-decoration: underline;
+    }
+  }
+
+  small {
+    font-size: .8em;
+  }
+
+  .caps {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .label {
+    background-color: @color-button;
+    color: @color-base;
+    padding: .2em .8em;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+  }
+} // end @{typo-prefix}

@@ -458,7 +458,7 @@
 
 <!--************* INPUT TYPES *************-->
 
-<section>
+<section style="border:1px solid red;">
 	<h1><a name="inputs" style="color:red;">Inputs</a></h1>
 	<p style="color:red;">Being Developed</p>
 	<h3>Text Input</h3>
@@ -580,19 +580,25 @@
 	<p><strong>Usage:</strong> Only for commonly used and easy to understand actions in the main area of an application, otherwise use a standard or “icon + label” button with descriptive text.</p>
 	<p><strong>Rules:</strong> Icon buttons must have descriptive tooltips that should appear on hover after a short delay.</p>
 	<div class="bui-lib-example">
-		<button role="button" title="Icon Button" class="btn btn-icon icon-sort-by"></button>
-		<button role="button" title="Icon Button when Selected" class="btn btn-icon icon-sort-by selected"></button>
-		<button role="button" title="Icon Button when Disabled" class="btn btn-icon icon-sort-by" disabled="disabled"></button>
+		<p>Standard:</p>
+			<button role="button" title="Icon Button" class="btn btn-icon"><i class="icon-settings"></i></button>
+		<p>Hover <i>(slightly darker, cursor: pointer)</i>:</p>
+			<button role="button" title="Icon Button" class="btn btn-icon demo-hover"><i class="icon-settings"></i></button>
+		<p>Selected <i>(.selected or .active)</i>:</p>
+			<button role="button" title="Icon Button when Selected" class="btn btn-icon selected"><i class="icon-settings"></i></button>
+		<p>Disabled:</p>
+			<button role="button" title="Icon Button when Disabled" class="btn btn-icon" disabled="disabled"><i class="icon-settings"></i></button>
 		<br>
-		<p>You can also add the icon inside the <code>&lt;button&gt;</code> tags using an <code>&lt;i&gt;</code> tag or <code>&lt;span&gt;</code> tag</p>
-		<button role="button" title="Icon button with the icon added inside the button tags." class="btn btn-icon"><span class="icon-sort-by"></span></button>
 	</div>
 	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-icon icon-sort-by</span>"&gt;&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-icon icon-sort-by <span>selected</span>"&gt;&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-icon icon-sort-by" <span>disabled="disabled"</span>&gt;&lt;/button&gt;</code></p>
-		<p>&lt;!-- An example button using a &lt;span&gt; tag inside the button for the icon --&gt;</p>
-		<p><code>&lt;button class="<span>btn btn-icon</span>"&gt;&lt;span class="icon-sort-by"&gt;&lt;/span&gt;&lt;/button&gt;</code></p>
+		<p>Standard:</p>
+		<p><code>&lt;button class="<span>btn btn-icon</span>"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+		<p>Hover (slightly darker, cursor: pointer):</p>
+		<p><code>&lt;button class="<span>btn btn-icon</span>"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+		<p>Selected (.selected or .active):</p>
+		<p><code>&lt;button class="btn btn-icon <span>selected</span>"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+		<p>Disabled:</p>
+		<p><code>&lt;button class="btn btn-icon" <span>disabled="disabled"</span>&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
 	</div>
 
 	<h3>Icon + Label</h3>
@@ -649,15 +655,15 @@
 	<ul>
 		<li>Links should not look like buttons, they always display an underline on hover.</li>
 		<li>When a link’s destination is to another Beacon application, it may be accompanied with the <code>icon-go-to</code> for internal links (<span class="icon-go-to"></span>), otherwise a link should not have any associated icons.</li>
-		<li>The <code>&lt;a href=”#”&gt;</code> markup is prefered for links, but if for some reason you need to, you can style buttons as links using <code>&lt;btn-link&gt;</code> class</li>
+		<li>The <code>&lt;a href=”#”&gt;</code> markup is prefered for links, but if for some reason you need to, you can style buttons as links using <code>&lt;btn-link&gt;</code> class. Just note that links with button styling have button padding <i>(so they align nicely to buttons)</i>.</li>
 	</ul>
 	<div class="bui-lib-example">
 		<button type="button" class="btn btn-link">Button Link</button>
-		<button type="button" class="btn btn-link" disabled="disabled">Disabled</button>
+		<a href="#0">A Standard Link</a>
 	</div>
 	<div class="bui-lib-example-comment">
 		<p><code>&lt;button class="<span>btn btn-link</span>"&gt;</code>Button Link<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-link" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
+		<p><code>&lt;a href="#URL"&gt;</code>A Standard Link<code>&lt;/a&gt;</code></p>
 	</div>
 
 	<h3>Cancel</h3>
@@ -676,16 +682,16 @@
 	<p><strong>Usage:</strong> A stand alone “x” icon (never the letter "x" or "X") used to remove or delete an item.</p>
 	<p><strong>Rules:</strong> Typically placed on the far right side in table rows. It may be appropriate to have a confirmation alert if the action cannot be undone. While the hover state is always @color-red, the default state may need to be a different color depending on what it's containing background color is.</p>
 	<div class="bui-lib-example">
-		<button class="btn btn-remove" title="Delete Button"></button>
-		<button class="btn btn-remove" disabled="disabled" title="Delete Button when Disabled"></button>
+		<button class="btn btn-remove" title="Delete Button"><i class="icon-remove"></i></button>
+		<button class="btn btn-remove" disabled="disabled" title="Delete Button when Disabled"><i class="icon-remove"></i></button>
 	</div>
 	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-remove" <span>disabled="disabled"</span>&gt;&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;i class="<span>icon-remove</span>"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-remove" <span>disabled="disabled"</span>&gt;&lt;i class="<span>icon-remove</span>"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
 	</div>
 
 	<h2>Button Sizing</h2>
-	<p>The default size should be used in most cases, but these are also available when necessary.</p>
+	<p>Bootstrap button size classes have been customized for BUI buttons.</p>
 	<div class="bui-lib-example">
 		<button type="button" class="btn btn-default btn-xs">Extra Small</button>
 		<button type="button" class="btn btn-default btn-sm">Small</button>
@@ -694,39 +700,36 @@
 		<div class="row bui-lib-example-block">
 			<button type="button" class="btn btn-default btn-block">Block</button>
 		</div>
-		<button role="button" title="" class="btn btn-xs btn-icon icon-dq-image-map active"></button>
-		<button role="button" title="" class="btn btn-sm btn-icon icon-dq-image-map active"></button>
-		<button role="button" title="" class="btn btn-icon icon-dq-image-map active"></button>
-		<button role="button" title="" class="btn btn-lg btn-icon icon-dq-image-map active"></button>
+		<button role="button" title="" class="btn btn-xs btn-icon icon-user active"></button>
+		<button role="button" title="" class="btn btn-sm btn-icon icon-user active"></button>
+		<button role="button" title="" class="btn btn-icon icon-user active"></button>
+		<button role="button" title="" class="btn btn-lg btn-icon icon-user active"></button>
 		<br>
-		<button role="button" title="" class="btn btn-icon btn-flush icon-user"></button>
-		<button role="button" title="" class="btn btn-icon btn-flush icon-copy"></button>
-		<button role="button" title="" class="btn btn-icon btn-flush icon-edit"></button>
 		<br>
-		<button class="btn btn-xs btn-remove" title="Delete Button"></button>
-		<button class="btn btn-sm btn-remove" title="Delete Button"></button>
-		<button class="btn btn-remove" title="Delete Button"></button>
-		<button class="btn btn-lg btn-remove" title="Delete Button"></button>
+		<button class="btn btn-xs btn-remove" title="Delete Button"><i class="icon-remove"></i></button>
+		<button class="btn btn-sm btn-remove" title="Delete Button"><i class="icon-remove"></i></button>
+		<button class="btn btn-remove" title="Delete Button"><i class="icon-remove"></i></button>
+		<button class="btn btn-lg btn-remove" title="Delete Button"><i class="icon-remove"></i></button>
 	</div>
 	<div class="bui-lib-example-comment">
 		<p>&lt;!-- Standard Buttons --&gt;</p>
-		<p><code>&lt;button class="btn btn-default <span>btn-xs</span>"&gt;</code>Extra Small<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-default <span>btn-sm</span>"&gt;</code>Small<code>&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-default <span>btn-xs</span>"&gt;</code>Extra Small<code>&lt;/button&gt;</code> &lt;!-- equivalent to 10px font-size when body font-size is 14px --&gt;</p>
+		<p><code>&lt;button class="btn btn-default <span>btn-sm</span>"&gt;</code>Small<code>&lt;/button&gt;</code> &lt;!-- equivalent to 12px font-size when body font-size is 14px --&gt;</p>
 		<p><code>&lt;button class="btn btn-default"&gt;</code>Default<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-default <span>btn-lg</span>"&gt;</code>Large<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-default <span>btn-block</span>"&gt;</code>Block<code>&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-default <span>btn-lg</span>"&gt;</code>Large<code>&lt;/button&gt;</code> &lt;!-- equivalent to 21px font-size when body font-size is 14px --&gt;</p>
+		<p><code>&lt;button class="btn btn-default <span>btn-block</span>"&gt;</code>Block<code>&lt;/button&gt;</code> &lt;!-- spans the full width of it's parent container --&gt;</p>
 		<br>
 		<p>&lt;!-- Icon Buttons --&gt;</p>
-		<p><code>&lt;button class="btn btn-icon icon-full <span>btn-xs</span> active"&gt;</code><code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-icon icon-full <span>btn-sm</span> active"&gt;</code><code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-icon icon-full active"&gt;</code><code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-icon icon-full <span>btn-lg</span> active"&gt;</code><code>&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-icon <span>btn-xs</span> active"&gt;&lt;i class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code> &lt;!-- equivalent to 12px font-size when body font-size is 14px --&gt;</p>
+		<p><code>&lt;button class="btn btn-icon <span>btn-sm</span> active"&gt;&lt;i class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code> &lt;!-- equivalent to 14px font-size when body font-size is 14px --&gt;</p>
+		<p><code>&lt;button class="btn btn-icon active"&gt;&lt;i class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code> &lt;!-- equivalent to 17px font-size when body font-size is 14px --&gt;</p>
+		<p><code>&lt;button class="btn btn-icon <span>btn-lg</span> active"&gt;&lt;i class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code>&lt;!-- equivalent to 21px font-size when body font-size is 14px --&gt;</p>
 		<br>
-		<p>&lt;!-- Delete/Remove Buttons --&gt;</p>
-		<p><code>&lt;button class="btn btn-remove <span>btn-xs</span>"&gt;</code><code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-remove <span>btn-sm</span>"&gt;</code><code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-remove"&gt;</code><code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-remove <span>btn-lg</span>"&gt;</code><code>&lt;/button&gt;</code></p>
+		<p>&lt;!-- Delete/Remove Buttons (same size equivalencies as icon buttons) --&gt;</p>
+		<p><code>&lt;button class="btn btn-remove <span>btn-xs</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-remove <span>btn-sm</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-remove"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-remove <span>btn-lg</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
 	</div>
 
 	<h2>Tags</h2>
@@ -734,28 +737,29 @@
 	<p><strong>Usage:</strong> Tags are used for representing data attributes on an object of some sort. In the Portal, they're used for classifying and organizing projects, while in other areas of Beacon they may be used for displaying applied filters.</p>
 	<p><strong>Rules:</strong> Tags are modular and must always be removable by hovering over the tag and clicking the remove button.</p>
 	<div class="bui-lib-example">
-		<div class="tag">Decipher Inc<button class="btn btn-remove"></button></div>
+		<div class="tag">Decipher Inc<button class="btn btn-remove"><i class="icon-remove"></i></button></div>
 	</div>
 	<div class="bui-lib-example-comment">
-		<code>&lt;div class="<span>tag</span>"&gt;</code>Decipher Inc<code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;/button&gt;&lt;/div&gt;</code>
+		<code>&lt;div class="<span>tag</span>"&gt;</code>Decipher Inc<code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;</code>
 	</div>
 	<p><strong>Code Note:</strong> You can turn a <code>&lt;div&gt;</code>, <code>&lt;li&gt;</code> or other container into a tag, but a <code>btn-remove</code> needs to exist inside after the tag's name for the remove button to work.</p>
 
 	<h3>Group Tags</h3>
 	<p><strong>Usage:</strong> Same as a standard tag, only a group tag is meant to represent a pre-defined group of users that can be added to a project all at once using the tag system. They are styled slightly differently so users can distinguish them standard organizational tags.</p>
 	<div class="bui-lib-example">
-		<div class="tag icon-user-group">BUI Group<button class="btn btn-remove"></button></div>
+		<div class="tag icon-user-group">BUI Group<button class="btn btn-remove"><i class="icon-remove"></i></button></div>
 	</div>
 	<div class="bui-lib-example-comment">
-		<code>&lt;div class="<span>tag <strong>icon-user-group</strong></span>"&gt;</code>BUI Group<code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;/button&gt;&lt;/div&gt;</code>
+		<code>&lt;div class="<span>tag <strong>icon-user-group</strong></span>"&gt;</code>BUI Group<code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;</code>
 	</div>
 	<p><strong>Code Note:</strong> All you have to do to turn a tag into group tag is add the <code>icon-user-group</code> class. This adds the icon and comes packaged with some minor css stuff.</p>
 </section>
 
 <!--************* TOOLTIPS *************-->
 
-<section>
-	<h1><a name="tooltips">Tooltips</a></h1>
+<section style="border:1px solid red;">
+	<h1><a name="tooltips" style="color:red;">Tooltips</a></h1>
+	<p><em style="color:red;">Being Developed - Will likely switch to using Tipped for all tooltips.</em></p>
 	<p>These definitions are for actual tooltips, styled and defined separately from tooltip menus/modals.</p>
 	<h2>Instant Tooltip</h2>
 	<p>A tooltip that appears on hover with no delay, containing minimal text. This type of tooltip should be used in instances where the interaction method isn’t immediately discernible, such as with icon buttons that don’t have supporting text.</p>
@@ -784,13 +788,13 @@
 		<button class="btn btn-text btn-large icon-add bui-instant-tooltip" data-toggle="tooltip" data-placement="auto" title="Awesome Tooltip">Hover Here</button>
 	</div>
 	<div class="bui-lib-example-comment">
-		<code>&lt;button class="btn btn-text btn-large icon-add <span>bui-instant-tooltip</span>" <span>data-toggle="tooltip" data-placement="auto" title="Awesome Tooltip"</span>&gt;</code>Hover Here<code>&lt;/button&gt;</code>
+		<code>&lt;button class="btn btn-text btn-large icon-add" <span>data-toggle="tooltip" data-placement="auto" title="Awesome Tooltip"</span>&gt;</code>Hover Here<code>&lt;/button&gt;</code>
 	</div>
-	<p><strong>Code Note:</strong> Bootstrap powered tooltips must be initialized manually. To make things easier, add the class <code>bui-instant-tooltip</code> and the tooltip will be initialized automatically <em>(as long as your document includes bui-scripts.js)</em>. When dynamically creating contant that needs a tooltip, just run <code>buiTooltipInit();</code> to initialize any new tooltips.</p>
+	<p><strong>Code Note:</strong> Bootstrap powered tooltips must be <a href="http://getbootstrap.com/javascript/#tooltips-usage">initialized manually</a>.
 	<p>Placement is set with the <code>data-placement=""</code> attribute. <code>"auto"</code> will make the tooltip appear on top unless it encounters a constraint in the viewport, at which point it will push to bottom, left, etc. The other available attributes are <code>"top"</code>, <code>"right"</code>, <code>"bottom"</code> or <code>"left"</code>.</p>
 
-	<h2 style="color:red;">Delayed Tooltip</h2>
-	<small style="color:red;">Being Developed</small>
+	<h2>Delayed Tooltip</h2>
+	<small>Being Developed</small>
 	<p>A tooltip that appears on hover after a short delay, possibly containing detailed information or even links to KB articles, etc. This type of tooltip should be used when an interaction method has some sort of label or cue to the expected outcome, but where more detailed information may be desirable. It can help to educate users in context.</p>
 	<p>Similar use of contrast as the instant tooltip, which will help differentiate informational tooltips from menu tooltips. A delayed tooltip contains a title (or main text), this may be the only content in the tooltip.</p>
 	<div class="bui-lib-example">
@@ -881,6 +885,7 @@
 	<h2>Header</h2>
 	<h3>Title + Optional Drop-Down Menu:</h3>
 	<p><strong>Usage:</strong> The title should be short and descriptive. This title may be displayed as a Drop-Down menu in situations where the modal features a number of categories (e.g. the project menu in the survey building app).</p>
+	<p>The title may also contain a left aligned icon before the text in situations like a warning dialog.</p>
 	<h3>Help Resources</h3>
 	<p><strong>Usage:</strong> There may be a “Learn More” link or help icon right aligned in the header.</p>
 	<h3>Close "x" Button</h3>
@@ -896,7 +901,7 @@
 	<h2>Sizes</h2>
 	<p>Use bootstraps native modal sizes.</p>
 	<h3>Small</h3>
-	<p>Add <code>modal-sm</code> class to <code>modal-dialog</code>.</p>
+	<p>Add <code><span><strong>modal-sm</strong></span></code> class to <code>modal-dialog</code>. These have less padding in the header and footer, so using <code>btn-small</code> works nicely here. You can also center small modals with <code>modal-centered</code> <i>(explained below, under "Placement")</i> if you're creating a small dialog modal.</p>
 	<div class="bui-lib-example dark-bg">
 		<div class="modal fade in" style="display:block; position: static; z-index: 5;">
 		  <div class="modal-dialog modal-sm" style="z-index: 10;">
@@ -909,8 +914,8 @@
 		        <p>One small body&hellip;</p>
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
+		        <button type="button" class="btn btn-sm btn-cancel" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-sm btn-primary">Save changes</button>
 		      </div>
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
@@ -918,7 +923,7 @@
 	</div>
 
 	<h3>Large</h3>
-	<p>Add <code>modal-lg</code> class to <code>modal-dialog</code>.</p>
+	<p>Add <code><span><strong>modal-lg</strong></span></code> class to <code>modal-dialog</code>.</p>
 	<div class="bui-lib-example dark-bg">
 		<div class="modal fade in" style="display:block; position: static; z-index: 5;">
 		  <div class="modal-dialog modal-lg" style="z-index: 10;">
@@ -939,9 +944,32 @@
 		</div><!-- /.modal -->
 	</div>
 
+	<h3>Fullscreen</h3>
+	<p>Add <code><span><strong>modal-fullscreen</strong></span></code> class to <code>modal-dialog</code> to create a full-screen modal. The <code>modal-body</code> will scroll when the modal contains lots of content.</p>
+	<div class="bui-lib-example">
+		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-full">Launch Fullscreen Modal</button>
+		<div class="modal fade" id="bui-modal-demo-full">
+		  <div class="modal-dialog modal-fullscreen">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"></button>
+		        <h4 class="modal-title">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        <h4 style="font-size: 3em; text-align: center; margin-top:2em;">A big ol' full screen modal!</h4>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	</div>
+
 	<h2>Placement</h2>
 	<p>The standard modal is placed 30px from the top and will allow scrolling if the modals content is long (or if the user is on a device with a small viewport).</p>
-	<p>If your modal has very little content and you're sure the user won't need the ability to scroll, you can apply the custom BUI <code>modal-centered</code> class to <code>.modal</code>, and center the modal in the window. Don't use this for any modal containing complex menues of any sort. The centered modal uses the transform: translate hack and can cause alignment anomalies.</p>
+	<p>If your modal has very little content and you're sure the user won't need the ability to scroll, you can apply the custom BUI <code>modal-centered</code> class to <code>.modal</code>, and center the modal in the window. Don't use this for any modal containing complex menues of any sort. The centered modal uses the transform: translate hack and can cause alignment anomalies. Best to only use this for modals displaying dialog text.</p>
 	<div class="bui-lib-example">
 		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-centered">Centered Modal Demo</button>
 		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-top">Standard Modal With Scroll Demo</button>
@@ -956,8 +984,8 @@
 		        <p>A tiny modal that will never scroll.</p>
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
+		        <button type="button" class="btn btn-sm btn-cancel" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-sm btn-primary">Save changes</button>
 		      </div>
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
@@ -981,6 +1009,10 @@
 		  </div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
 	</div>
+
+	<h2>Padding Flush</h2>
+	<p>The <code>modal-body</code> includes padding by default.</p>
+	<p>Remove this padding by adding the class <code><span><strong>flush</strong></span></code> to <code>modal-body</code>.</p>
 </section>
 
 
@@ -990,13 +1022,23 @@
 	<h1><a name="typography">Typography</a></h1>
 	<p>Most of this uses the same markup as bootstrap, but it's worth reading through as it also provides some best practice tips.</p>
 	<h2>Font</h2>
-	<p>The base font-size is 14px. All other font-sizes should be set using em or rem units so that the relative font size can be adjusted for different viewports.</p>
-	<p>The font weights available are <strong>400</strong> (+ italic), <strong>600</strong> (semi-bold), and <strong>700</strong>.</p>
+	<p>BUI uses <code>em</code> units heavily to maintain proportionality of design elements to the text. Applications in Beacon have been built on inconsistent root font sizes, so nothing in BUI relies on <code>rem</code> units and should scale appropriately to the previously set <code>body</code> font size.</p>
+	<p>When adding BUI typography, the root <code>&lt;html&gt;</code> font-size is set to 87.5% <i>(14px on standard 16px based browsers)</i>, and the <code>&lt;body&gt;</code> font-size to 14px. If the application you're working on needs to override these default BUI font-size settings, you'll need to match the level of BUI specificity in an override like so:</p>
 
-	<p>The font family used for Beacon is <strong>Open Sans</strong>.</p>
+	<pre class="bui-lib-example">
+<code>.bui.bui-typography {</code>
+  <code>font-size: 87.5%;</code> /* Change to your desired root font-size */
+<code>}</code>
+<code>.bui.bui-typography body {</code>
+  <code>font-size: 14px;</code> /* Change to your desired body font-size */
+<code>}</code>
+	</pre>
+
+	<p>The font family used in BUI is <strong>Open Sans</strong>.</p>
+	<p>The font weights available are <strong>400</strong> <i>(+ italic)</i>, <strong>600</strong> <i>(semi-bold)</i>, and <strong>700</strong> <i>(bold)</i>.</p>
 
 	<h2>Headings</h2>
-	<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are styled and available.</p>
+	<p>Other than the font family and weight, header styles are inherited from bootstrap. At some point in the future we'll provide some standard heading styles.</p>
 	<div class="bui-lib-example">
 		<h1>H1 Heading</h1>
 		<h2>H2 Heading</h2>
@@ -1015,7 +1057,7 @@
 	</div>
 
 	<h3>Unbold Headings</h3>
-	<p>Some designs may call for an unbolded heading.</p>
+	<p>Some designs may call for an unbolded heading. Add the class <code><span><strong>unbold</strong></span></code> to the <code>&lt;h*&gt;</code> tag.</p>
 	<div class="bui-lib-example">
 		<h1 class="unbold">H1 Heading</h1>
 		<h2 class="unbold">H2 Heading</h2>
@@ -1118,6 +1160,7 @@
 					$(this).toggleClass('down').toggleClass('up');
 					$('#example-btn-text-toggle-content').slideToggle('fast');
 				});
+				$('.bui-instant-tooltip').tooltip();
     </script>
 </footer>
 </body>

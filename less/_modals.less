@@ -45,19 +45,18 @@
 	}
 	.modal-title {
 	  font-weight: bold;
-	  font-size: 1.2rem;
+	  font-size: 1.2em;
 	  line-height: 1em;
 	  margin: 0;
 	  padding: 0;
 	}
 	.modal-header .close {
 		color: @color-remove;
-		margin-top: -0.2em;
 		.opacity(1);
+		line-height: 0.8em;
 		&:before {
 			font-family: "beacon-icons";
-			font-size: 1.2rem;
-	    margin-right: 0.2rem;
+			font-size: 0.8em;
 			content: '\e802';
 		}
 		&:hover, &:focus {
@@ -65,7 +64,7 @@
 			color: @color-red;
 			text-decoration: none;
 		}
-		&:active, &.active {
+		&:active {
 			color: darken(@color-red, 5%);
 		}
 	  &.disabled,
@@ -81,13 +80,40 @@
 	}
 
 	.modal-body {
-	  padding: 0.2rem 1.5rem;
+	  padding: 0.2em 1.5em;
+	  &.flush {
+	  	padding: 0;
+	  }
 	}
 
 	.modal-footer {
 	  margin-top: 0;
-	  padding: 0.5rem 1.5rem 1.2rem;
+	  padding: 0.5em 1.5em 1.2em;
 	  text-align: right;
 	  border-top: 0;
+	}
+
+	.modal-sm {
+		.modal-header {
+			padding: 1em 1em;
+		}
+		.modal-body {
+			padding: 0.2em 1em;
+		}
+		.modal-footer {
+			padding: 1em 1em;
+		}
+	}
+
+	.modal-fullscreen {
+		width: 96%;
+		height: 100%;
+		margin: 0 auto;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		.modal-content .modal-body {
+			height: calc(~'100vh - 10em');
+			overflow-y: auto;
+		}
 	}
 }
