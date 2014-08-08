@@ -27,7 +27,7 @@ bui-inputs bui-tooltips
 To use:
 
 ```sh
-bower install decipher-bui
+bower install bui
 ```
 
 ## Installation (For Developers)
