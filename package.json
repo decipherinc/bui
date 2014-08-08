@@ -12,6 +12,8 @@
     "license": "MIT",
     "private": true,
     "scripts": {
-        "install": "grunt bower-install-simple"
+        "install": "grunt bower-install-simple",
+        "build": "grunt",
+        "watch": "grunt watch"
     }
 }

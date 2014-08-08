@@ -24,38 +24,49 @@ bui-inputs bui-tooltips
 
 ## Installation
 
-To use:
+1. To install:
 
-```sh
-bower install bui
-```
+    ```sh
+    bower install bui
+    ```
 
-## Installation (For Developers)
+2. If you do not have [Bower](http://bower.io/) installed, install it via `npm`:
 
-```sh
-git clone git://github.com/decipherinc/bui.git && cd bui
-npm install
-```
+    ```sh
+    npm install -g bower
+    ```
 
-The above command will install client-side dependencies.
+3. If that didn't work, you probably don't have [Node.js](http://nodejs.org) installed, so [download and install it](http://nodejs.org/download/), then repeat step #2, then repeat step #1.  Fun!
+
+### Development Installation (for Non-[Decipher](http://decipherinc.com) Employees)
+
+1.  Clone
+
+    ```sh
+    git clone git://github.com/decipherinc/bui.git && cd bui
+    ```
+
+    The above command will install client-side dependencies.  If you're having problems with `npm`, [install Node.js](http://nodejs.org/download/).
  
-From there, you can build the `.css` files by executing:
+2.  From there, you can build the `.css` files by executing:
 
-```sh
-grunt
-```
+    ```sh
+    npm run-script build
+    ```
 
-To automatically compile `.less` files as you work, execute:
+3.  To automatically compile `.less` files as you work, execute:
 
-```sh
-grunt watch
-```
+    ```sh
+    npm run-script watch
+    ```
+
+### Development Installation (for Decipher Employees)
+
+Ask [Christopher Hiller](https://github.com/boneskull) or [Brandon Reid](https://github.com/brandonreid) where to clone from, then follow steps #2 and #3 above as necessary.
 
 ## Notes
 
-### NOTES TO YOU:
-
-`.codekit-config`?  
+### `.codekit-config`?  
 
 Don't worry about the `.codekit-config` or `cache` folder, Brandon uses it only for running a local server and seeing results update in the browser. Nothing is compiled with it, compiling less and js is done by using `grunt`.
 
@@ -71,4 +82,4 @@ MIT
 
 ## Author
 
-[Brandon Reid](http://github.com/brandonreid)
+[Brandon Reid](https://github.com/brandonreid)
