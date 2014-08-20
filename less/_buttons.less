@@ -23,20 +23,20 @@
 	}
 
 	.btn-default {
-		background-color: @color-button;
+		background: @color-button;
 		border: 1px solid darken(@color-button, 11);
 		padding: 5px 10px;
 		border-radius: 4px;
 		&:hover, &:focus{
-			background-color: lighten(@color-button, 3);
+			background: lighten(@color-button, 3);
 		}
 		&:active, &.active {
-			background-color: darken(@color-button, 3);
+			background: darken(@color-button, 3);
 		}
 	}
 
 	.btn-primary {
-		background-color: @color-blue;
+		background: @color-blue;
 		#gradient > .vertical(lighten(@color-blue, 2); darken(@color-blue, 2));
 		border: 1px solid darken(@color-blue, 2);
 		color: #fff;
@@ -47,7 +47,7 @@
 			#gradient > .vertical(lighten(@color-blue, 2); lighten(@color-blue, 3));
 		}
 		&.dangerous {
-			background-color: @color-red;
+			background: @color-red;
 			#gradient > .vertical(lighten(@color-red, 2); darken(@color-red, 2));
 			border: 1px solid darken(@color-red, 2);
 			&:hover, &:focus {
@@ -60,7 +60,7 @@
 	}
 
 	.btn-special {
-		background-color: @color-green;
+		background: @color-green;
 		#gradient > .vertical(lighten(@color-green, 2); darken(@color-green, 2));
 		border: 1px solid darken(@color-green, 1);
 		color: #fff;
@@ -73,7 +73,7 @@
 	}
 
 	.btn-text {
-		background-color: transparent;
+		background: transparent;
 		color: @color-blue;
 		text-decoration: none;
 		cursor: pointer;
@@ -96,7 +96,7 @@
 	}
 
 	.btn-text-toggle {
-		background-color: transparent;
+		background: transparent;
 		color: @color-blue;
 		text-decoration: none;
 		cursor: pointer;
@@ -132,7 +132,7 @@
 	}
 
 	.btn-icon {
-		background-color: transparent;
+		background: transparent;
 		font-size: 1.25em;
 		color: @color-orange;
 		text-align: center;
@@ -153,11 +153,11 @@
 		}
 		&.active, &.selected {
 			color: white;
-			background-color: @color-orange;
+			background: @color-orange;
 			outline: 0;
 			&:hover {
 				color: white;
-				background-color: @color-orange;
+				background: @color-orange;
 			}
 		}
 	  &.disabled,
@@ -169,28 +169,28 @@
 	}
 
 	.btn-toggle {
-		background-color: @color-button;
+		background: @color-button;
 		font-size: 0.8em;
 		padding: 3px 6px;
 		border-radius: 3px;
 		&:hover, &:focus{
-			background-color: lighten(@color-button, 3);
+			background: lighten(@color-button, 3);
 		}
 		&:active, &.active, &.selected {
-			background-color: @color-orange;
+			background: @color-orange;
 			color: @color-bg;
 			outline: 0;
 		}
 	}
 
 	.btn-cancel {
-		background-color: transparent;
+		background: transparent;
 		border: 0;
 		color: @color-remove;
 		padding: 5px 10px;
 		&:hover, &:focus {
 			cursor: pointer;
-			background-color: transparent;
+			background: transparent;
 			color: @color-red;
 			text-decoration: underline;
 		}
@@ -211,7 +211,7 @@
 	}
 
 	.btn-remove {
-		background-color: transparent;
+		background: transparent;
 		font-size: 1.25em;
 		color: @color-remove;
 		width: 1.4em;
@@ -243,7 +243,7 @@
 	  &:active,
 	  &[disabled],
 	  fieldset[disabled] & {
-	    background-color: transparent;
+	    background: transparent;
 	    .box-shadow(none);
 	  }
 	  &,
@@ -255,7 +255,7 @@
 	  &:focus {
 	    color: lighten(@color-blue, 10);
 	    text-decoration: underline;
-	    background-color: transparent;
+	    background: transparent;
 	  }
 	  &:active {
 			color: darken(@color-blue, 5%);
@@ -270,7 +270,7 @@
 	}
 
   .tag {
-    background-color: @color-tag;
+    background: @color-tag;
     padding: 0.2em 0.5em;
     -webkit-border-radius: 3px;
     border-radius: 3px;

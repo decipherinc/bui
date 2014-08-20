@@ -17,11 +17,6 @@ If adding styles, use the Gruntfile.js in the root of the bui folder to compile 
 bui bui-grid bui-typography bui-icons bui-buttons bui-modals
 ```
 
-### Partially Available (Being Developed)
-```sh
-bui-inputs bui-tooltips
-```
-
 ## Installation
 
 1. To install:

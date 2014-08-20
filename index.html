@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bui bui-grid bui-typography bui-icons bui-modals bui-buttons bui-inputs bui-tooltips bui-library">
+<html lang="en" class="bui bui-grid bui-typography bui-icons bui-modals bui-buttons bui-inputs bui-library">
 <head>
 	<meta charset="UTF-8">
 	<!-- Mobile Specific Metas
@@ -25,7 +25,7 @@
 			<li><a href="#iconsAndImages">Icons &amp; Images</a></li>
 			<li><a href="#inputs">Inputs</a></li>
 			<li><a href="#buttons">Buttons</a></li>
-			<li><a href="#tooltips">Tooltips</a></li>
+			<!-- <li><a href="#tooltips">Tooltips</a></li> -->
 			<li><a href="#modals">Modals</a></li>
 			<li><a href="#typography">Typography</a></li>
 		</ul>
@@ -461,36 +461,53 @@
 <section style="border:1px solid red;">
 	<h1><a name="inputs" style="color:red;">Inputs</a></h1>
 	<p style="color:red;">Being Developed</p>
+	<ul>
+		<li>Here we're showing a few style overrides, but all markup, classes, etc. are the same as <a href="http://getbootstrap.com/css/#forms">bootstrap</a>, so reference that and see bui style overrides add a bit of our own spice.</li>
+	</ul>
 	<h3>Text Input</h3>
 	<ul>
 		<li>They always span the full width of parent div</li>
 		<li>Always have a label (couldn't get sr-only to hide label, might make special class)</li>
 		<li>labels weight set to semibold</li>
-		<li>should input fields have a slight indented shadow or not?</li>
 		<li>Markup is the same as <a href="http://getbootstrap.com/css/#forms">bootstrap</a></li>
 	</ul>
 	<div class="bui-lib-example">
-		<input type="text" class="form-control" placeholder="Example Input">
+		<label>Text Input</label>
+		<input type="text" class="form-control" placeholder="Input Example">
+		<label>Disabled Text Input</label>
+		<input type="text" class="form-control" placeholder="Disabled Input Example" disabled>
 	</div>
 	<div class="bui-lib-example-comment">
-		<code>&lt;input type="text" class="<span>form-control</span>" placeholder="Example Input"&gt;</code>
+		<p><code>&lt;label for="demo-input"&gt;Text Input&lt;/label&gt;</code></p>
+		<p><code>&lt;input type="text" id="demo-input" class="<span>form-control</span>" placeholder="Input Example"&gt;</code></p>
+		<code>&lt;label for="demo-input-disabled"&gt;Disabled Text Input&lt;/label&gt;</code></p>
+		<code>&lt;input type="text" id="demo-input-disabled" class="<span>form-control</span>" placeholder="Disabled Input Example" <span><strong>disabled</strong></span>&gt;</code>
 	</div>
 
 	<h3>Text Area</h3>
 	<ul>
 		<li>always spans width of parent container</li>
 		<li>declare number of rows only</li>
+		<li>can also be <code>.disabled</code></li>
 	</ul>
 	<div class="bui-lib-example">
+		<label>Text Area</label>
 		<textarea class="form-control" rows="5"></textarea>
 	</div>
 	<div class="bui-lib-example-comment">
-		<code>&lt;textarea class="form-control" rows="5"&gt;&lt;/textarea&gt;</code>
+		<p><code>&lt;label&gt;Text Area&lt;/label&gt;</code></p>
+		<p><code>&lt;textarea class="form-control" rows="5"&gt;&lt;/textarea&gt;</code></p>
 	</div>
 
 	<h3>Select Menu</h3>
+	<p style="color:red;"><i>Likely to change as we do some complex things with select boxes.</i></p>
 	<ul>
 		<li>Always spans width of parent</li>
+		<li>Single selecte menu has a wierd looking handle on ff, but we're OK with that as it avoids the need for a robust dropdown plugin.</li>
+		<ul>
+			<li>These might not work with our methods of placing buttons inside select menus.</li>
+		</ul>
+		<li>add <code>.disabled</code> to <code>.form-control</code> to make either of these disabled.</li>
 	</ul>
 	<div class="bui-lib-example">
 		<select class="form-control" style="margin-bottom: 1em;">
@@ -520,6 +537,36 @@
 	<code>&lt;option&gt;Select Option 4&lt;/option&gt;</code>
 <code>&lt;/select&gt;</code>
 	</pre>
+
+	<h3>Validation States</h3>
+	<div class="bui-lib-example">
+		<div class="form-group has-success">
+		  <label class="control-label" for="inputSuccess1">Input with success</label>
+		  <input type="text" class="form-control" id="inputSuccess1">
+		</div>
+		<div class="form-group has-warning">
+		  <label class="control-label" for="inputWarning1">Input with warning</label>
+		  <input type="text" class="form-control" id="inputWarning1">
+		</div>
+		<div class="form-group has-error">
+		  <label class="control-label" for="inputError1">Input with error</label>
+		  <input type="text" class="form-control" id="inputError1">
+		</div>
+	</div>
+	<pre class="bui-lib-example-comment">
+<code>&lt;div class="form-group <span>has-success</span>"&gt;</code>
+  <code>&lt;label class="control-label" for="inputSuccess1"&gt;Input with success&lt;/label&gt;</code>
+  <code>&lt;input type="text" class="form-control" id="inputSuccess1"&gt;</code>
+<code>&lt;/div&gt;</code>
+<code>&lt;div class="form-group <span>has-warning</span>"&gt;</code>
+  <code>&lt;label class="control-label" for="inputWarning1"&gt;Input with warning&lt;/label&gt;</code>
+  <code>&lt;input type="text" class="form-control" id="inputWarning1"&gt;</code>
+<code>&lt;/div&gt;</code>
+<code>&lt;div class="form-group <span>has-error</span>"&gt;</code>
+  <code>&lt;label class="control-label" for="inputError1"&gt;Input with error&lt;/label&gt;</code>
+  <code>&lt;input type="text" class="form-control" id="inputError1"&gt;</code>
+<code>&lt;/div&gt;</code>
+	</pre>
 </section>
 
 
@@ -536,7 +583,7 @@
 		<button type="button" title="Standard Button" class="btn btn-default">Standard</button>
 		<button type="button" title="Standard Button when Disabled" class="btn btn-default" disabled="disabled">Disabled</button>
 		<button type="button" title="Standard Button with an Icon" class="btn btn-default icon-add">Icon + Text</button>
-		<button type="button" title="Standard Button with an Icon" class="btn btn-default"><i class="icon-add"></i>Text w/ Icon in 'i' tag</button>
+		<button type="button" title="Standard Button with an Icon" class="btn btn-default"><i class="icon-add"></i>Text w/ Icon in &lt;i&gt; tag</button>
 	</div>
 	<div class="bui-lib-example-comment">
 		<p><code>&lt;button class="<span>btn btn-default</span>"&gt;</code>Standard<code>&lt;/button&gt;</code></p>
@@ -756,7 +803,7 @@
 </section>
 
 <!--************* TOOLTIPS *************-->
-
+<!-- 
 <section style="border:1px solid red;">
 	<h1><a name="tooltips" style="color:red;">Tooltips</a></h1>
 	<p><em style="color:red;">Being Developed - Will likely switch to using Tipped for all tooltips.</em></p>
@@ -838,14 +885,14 @@
 	</pre>
 </section>
 
-
+ -->
 <!--************* MODALS *************-->
 
 <section>
 	<h1><a name="modals">Modals</a></h1>
 	<p>The markup for bui modals are very similar to standard bootstrap modals. The close 'x' button and cancel buttons have bui specific classes.</p>
 	<div class="bui-lib-example dark-bg">
-		<div class="modal fade in" style="display:block; position: static; z-index: 5;">
+		<div class="modal fade in" style="display:block; position: static; z-index: 5; height:auto;">
 		  <div class="modal-dialog" style="z-index: 10;">
 		    <div class="modal-content">
 		      <div class="modal-header">
@@ -903,7 +950,7 @@
 	<h3>Small</h3>
 	<p>Add <code><span><strong>modal-sm</strong></span></code> class to <code>modal-dialog</code>. These have less padding in the header and footer, so using <code>btn-small</code> works nicely here. You can also center small modals with <code>modal-centered</code> <i>(explained below, under "Placement")</i> if you're creating a small dialog modal.</p>
 	<div class="bui-lib-example dark-bg">
-		<div class="modal fade in" style="display:block; position: static; z-index: 5;">
+		<div class="modal fade in" style="display:block; position: static; z-index: 5; height: auto;">
 		  <div class="modal-dialog modal-sm" style="z-index: 10;">
 		    <div class="modal-content">
 		      <div class="modal-header">
@@ -925,7 +972,7 @@
 	<h3>Large</h3>
 	<p>Add <code><span><strong>modal-lg</strong></span></code> class to <code>modal-dialog</code>.</p>
 	<div class="bui-lib-example dark-bg">
-		<div class="modal fade in" style="display:block; position: static; z-index: 5;">
+		<div class="modal fade in" style="display:block; position: static; z-index: 5; height: auto;">
 		  <div class="modal-dialog modal-lg" style="z-index: 10;">
 		    <div class="modal-content">
 		      <div class="modal-header">
@@ -1026,10 +1073,10 @@
 	<p>When adding BUI typography, the root <code>&lt;html&gt;</code> font-size is set to 87.5% <i>(14px on standard 16px based browsers)</i>, and the <code>&lt;body&gt;</code> font-size to 14px. If the application you're working on needs to override these default BUI font-size settings, you'll need to match the level of BUI specificity in an override like so:</p>
 
 	<pre class="bui-lib-example">
-<code>.bui.bui-typography {</code>
+<code>.bui-typography {</code>
   <code>font-size: 87.5%;</code> /* Change to your desired root font-size */
 <code>}</code>
-<code>.bui.bui-typography body {</code>
+<code>.bui-typography body {</code>
   <code>font-size: 14px;</code> /* Change to your desired body font-size */
 <code>}</code>
 	</pre>
@@ -1113,13 +1160,13 @@
 	<h3>Underline</h3>
 	<p>Never use underline. Links underline themselves on hover, that's it.</p>
 
-	<h2>Labels</h2>
-	<p>Style labels by adding a <code>class=”label”</code>. Labels can be used for things like the survey state (dev, test, live, closed).</p>
+	<h2>State Labels</h2>
+	<p>Style "state labels" by adding a <code>class=”state-label”</code>. State labels show the survey's survey state (dev, test, live, closed).</p>
 	<div class="bui-lib-example">
-		<p><span class="label">Dev</span> <span class="label">Test</span> <span class="label">Live</span> <span class="label">Closed</span></p>	
+		<p><span class="state-label">Dev</span> <span class="state-label">Test</span> <span class="state-label">Live</span> <span class="state-label">Closed</span></p>	
 	</div>
 	<div class="bui-lib-example-comment">
-		<p><code>&lt;span class="<span>label</span>"&gt;</code> . . . <code>&lt;/span&gt;</code></p>
+		<p><code>&lt;span class="<span>state-label</span>"&gt;</code> . . . <code>&lt;/span&gt;</code></p>
 	</div>
 </section>
 
