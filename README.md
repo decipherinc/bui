@@ -2,9 +2,7 @@
 
 To add BUI styles to bootstrap, just link to the bui-styles.css file in bui-css. The style overrides have been built using bootstrap 3.1.1.
 
-BUI is built to be modular. An application can load regular bootstrap, then when ready, adding classes to the ```<html>``` tag will activate the bui style overrides.
-
-If adding styles, use the Gruntfile.js in the root of the bui folder to compile less.
+BUI is built to be modular. An application can load regular bootstrap, then when ready, adding override classes will activate the bui style overrides. You can add these override classes to the ```<html>``` tag or localize them to a specific ```<div>```.
 
 
 ## Demo
@@ -14,7 +12,7 @@ If adding styles, use the Gruntfile.js in the root of the bui folder to compile 
 ## Currently Available Overrides
 
 ```sh
-bui bui-grid bui-typography bui-icons bui-buttons bui-modals
+bui-grid bui-typography bui-icons bui-buttons bui-modals
 ```
 
 ## Installation
@@ -65,7 +63,7 @@ Ask [Christopher Hiller](https://github.com/boneskull) or [Brandon Reid](https:/
 
 Don't worry about the `.codekit-config` or `cache` folder, Brandon uses it only for running a local server and seeing results update in the browser. Nothing is compiled with it, compiling less and js is done by using `grunt`.
 
-When editing: Make sure the style.less file references the bootstrap variables and mixens
+When editing: Make sure the style.less file references the bootstrap variables and mixens.
     
 ## Copyright
 
