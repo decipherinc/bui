@@ -46,7 +46,7 @@ module.exports = function(grunt) {
                     nospawn: true
                 }
             },
-            bui: {
+            buiDemoSite: {
                 files: ['less/*.less', '!less/demo-page-specific.less'],
                 tasks: ['less:buiDemoSite'],
                 options: {
