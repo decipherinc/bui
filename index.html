@@ -9,7 +9,7 @@
 	<title>Beacon Pattern Library</title>
 	<link rel="icon" type="image/x-con" href="favicon.ico">
 	<link rel="stylesheet" href="support/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="bui-css/bui-styles.css">
+	<link rel="stylesheet" href="demo-page-css/bui-styles.css">
 	<link rel="stylesheet" href="demo-page-css/demo-page-styles.css">
 </head>
 <body>
@@ -306,7 +306,7 @@
 	<h1><a name="iconsAndImages">Icons &amp; Images</a></h1>
 	<h2>Beacon Icons</h2>
 	<p>Every icon has an intended use. In most cases the name of the icon will make it clear what its intended use is. It’s important to stay consistent with the use of an icon throughout all the applications, so the user can rely on them to symbolize a predictable action.</p>
-	<div class="iconsContainer row">
+	<div class="iconsContainer js-unittest-icons row">
 		<div class="col-sm-8">
 			<p><i></i> icon-portal (e867)</p>
 			<p><i></i> icon-distribute (e874)</p>
@@ -1035,7 +1035,7 @@
 
 	<h2>Placement</h2>
 	<p>The standard modal is placed 30px from the top and will allow scrolling if the modals content is long (or if the user is on a device with a small viewport).</p>
-	<p>If your modal has very little content and you're sure the user won't need the ability to scroll, you can apply the custom BUI <code>modal-centered</code> class to <code>.modal</code>, and center the modal in the window. Don't use this for any modal containing complex menues of any sort. The centered modal uses the transform: translate hack and can cause alignment anomalies. Best to only use this for modals displaying dialog text.</p>
+	<p>If your modal has very little content and you're sure the user won't need the ability to scroll, you can apply the custom BUI <code><span>modal-centered</span></code> class to <code>.modal</code>, and center the modal in the window. Don't use this for any modal containing complex menues of any sort. The centered modal uses the transform: translate hack and can cause alignment anomalies. Best to only use this for modals displaying dialog text.</p>
 	<div class="bui-lib-example">
 		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-centered">Centered Modal Demo</button>
 		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-top">Standard Modal With Scroll Demo</button>
