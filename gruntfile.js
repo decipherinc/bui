@@ -10,56 +10,51 @@ module.exports = function(grunt) {
     grunt.initConfig({
         less: {
             lib: {
-                options: {
-                    compress: true,
-                    yuicompress: true,
-                    optimization: 2
-                },
                 files: {
                     // target.css file: source.less file
-                    "demo-page-css/demo-page-styles.css": "less/demo-page-specific.less"
+                    "demo-site/styles/demo-page-styles.css": "demo-site/styles/demo-page-specific.less"
                 }
             },
             buiDemoSite: {
                 files: {
                     // target.css file: source.less file
-                    "demo-page-css/bui-styles.css": "less/style.less"
+                    "demo-site/styles/bui-styles.css": "bui-less/bui-styles.less"
                 }
             },
-            bui: {
-                options: {
-                    compress: true,
-                    yuicompress: true,
-                    optimization: 2
-                },
-                files: {
-                    // target.css file: source.less file
-                    "bui-css/bui-styles-min.css": "less/style.less"
-                }
-            }
+            // bui: {
+            //     options: {
+            //         compress: true,
+            //         yuicompress: true,
+            //         optimization: 2
+            //     },
+            //     files: {
+            //         // target.css file: source.less file
+            //         "bui-css/bui-styles-min.css": "less/bui-styles.less"
+            //     }
+            // }
         },
         watch: {
             libSpecificStyles: {
-                files: ['less/demo-page-specific.less'],
+                files: ['demo-site/styles/demo-page-specific.less'],
                 tasks: ['less:lib'],
                 options: {
                     nospawn: true
                 }
             },
             buiDemoSite: {
-                files: ['less/*.less', '!less/demo-page-specific.less'],
+                files: ['bui-less/*.less'],
                 tasks: ['less:buiDemoSite'],
                 options: {
                     nospawn: true
                 }
             },
-            bui: {
-                files: ['less/*.less', '!less/demo-page-specific.less'],
-                tasks: ['less:bui'],
-                options: {
-                    nospawn: true
-                }
-            }
+            // bui: {
+            //     files: ['less/*.less', '!less/demo-page-specific.less'],
+            //     tasks: ['less:bui'],
+            //     options: {
+            //         nospawn: true
+            //     }
+            // }
         },
         'bower-install-simple': {
             options: {
