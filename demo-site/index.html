@@ -684,15 +684,15 @@
 	
 	<h3>Show / Hide Toggle Button</h3>
 	<p><strong>Usage:</strong> Used for toggeling content in or out of the viewport.</p>
-	<p><strong>Rules:</strong> The box arrow icon should always point in the direction that content will animate in from.</p>
+	<p><strong>Rules:</strong> The caret icon always point towards the text when collapsed, when content is opened, the arrow points towards the content.</p>
 	<div class="bui-lib-example">
-		<button id="example-btn-text-toggle" class="btn btn-text-toggle down">Click to show content below</button>
+		<button id="example-btn-text-toggle" class="btn btn-text-toggle toggle-right">Click to show content below</button>
 		<div id="example-btn-text-toggle-content" style="display:none;background-color:#bcbcbc;padding:1em;text-align:center;color:#ffffff;">
 			<h3 style="margin-top:1em;">Some fancy content.</h3>
 		</div>
 	</div>
 	<pre class="bui-lib-example-comment">
-<code>&lt;button class="btn <span>btn-text-toggle down</span>" id="example-toggle-button"&gt;</code>Click to show content below<code>&lt;/button&gt;</code>
+<code>&lt;button class="btn <span>btn-text-toggle toggle-right</span>" id="example-toggle-button"&gt;</code>Click to show content below<code>&lt;/button&gt;</code>
 <code>&lt;div id="example-content"&gt;</code>Some fancy content.<code>&lt;/div&gt;</code>
 
 <code>&lt;script&gt;</code>
@@ -702,7 +702,7 @@
  <code>});</code>
 <code>&lt;/script&gt;</code>
 	</pre>
-	<p><strong>Code Note:</strong> To animate and change the direction of the arrow box, just add/change it's directional class (arrow points right by default or with now direction declared). <code>.up</code>, <code>.right</code>, <code>.down</code>, and <code>.left</code> are all available. So in the example above, the button has the <code>.down</code> class added by default, then when the user clicks, the <code>.down</code> class is removed and the <code>.up</code> class is added <em>(sweet css animations built in!)</em>.</p>
+	<p><strong>Code Note:</strong> To animate and change the direction of the arrow box, just add/change it's directional class (arrow points down by default or with now direction declared). <code>.toggle-up</code>, <code>.toggle-right</code>, <code>.toggle-down</code>, and <code>.toggle-left</code> are all available. So in the example above, the button has the <code>.toggle-down</code> class added by default, then when the user clicks, the <code>.toggle-down</code> class is removed and the <code>.toggle-up</code> class is added <em>(sweet css animations built in!)</em>.</p>
 
 	<h3>Toggle Buttons</h3>
 	<p><strong>Usage:</strong> Used like a checkbox to filter viewport information.</p>
@@ -1036,9 +1036,11 @@
 	<h2>Placement</h2>
 	<p>The standard modal is placed 30px from the top and will allow scrolling if the modals content is long (or if the user is on a device with a small viewport).</p>
 	<p>If your modal has very little content and you're sure the user won't need the ability to scroll, you can apply the custom BUI <code><span>modal-centered</span></code> class to <code>.modal</code>, and center the modal in the window. Don't use this for any modal containing complex menues of any sort. The centered modal uses the transform: translate hack and can cause alignment anomalies. Best to only use this for modals displaying dialog text.</p>
+	<p>If you need your modal to scroll the body of the modal instead of the viewport, add the class <code><span>.modal-scroll-body</span></code> to <code>.modal</code>.</p>
 	<div class="bui-lib-example">
-		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-centered">Centered Modal Demo</button>
 		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-top">Standard Modal With Scroll Demo</button>
+		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-centered">Centered Modal Demo</button>
+		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-body-scroll">Standard Modal With Scroll on Body Demo</button>
 		<div class="modal fade modal-centered" id="bui-modal-demo-centered">
 		  <div class="modal-dialog modal-sm">
 		    <div class="modal-content">
@@ -1065,6 +1067,24 @@
 		      </div>
 		      <div class="modal-body">
 		        <h4>A big long modal!</h4>
+		        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At unde, porro assumenda neque tempore commodi provident sapiente dolorem labore voluptates laboriosam quasi laudantium recusandae quaerat perspiciatis accusantium sit ad quia cupiditate est! Nobis maxime repellat obcaecati sequi dolorum voluptatum tempora dignissimos accusamus magnam nisi eos harum, nesciunt rerum fugit adipisci consectetur laborum vel pariatur reprehenderit consequatur animi neque omnis architecto. Ducimus nemo non dolore cumque corporis dolorum magni earum quasi, ut minus illum distinctio! Ad illum quos esse pariatur, animi sequi enim ullam iste assumenda voluptatem perspiciatis, ducimus delectus. Dolores, nam laboriosam ab assumenda natus consequuntur accusantium esse quo, corrupti iure quasi! Adipisci soluta ratione eos sed pariatur hic nihil aliquam iure incidunt, ducimus ipsam enim facere, libero officia quas animi corporis eveniet magnam. Provident voluptatum sit mollitia, inventore rem doloribus aspernatur eligendi, alias dolores eaque sint, molestiae tenetur perferendis eum obcaecati deserunt sequi reprehenderit cumque maxime facere, modi ex ipsam aut optio! Repellat accusantium accusamus vel, ratione fugit vero possimus ab eum ipsa voluptas ullam suscipit aliquam atque minus! Ut quod, officiis necessitatibus laborum expedita eveniet deleniti. Tempore, ratione provident commodi natus beatae obcaecati explicabo. Expedita cupiditate temporibus fugiat est quos earum necessitatibus autem soluta odio enim quas illum unde dignissimos cumque voluptate ipsa amet labore quis eos commodi dicta vitae quibusdam tempora, maxime. Illo laboriosam quibusdam neque repellendus ab soluta perspiciatis nam deleniti aliquid accusantium omnis alias vero fugiat sunt ex ea, nemo atque dolorem odio, at sapiente. Quae quaerat explicabo veritatis eum, praesentium voluptatum mollitia ratione magni soluta officiis aliquid suscipit unde maiores dolore in possimus et. Debitis laboriosam nostrum perferendis magnam. Harum officia, beatae fugit eos. Illum rerum eum minus accusamus, reprehenderit quas qui similique assumenda ipsum cumque unde, a, sequi veniam ex dolorem doloribus voluptas temporibus deleniti autem consequuntur aliquid maiores voluptate. Magnam, quaerat nihil fugit velit accusantium eligendi pariatur minima consequatur esse, voluptates, dignissimos possimus, facilis sit eos adipisci provident aut dolorem. Laborum libero architecto dicta sunt esse saepe sint mollitia quidem quo minima, voluptatum aperiam error! Tempore aperiam quis repellat doloremque. Quis aliquam quaerat rerum totam qui atque cupiditate, inventore deserunt nihil aliquid animi enim hic vel ducimus dicta beatae voluptate facere voluptates commodi nostrum nemo non, temporibus doloremque. Libero qui aliquam, ad natus unde cupiditate similique, ex eaque. Tenetur corporis hic mollitia dicta velit molestiae consequatur, pariatur dolores voluptate accusamus fugit quisquam porro, omnis possimus explicabo ea id deleniti repudiandae fuga nobis!</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="modal modal-scroll-body fade" id="bui-modal-demo-body-scroll">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"></button>
+		        <h4 class="modal-title">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        <h4>A big long modal that scrolls the body instead of the viewport!</h4>
 		        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At unde, porro assumenda neque tempore commodi provident sapiente dolorem labore voluptates laboriosam quasi laudantium recusandae quaerat perspiciatis accusantium sit ad quia cupiditate est! Nobis maxime repellat obcaecati sequi dolorum voluptatum tempora dignissimos accusamus magnam nisi eos harum, nesciunt rerum fugit adipisci consectetur laborum vel pariatur reprehenderit consequatur animi neque omnis architecto. Ducimus nemo non dolore cumque corporis dolorum magni earum quasi, ut minus illum distinctio! Ad illum quos esse pariatur, animi sequi enim ullam iste assumenda voluptatem perspiciatis, ducimus delectus. Dolores, nam laboriosam ab assumenda natus consequuntur accusantium esse quo, corrupti iure quasi! Adipisci soluta ratione eos sed pariatur hic nihil aliquam iure incidunt, ducimus ipsam enim facere, libero officia quas animi corporis eveniet magnam. Provident voluptatum sit mollitia, inventore rem doloribus aspernatur eligendi, alias dolores eaque sint, molestiae tenetur perferendis eum obcaecati deserunt sequi reprehenderit cumque maxime facere, modi ex ipsam aut optio! Repellat accusantium accusamus vel, ratione fugit vero possimus ab eum ipsa voluptas ullam suscipit aliquam atque minus! Ut quod, officiis necessitatibus laborum expedita eveniet deleniti. Tempore, ratione provident commodi natus beatae obcaecati explicabo. Expedita cupiditate temporibus fugiat est quos earum necessitatibus autem soluta odio enim quas illum unde dignissimos cumque voluptate ipsa amet labore quis eos commodi dicta vitae quibusdam tempora, maxime. Illo laboriosam quibusdam neque repellendus ab soluta perspiciatis nam deleniti aliquid accusantium omnis alias vero fugiat sunt ex ea, nemo atque dolorem odio, at sapiente. Quae quaerat explicabo veritatis eum, praesentium voluptatum mollitia ratione magni soluta officiis aliquid suscipit unde maiores dolore in possimus et. Debitis laboriosam nostrum perferendis magnam. Harum officia, beatae fugit eos. Illum rerum eum minus accusamus, reprehenderit quas qui similique assumenda ipsum cumque unde, a, sequi veniam ex dolorem doloribus voluptas temporibus deleniti autem consequuntur aliquid maiores voluptate. Magnam, quaerat nihil fugit velit accusantium eligendi pariatur minima consequatur esse, voluptates, dignissimos possimus, facilis sit eos adipisci provident aut dolorem. Laborum libero architecto dicta sunt esse saepe sint mollitia quidem quo minima, voluptatum aperiam error! Tempore aperiam quis repellat doloremque. Quis aliquam quaerat rerum totam qui atque cupiditate, inventore deserunt nihil aliquid animi enim hic vel ducimus dicta beatae voluptate facere voluptates commodi nostrum nemo non, temporibus doloremque. Libero qui aliquam, ad natus unde cupiditate similique, ex eaque. Tenetur corporis hic mollitia dicta velit molestiae consequatur, pariatur dolores voluptate accusamus fugit quisquam porro, omnis possimus explicabo ea id deleniti repudiandae fuga nobis!</p>
 		      </div>
 		      <div class="modal-footer">
@@ -1222,7 +1242,7 @@
 				$('.tooltip-ex-static').tooltip('show');
 				// show / hide toggle button
 				$('#example-btn-text-toggle').on('click', function() {
-					$(this).toggleClass('down').toggleClass('up');
+					$(this).toggleClass('toggle-right').toggleClass('toggle-down');
 					$('#example-btn-text-toggle-content').slideToggle('fast');
 				});
 				$('.bui-instant-tooltip').tooltip();

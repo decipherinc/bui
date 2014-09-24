@@ -97,17 +97,19 @@
 
 	.btn-text-toggle {
 		background: transparent;
+		outline: 0;
 		color: @color-blue;
 		text-decoration: none;
 		cursor: pointer;
 		&:hover, &:focus {
 			color: lighten(@color-blue, 5%);
+			outline: 0;
 		}
 		&:active, &.active {
 			color: darken(@color-blue, 2%);
 		}
 		&:before {
-			content: '\e838';
+			content: '\e835';
 			.iconify();
 	    .transition-transform(200ms ease);
 		}
@@ -117,17 +119,17 @@
 			color: @color-disabled;
 			.opacity(1);
 	  }
-	  &.up:before {
+	  &.toggle-up:before {
+	  	.rotate(-180deg);
+	  }
+	  &.toggle-right:before {
 	  	.rotate(-90deg);
 	  }
-	  &.right:before {
+	  &.toggle-down:before {
 	  	.rotate(0deg);
 	  }
-	  &.down:before {
-	  	.rotate(90deg);
-	  }
-	  &.left:before {
-	  	.rotate(-180deg);
+	  &.toggle-left:before {
+	  	.rotate(-90deg);
 	  }
 	}
 

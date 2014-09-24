@@ -116,4 +116,25 @@
 			overflow-y: auto;
 		}
 	}
+
+	.modal-scroll-body {
+		.modal-dialog {
+			max-height: 100vh;
+			margin-top: 0;
+			margin-bottom: 0;
+			padding-top: 1.416em;
+			padding-bottom: 1.416em;
+			.modal-content {
+				max-height: 100%;
+			}
+			.modal-body {
+				max-height: 70%;
+				max-height: ~"calc(100vh - 11em)";
+				overflow-y: scroll;
+			}
+			.modal-footer {
+				border-top: 1px solid @color-frame;
+			}
+		}
+	}
 }

@@ -684,6 +684,7 @@ fieldset[disabled] .bui-buttons .btn-text {
 }
 .bui-buttons .btn-text-toggle {
   background: transparent;
+  outline: 0;
   color: #0086ab;
   text-decoration: none;
   cursor: pointer;
@@ -691,13 +692,14 @@ fieldset[disabled] .bui-buttons .btn-text {
 .bui-buttons .btn-text-toggle:hover,
 .bui-buttons .btn-text-toggle:focus {
   color: #009ac4;
+  outline: 0;
 }
 .bui-buttons .btn-text-toggle:active,
 .bui-buttons .btn-text-toggle.active {
   color: #007ea1;
 }
 .bui-buttons .btn-text-toggle:before {
-  content: '\e838';
+  content: '\e835';
   font-family: "beacon-icons";
   font-style: normal;
   font-weight: normal;
@@ -719,29 +721,29 @@ fieldset[disabled] .bui-buttons .btn-text-toggle {
   opacity: 1;
   filter: alpha(opacity=100);
 }
-.bui-buttons .btn-text-toggle.up:before {
+.bui-buttons .btn-text-toggle.toggle-up:before {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.bui-buttons .btn-text-toggle.toggle-right:before {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-.bui-buttons .btn-text-toggle.right:before {
+.bui-buttons .btn-text-toggle.toggle-down:before {
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-.bui-buttons .btn-text-toggle.down:before {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-.bui-buttons .btn-text-toggle.left:before {
-  -webkit-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  -o-transform: rotate(-180deg);
-  transform: rotate(-180deg);
+.bui-buttons .btn-text-toggle.toggle-left:before {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 .bui-buttons .btn-icon {
   background: transparent;
@@ -1342,6 +1344,24 @@ fieldset[disabled] .bui-modals .modal-header .close:active {
 .bui-modals .modal-fullscreen .modal-content .modal-body {
   height: calc(100vh - 10em);
   overflow-y: auto;
+}
+.bui-modals .modal-scroll-body .modal-dialog {
+  max-height: 100vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1.416em;
+  padding-bottom: 1.416em;
+}
+.bui-modals .modal-scroll-body .modal-dialog .modal-content {
+  max-height: 100%;
+}
+.bui-modals .modal-scroll-body .modal-dialog .modal-body {
+  max-height: 70%;
+  max-height: calc(100vh - 11em);
+  overflow-y: scroll;
+}
+.bui-modals .modal-scroll-body .modal-dialog .modal-footer {
+  border-top: 1px solid #dddddd;
 }
 .bui-grid .container {
   margin-right: auto;
