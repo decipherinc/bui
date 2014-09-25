@@ -1,15 +1,17 @@
 @{button-prefix} {
 	button {
-		outline: none;
+		outline: 0;
 		border: 0;
-		&:active {
+		&:hover, &:focus, &:active {
 			outline: 0;
 		}
 	}
 
 	.btn {
+		outline: 0;
 		&:active, &.active {
 			.box-shadow(none);
+			outline: 0;
 		}
 	  &.disabled,
 	  &[disabled],
@@ -285,8 +287,8 @@
       margin-top: -1px;
       margin-left: -1em;
       opacity: 0;
-      -webkit-transition: opacity 100ms ease 100ms, margin-left 200ms ease;
-      transition: opacity 50ms ease, margin-left 200ms ease;
+      -webkit-transition: opacity 100ms ease 500ms, margin-left 200ms ease 500ms;
+      transition: opacity 50ms ease 500ms, margin-left 200ms ease 500ms;
     }
     &:hover, &:focus {
     	cursor: default;
