@@ -19,7 +19,7 @@
 	    .opacity(.45);
 	  }
 		&:before, span:before, i:before {
-			margin-left: -0.25em;
+			margin-left: 1px;
 			margin-right: 0.35em;
 		}
 	}
@@ -85,10 +85,10 @@
 		&:active, &.active {
 			color: darken(@color-blue, 2%);
 		}
-		&:before, span:before, i:before {
-			margin-left: 0;
-			margin-right: 0.35em;
-		}
+		// &:before, span:before, i:before {
+		// 	margin-left: 0;
+		// 	margin-right: 0.35em;
+		// }
 		&.disabled,
 	  &[disabled],
 	  fieldset[disabled] & {
@@ -145,7 +145,7 @@
 		border-radius: 4px;
 		line-height: 1em;
 		&:before, & i:before, & span:before {
-			margin: 0;
+			margin: 1px 0;
 			line-height: 1em;
 		}
 		&:hover, &:focus {
@@ -222,7 +222,7 @@
 		padding: 3px 0;
 		line-height: 1em;
 		&:before, & i:before, & span:before {
-			margin: 0;
+			margin: 1px 0;
 			line-height: 1em;
 		}
 		&:hover, &:focus {
@@ -302,7 +302,7 @@
     &.icon-user-group {
     	&:before {
     		margin-right: 0.4em;
-    		margin-left: 0;
+    		margin-left: 1px;
     	}
     }
   }
@@ -332,6 +332,7 @@
 		font-size: 1.2em;
 		padding: 0.5em 1em;
 		&.btn-icon, &.btn-remove {
+			font-size: 1.618em;
 			padding: 4px 0;
 		}
 	}

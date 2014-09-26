@@ -137,4 +137,69 @@
 			}
 		}
 	}
+
+	.fly-out-menu {
+	  position: fixed;
+	  z-index: 9000;
+	  left: -252px;
+	  top: 0;
+	  bottom: 0;
+	  width: 250px;
+	  background-color: fadeout(@color-bg, 7);
+	  border-right: 1px solid @color-frame;
+	  box-shadow: 2px 0 4px 0 fadeOut(@color-frame, 50);
+	  transition: left 200ms cubic-bezier(.67,.01,0,1);
+	  &.fly-out-opened {
+	    left: 0;
+	  }
+	  .fly-out-header {
+	    padding: 1em;
+	    h4 {
+	      display: inline-block;
+	      line-height: 1.1em;
+	    }
+	    .close {
+	      color: @color-remove;
+	      .opacity(1);
+	      line-height: 0.8em;
+	      margin-top: 0.45em;
+	      &:before {
+	        font-family: "beacon-icons";
+	        font-size: 0.8em;
+	        content: '\e802';
+	      }
+	      &:hover, &:focus {
+	        cursor: pointer;
+	        color: @color-red;
+	        text-decoration: none;
+	      }
+	      &:active {
+	        color: darken(@color-red, 5%);
+	      }
+	      &.disabled,
+	      &[disabled],
+	      fieldset[disabled] & {
+	        color: @color-disabled;
+	        .opacity(1);
+	        &:hover, &:focus, &:active {
+	          text-decoration: none;
+	          color: @color-disabled;
+	        }
+	      }
+	    }
+	  }
+	  .fly-out-body {
+	    max-height: 80%;
+	    max-height: ~"calc(100vh - 9.2rem)";
+	    overflow-y: auto;
+	  }
+	  .fly-out-footer {
+	    padding: 1em;
+	    text-align: right;
+	    position: absolute;
+	    width: 249px;
+	    bottom: 0;
+	    left: 0;
+	  }
+	}
 }
