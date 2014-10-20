@@ -147,7 +147,8 @@
 	  width: 250px;
 	  background-color: fadeout(@color-bg, 7);
 	  border-right: 1px solid @color-frame;
-	  box-shadow: 2px 0 4px 0 fadeOut(@color-frame, 50);
+	  -webkit-box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.1);
+	  box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.1);
 	  transition: left 200ms cubic-bezier(.67,.01,0,1);
 	  &.fly-out-opened {
 	    left: 0;

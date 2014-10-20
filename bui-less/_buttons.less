@@ -28,7 +28,7 @@
 		background: @color-button;
 		border: 1px solid darken(@color-button, 11);
 		padding: 5px 10px;
-		border-radius: 4px;
+		border-radius: 3px;
 		&:hover, &:focus{
 			background: lighten(@color-button, 3);
 		}
@@ -85,15 +85,14 @@
 		&:active, &.active {
 			color: darken(@color-blue, 2%);
 		}
-		// &:before, span:before, i:before {
-		// 	margin-left: 0;
-		// 	margin-right: 0.35em;
-		// }
 		&.disabled,
 	  &[disabled],
 	  fieldset[disabled] & {
 			color: @color-disabled;
 			.opacity(1);
+	  }
+	  &.btn-text-flush {
+	  	padding: 0;
 	  }
 	}
 
@@ -142,7 +141,7 @@
 		text-align: center;
 		width: 1.4em;
 		padding: 3px 0;
-		border-radius: 4px;
+		border-radius: 3px;
 		line-height: 1em;
 		&:before, & i:before, & span:before {
 			margin: 1px 0;
