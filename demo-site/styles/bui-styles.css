@@ -551,6 +551,8 @@
 }
 .bui-buttons .btn {
   outline: 0;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 .bui-buttons .btn:active,
 .bui-buttons .btn.active {
@@ -572,9 +574,8 @@ fieldset[disabled] .bui-buttons .btn {
 }
 .bui-buttons .btn-default {
   background: #e7e7e7;
-  border: 1px solid #cbcbcb;
+  border-bottom: 1px solid #cbcbcb;
   padding: 5px 10px;
-  border-radius: 3px;
 }
 .bui-buttons .btn-default:hover,
 .bui-buttons .btn-default:focus {
@@ -755,7 +756,6 @@ fieldset[disabled] .bui-buttons .btn-text-toggle {
   text-align: center;
   width: 1.4em;
   padding: 3px 0;
-  border-radius: 3px;
   line-height: 1em;
 }
 .bui-buttons .btn-icon:before,
@@ -794,7 +794,6 @@ fieldset[disabled] .bui-buttons .btn-icon {
   background: #e7e7e7;
   font-size: 0.8em;
   padding: 3px 6px;
-  border-radius: 3px;
 }
 .bui-buttons .btn-toggle:hover,
 .bui-buttons .btn-toggle:focus {
@@ -944,7 +943,6 @@ fieldset[disabled] .bui-buttons .btn-link {
 }
 .bui-buttons .btn-xs {
   font-size: 0.714em;
-  border-radius: 3px;
   padding: 2px 6px;
 }
 .bui-buttons .btn-xs.btn-icon,
@@ -954,7 +952,6 @@ fieldset[disabled] .bui-buttons .btn-link {
 }
 .bui-buttons .btn-sm {
   font-size: 0.875em;
-  border-radius: 3px;
   padding: 2px 6px;
 }
 .bui-buttons .btn-sm.btn-icon,
