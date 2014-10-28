@@ -1,16 +1,16 @@
 @{button-prefix} {
 	button {
 		outline: 0;
-		border: 0;
 		&:hover, &:focus, &:active {
 			outline: 0;
 		}
 	}
 
 	.btn {
-		outline: 0;
 		-webkit-border-radius: 3px;
 		border-radius: 3px;
+		outline: 0;
+		text-shadow: none;
 		&:active, &.active {
 			.box-shadow(none);
 			outline: 0;
@@ -28,6 +28,7 @@
 
 	.btn-default {
 		background: @color-button;
+		border: 0;
 		border-bottom: 1px solid darken(@color-button, 11);
 		padding: 5px 10px;
 		&:hover, &:focus{
@@ -77,6 +78,7 @@
 
 	.btn-text {
 		background: transparent;
+		border: 0;
 		color: @color-blue;
 		text-decoration: none;
 		cursor: pointer;
@@ -99,6 +101,7 @@
 
 	.btn-text-toggle {
 		background: transparent;
+		border: 0;
 		outline: 0;
 		color: @color-blue;
 		text-decoration: none;
@@ -137,6 +140,7 @@
 
 	.btn-icon {
 		background: transparent;
+		border: 0;
 		font-size: 1.25em;
 		color: @color-orange;
 		text-align: center;
@@ -172,6 +176,7 @@
 	}
 
 	.btn-toggle {
+		border: 0;
 		background: @color-button;
 		font-size: 0.8em;
 		padding: 3px 6px;
@@ -214,6 +219,7 @@
 
 	.btn-remove {
 		background: transparent;
+		border: 0;
 		font-size: 1.25em;
 		color: @color-remove;
 		width: 1.4em;
@@ -240,6 +246,7 @@
 	.btn-link {
 	  color: @color-blue;
 	  font-weight: 300;
+	  border: 0;
 	  border-radius: 0;
 	  &,
 	  &:active,
@@ -272,6 +279,7 @@
 	}
 
   .tag {
+  	border: 0;
     background: @color-tag;
     padding: 0.2em 0.5em;
     -webkit-border-radius: 3px;

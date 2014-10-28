@@ -542,7 +542,6 @@
 }
 .bui-buttons button {
   outline: 0;
-  border: 0;
 }
 .bui-buttons button:hover,
 .bui-buttons button:focus,
@@ -550,9 +549,10 @@
   outline: 0;
 }
 .bui-buttons .btn {
-  outline: 0;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+  outline: 0;
+  text-shadow: none;
 }
 .bui-buttons .btn:active,
 .bui-buttons .btn.active {
@@ -574,6 +574,7 @@ fieldset[disabled] .bui-buttons .btn {
 }
 .bui-buttons .btn-default {
   background: #e7e7e7;
+  border: 0;
   border-bottom: 1px solid #cbcbcb;
   padding: 5px 10px;
 }
@@ -664,6 +665,7 @@ fieldset[disabled] .bui-buttons .btn {
 }
 .bui-buttons .btn-text {
   background: transparent;
+  border: 0;
   color: #0086ab;
   text-decoration: none;
   cursor: pointer;
@@ -688,6 +690,7 @@ fieldset[disabled] .bui-buttons .btn-text {
 }
 .bui-buttons .btn-text-toggle {
   background: transparent;
+  border: 0;
   outline: 0;
   color: #0086ab;
   text-decoration: none;
@@ -751,6 +754,7 @@ fieldset[disabled] .bui-buttons .btn-text-toggle {
 }
 .bui-buttons .btn-icon {
   background: transparent;
+  border: 0;
   font-size: 1.25em;
   color: #ff9117;
   text-align: center;
@@ -791,6 +795,7 @@ fieldset[disabled] .bui-buttons .btn-icon {
   filter: alpha(opacity=100);
 }
 .bui-buttons .btn-toggle {
+  border: 0;
   background: #e7e7e7;
   font-size: 0.8em;
   padding: 3px 6px;
@@ -845,6 +850,7 @@ fieldset[disabled] .bui-buttons .btn-cancel:active {
 }
 .bui-buttons .btn-remove {
   background: transparent;
+  border: 0;
   font-size: 1.25em;
   color: #777777;
   width: 1.4em;
@@ -876,6 +882,7 @@ fieldset[disabled] .bui-buttons .btn-remove {
 .bui-buttons .btn-link {
   color: #0086ab;
   font-weight: 300;
+  border: 0;
   border-radius: 0;
 }
 .bui-buttons .btn-link,
@@ -909,6 +916,7 @@ fieldset[disabled] .bui-buttons .btn-link {
   filter: alpha(opacity=100);
 }
 .bui-buttons .tag {
+  border: 0;
   background: #b8e3f4;
   padding: 0.2em 0.5em;
   -webkit-border-radius: 3px;
