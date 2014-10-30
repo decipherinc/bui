@@ -28,14 +28,17 @@
 
 	.btn-default {
 		background: @color-button;
+		color: @color-base;
 		border: 0;
 		border-bottom: 1px solid darken(@color-button, 11);
 		padding: 5px 10px;
 		&:hover, &:focus{
 			background: lighten(@color-button, 3);
+			color: @color-base; // helps when peeps style <a> as button
 		}
 		&:active, &.active {
 			background: darken(@color-button, 3);
+			color: @color-base;
 		}
 	}
 
