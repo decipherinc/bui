@@ -11,6 +11,7 @@
 		border-radius: 3px;
 		outline: 0;
 		text-shadow: none;
+		.box-shadow(none);
 		&:active, &.active {
 			.box-shadow(none);
 			outline: 0;
@@ -40,6 +41,9 @@
 			background: darken(@color-button, 3);
 			color: @color-base;
 		}
+		&.btn-darken {
+			background: @color-frame;
+		}
 	}
 
 	.btn-primary {
@@ -48,9 +52,11 @@
 		border: 1px solid darken(@color-blue, 2);
 		color: #fff;
 		&:hover, &:focus {
+			background: @color-blue;
 			#gradient > .vertical(lighten(@color-blue, 5); lighten(@color-blue, 5));
 		}
 		&:active, &.active {
+			background: @color-blue;
 			#gradient > .vertical(lighten(@color-blue, 2); lighten(@color-blue, 3));
 		}
 		&.dangerous {
@@ -58,12 +64,29 @@
 			#gradient > .vertical(lighten(@color-red, 2); darken(@color-red, 2));
 			border: 1px solid darken(@color-red, 2);
 			&:hover, &:focus {
+				background: @color-red;
 				#gradient > .vertical(lighten(@color-red, 5); lighten(@color-red, 5));
 			}
 			&:active, &.active {
+				background: @color-red;
 				#gradient > .vertical(lighten(@color-red, 2); lighten(@color-red, 3));
 			}
+		  &.disabled,
+		  &[disabled],
+		  fieldset[disabled] & {
+		  	background: @color-red;
+				#gradient > .vertical(lighten(@color-red, 2); darken(@color-red, 2));
+				border: 1px solid darken(@color-red, 2);
+		  }
 		}
+	  &.disabled,
+	  &[disabled],
+	  fieldset[disabled] & {
+			background: @color-blue;
+			#gradient > .vertical(lighten(@color-blue, 2); darken(@color-blue, 2));
+			border: 1px solid darken(@color-blue, 2);
+			color: #fff;
+	  }
 	}
 
 	.btn-special {

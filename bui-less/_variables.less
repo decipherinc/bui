@@ -8,6 +8,7 @@
 @input-prefix: ~'.bui-inputs';
 @tooltips-prefix: ~'.bui-tooltips';
 @modal-prefix: ~'.bui-modals';
+@progress-bars-prefix: ~'.bui-progress-bars';
 @normal-prefix: ~'.bui-normalize';
 
 // colors
@@ -29,6 +30,9 @@
 
 @color-tooltips-bg: rgba(0, 0, 0, 0.795);
 
+// Circle progress bar size
+@cp-size: 150px;
+
 // grid
 @bui-grid-columns: 24;
 
@@ -43,4 +47,15 @@
   text-align: center;
   font-variant: normal;
   line-height: 1em;
+}
+
+// used with the circle progress bar
+.circle(@circle-size) { // circle mixen
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(~"50% -" (@circle-size / 2) );
+  top: calc(~"50% -" (@circle-size / 2) );
+  width: @circle-size;
+  height: @circle-size;
 }
