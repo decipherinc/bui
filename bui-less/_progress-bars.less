@@ -15,12 +15,17 @@
     bottom: 0;
     z-index: -1;
     overflow: hidden;
+    -webkit-transition: z-index 140.962ms steps(1, end), background-color 107.692ms linear;
+    -o-transition: z-index 140.962ms steps(1, end), background-color 107.692ms linear;
     transition: z-index 140.962ms steps(1, end), background-color 107.692ms linear;
     .clm-body {
       width: 50%;
       margin: 0 auto;
       margin-top: 101vh;
-      transition: margin-top 140.962ms cubic-bezier(0.630, 0.010, 0.990, 0.405);
+      opacity: 0;
+      -webkit-transition: margin-top 140.962ms cubic-bezier(0.630, 0.010, 0.990, 0.405), opacity 140.962ms steps(1, end);
+      -o-transition: margin-top 140.962ms cubic-bezier(0.630, 0.010, 0.990, 0.405), opacity 140.962ms steps(1, end);
+      transition: margin-top 140.962ms cubic-bezier(0.630, 0.010, 0.990, 0.405), opacity 140.962ms steps(1, end);
       h1 {
         font-size: 1.416em;
         text-align: center;
@@ -31,10 +36,15 @@
     &.in {
       background-color: rgba(255,255,255,0.87);
       z-index: 8;
+      -webkit-transition: z-index 369.031ms step-start, background-color 228.077ms linear;
+      -o-transition: z-index 369.031ms step-start, background-color 228.077ms linear;
       transition: z-index 369.031ms step-start, background-color 228.077ms linear;
       .clm-body {
         margin-top: 40vh;
-        transition: margin-top 369.031ms cubic-bezier(0.420, 1.055, 0.160, 1.095);;
+        opacity: 1;
+        -webkit-transition: margin-top 369.031ms cubic-bezier(0.420, 1.055, 0.160, 1.095);
+        -o-transition: margin-top 369.031ms cubic-bezier(0.420, 1.055, 0.160, 1.095);
+        transition: margin-top 369.031ms cubic-bezier(0.420, 1.055, 0.160, 1.095);
       }
     }
   }
@@ -60,12 +70,13 @@
       background: #76BD23;
       transform: rotate(60deg);
     }
-    .gt-50 & {
-      clip: rect(0, @cp-size / 2, @cp-size, 0);
-      .pc-progress-fill {
-        clip: rect(0, @cp-size, @cp-size, @cp-size / 2);
-        background: #f5f5f5;
-      }
+  }
+
+  .gt-50 .pc-progress {
+    clip: rect(0, @cp-size / 2, @cp-size, 0);
+    .pc-progress-fill {
+      clip: rect(0, @cp-size, @cp-size, @cp-size / 2);
+      background: #f5f5f5;
     }
   }
 
