@@ -14,32 +14,50 @@
 </head>
 <body>
 
-<button class="btn btn-lg btn-icon icon-menu menu-btn" data-toggle="button"></button>
-<div class="menu">
+<button class="btn btn-lg btn-icon icon-menu menu-btn"></button>
+<div class="fly-out-menu fly-out-scroll demo-site-menu">
 	<nav role="Navigation" class="navigation">
-		<h4>Skip Menu</h4>
-		<ul>
-			<li><a href="#orientation">Orientation</a></li>
-			<li><a href="#framework">Framework</a></li>
-			<li><a href="#colorPalette">Color Palette</a></li>
-			<li><a href="#iconsAndImages">Icons &amp; Images</a></li>
-			<li><a href="#inputs">Inputs</a></li>
-			<li><a href="#buttons">Buttons</a></li>
-			<!-- <li><a href="#tooltips">Tooltips</a></li> -->
-			<li><a href="#modals">Modals</a></li>
-			<li><a href="#typography">Typography</a></li>
-		</ul>
+		<div class="fly-out-header">
+			<h4>Menu</h4>
+			<button class="btn close"></button>
+		</div>
+		<div class="fly-out-body">
+			<ul>
+				<li><a href="#orientation">Orientation</a></li>
+				<li><a href="#framework">Framework</a></li>
+				<li><a href="#colorPalette">Color Palette</a></li>
+				<li><a href="#iconsAndImages">Icons &amp; Images</a></li>
+				<li><a href="#inputs">Inputs</a></li>
+				<li><a href="#buttons">Buttons</a></li>
+				<ul>
+					<li><a href="#btnsStandard">Standard</a></li>
+					<li><a href="#btnsPrimary">Primary</a></li>
+					<li><a href="#btnsSpecialAction">Special Action</a></li>
+					<li><a href="#btnsIconButtons">Icon Button</a></li>
+					<li><a href="#btnsText">Text Button</a></li>
+					<li><a href="#btnsExpandToggle">Expand Toggle</a></li>
+					<li><a href="#btnsToggleButtons">Toggle Button</a></li>
+					<li><a href="#btnsLinks">Links</a></li>
+					<li><a href="#btnsCancel">Cancel</a></li>
+					<li><a href="#btnsDeleteRemove">Delete or Remove</a></li>
+					<li><a href="#btnsSizing">Button Sizing</a></li>
+					<li><a href="#btnsGroups">Button Group</a></li>
+					<li><a href="#btnsTags">Tags</a></li>
+				</ul>
+				<!-- <li><a href="#tooltips">Tooltips</a></li> -->
+				<li><a href="#modals">Modals</a></li>
+				<ul>
+					<li><a href="#modalSizes">Sizes</a></li>
+					<li><a href="#modalPlacement">Placement</a></li>
+					<li><a href="#modalPaddingFlush">Body Padding Flush</a></li>
+					<li><a href="#modalFlyOut">Fly Out Modal</a></li>
+				</ul>
+				<li><a href="#typography">Typography</a></li>
+			</ul>
+		</div>
+		<div class="fly-out-footer">
+		</div>
 	</nav>
-
-	<div class="control-panel">
-			<h4>Toggle BUI styles:</h4>
-			<!-- <button type="button" data-target="bui" title="Toggle Beacon Pattern" class="btn btn-default" data-toggle="button">Everything</button> -->
-	    <button type="button" data-target="bui-grid" title="Toggle Grid" class="btn btn-default" data-toggle="button">Grid</button>
-	    <button type="button" data-target="bui-icons" title="Toggle Icons" class="btn btn-default" data-toggle="button">Icons</button>
-	    <button type="button" data-target="bui-buttons" title="Toggle Buttons" class="btn btn-default" data-toggle="button">Buttons</button>
-	    <button type="button" data-target="bui-modals" title="Toggle Modals" class="btn btn-default" data-toggle="button">Modals</button>
-	    <button type="button" data-target="bui-typography" title="Toggle Typography" class="btn btn-default" data-toggle="button">Typography</button>
-	</div>
 </div>
 <!--************* ORIENTATION *************-->
 <div class="library-header">
@@ -84,7 +102,7 @@
 <!--************* FRAMEWORK *************-->
 
 <section>
-	<h1>Framework</h1>
+	<h1><a name="framework">Framework</a></h1>
 	<p>The base bootstrap grid is 12 columns. Add the class <code>bui-grid</code> to <code>&lt;html&gt;</code> to turn on the 24 column bui grid, which uses the same bootstrap grid system but with 24 columns.</p>
 	<div class="row">
 		<div class="example-framework-col col-sm-1">1</div>
@@ -247,7 +265,7 @@
 			<div class="color-info">
 				<h4>Controls</h4>
 				<em>Interface Icons / Active Tabs / Selectables</em>
-				<p>HEX: #ff9117</p>
+				<p>HEX: #ff8800</p>
 				<p>LESS: <code>@color-orange</code></p>
 			</div>
 		</div>
@@ -473,6 +491,13 @@
 			<p><i></i> icon-piping (e891)</p>
 		</div>
 	</div>
+	<h2>Spinner</h2>
+	<div class="bui-lib-example">
+		<i class="icon-spinner spin-icon"></i>
+	</div>
+	<div class="bui-lib-example-comment">
+		<code>&lt;i class="<span>icon-spinner <strong>spin-icon</strong></span>"&gt;&lt;/i&gt;</code>
+	</div>
 <!-- 
 	<h2>Image Handeling</h2>
 	<p>Responsive images &amp; show/hide on different size screens. User profile images, etc.</p> -->
@@ -598,7 +623,7 @@
 	<h1><a name="buttons">Buttons</a></h1>
 	<h2>Button Types</h2>
 	<p>Use as described. Remember that <a href="http://www.karlgroves.com/2013/05/14/links-are-not-buttons-neither-are-divs-and-spans/">links, divs and spans are not buttons</a>.</p>
-	<h3>Standard</h3>
+	<h3><a name="btnsStandard">Standard</a></h3>
 	<p><strong>Usage:</strong> Used as a generic button. Should have simple text that describes the action.</p>
 	<p><strong>Rules:</strong> May include an appropriate icon with text.</p>
 	<div class="bui-lib-example">
@@ -606,16 +631,21 @@
 		<button type="button" title="Standard Button when Disabled" class="btn btn-default" disabled="disabled">Disabled</button>
 		<button type="button" title="Standard Button with an Icon" class="btn btn-default icon-add">Icon + Text</button>
 		<button type="button" title="Standard Button with an Icon" class="btn btn-default"><i class="icon-add"></i>Text w/ Icon in &lt;i&gt; tag</button>
+		<div style="background-color: #f5f5f5; border: 1px solid #ddd; margin-top: 1em; padding: 1em; max-width: 20em;">
+			<p style="margin-top: 0;">You can add <code>btn-darken</code> to standard buttons when extra contrast is needed.</p>
+			<button class="btn btn-default btn-darken">Darker Standard Button</button>
+		</div>
 	</div>
 	<div class="bui-lib-example-comment">
 		<p><code>&lt;button class="<span>btn btn-default</span>"&gt;</code>Standard<code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-default" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-default <span>icon-add</span>"&gt;</code>Icon + Text<code>&lt;/button&gt;</code></p>
 		<p><code>&lt;button class="btn btn-default"&gt;</code><code><span>&lt;i class="<strong>icon-add</strong>"&gt;</span></code><code><span>&lt;/i&gt;</span></code>Text w/ Icon in 'i' tag<code>&lt;/button&gt;</code></p>
+		<p><code>&lt;button class="btn btn-default <span><strong>btn-darken</strong></span>"&gt;</code>Darker Standard Button<code>&lt;/button&gt;</code></p>
 	</div>
 	<p class="small"><strong>Note:</strong> Both an <code>&lt;i&gt;</code> tag or a <code>&lt;span&gt;</code> tag can be used for icon.</p>
 
-	<h3>Primary</h3>
+	<h3><a name="btnsPrimary">Primary</a></h3>
 	<p><strong>Usage:</strong> Used when there’s a need for a suggested action, like the “Done” button in a modal or an obvious "next step".</p>
 	<p>In situations where the primary button is for an undoable action <em>(this normally occurs in a confirmation modal or tooltip)</em>, you can add the class <code>dangerous</code> to make the button red.</p>
 	<p><strong>Rules:</strong> There shouldn’t be more than one primary button in any dialog/modal/interface.</p>
@@ -633,7 +663,7 @@
 		<p><code>&lt;button class="btn btn-primary dangerous" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
 	</div>
 	
-	<h3>Special Action</h3>
+	<h3><a name="btnsSpecialAction">Special Action</a></h3>
 	<p><strong>Usage:</strong> Used in an application to denote a special action. It has a “go” connotation, so it should be used to initiate a journey of some sort (like “new project”, “new campaign”, “launch campaign”).</p>
 	<p><strong>Rules:</strong> Maximum of one per application (although having none is fine).</p>
 	<div class="bui-lib-example">
@@ -645,8 +675,9 @@
 		<p><code>&lt;button class="btn btn-special" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
 	</div>
 
-	<h3>Icon Buttons</h3>
+	<h3><a name="btnsIconButtons">Icon Buttons</a></h3>
 	<p><strong>Usage:</strong> Only for commonly used and easy to understand actions in the main area of an application, otherwise use a standard or “icon + label” button with descriptive text.</p>
+	<p><strong>Special note on "Edit" icon button:</strong> The edit icon (<span class="icon-edit"></span>) may use <code>btn-text</code> instead, making it a blue icon button, but only when the edit button sends the user away for editing (eg. opens a modal for editing).</p>
 	<p><strong>Rules:</strong> Icon buttons must have descriptive tooltips that appear instantly on hover.</p>
 	<div class="bui-lib-example">
 		<p>Standard:</p>
@@ -670,7 +701,7 @@
 		<p><code>&lt;button class="btn btn-icon" <span>disabled="disabled"</span>&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
 	</div>
 
-	<h3>Icon + Label</h3>
+	<h3><a name="btnsText">Text Button</a></h3>
 	<p><strong>Usage:</strong> Used to indicate a supporting action, typically inside of a tab or accordion menu.</p>
 	<p><strong>Rules:</strong> To avoid being confused with a standard link, these buttons must always be accompanied with an appropriate icon.</p>
 	<div class="bui-lib-example">
@@ -687,7 +718,7 @@
 	</div>
 	<p class="small"><strong>Note:</strong> Both an <code>&lt;i&gt;</code> tag or a <code>&lt;span&gt;</code> tag can be used for icon.</p>
 	
-	<h3>Show / Hide Toggle Button</h3>
+	<h3><a name="btnsExpandToggle">Expand Toggle Button</a></h3>
 	<p><strong>Usage:</strong> Used for toggeling content in or out of the viewport.</p>
 	<p><strong>Rules:</strong> The caret icon always point towards the text when collapsed, when content is opened, the arrow points towards the content.</p>
 	<div class="bui-lib-example">
@@ -709,7 +740,7 @@
 	</pre>
 	<p><strong>Code Note:</strong> To animate and change the direction of the arrow box, just add/change it's directional class (arrow points down by default or with now direction declared). <code>.toggle-up</code>, <code>.toggle-right</code>, <code>.toggle-down</code>, and <code>.toggle-left</code> are all available. So in the example above, the button has the <code>.toggle-down</code> class added by default, then when the user clicks, the <code>.toggle-down</code> class is removed and the <code>.toggle-up</code> class is added <em>(sweet css animations built in!)</em>.</p>
 
-	<h3>Toggle Buttons</h3>
+	<h3><a name="btnsToggleButtons">Toggle Buttons</a></h3>
 	<p><strong>Usage:</strong> Used like a checkbox to filter viewport information.</p>
 	<div class="bui-lib-example">
 		<button role="button" title="Toggle Button" class="btn btn-toggle" data-toggle="button">Toggle Button</button>
@@ -720,7 +751,7 @@
 		<p><code>&lt;button class="btn btn-toggle" <span>disabled="disabled"</span>&gt;</code>Toggle Button<code>&lt;/button&gt;</code></p>
 	</div>
 
-	<h3>Links</h3>
+	<h3><a name="btnsLinks">Links</a></h3>
 	<p><strong>Usage:</strong> Links send the user away from the current page to somewhere else.</p>
 	<p><strong>Rules:</strong></p>
 	<ul>
@@ -737,7 +768,7 @@
 		<p><code>&lt;a href="#URL"&gt;</code>A Standard Link<code>&lt;/a&gt;</code></p>
 	</div>
 
-	<h3>Cancel</h3>
+	<h3><a name="btnsCancel">Cancel</a></h3>
 	<p><strong>Usage:</strong> Used in any dialog box/modal/menu where actions require a commit button, there should always be an option to cancel as well. Cancel should back out any changes that occurred and leave it in the previous state.</p>
 	<p><strong>Rules:</strong> Should always be placed to the left of a Primary of standard button.</p>
 	<div class="bui-lib-example">
@@ -749,7 +780,7 @@
 		<p><code>&lt;button class="btn btn-cancel" <span>disabled="disabled"</span>&gt;</code>Cancel<code>&lt;/button&gt;</code></p>
 	</div>
 
-	<h3>Delete or Remove</h3>
+	<h3><a name="btnsDeleteRemove">Delete or Remove</a></h3>
 	<p><strong>Usage:</strong> A stand alone “x” icon (never the letter "x" or "X") used to remove or delete an item.</p>
 	<p><strong>Rules:</strong> Typically placed on the far right side in table rows. It may be appropriate to have a confirmation alert if the action cannot be undone. While the hover state is always @color-red, the default state may need to be a different color depending on what it's containing background color is.</p>
 	<div class="bui-lib-example">
@@ -761,7 +792,7 @@
 		<p><code>&lt;button class="btn btn-remove" <span>disabled="disabled"</span>&gt;&lt;i class="<span>icon-remove</span>"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
 	</div>
 
-	<h2>Button Sizing</h2>
+	<h2><a name="btnsSizing">Button Sizing</a></h2>
 	<p>Bootstrap button size classes have been customized for BUI buttons.</p>
 	<div class="bui-lib-example">
 		<button type="button" class="btn btn-default btn-xs">Extra Small</button>
@@ -803,7 +834,29 @@
 		<p><code>&lt;button class="btn btn-remove <span>btn-lg</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
 	</div>
 
-	<h2>Tags</h2>
+	<h2><a name="btnsGroups">Button Groups</a></h2>
+	<div class="bui-lib-example">
+		<div class="btn-group" id="exampleBtnGroup">
+		  <button type="button" class="btn btn-default">On</button>
+		  <button type="button" class="btn btn-default active">Off</button>
+		  <button type="button" class="btn btn-default">Auto</button>
+		  <button type="button" class="btn btn-default">Modular</button>
+		  <button type="button" class="btn btn-default">Husked</button>
+		  <button type="button" class="btn btn-default">Bedazzled</button>
+		</div>
+	</div>
+	<div class="bui-lib-example-comment">
+<pre>
+<code>&lt;div class="<span>btn-group</span>"&gt;</code>
+  <code>&lt;button type="button" class="btn btn-default"&gt;On&lt;/button&gt;</code>
+  <code>&lt;button type="button" class="btn btn-default <span><strong>active</strong></span>"&gt;Off&lt;/button&gt;</code>
+  <code>&lt;button type="button" class="btn btn-default"&gt;Auto&lt;/button&gt;</code>
+<code>&lt;/div&gt;</code>
+<p>&lt;!-- Use javascript to place the 'active' class on whichever button is pressed --&gt;</p>
+</pre>
+	</div>
+
+	<h2><a name="btnsTags">Tags</a></h2>
 	<h3>Standard Tags</h3>
 	<p><strong>Usage:</strong> Tags are used for representing data attributes on an object of some sort. In the Portal, they're used for classifying and organizing projects, while in other areas of Beacon they may be used for displaying applied filters.</p>
 	<p><strong>Rules:</strong> Tags are modular and must always be removable by hovering over the tag and clicking the remove button.</p>
@@ -969,8 +1022,8 @@
 	<p><strong>Usage:</strong> The footer of a modal should contain any buttons related to submitting, canceling, or saving the content. There may also be checkboxes that appear for settings related to the modal (e.g. “Show this screen for new projects”).</p>
 	<p><strong>Rules:</strong> The primary button should always be the furthest right aligned, with secondary buttons to the left of that, and a cancel button to the left of all buttons. Any checkboxes in the footer should be aligned to the left.</p>
 
-	<h2>Sizes</h2>
-	<p>Use bootstraps native modal sizes.</p>
+	<h2><a name="modalSizes">Sizes</a></h2>
+	<p>Uses bootstraps native modal sizing classes.</p>
 	<h3>Small</h3>
 	<p>Add <code><span><strong>modal-sm</strong></span></code> class to <code>modal-dialog</code>. These have less padding in the header and footer, so using <code>btn-small</code> works nicely here. You can also center small modals with <code>modal-centered</code> <i>(explained below, under "Placement")</i> if you're creating a small dialog modal.</p>
 	<div class="bui-lib-example dark-bg">
@@ -1018,7 +1071,7 @@
 	<h3>Fullscreen</h3>
 	<p>Add <code><span><strong>modal-fullscreen</strong></span></code> class to <code>modal-dialog</code> to create a full-screen modal. The <code>modal-body</code> will scroll when the modal contains lots of content.</p>
 	<div class="bui-lib-example">
-		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-full">Launch Fullscreen Modal</button>
+		<button class="btn btn-default" data-toggle="modal" data-target="#bui-modal-demo-full">Launch Fullscreen Modal</button>
 		<div class="modal fade" id="bui-modal-demo-full">
 		  <div class="modal-dialog modal-fullscreen">
 		    <div class="modal-content">
@@ -1038,14 +1091,14 @@
 		</div><!-- /.modal -->
 	</div>
 
-	<h2>Placement</h2>
+	<h2><a name="modalPlacement">Placement</a></h2>
 	<p>The standard modal is placed 30px from the top and will allow scrolling if the modals content is long (or if the user is on a device with a small viewport).</p>
 	<p>If your modal has very little content and you're sure the user won't need the ability to scroll, you can apply the custom BUI <code><span>modal-centered</span></code> class to <code>.modal</code>, and center the modal in the window. Don't use this for any modal containing complex menues of any sort. The centered modal uses the transform: translate hack and can cause alignment anomalies. Best to only use this for modals displaying dialog text.</p>
 	<p>If you need your modal to scroll the body of the modal instead of the viewport, add the class <code><span>.modal-scroll-body</span></code> to <code>.modal</code>.</p>
 	<div class="bui-lib-example">
-		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-top">Standard Modal With Scroll Demo</button>
-		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-centered">Centered Modal Demo</button>
-		<button class="btn btn-primary" data-toggle="modal" data-target="#bui-modal-demo-body-scroll">Standard Modal With Scroll on Body Demo</button>
+		<button class="btn btn-default" data-toggle="modal" data-target="#bui-modal-demo-top">Standard Modal With Scroll Demo</button>
+		<button class="btn btn-default" data-toggle="modal" data-target="#bui-modal-demo-centered">Centered Modal Demo</button>
+		<button class="btn btn-default" data-toggle="modal" data-target="#bui-modal-demo-body-scroll">Standard Modal With Scroll on Body Demo</button>
 		<div class="modal fade modal-centered" id="bui-modal-demo-centered">
 		  <div class="modal-dialog modal-sm">
 		    <div class="modal-content">
@@ -1101,9 +1154,48 @@
 		</div><!-- /.modal -->
 	</div>
 
-	<h2>Padding Flush</h2>
+	<h2><a name="modalPaddingFlush">Padding Flush</a></h2>
 	<p>The <code>modal-body</code> includes padding by default.</p>
 	<p>Remove this padding by adding the class <code><span><strong>flush</strong></span></code> to <code>modal-body</code>.</p>
+
+	<h2><a name="modalFlyOut">Fly Out Modal</a></h2>
+	<p><strong>Usage:</strong> This modal is used for things like adding filters. This is a good option when a modal is appropriate and allowing the user to continue scrolling the main stage with the modal open is useful.</p>
+	<p><strong>Rules:</strong> When the fly-out-modal is visible, your javascript will need to hide it when the user <strong>clicks away from the modal</strong>, like the example below and this web page's main menu. Also when the user takes an action in the modal (e.g. clicks the 'x' close button, primary button.</p>
+	<p>Use javascript to toggle the class <code><span>.fly-out-opened</span></code> on <code>.fly-out-modal</code> to show or hide the modal.</p>
+	<p>Add the class <code><span>.fly-out-scroll</span></code> to <code>.fly-out-menu</code>, if you know scrolling will take place, to add top/bottom shadows on the body of the modal.</p>
+	<p>Add the class <code><span>.flush</span></code> to <code>.fly-out-body</code> to set it's padding to 0.</p>
+	<div class="bui-lib-example" style="padding:0; overflow: hidden; padding-bottom: 0.3em; background-color: #f9f9f9;">
+		<button class="btn btn-default btn-darken demo-fly-out-menu-btn" style="position: absolute; top: 40%; left: 2em;">Reopen Menu</button>
+		<div class="fly-out-menu fly-out-opened demo-fly-out-menu" style="position: relative; min-height: 25em; z-index: 10;">
+			<div class="fly-out-header">
+				<h4>Modal Header</h4>
+				<button class="btn close"></button>
+			</div>
+			<div class="fly-out-body" style="height: 15.75em;">
+				<p>Some body content for the fly out modal.</p>
+			</div>
+			<div class="fly-out-footer">
+				<button class="btn btn-cancel">Cancel</button>
+				<div class="btn btn-primary">Ok</div>
+			</div>
+		</div>
+	</div>
+<pre class="bui-lib-example-comment">
+<code>&lt;div class="<span>fly-out-menu <strong>fly-out-opened</strong></span>"&gt;</code> &lt;!-- toggle ".fly-out-open" with js to show/hide the modal --&gt;
+	<code>&lt;div class="<span>fly-out-header</span>"&gt;</code>
+		<code>&lt;h4&gt;Modal Header&lt;/h4&gt;</code>
+		<code>&lt;button class="<span>btn close</span>"&gt;&lt;/button&gt;</code>
+	<code>&lt;/div&gt;</code>
+	<code>&lt;div class="<span>fly-out-body</span>"&gt;</code>
+		<code>&lt;p&gt;Some body content for the fly out modal.&lt;/p&gt;</code>
+	<code>&lt;/div&gt;</code>
+	<code>&lt;div class="<span>fly-out-footer</span>"&gt;</code>
+		<code>&lt;button class="btn btn-cancel"&gt;Cancel&lt;/button&gt;</code>
+		<code>&lt;button class="btn btn-primary"&gt;Ok&lt;/button&gt;</code>
+	<code>&lt;/div&gt;</code>
+<code>&lt;/div&gt;</code>
+</pre>
+
 </section>
 
 
@@ -1245,37 +1337,69 @@
 <script src="../support/jquery/dist/jquery.min.js"></script>
 <script src="../support/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-    		// bui style toggles
-        $(function() {
-            $('.control-panel button').on('click', function() {
-                var me = $(this);
-                var thisTarget = me.data('target');
-                var body = $('html');
-                if (body.hasClass(thisTarget)) {
-                    body.removeClass(thisTarget);
-                    me.addClass('hover-state');
-                } else {
-                    body.addClass(thisTarget);
-                    me.removeClass('hover-state');
-                }
-            });
-        });
-        // menu button
-        $(".menu-btn").on('click', function() {
-        	$(".menu").toggleClass('menu-open');
-        });
-        // tooltips
-				$('.tooltip-ex-static').tooltip({
-					trigger: 'manual',
-					animation: false
+        // main menu button
+        var demoSiteMenuOpened = false;
+        var mousedOffMenu = false;
+				$(".menu-btn").on('click', function() {
+					$('.demo-site-menu').addClass('fly-out-opened');
+					demoSiteMenuOpened = true;
+					mousedOffMenu = false;
+					clickAwayCloseMenu();
 				});
-				$('.tooltip-ex-static').tooltip('show');
+				$('.demo-site-menu').on('click', function(e) {
+					e.stopImmediatePropagation();
+				})
+				$('.demo-site-menu .close').on('click', function() {
+					$('.demo-site-menu').removeClass('fly-out-opened');
+					demoSiteMenuOpened = false;
+					$(document).off('.modalHider');
+				});
+
+				function clickAwayCloseMenu() {
+					$('.demo-site-menu').mouseleave(function() {
+						mousedOffMenu = true;
+					});
+					$('.demo-site-menu').mouseenter(function() {
+						mousedOffMenu = false;
+					});
+					$(document).on('click.modalHider', function() {
+						console.log($(this));
+						if (mousedOffMenu == true) {
+							$('.demo-site-menu').removeClass('fly-out-opened');
+							demoSiteMenuOpened = false;
+							$(document).off('.modalHider');
+						}
+					});
+				}
+
 				// show / hide toggle button
 				$('#example-btn-text-toggle').on('click', function() {
 					$(this).toggleClass('toggle-right').toggleClass('toggle-down');
 					$('#example-btn-text-toggle-content').slideToggle('fast');
 				});
-				$('.bui-instant-tooltip').tooltip();
+
+				// button groups
+				$('#exampleBtnGroup .btn').on('click', function() {
+					$('#exampleBtnGroup button').removeClass('active');
+					$(this).addClass('active');
+				});
+
+				// fly out menu modal
+				$('.demo-fly-out-menu').on('click', function(e) {
+					e.stopImmediatePropagation();
+				});
+				$('.demo-fly-out-menu').parent().on('click', function() {
+					if ($('.demo-fly-out-menu').hasClass('fly-out-opened') == true) {
+						$('.demo-fly-out-menu').removeClass('fly-out-opened');
+					}
+				})
+				$('.demo-fly-out-menu-btn').on('click', function(e) {
+					e.stopImmediatePropagation();
+					$('.demo-fly-out-menu').addClass('fly-out-opened');
+				});
+				$('.demo-fly-out-menu .btn').on('click', function() {
+					$('.demo-fly-out-menu').removeClass('fly-out-opened');
+				});
     </script>
 </footer>
 </body>

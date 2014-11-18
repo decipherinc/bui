@@ -24,10 +24,15 @@
 }
 
 @{icon-prefix} {
-
   [class^="icon-"]:before,
   [class*=" icon-"]:before {
     .iconify();
+    margin: 1px;
+  }
+
+  .spin-icon {
+    -webkit-animation: bui-icon-spin 2s infinite linear;
+    animation: bui-icon-spin 2s infinite linear;
   }
    
   .icon-build:before { content: '\e878'; }
@@ -192,3 +197,26 @@
   .icon-project:before { content: '\e899'; }
   .icon-black-box:before { content: '\e89a'; }
 } // end @{icon-prefix}
+
+// spinner animation
+@-webkit-keyframes bui-icon-spin {
+  from {
+    //.rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    //.rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bui-icon-spin {
+  0% {
+    //.rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    //.rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
