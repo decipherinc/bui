@@ -317,6 +317,9 @@
 .bui-icons .icon-single-select:before {
   content: '\e84d';
 }
+.bui-icons .icon-single-select-grid:before {
+  content: '\e89c';
+}
 .bui-icons .icon-chart:before {
   content: '\e830';
 }
