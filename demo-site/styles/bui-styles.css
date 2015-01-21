@@ -600,6 +600,8 @@
 .bui-buttons .btn.disabled,
 .bui-buttons .btn[disabled],
 fieldset[disabled] .bui-buttons .btn {
+  cursor: pointer;
+  pointer-events: none;
   opacity: 0.45;
   filter: alpha(opacity=45);
 }
