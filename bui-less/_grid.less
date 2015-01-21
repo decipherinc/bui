@@ -1,7 +1,17 @@
-// bui 24 col grid system
-
 @{grid-prefix} { 
-  // !!! Copied directly from bootstrap/less/variables.less, placed here to make a version with bui prefix. Functions have -bui placed before them to reference the duplicated functions lower on this page.
+  .row.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+    div[class^="col-"], div[class*=" col-"] {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+
+  // **************************************************
+  // bui 24 col grid generator (fork of bootstrap grid)
+  // **************************************************
 
   // Container widths
   //

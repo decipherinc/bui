@@ -11,6 +11,7 @@
 		border-radius: 3px;
 		outline: 0;
 		text-shadow: none;
+		cursor: pointer;
 		.box-shadow(none);
 		padding: 5px 10px 4px;
 		&:active, &.active {
@@ -116,7 +117,6 @@
 		border: 0;
 		color: @color-blue;
 		text-decoration: none;
-		cursor: pointer;
 		padding: 5px 10px;
 		&:hover, &:focus {
 			color: lighten(@color-blue, 5%);
@@ -141,7 +141,6 @@
 		outline: 0;
 		color: @color-blue;
 		text-decoration: none;
-		cursor: pointer;
 		padding: 5px 10px;
 		&:hover, &:focus {
 			color: lighten(@color-blue, 5%);
@@ -232,7 +231,6 @@
 		border: 0;
 		color: @color-remove;
 		padding: 5px 10px;
-		cursor: pointer;
 		&:hover, &:focus {
 			background: transparent;
 			color: @color-red;
@@ -324,7 +322,6 @@
 				background-color: @color-disabled;
 				top: 1px;
 				border-bottom: 0;
-				cursor: default;
 				margin-bottom: 1px;
 				// ^prevents content below button group from jumping when clicking
 				.box-shadow(inset 3px 0px 2px -2px rgba(0,0,0,0.2));
@@ -389,7 +386,6 @@
       opacity: 0;
       -webkit-transition: opacity 100ms ease 500ms, margin-left 200ms ease 500ms;
       transition: opacity 50ms ease 500ms, margin-left 200ms ease 500ms;
-      cursor: pointer;
     }
     &:hover, &:focus {
     	.btn-remove {
