@@ -42,6 +42,9 @@
 	.modal-header {
 	  padding: 1.2em 1.5em;
 	  border-bottom: 1px solid @color-frame;
+	  h1, h2, h3, h4, h5 {
+	  	display: inline-block;
+	  }
 	}
 	.modal-title {
 	  font-weight: bold;
@@ -130,7 +133,7 @@
 			.modal-body {
 				max-height: 70%;
 				max-height: ~"calc(100vh - 11em)";
-				overflow-y: scroll;
+				overflow-y: auto;
 			}
 			.modal-footer {
 				border-top: 1px solid @color-frame;

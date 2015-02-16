@@ -22,7 +22,6 @@
 	  &[disabled],
 	  fieldset[disabled] & {
 	  	cursor: pointer;
-	  	pointer-events: none;
 	    .opacity(.45);
 	  }
 		&:before, span:before, i:before {
@@ -134,6 +133,9 @@
 	  }
 	  &.btn-text-flush {
 	  	padding: 0;
+	  	&:before {
+	  		margin: 0;
+	  	}
 	  }
 	}
 

@@ -770,6 +770,9 @@ fieldset[disabled] .bui-buttons .btn-text {
 .bui-buttons .btn-text.btn-text-flush {
   padding: 0;
 }
+.bui-buttons .btn-text.btn-text-flush:before {
+  margin: 0;
+}
 .bui-buttons .btn-text-toggle {
   background: transparent;
   border: 0;
@@ -1383,6 +1386,13 @@ fieldset[disabled] .bui-inputs .form-control {
   padding: 1.2em 1.5em;
   border-bottom: 1px solid #dddddd;
 }
+.bui-modals .modal-header h1,
+.bui-modals .modal-header h2,
+.bui-modals .modal-header h3,
+.bui-modals .modal-header h4,
+.bui-modals .modal-header h5 {
+  display: inline-block;
+}
 .bui-modals .modal-title {
   font-weight: bold;
   font-size: 1.2em;
@@ -1474,7 +1484,7 @@ fieldset[disabled] .bui-modals .modal-header .close:active {
 .bui-modals .modal-scroll-body .modal-dialog .modal-body {
   max-height: 70%;
   max-height: calc(100vh - 11em);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .bui-modals .modal-scroll-body .modal-dialog .modal-footer {
   border-top: 1px solid #dddddd;
