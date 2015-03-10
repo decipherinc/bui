@@ -1,32 +1,30 @@
 {
-    "name": "bui",
-    "version": "1.2.1",
-    "homepage": "http://decipher-design.com/bui/",
-    "authors": [
-        "Brandon Reid <breid@decipherinc.com>"
-    ],
-    "description": "Beacon User Interface",
-    "main": "bui-css/bui-styles.css",
-    "keywords": [
-        "decipher",
-        "decipherinc",
-        "bootstrap",
-        "bui",
-        "styles"
-    ],
-    "license": "MIT",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "assets",
-        "support",
-        "gruntfile.js",
-        "demo-page-css",
-        "config.codekit",
-        "favicon.ico",
-        "*.html"
-    ],
-    "dependencies": {
-        "bootstrap": "~3.2.0"
-    }
+  "name": "bui",
+  "version": "1.2.1",
+  "homepage": "http://decipher-design.com/bui/",
+  "authors": [
+    "Christopher Hiller <chiller@decipherinc.com>",
+    "Dick DeLeon <ddleon@decipherinc.com>"
+  ],
+  "description": "Beacon User Interface",
+  "main": "dist/bui-styles.css",
+  "keywords": [
+    "decipher",
+    "decipherinc",
+    "bootstrap",
+    "bui",
+    "styles"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "support",
+    "Gruntfile.js",
+    "demo-site",
+    "config.codekit"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
 }
