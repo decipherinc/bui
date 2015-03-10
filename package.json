@@ -1,7 +1,7 @@
 {
   "name": "bui",
   "description": "Beacon User Interface",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-bower-install-simple": "^1.1.0",
