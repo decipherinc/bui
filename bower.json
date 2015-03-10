@@ -22,7 +22,8 @@
     "support",
     "Gruntfile.js",
     "demo-site",
-    "config.codekit"
+    "config.codekit",
+    "package.json"
   ],
   "dependencies": {
     "bootstrap": "~3.2.0"
