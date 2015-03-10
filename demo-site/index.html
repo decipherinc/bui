@@ -1,158 +1,212 @@
 <!doctype html>
-<html lang="en" class="bui-grid bui-typography bui-icons bui-modals bui-buttons bui-inputs bui-library">
+<html lang="en"
+      class="bui-grid bui-typography bui-icons bui-modals bui-buttons bui-inputs bui-library">
 <head>
-	<meta charset="UTF-8">
-	<!-- Mobile Specific Metas
-	================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8">
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<title>Beacon Pattern Library</title>
-	<link rel="icon" type="image/x-con" href="favicon.ico">
-	<link rel="stylesheet" href="../support/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="styles/bui-styles.css">
-	<link rel="stylesheet" href="styles/demo-page-styles.css">
+  <title>Beacon Pattern Library</title>
+  <link rel="icon" type="image/x-con" href="favicon.ico">
+  <link rel="stylesheet" href="../support/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../dist/bui-styles.css">
+  <link rel="stylesheet" href="styles/demo-page-styles.css">
 </head>
 <body>
 
 <button class="btn btn-lg btn-icon icon-menu menu-btn"></button>
 <div class="fly-out-menu fly-out-scroll demo-site-menu">
-	<nav role="Navigation" class="navigation">
-		<div class="fly-out-header">
-			<h4>Menu</h4>
-			<button class="btn close"></button>
-		</div>
-		<div class="fly-out-body">
-			<ul>
-				<li><a href="#orientation">Orientation</a></li>
-				<li><a href="#framework">Framework</a></li>
-				<li><a href="#colorPalette">Color Palette</a></li>
-				<li><a href="#iconsAndImages">Icons &amp; Images</a></li>
-				<li><a href="#inputs">Inputs</a></li>
-				<li><a href="#buttons">Buttons</a></li>
-				<ul>
-					<li><a href="#btnsStandard">Standard</a></li>
-					<li><a href="#btnsPrimary">Primary</a></li>
-					<li><a href="#btnsSpecialAction">Special Action</a></li>
-					<li><a href="#btnsIconButtons">Icon Button</a></li>
-					<li><a href="#btnsText">Text Button</a></li>
-					<li><a href="#btnsExpandToggle">Expand Toggle</a></li>
-					<li><a href="#btnsToggleButtons">Toggle Button</a></li>
-					<li><a href="#btnsLinks">Links</a></li>
-					<li><a href="#btnsCancel">Cancel</a></li>
-					<li><a href="#btnsDeleteRemove">Delete or Remove</a></li>
-					<li><a href="#btnsSizing">Button Sizing</a></li>
-					<li><a href="#btnsGroups">Button Group</a></li>
-					<li><a href="#btnsTags">Tags</a></li>
-				</ul>
-				<!-- <li><a href="#tooltips">Tooltips</a></li> -->
-				<li><a href="#modals">Modals</a></li>
-				<ul>
-					<li><a href="#modalSizes">Sizes</a></li>
-					<li><a href="#modalPlacement">Placement</a></li>
-					<li><a href="#modalPaddingFlush">Body Padding Flush</a></li>
-					<li><a href="#modalFlyOut">Fly Out Modal</a></li>
-				</ul>
-				<li><a href="#typography">Typography</a></li>
-			</ul>
-		</div>
-		<div class="fly-out-footer">
-		</div>
-	</nav>
+  <nav role="Navigation" class="navigation">
+    <div class="fly-out-header">
+      <h4>Menu</h4>
+      <button class="btn close"></button>
+    </div>
+    <div class="fly-out-body">
+      <ul>
+        <li><a href="#orientation">Orientation</a></li>
+        <li><a href="#framework">Framework</a></li>
+        <li><a href="#colorPalette">Color Palette</a></li>
+        <li><a href="#iconsAndImages">Icons &amp; Images</a></li>
+        <li><a href="#inputs">Inputs</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <ul>
+          <li><a href="#btnsStandard">Standard</a></li>
+          <li><a href="#btnsPrimary">Primary</a></li>
+          <li><a href="#btnsSpecialAction">Special Action</a></li>
+          <li><a href="#btnsIconButtons">Icon Button</a></li>
+          <li><a href="#btnsText">Text Button</a></li>
+          <li><a href="#btnsExpandToggle">Expand Toggle</a></li>
+          <li><a href="#btnsToggleButtons">Toggle Button</a></li>
+          <li><a href="#btnsLinks">Links</a></li>
+          <li><a href="#btnsCancel">Cancel</a></li>
+          <li><a href="#btnsDeleteRemove">Delete or Remove</a></li>
+          <li><a href="#btnsSizing">Button Sizing</a></li>
+          <li><a href="#btnsGroups">Button Group</a></li>
+          <li><a href="#btnsTags">Tags</a></li>
+        </ul>
+        <!-- <li><a href="#tooltips">Tooltips</a></li> -->
+        <li><a href="#modals">Modals</a></li>
+        <ul>
+          <li><a href="#modalSizes">Sizes</a></li>
+          <li><a href="#modalPlacement">Placement</a></li>
+          <li><a href="#modalPaddingFlush">Body Padding Flush</a></li>
+          <li><a href="#modalFlyOut">Fly Out Modal</a></li>
+        </ul>
+        <li><a href="#typography">Typography</a></li>
+      </ul>
+    </div>
+    <div class="fly-out-footer"></div>
+  </nav>
 </div>
 <!--************* ORIENTATION *************-->
 <div class="library-header">
-	<div class="row header-container">
-		<div class="col-sm-12 bui-logo">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 400 660" enable-background="new 0 0 400 660" xml:space="preserve"><style>.style0{fill:	#333333;}.style1{fill:	#F9F9F9;}.style10{fill:	#DDDDDC;}.style2{fill:	#F69021;}.style3{stop-color:	#F69353;}.style4{stop-color:	#F37521;}.style5{stop-color:	#D4622A;}.style6{fill:	url(#SVGID_1_);}.style7{fill:	url(#SVGID_2_);}.style8{fill:	#E17F26;}.style9{fill:	#EFEFEF;}</style><path d="M199.8 1c-37 0-67.1 29.8-67.1 66.5c0 19.6 8.6 37.2 22.3 49.4h-26.1c-15.9 0-28.8 12.8-28.8 28.5v20.7 c0 6.5 2.3 12.6 6 17.4c-10 0.8-18.6 8-20.7 17.9L33.8 440c-19.7 13.8-25.4 31.4-25.4 31.4C3.5 484.5 1 498 1 511.5 c0 40 20.9 77.4 59 105.1c36.7 26.8 88.4 41.5 139.8 41.5s103.1-14.8 139.8-41.5c38-27.8 59-65.1 59-105.1c0-13.5-2.5-27-7.4-40.1 c0 0-5.8-17.5-25.4-31.4l-51.5-238.7c-2.1-9.9-10.6-17.1-20.7-17.9c3.8-4.8 6-10.8 6-17.4v-20.7c0-15.7-12.9-28.5-28.8-28.5h-26.1 c13.6-12.2 22.3-29.8 22.3-49.4C266.9 30.8 236.8 1 199.8 1" class="style0"/><path d="M199.7 56.4c5.1 0 9.3 4.1 9.3 9.2c0 5.1-4.2 9.2-9.3 9.2s-9.3-4.1-9.3-9.2 C190.5 60.5 194.6 56.4 199.7 56.4z" class="style1"/><g><path d="M199.7 120.6c29.3 0 53-23.7 53-53s-23.7-53-53-53s-53 23.7-53 53S170.5 120.6 199.7 120.6z M199.7 43.6 c13.3 0 24 10.8 24 24s-10.8 24-24 24s-24-10.8-24-24S186.4 43.6 199.7 43.6z" class="style2"/><g><path d="M355.7 467.2l-55.1-260.4c-0.8-3.9-4.3-6.7-8.3-6.7H112.9c-4 0-7.4 2.8-8.3 6.7L49.6 467.2c0 0 0 0 0 0 c1.3 39.7 69.3 86.4 153.1 88C276.3 556.6 354 507 355.7 467.2C355.7 467.2 355.7 467.2 355.7 467.2z M148.1 237.1H266 c1.8 0 2.8 2.6 1.6 4.2l-62.8 63.8c-1 1.3-2.8 1.3-3.8 0l-54.5-63.8C145.2 239.7 146.2 237.1 148.1 237.1z M94 424.8L124.3 283 c0.5-2.3 3.2-3.2 4.8-1.5l49.5 59.3c1.3 1.4 1.3 3.6 0 5l-79.7 82C96.7 429.9 93.3 427.9 94 424.8z M294.4 486 c-19.1 14.1-97 62.7-183.4 0c-2.5-1.8-2.7-5.8-0.5-8.2l88.7-95.6c1.9-2.1 5.1-2.1 7 0l88.6 95.7C297 480.2 296.8 484.2 294.4 486z M313.3 430.9l-80.1-82.4c-1.3-1.3-1.3-3.4 0-4.8l50.6-58.4c1.5-1.6 4.1-0.7 4.6 1.5L318 428.1C318.7 431.1 315.4 433 313.3 430.9 z" class="style2"/><radialGradient cx="118.1" cy="344.7" r="467.5" gradientUnits="userSpaceOnUse"><stop offset="0" class="style3"/><stop offset="0.5" class="style4"/><stop offset="1" class="style5"/></radialGradient><path d="M49.1 467.6c0.2 0 0.4-0.2 0.5-0.4c0-0.4-0.1-0.8-0.1-1.1L49.1 467.6z" class="style6"/><radialGradient cx="118.1" cy="344.7" r="467.5" gradientUnits="userSpaceOnUse"><stop offset="0" class="style3"/><stop offset="0.5" class="style4"/><stop offset="1" class="style5"/></radialGradient><path d="M355.8 466.1c0 0.4 0 0.8-0.1 1.1c0.1 0.2 0.2 0.4 0.5 0.4L355.8 466.1z" class="style7"/></g><path d="M271.2 132.5H133.7c-7.9 0-14.3 6.4-14.3 14.3v21c0 7.9 6.4 14.3 14.3 14.3h137.5c7.9 0 14.3-6.4 14.3-14.3 v-21C285.6 138.9 279.2 132.5 271.2 132.5z" class="style2"/><g><path d="M378.8 470.1C366 514.3 304.2 576.5 202.6 576c-101.4-0.5-163.9-61.4-176.1-104.8c-4 11-6.1 22.6-6.1 34.5 c0 74.3 81.7 134.5 182.5 134.5c100.8 0 182.5-60.2 182.5-134.5C385.4 493.4 383.1 481.5 378.8 470.1z" class="style2"/></g></g><g><path d="M328.6 536.4c27.1-20.4 44.1-45.4 50.2-66.3c4.2 11.4 6.5 23.3 6.5 35.7c0 74.3-81.7 134.5-182.5 134.5 c-72.5 0-135.2-31.2-164.6-76.4c0 0 74.8 77.7 192.9 61.4S328.6 536.4 328.6 536.4z" class="style8"/></g><path d="M67 503.1c25.6 27.6 76.7 51 135.6 52.1c73.7 1.4 151.4-48.2 153.1-87.9c0 0 0 0 0 0l-55.1-260.4 c-0.8-3.9-4.3-6.7-8.3-6.7h-16.9c0 0 7.2 1.5 14.5 29.5c7.2 28 55.3 241.3 42.5 254.6C216 604 67 503.1 67 503.1z" class="style8"/><path d="M200.9 305.1l-54.5-63.8c-1.2-1.5-0.2-4.2 1.6-4.2H266c1.8 0 2.8 2.6 1.6 4.2c1.2-1.2 1.8-2.7 2-4.3 c0.5-2.9-1.9-5.6-4.9-5.6H137.6c-2.7 0-4.2 3.2-2.4 5.3C143.6 246.4 164.4 269.8 200.9 305.1z" class="style8"/><path d="M94.1 426.9c-0.2-0.6-0.3-1.3-0.2-2.1L124.3 283c0.5-2.3 3.2-3.2 4.8-1.5l-10.6-5.7L88.8 414.7 c-0.9 4.1 0.6 8.3 3.8 10.9L94.1 426.9z" class="style8"/><path d="M199.8 517.3c-26.8-0.3-57.2-8.4-88.7-31.3c-2.5-1.8-2.7-5.8-0.5-8.2l88.7-95.6c1.9-2.1 5.1-2.1 7 0 l17.5 18.9c-8.6-11.6-15.7-20.2-19.9-25.1c-2.1-2.5-5.9-2.5-8.2-0.2l-93.9 100.5c-2 2.1-2 5.4 0 7.5 C110.3 492.9 137.4 515 199.8 517.3z" class="style8"/><path d="M313.3 430.9l-80.1-82.4c-1.3-1.3-1.3-3.4 0-4.8l50.6-58.4c1.5-1.6 4.1-0.7 4.6 1.5l-1.3-6 c-0.6-2.8-4.2-3.7-6.1-1.5L227 340.9c-1.9 2.1-1.8 5.3 0.1 7.4C234.4 356.3 256.4 378.9 313.3 430.9z" class="style8"/><path d="M231.4 25c5.8 8.7 13.2 22.6 13.2 33.8c0 34.8-16 54.5-54.5 54.5c-9.6 0-22.2-6.1-30.1-10.5l0.1-0.1 c9.7 10.9 23.9 17.8 39.6 17.8c29.3 0 53-23.7 53-53C252.7 50.2 244.3 34.7 231.4 25z" class="style8"/><path d="M133.7 182.2l137.5 0c7.9 0 14.3-6.4 14.3-14.3v-21c0-7.9-6.4-14.3-14.3-14.3l1.6 7c0.3 1.5 0.5 2.9 0.5 4.4 l0 19c0 6.8-5.1 12.4-11.8 13.1C236.7 178.7 177.6 180.9 133.7 182.2z" class="style8"/><path d="M181.6 83.7c-3.9-4.3-6-9.9-6-16.1c0-13.3 10.8-24 24-24c6.6 0 12.5 2.5 16.8 6.9 c-4.4-6.8-12.2-11.4-20.9-11.4c-13.6 0-24.6 11-24.6 24.6C171.1 71.9 175.4 79.2 181.6 83.7z" class="style8"/><path d="M76.1 342c-0.3 1.2 7.2 3.9 16.7 5.9s17.4 2.7 17.7 1.4l5.7-28.2c-0.3 1.2-8.2 0.6-17.7-1.4 s-17-4.7-16.7-5.9L76.1 342z" class="style9"/><path d="M102.7 349.6c4.5 0.5 7.6 0.5 7.7-0.3l5.7-28.2c-0.2 0.7-3.1 0.8-7.4 0.3L102.7 349.6z" class="style10"/><path d="M329 340.8c0.2 1-6 3.2-13.8 4.9c-7.9 1.7-13.9 2.3-14.2 1.2l-5.2-25.1c0.2 1 6.8 0.5 14.6-1.2 c7.9-1.7 13.5-3.9 13.3-4.9L329 340.8z" class="style9"/><path d="M315.6 345.7c7.6-1.7 13.6-3.8 13.4-4.8l-5.3-25c0.2 1-5.4 3.2-13.3 4.9L315.6 345.7z" class="style10"/></svg>
-		</div>
-		<div class="col-sm-12 header-title">
-			<h1>bui</h1>
-			<h2>Beacon User Interface</h2>
-			<p>A pattern library built on bootstrap, designed for Beacon - a survey authoring and reporting platform by Decipher Inc.</p>
-		</div>
-	</div>
+  <div class="row header-container">
+    <div class="col-sm-12 bui-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 400 660" enable-background="new 0 0 400 660" xml:space="preserve"><style>.style0 {
+        fill: #333333;
+      }
+
+      .style1 {
+        fill: #F9F9F9;
+      }
+
+      .style10 {
+        fill: #DDDDDC;
+      }
+
+      .style2 {
+        fill: #F69021;
+      }
+
+      .style3 {
+        stop-color: #F69353;
+      }
+
+      .style4 {
+        stop-color: #F37521;
+      }
+
+      .style5 {
+        stop-color: #D4622A;
+      }
+
+      .style6 {
+        fill: url(#SVGID_1_);
+      }
+
+      .style7 {
+        fill: url(#SVGID_2_);
+      }
+
+      .style8 {
+        fill: #E17F26;
+      }
+
+      .style9 {
+        fill: #EFEFEF;
+      }</style><path d="M199.8 1c-37 0-67.1 29.8-67.1 66.5c0 19.6 8.6 37.2 22.3 49.4h-26.1c-15.9 0-28.8 12.8-28.8 28.5v20.7 c0 6.5 2.3 12.6 6 17.4c-10 0.8-18.6 8-20.7 17.9L33.8 440c-19.7 13.8-25.4 31.4-25.4 31.4C3.5 484.5 1 498 1 511.5 c0 40 20.9 77.4 59 105.1c36.7 26.8 88.4 41.5 139.8 41.5s103.1-14.8 139.8-41.5c38-27.8 59-65.1 59-105.1c0-13.5-2.5-27-7.4-40.1 c0 0-5.8-17.5-25.4-31.4l-51.5-238.7c-2.1-9.9-10.6-17.1-20.7-17.9c3.8-4.8 6-10.8 6-17.4v-20.7c0-15.7-12.9-28.5-28.8-28.5h-26.1 c13.6-12.2 22.3-29.8 22.3-49.4C266.9 30.8 236.8 1 199.8 1" class="style0"/><path d="M199.7 56.4c5.1 0 9.3 4.1 9.3 9.2c0 5.1-4.2 9.2-9.3 9.2s-9.3-4.1-9.3-9.2 C190.5 60.5 194.6 56.4 199.7 56.4z" class="style1"/><g><path d="M199.7 120.6c29.3 0 53-23.7 53-53s-23.7-53-53-53s-53 23.7-53 53S170.5 120.6 199.7 120.6z M199.7 43.6 c13.3 0 24 10.8 24 24s-10.8 24-24 24s-24-10.8-24-24S186.4 43.6 199.7 43.6z" class="style2"/><g><path d="M355.7 467.2l-55.1-260.4c-0.8-3.9-4.3-6.7-8.3-6.7H112.9c-4 0-7.4 2.8-8.3 6.7L49.6 467.2c0 0 0 0 0 0 c1.3 39.7 69.3 86.4 153.1 88C276.3 556.6 354 507 355.7 467.2C355.7 467.2 355.7 467.2 355.7 467.2z M148.1 237.1H266 c1.8 0 2.8 2.6 1.6 4.2l-62.8 63.8c-1 1.3-2.8 1.3-3.8 0l-54.5-63.8C145.2 239.7 146.2 237.1 148.1 237.1z M94 424.8L124.3 283 c0.5-2.3 3.2-3.2 4.8-1.5l49.5 59.3c1.3 1.4 1.3 3.6 0 5l-79.7 82C96.7 429.9 93.3 427.9 94 424.8z M294.4 486 c-19.1 14.1-97 62.7-183.4 0c-2.5-1.8-2.7-5.8-0.5-8.2l88.7-95.6c1.9-2.1 5.1-2.1 7 0l88.6 95.7C297 480.2 296.8 484.2 294.4 486z M313.3 430.9l-80.1-82.4c-1.3-1.3-1.3-3.4 0-4.8l50.6-58.4c1.5-1.6 4.1-0.7 4.6 1.5L318 428.1C318.7 431.1 315.4 433 313.3 430.9 z" class="style2"/><radialGradient cx="118.1" cy="344.7" r="467.5" gradientUnits="userSpaceOnUse"><stop offset="0" class="style3"/><stop offset="0.5" class="style4"/><stop offset="1" class="style5"/></radialGradient><path d="M49.1 467.6c0.2 0 0.4-0.2 0.5-0.4c0-0.4-0.1-0.8-0.1-1.1L49.1 467.6z" class="style6"/><radialGradient cx="118.1" cy="344.7" r="467.5" gradientUnits="userSpaceOnUse"><stop offset="0" class="style3"/><stop offset="0.5" class="style4"/><stop offset="1" class="style5"/></radialGradient><path d="M355.8 466.1c0 0.4 0 0.8-0.1 1.1c0.1 0.2 0.2 0.4 0.5 0.4L355.8 466.1z" class="style7"/></g><path d="M271.2 132.5H133.7c-7.9 0-14.3 6.4-14.3 14.3v21c0 7.9 6.4 14.3 14.3 14.3h137.5c7.9 0 14.3-6.4 14.3-14.3 v-21C285.6 138.9 279.2 132.5 271.2 132.5z" class="style2"/><g><path d="M378.8 470.1C366 514.3 304.2 576.5 202.6 576c-101.4-0.5-163.9-61.4-176.1-104.8c-4 11-6.1 22.6-6.1 34.5 c0 74.3 81.7 134.5 182.5 134.5c100.8 0 182.5-60.2 182.5-134.5C385.4 493.4 383.1 481.5 378.8 470.1z" class="style2"/></g></g><g><path d="M328.6 536.4c27.1-20.4 44.1-45.4 50.2-66.3c4.2 11.4 6.5 23.3 6.5 35.7c0 74.3-81.7 134.5-182.5 134.5 c-72.5 0-135.2-31.2-164.6-76.4c0 0 74.8 77.7 192.9 61.4S328.6 536.4 328.6 536.4z" class="style8"/></g><path d="M67 503.1c25.6 27.6 76.7 51 135.6 52.1c73.7 1.4 151.4-48.2 153.1-87.9c0 0 0 0 0 0l-55.1-260.4 c-0.8-3.9-4.3-6.7-8.3-6.7h-16.9c0 0 7.2 1.5 14.5 29.5c7.2 28 55.3 241.3 42.5 254.6C216 604 67 503.1 67 503.1z" class="style8"/><path d="M200.9 305.1l-54.5-63.8c-1.2-1.5-0.2-4.2 1.6-4.2H266c1.8 0 2.8 2.6 1.6 4.2c1.2-1.2 1.8-2.7 2-4.3 c0.5-2.9-1.9-5.6-4.9-5.6H137.6c-2.7 0-4.2 3.2-2.4 5.3C143.6 246.4 164.4 269.8 200.9 305.1z" class="style8"/><path d="M94.1 426.9c-0.2-0.6-0.3-1.3-0.2-2.1L124.3 283c0.5-2.3 3.2-3.2 4.8-1.5l-10.6-5.7L88.8 414.7 c-0.9 4.1 0.6 8.3 3.8 10.9L94.1 426.9z" class="style8"/><path d="M199.8 517.3c-26.8-0.3-57.2-8.4-88.7-31.3c-2.5-1.8-2.7-5.8-0.5-8.2l88.7-95.6c1.9-2.1 5.1-2.1 7 0 l17.5 18.9c-8.6-11.6-15.7-20.2-19.9-25.1c-2.1-2.5-5.9-2.5-8.2-0.2l-93.9 100.5c-2 2.1-2 5.4 0 7.5 C110.3 492.9 137.4 515 199.8 517.3z" class="style8"/><path d="M313.3 430.9l-80.1-82.4c-1.3-1.3-1.3-3.4 0-4.8l50.6-58.4c1.5-1.6 4.1-0.7 4.6 1.5l-1.3-6 c-0.6-2.8-4.2-3.7-6.1-1.5L227 340.9c-1.9 2.1-1.8 5.3 0.1 7.4C234.4 356.3 256.4 378.9 313.3 430.9z" class="style8"/><path d="M231.4 25c5.8 8.7 13.2 22.6 13.2 33.8c0 34.8-16 54.5-54.5 54.5c-9.6 0-22.2-6.1-30.1-10.5l0.1-0.1 c9.7 10.9 23.9 17.8 39.6 17.8c29.3 0 53-23.7 53-53C252.7 50.2 244.3 34.7 231.4 25z" class="style8"/><path d="M133.7 182.2l137.5 0c7.9 0 14.3-6.4 14.3-14.3v-21c0-7.9-6.4-14.3-14.3-14.3l1.6 7c0.3 1.5 0.5 2.9 0.5 4.4 l0 19c0 6.8-5.1 12.4-11.8 13.1C236.7 178.7 177.6 180.9 133.7 182.2z" class="style8"/><path d="M181.6 83.7c-3.9-4.3-6-9.9-6-16.1c0-13.3 10.8-24 24-24c6.6 0 12.5 2.5 16.8 6.9 c-4.4-6.8-12.2-11.4-20.9-11.4c-13.6 0-24.6 11-24.6 24.6C171.1 71.9 175.4 79.2 181.6 83.7z" class="style8"/><path d="M76.1 342c-0.3 1.2 7.2 3.9 16.7 5.9s17.4 2.7 17.7 1.4l5.7-28.2c-0.3 1.2-8.2 0.6-17.7-1.4 s-17-4.7-16.7-5.9L76.1 342z" class="style9"/><path d="M102.7 349.6c4.5 0.5 7.6 0.5 7.7-0.3l5.7-28.2c-0.2 0.7-3.1 0.8-7.4 0.3L102.7 349.6z" class="style10"/><path d="M329 340.8c0.2 1-6 3.2-13.8 4.9c-7.9 1.7-13.9 2.3-14.2 1.2l-5.2-25.1c0.2 1 6.8 0.5 14.6-1.2 c7.9-1.7 13.5-3.9 13.3-4.9L329 340.8z" class="style9"/><path d="M315.6 345.7c7.6-1.7 13.6-3.8 13.4-4.8l-5.3-25c0.2 1-5.4 3.2-13.3 4.9L315.6 345.7z" class="style10"/></svg>
+    </div>
+    <div class="col-sm-12 header-title">
+      <h1>bui</h1>
+
+      <h2>Beacon User Interface</h2>
+
+      <p>A pattern library built on bootstrap, designed for Beacon - a survey
+        authoring and reporting platform by Decipher Inc.</p>
+    </div>
+  </div>
 </div>
 
 
 <div class="container">
-<section>
-	<h1><a name="orientation">Orientation</a></h1>
-	<h2>To be added:</h2>
-	<ul>
-		<li>Welcome, and what is this thing</li>
-		<li>Library Intentions</li>
-		<ul>
-			<li>Standardization</li>
-			<li>Consistency</li>
-			<li>etc..</li>
-		</ul>
-		<li>Working with the bui files</li>
-		<ul>
-			<li>The grunt files</li>
-			<li>the @include in /bootstrap/less</li>
-		</ul>
-		<li>Using bui in an interface</li>
-		<ul>
-			<li>The bui + bui-"" prefix override system</li>
-			<li>Built on bootstrap, mind the markup differences</li>
-		</ul>
-	</ul>
-</section>
+  <section>
+    <h1><a name="orientation">Orientation</a></h1>
 
-<!--************* FRAMEWORK *************-->
+    <h2>To be added:</h2>
+    <ul>
+      <li>Welcome, and what is this thing</li>
+      <li>Library Intentions</li>
+      <ul>
+        <li>Standardization</li>
+        <li>Consistency</li>
+        <li>etc..</li>
+      </ul>
+      <li>Working with the bui files</li>
+      <ul>
+        <li>The grunt files</li>
+        <li>the @include in /bootstrap/less</li>
+      </ul>
+      <li>Using bui in an interface</li>
+      <ul>
+        <li>The bui + bui-"" prefix override system</li>
+        <li>Built on bootstrap, mind the markup differences</li>
+      </ul>
+    </ul>
+  </section>
 
-<section>
-	<h1><a name="framework">Framework</a></h1>
-	<p>The base bootstrap grid is 12 columns. Add the class <code>bui-grid</code> to <code>&lt;html&gt;</code> to turn on the 24 column bui grid, which uses the same bootstrap grid system but with 24 columns.</p>
-	<div class="row">
-		<div class="example-framework-col col-sm-1">1</div>
-		<div class="example-framework-col col-sm-1">2</div>
-		<div class="example-framework-col col-sm-1">3</div>
-		<div class="example-framework-col col-sm-1">4</div>
-		<div class="example-framework-col col-sm-1">5</div>
-		<div class="example-framework-col col-sm-1">6</div>
-		<div class="example-framework-col col-sm-1">7</div>
-		<div class="example-framework-col col-sm-1">8</div>
-		<div class="example-framework-col col-sm-1">9</div>
-		<div class="example-framework-col col-sm-1">10</div>
-		<div class="example-framework-col col-sm-1">11</div>
-		<div class="example-framework-col col-sm-1">12</div>
-		<div class="example-framework-col col-sm-1">13</div>
-		<div class="example-framework-col col-sm-1">14</div>
-		<div class="example-framework-col col-sm-1">15</div>
-		<div class="example-framework-col col-sm-1">16</div>
-		<div class="example-framework-col col-sm-1">17</div>
-		<div class="example-framework-col col-sm-1">18</div>
-		<div class="example-framework-col col-sm-1">19</div>
-		<div class="example-framework-col col-sm-1">20</div>
-		<div class="example-framework-col col-sm-1">21</div>
-		<div class="example-framework-col col-sm-1">22</div>
-		<div class="example-framework-col col-sm-1">23</div>
-		<div class="example-framework-col col-sm-1">24</div>
-	</div>
+  <!--************* FRAMEWORK *************-->
 
-	<h3>Gutters</h3>
-	<p>Columns use padding to create gutters, BUI gutters are set to 1em.</p>
-	<div class="bui-lib-example">
-		<div class="row">
-			<div class="col-xs-8">
-				<div class="a-box">8 Columns</div>
-			</div>
-			<div class="col-xs-8">
-				<div class="a-box">8 Columns</div>
-			</div>
-			<div class="col-xs-8">
-				<div class="a-box">8 Columns</div>
-			</div>
-		</div>
-		<style>
-			.a-box {
-				background-color: #f5f5f5;
-				border: 1px solid #ddd;
-			}
-		</style>
-	</div>
-	<div class="bui-lib-example-comment">
+  <section>
+    <h1><a name="framework">Framework</a></h1>
+
+    <p>The base bootstrap grid is 12 columns. Add the class
+      <code>bui-grid</code> to <code>&lt;html&gt;</code> to turn on the 24
+      column bui grid, which uses the same bootstrap grid system but with 24
+      columns.</p>
+
+    <div class="row">
+      <div class="example-framework-col col-sm-1">1</div>
+      <div class="example-framework-col col-sm-1">2</div>
+      <div class="example-framework-col col-sm-1">3</div>
+      <div class="example-framework-col col-sm-1">4</div>
+      <div class="example-framework-col col-sm-1">5</div>
+      <div class="example-framework-col col-sm-1">6</div>
+      <div class="example-framework-col col-sm-1">7</div>
+      <div class="example-framework-col col-sm-1">8</div>
+      <div class="example-framework-col col-sm-1">9</div>
+      <div class="example-framework-col col-sm-1">10</div>
+      <div class="example-framework-col col-sm-1">11</div>
+      <div class="example-framework-col col-sm-1">12</div>
+      <div class="example-framework-col col-sm-1">13</div>
+      <div class="example-framework-col col-sm-1">14</div>
+      <div class="example-framework-col col-sm-1">15</div>
+      <div class="example-framework-col col-sm-1">16</div>
+      <div class="example-framework-col col-sm-1">17</div>
+      <div class="example-framework-col col-sm-1">18</div>
+      <div class="example-framework-col col-sm-1">19</div>
+      <div class="example-framework-col col-sm-1">20</div>
+      <div class="example-framework-col col-sm-1">21</div>
+      <div class="example-framework-col col-sm-1">22</div>
+      <div class="example-framework-col col-sm-1">23</div>
+      <div class="example-framework-col col-sm-1">24</div>
+    </div>
+
+    <h3>Gutters</h3>
+
+    <p>Columns use padding to create gutters, BUI gutters are set to 1em.</p>
+
+    <div class="bui-lib-example">
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="a-box">8 Columns</div>
+        </div>
+        <div class="col-xs-8">
+          <div class="a-box">8 Columns</div>
+        </div>
+        <div class="col-xs-8">
+          <div class="a-box">8 Columns</div>
+        </div>
+      </div>
+      <style>
+        .a-box {
+          background-color: #f5f5f5;
+          border: 1px solid #ddd;
+        }
+      </style>
+    </div>
+    <div class="bui-lib-example-comment">
 <pre>
 <code>&lt;div class="<span>row</span>"&gt;</code>
 	<code>&lt;div class="<span>col-xs-8</span>"&gt;</code>
@@ -172,469 +226,687 @@
 	<code>}</code>
 <code>&lt;/style&gt;</code>
 </pre>
-	</div>
-	<h4>No Gutters</h4>
-	<p>Add the class <code><span>.no-gutters</span></code> to <code>.row</code> to remove all the gutters.</p>
-	<div class="bui-lib-example">
-		<div class="row no-gutters">
-			<div class="col-xs-8">
-				<div class="a-box">8 Columns</div>
-			</div>
-			<div class="col-xs-8">
-				<div class="a-box">8 Columns</div>
-			</div>
-			<div class="col-xs-8">
-				<div class="a-box">8 Columns</div>
-			</div>
-		</div>
-		<style>
-			.a-box {
-				background-color: #f5f5f5;
-				border: 1px solid #ddd;
-			}
-		</style>
-	</div>
-</section>
+    </div>
+    <h4>No Gutters</h4>
 
-<!--************* COLOR PALETTE *************-->
+    <p>Add the class <code><span>.no-gutters</span></code> to <code>.row</code>
+      to remove all the gutters.</p>
 
-<section class="color-swatches">
-	<h1><a name="colorPalette">Color Palette</a></h1>
-	<p>These are the main colors for Beacon applications. Use as described.</p>
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="color-swatch color-bg">
-				Bg
-			</div>
-			<div class="color-info">
-				<h4>General Background Color</h4>
-				<p>HEX: #ffffff</p>
-				<p>LESS: <code>@color-bg</code></p>
-			</div>
-		</div>
-		<div class="col-sm-12">
-			<div class="color-swatch color-t">
-				T
-			</div>
-			<div class="color-info">
-				<h4>Base Text Color</h4>
-				<p>HEX: #333333</p>
-				<p>LESS: <code>@color-base</code></p>
-			</div>
-		</div>
-	</div>
+    <div class="bui-lib-example">
+      <div class="row no-gutters">
+        <div class="col-xs-8">
+          <div class="a-box">8 Columns</div>
+        </div>
+        <div class="col-xs-8">
+          <div class="a-box">8 Columns</div>
+        </div>
+        <div class="col-xs-8">
+          <div class="a-box">8 Columns</div>
+        </div>
+      </div>
+      <style>
+        .a-box {
+          background-color: #f5f5f5;
+          border: 1px solid #ddd;
+        }
+      </style>
+    </div>
+  </section>
 
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="color-swatch color-7">
-				7
-			</div>
-			<div class="color-info">
-				<h4>Cancel &amp; Remove Button</h4>
-				<p>HEX: #777777</p>
-				<p>LESS: <code>@color-remove</code></p>
-			</div>
-		</div>
-		<div class="col-sm-12">
-			<div class="color-swatch color-b">
-				B
-			</div>
-			<div class="color-info">
-				<h4>Disabled</h4>
-				<p>HEX: #bbbbbb</p>
-				<p>LESS: <code>@color-disabled</code></p>
-			</div>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="color-swatch color-bc">
-				B
-			</div>
-			<div class="color-info">
-				<h4>Structural Dark</h4>
-				<em>For when you need a darker frame color</em>
-				<p>HEX: #bcbcbc</p>
-				<p>LESS: <code>@color-frame-dark</code></p>
-			</div>
-		</div>
-		<div class="col-sm-12">
-			<div class="color-swatch color-d">
-				D
-			</div>
-			<div class="color-info">
-				<h4>Structural</h4>
-				<em>Divider Lines &amp; Borders</em>
-				<p>HEX: #dddddd</p>
-				<p>LESS: <code>@color-frame</code></p>
-			</div>
-		</div>
-	</div>
+  <!--************* COLOR PALETTE *************-->
 
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="color-swatch color-bt">
-				Bt
-			</div>
-			<div class="color-info">
-				<h4>Standard Buttons</h4>
-				<p>HEX: #e7e7e7</p>
-				<p>LESS: <code>@color-button</code></p>
-			</div>
-		</div>
-		<div class="col-sm-12">
-			<div class="color-swatch color-ct">
-				CT
-			</div>
-			<div class="color-info">
-				<h4>Container BG</h4>
-				<em>For certain containers, usually has a border.</em>
-				<p>HEX: #f5f5f5</p>
-				<p>LESS: <code>@color-container</code></p>
-			</div>
-		</div>
-	</div>
+  <section class="color-swatches">
+    <h1><a name="colorPalette">Color Palette</a></h1>
 
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="color-swatch color-bl">
-				Bl
-			</div>
-			<div class="color-info">
-				<h4>Primary</h4>
-				<em>Buttons/Links/Drop-Down</em>
-				<p>HEX: #0086ab</p>
-				<p>LESS: <code>@color-blue</code></p>
-			</div>
-		</div>
-		<div class="col-sm-12">
-			<div class="color-swatch color-g">
-				G
-			</div>
-			<div class="color-info">
-				<h4>Special Action</h4>
-				<em>Max, one per page</em>
-				<p>HEX: #76bd23</p>
-				<p>LESS: <code>@color-green</code></p>
-			</div>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="color-swatch color-o">
-				O
-			</div>
-			<div class="color-info">
-				<h4>Controls</h4>
-				<em>Interface Icons / Active Tabs / Selectables</em>
-				<p>HEX: #ff8800</p>
-				<p>LESS: <code>@color-orange</code></p>
-			</div>
-		</div>
-		<div class="col-sm-12">
-			<div class="color-swatch color-tg">
-				Tg
-			</div>
-			<div class="color-info">
-				<h4>Tags</h4>
-				<p>HEX: #b8e3f4</p>
-				<p>LESS: <code>@color-tag</code></p>
-			</div>
-		</div>
-	</div>
+    <p>These are the main colors for Beacon applications. Use as described.</p>
 
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="color-swatch color-c">
-				C
-			</div>
-			<div class="color-info">
-				<h4>Cancel/Danger</h4>
-				<p>HEX: #9e0b0f</p>
-				<p>LESS: <code>@color-red</code></p>
-			</div>
-		</div>
-		<div class="col-sm-12">
-			<div class="color-swatch color-w">
-				W
-			</div>
-			<div class="color-info">
-				<h4>Warning</h4>
-				<p>HEX: #f0c000</p>
-				<p>LESS: <code>@color-warning</code></p>
-			</div>
-		</div>
-	</div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="color-swatch color-bg">
+          Bg
+        </div>
+        <div class="color-info">
+          <h4>General Background Color</h4>
 
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="color-swatch color-h">
-				H
-			</div>
-			<div class="color-info">
-				<h4>Highlight</h4>
-				<p>HEX: #fff200</p>
-				<p>LESS: <code>@color-yellow</code></p>
-			</div>
-		</div>
-	</div>
-</section>
+          <p>HEX: #ffffff</p>
 
-<!--************* ICONS & IMAGES *************-->
+          <p>LESS: <code>@color-bg</code></p>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="color-swatch color-t">
+          T
+        </div>
+        <div class="color-info">
+          <h4>Base Text Color</h4>
 
-<section>
-	<h1><a name="iconsAndImages">Icons &amp; Images</a></h1>
-	<h2>Beacon Icons</h2>
-	<p>Every icon has an intended use. In most cases the name of the icon will make it clear what its intended use is. It’s important to stay consistent with the use of an icon throughout all the applications, so the user can rely on them to symbolize a predictable action.</p>
-	<div class="iconsContainer js-unittest-icons row">
-		<div class="col-sm-8">
-			<p><i></i> icon-portal (e867)</p>
-			<p><i></i> icon-distribute (e874)</p>
-			<p><i></i> icon-build (e878)</p>
-			<p><i></i> icon-report (e86a)</p>
-			<p><i></i> icon-test (e862)</p>
-			<p><i></i> icon-menu (e815)</p>
-			<p><i></i> icon-full (e86b)</p>
-			<p><i></i> icon-list (e840)</p>
-			<p><i></i> icon-tile (e841)</p>
-			<p><i></i> icon-sort-by (e83f)</p>
-			<p><i></i> icon-tag (e818)</p>
-			<p><i></i> icon-tags (e819)</p>
-			<p><i></i> icon-directory (e80c)</p>
-			<p><i></i> icon-company (e816)</p>
-			<p><i></i> icon-project (e899)</p>
-			<p><i></i> icon-file (e809)</p>
-			<p><i></i> icon-copy (e875)</p>
-			<p><i></i> icon-folder (e80b)</p>
-			<p><i></i> icon-folder-open (e80a)</p>
-			<p><i></i> icon-error (e828)</p>
-			<p><i></i> icon-alert (e827)</p>
-			<p><i></i> icon-help (e823)</p>
-			<p><i></i> icon-info (e845)</p>
-			<p><i></i> icon-kb (e844)</p>
-			<p><i></i> icon-success (e829)</p>
-			<p><i></i> icon-save (e803)</p>
-			<p><i></i> icon-lock (e807)</p>
-			<p><i></i> icon-unlock (e808)</p>
-			<p><i></i> icon-favorite-empty (e82d)</p>
-			<p><i></i> icon-favorite-full (e82e)</p>
-			<p><i></i> icon-pin (e82f)</p>
-			<p><i></i> icon-chart (e830)</p>
-			<p><i></i> icon-table (e832)</p>
+          <p>HEX: #333333</p>
 
-			<p><i></i> icon-rte-bold (e879)</p>
-			<p><i></i> icon-rte-italic (e87a)</p>
-			<p><i></i> icon-rte-underline (e87b)</p>
-			<p><i></i> icon-rte-strike (e886)</p>
-			<p><i></i> icon-rte-superscript (e887)</p>
-			<p><i></i> icon-rte-subscript (e888)</p>
-			<p><i></i> icon-rte-align-left (e87c)</p>
-			<p><i></i> icon-rte-align-center (e87d)</p>
-			<p><i></i> icon-rte-align-right (e87e)</p>
-			<p><i></i> icon-rte-align-justify (e87f)</p>
-			<p><i></i> icon-rte-unordered-list (e880)</p>
-			<p><i></i> icon-rte-ordered-list (e881)</p>
-			<p><i></i> icon-rte-indent-right (e882)</p>
-			<p><i></i> icon-rte-indent-left (e883)</p>
-			<p><i></i> icon-rte-special-char (e88a)</p>
-			<p><i></i> icon-rte-line (e885)</p>
-			<p><i></i> icon-rte-paste-plain (e88b)</p>
-			<p><i></i> icon-rte-clear-formatting (e88c)</p>
-			<p><i></i> icon-rte-tooltip (e896)</p>
-			<p><i class="icon-rte-line-break"></i> icon-rte-line-break (e898)</p>
+          <p>LESS: <code>@color-base</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="color-swatch color-7">
+          7
+        </div>
+        <div class="color-info">
+          <h4>Cancel &amp; Remove Button</h4>
+
+          <p>HEX: #777777</p>
+
+          <p>LESS: <code>@color-remove</code></p>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="color-swatch color-b">
+          B
+        </div>
+        <div class="color-info">
+          <h4>Disabled</h4>
+
+          <p>HEX: #bbbbbb</p>
+
+          <p>LESS: <code>@color-disabled</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="color-swatch color-bc">
+          B
+        </div>
+        <div class="color-info">
+          <h4>Structural Dark</h4>
+          <em>For when you need a darker frame color</em>
+
+          <p>HEX: #bcbcbc</p>
+
+          <p>LESS: <code>@color-frame-dark</code></p>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="color-swatch color-d">
+          D
+        </div>
+        <div class="color-info">
+          <h4>Structural</h4>
+          <em>Divider Lines &amp; Borders</em>
+
+          <p>HEX: #dddddd</p>
+
+          <p>LESS: <code>@color-frame</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="color-swatch color-bt">
+          Bt
+        </div>
+        <div class="color-info">
+          <h4>Standard Buttons</h4>
+
+          <p>HEX: #e7e7e7</p>
+
+          <p>LESS: <code>@color-button</code></p>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="color-swatch color-ct">
+          CT
+        </div>
+        <div class="color-info">
+          <h4>Container BG</h4>
+          <em>For certain containers, usually has a border.</em>
+
+          <p>HEX: #f5f5f5</p>
+
+          <p>LESS: <code>@color-container</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="color-swatch color-bl">
+          Bl
+        </div>
+        <div class="color-info">
+          <h4>Primary</h4>
+          <em>Buttons/Links/Drop-Down</em>
+
+          <p>HEX: #0086ab</p>
+
+          <p>LESS: <code>@color-blue</code></p>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="color-swatch color-g">
+          G
+        </div>
+        <div class="color-info">
+          <h4>Special Action</h4>
+          <em>Max, one per page</em>
+
+          <p>HEX: #76bd23</p>
+
+          <p>LESS: <code>@color-green</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="color-swatch color-o">
+          O
+        </div>
+        <div class="color-info">
+          <h4>Controls</h4>
+          <em>Interface Icons / Active Tabs / Selectables</em>
+
+          <p>HEX: #ff8800</p>
+
+          <p>LESS: <code>@color-orange</code></p>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="color-swatch color-tg">
+          Tg
+        </div>
+        <div class="color-info">
+          <h4>Tags</h4>
+
+          <p>HEX: #b8e3f4</p>
+
+          <p>LESS: <code>@color-tag</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="color-swatch color-c">
+          C
+        </div>
+        <div class="color-info">
+          <h4>Cancel/Danger</h4>
+
+          <p>HEX: #9e0b0f</p>
+
+          <p>LESS: <code>@color-red</code></p>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="color-swatch color-w">
+          W
+        </div>
+        <div class="color-info">
+          <h4>Warning</h4>
+
+          <p>HEX: #f0c000</p>
+
+          <p>LESS: <code>@color-warning</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="color-swatch color-h">
+          H
+        </div>
+        <div class="color-info">
+          <h4>Highlight</h4>
+
+          <p>HEX: #fff200</p>
+
+          <p>LESS: <code>@color-yellow</code></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--************* ICONS & IMAGES *************-->
+
+  <section>
+    <h1><a name="iconsAndImages">Icons &amp; Images</a></h1>
+
+    <h2>Beacon Icons</h2>
+
+    <p>Every icon has an intended use. In most cases the name of the icon will
+      make it clear what its intended use is. It’s important to stay consistent
+      with the use of an icon throughout all the applications, so the user can
+      rely on them to symbolize a predictable action.</p>
+
+    <div class="iconsContainer js-unittest-icons row">
+      <div class="col-sm-8">
+        <p><i></i> icon-portal (e867)</p>
+
+        <p><i></i> icon-distribute (e874)</p>
+
+        <p><i></i> icon-build (e878)</p>
+
+        <p><i></i> icon-report (e86a)</p>
+
+        <p><i></i> icon-test (e862)</p>
+
+        <p><i></i> icon-menu (e815)</p>
+
+        <p><i></i> icon-full (e86b)</p>
+
+        <p><i></i> icon-list (e840)</p>
+
+        <p><i></i> icon-tile (e841)</p>
+
+        <p><i></i> icon-sort-by (e83f)</p>
+
+        <p><i></i> icon-tag (e818)</p>
+
+        <p><i></i> icon-tags (e819)</p>
+
+        <p><i></i> icon-directory (e80c)</p>
+
+        <p><i></i> icon-company (e816)</p>
+
+        <p><i></i> icon-project (e899)</p>
+
+        <p><i></i> icon-file (e809)</p>
+
+        <p><i></i> icon-copy (e875)</p>
+
+        <p><i></i> icon-folder (e80b)</p>
+
+        <p><i></i> icon-folder-open (e80a)</p>
+
+        <p><i></i> icon-error (e828)</p>
+
+        <p><i></i> icon-alert (e827)</p>
+
+        <p><i></i> icon-help (e823)</p>
+
+        <p><i></i> icon-info (e845)</p>
+
+        <p><i></i> icon-kb (e844)</p>
+
+        <p><i></i> icon-success (e829)</p>
+
+        <p><i></i> icon-save (e803)</p>
+
+        <p><i></i> icon-lock (e807)</p>
+
+        <p><i></i> icon-unlock (e808)</p>
+
+        <p><i></i> icon-favorite-empty (e82d)</p>
+
+        <p><i></i> icon-favorite-full (e82e)</p>
+
+        <p><i></i> icon-pin (e82f)</p>
+
+        <p><i></i> icon-chart (e830)</p>
+
+        <p><i></i> icon-table (e832)</p>
+
+        <p><i></i> icon-rte-bold (e879)</p>
+
+        <p><i></i> icon-rte-italic (e87a)</p>
+
+        <p><i></i> icon-rte-underline (e87b)</p>
+
+        <p><i></i> icon-rte-strike (e886)</p>
+
+        <p><i></i> icon-rte-superscript (e887)</p>
+
+        <p><i></i> icon-rte-subscript (e888)</p>
+
+        <p><i></i> icon-rte-align-left (e87c)</p>
+
+        <p><i></i> icon-rte-align-center (e87d)</p>
+
+        <p><i></i> icon-rte-align-right (e87e)</p>
+
+        <p><i></i> icon-rte-align-justify (e87f)</p>
+
+        <p><i></i> icon-rte-unordered-list (e880)</p>
+
+        <p><i></i> icon-rte-ordered-list (e881)</p>
+
+        <p><i></i> icon-rte-indent-right (e882)</p>
+
+        <p><i></i> icon-rte-indent-left (e883)</p>
+
+        <p><i></i> icon-rte-special-char (e88a)</p>
+
+        <p><i></i> icon-rte-line (e885)</p>
+
+        <p><i></i> icon-rte-paste-plain (e88b)</p>
+
+        <p><i></i> icon-rte-clear-formatting (e88c)</p>
+
+        <p><i></i> icon-rte-tooltip (e896)</p>
+
+        <p><i class="icon-rte-line-break"></i> icon-rte-line-break (e898)</p>
 
 
-		</div>
-		<div class="col-sm-8">
-			<p><i></i> icon-user (e85e)</p>
-			<p><i></i> icon-user-group (e85f)</p>
-			<p><i></i> icon-sample-source (e863)</p>
-			<p><i></i> icon-sample-source-multi (e866)</p>
-			<p><i></i> icon-search (e806)</p>
-			<p><i></i> icon-action (e82a)</p>
-			<p><i></i> icon-settings (e82b)</p>
-			<p><i></i> icon-edit (e81d)</p>
-			<p><i></i> icon-image (e811)</p>
-			<p><i></i> icon-launch (e820)</p>
-			<p><i></i> icon-add (e800)</p>
-			<p><i></i> icon-remove (e801)</p>
-			<p><i></i> icon-close (e802)</p>
-			<p><i></i> icon-term (e805)</p>
-			<p><i></i> icon-check (e831)</p>
-			<p><i></i> icon-go-to (e814)</p>
-			<p><i></i> icon-domain (e855)</p>
-			<p><i></i> icon-box-up (e837)</p>
-			<p><i></i> icon-box-right (e838)</p>
-			<p><i></i> icon-box-left (e839)</p>
-			<p><i></i> icon-box-down (e836)</p>
-			<p><i></i> icon-view (e82c)</p>
-			<p><i></i> icon-page-break (e847)</p>
-			<p><i></i> icon-library (e846)</p>
-			<p><i></i> icon-answer-list (e897)</p>
-			<p><i></i> icon-language (e817)</p>
-			<p><i></i> icon-single-select (e84d)</p>
-			<p><i></i> icon-single-select-grid (e89c)</p>
-			<p><i></i> icon-multi-select (e84e)</p>
-			<p><i></i> icon-text (e842)</p>
-			<p><i></i> icon-number (e843)</p>
-			<p><i></i> icon-comment (e849)</p>
-			<p><i></i> icon-quota (e84f)</p>
-			<p><i></i> icon-autofill (e84a)</p>
-			<p><i></i> icon-section (e851)</p>
-			<p><i></i> icon-loop (e852)</p>
-			<p><i></i> icon-block (e84b)</p>
-			<p><i></i> icon-skip (e850)</p>
-			<p><i></i> icon-black-box (e89a)</p>
-			<p><i></i> icon-exit-page (e848)</p>
-			<p><i></i> icon-tasks (e81a)</p>
-			<p><i></i> icon-unfinished-task (e81b)</p>
-			<p><i></i> icon-recorder (e81c)</p>
-			<p><i></i> icon-link (e80d)</p>
-			<p><i></i> icon-unlink (e884)</p>
-			<p><i></i> icon-print (e81e)</p>
-			<p><i></i> icon-mail (e81f)</p>
-			<p><i></i> icon-download (e833)</p>
-			<p><i></i> icon-upload (e834)</p>
-			<p><i></i> icon-mobile (e80e)</p>
-			<p><i></i> icon-tablet (e80f)</p>
-			<p><i></i> icon-desktop (e810)</p>
-			<p><i></i> icon-feature-phone (e89b)</p>
-			<p><i></i> icon-code (e821)</p>
-		</div>
-		<div class="col-sm-8">
-			<p><i></i> icon-notification-empty (e825)</p>
-			<p><i></i> icon-notification-full (e826)</p>
-			<p><i></i> icon-theme (e822)</p>
-			<p><i></i> icon-audio (e853)</p>
-			<p><i></i> icon-video (e824)</p>
-			<p><i></i> icon-return (e812)</p>
-			<p><i></i> icon-forward (e813)</p>
-			<p><i></i> icon-caret (e835)</p>
-			<p><i></i> icon-sort-up-down (e83e)</p>
-			<p><i></i> icon-sort-up (e83d)</p>
-			<p><i></i> icon-sort-right (e83c)</p>
-			<p><i></i> icon-sort-down (e83a)</p>
-			<p><i></i> icon-sort-left (e83b)</p>
-			<p><i></i> icon-undo (e804)</p>			
-			<p><i></i> icon-redo (e854)</p>
-			<p><i></i> icon-text-input (e88f)</p>
-			<p><i></i> icon-essay (e890)</p>
-			<p><i></i> icon-dropdown-question (e894)</p>
-			<p><i></i> icon-dq (e84c)</p>
-			<p><i></i> icon-dq-button-select (e86f)</p>
-			<p><i></i> icon-dq-button-multi-select (e870)</p>
-			<p><i></i> icon-dq-button-select-grid (e86d)</p>
-			<p><i></i> icon-dq-button-multi-select-grid (e871)</p>
-			<p><i></i> icon-dq-button-rating (e856)</p>
-			<p><i></i> icon-dq-rank-sort (e85d)</p>
-			<p><i></i> icon-dq-rating-scale (e85c)</p>
-			<p><i></i> icon-dq-card-sort (e869)</p>
-			<p><i></i> icon-dq-card-multi-sort (e86c)</p>
-			<p><i></i> icon-dq-fancy-boxes (e868)</p>
-			<p><i></i> icon-dq-page-turner (e861)</p>
-			<p><i></i> icon-dq-image-map (e865)</p>
-			<p><i></i> icon-dq-shopping-cart (e85b)</p>
-			<p><i></i> icon-dq-quester-itb (e860)</p>
-			<p><i></i> icon-dq-timer-ad (e873)</p>
-			<p><i></i> icon-dq-star-rating (e857)</p>
-			<p><i></i> icon-dq-slider (e858)</p>
-			<p><i></i> icon-dq-slider-decimal (e85a)</p>
-			<p><i></i> icon-dq-slider-points (e859)</p>
-			<p><i></i> icon-dq-this-or-that (e876)</p>
-			<p><i></i> icon-dq-text-highlighter (e877)</p>
-			<p><i></i> icon-dq-media-evaluator (e864)</p>
-			<p><i></i> icon-dq-video-hosted (e872)</p>
-			<p><i></i> icon-dq-fulcrum (e86e)</p>
-			<p><i></i> icon-dq-fulcrum-quota (e895)</p>
-			<p><i></i> icon-cati-phone (e88d)</p>
-			<p><i></i> icon-draggable (e88e)</p>
-			<p><i></i> icon-calendar (e889)</p>
-			<p><i></i> icon-spinner (e893)</p>
-			<p><i></i> icon-field-merge (e892)</p>
-			<p><i></i> icon-piping (e891)</p>
-		</div>
-	</div>
-	<h2>Spinner</h2>
-	<div class="bui-lib-example">
-		<i class="icon-spinner spin-icon"></i>
-	</div>
-	<div class="bui-lib-example-comment">
-		<code>&lt;i class="<span>icon-spinner <strong>spin-icon</strong></span>"&gt;&lt;/i&gt;</code>
-	</div>
-<!-- 
-	<h2>Image Handeling</h2>
-	<p>Responsive images &amp; show/hide on different size screens. User profile images, etc.</p> -->
-</section>
+      </div>
+      <div class="col-sm-8">
+        <p><i></i> icon-user (e85e)</p>
 
-<!--************* INPUT TYPES *************-->
+        <p><i></i> icon-user-group (e85f)</p>
 
-<section style="border:1px solid red;">
-	<h1><a name="inputs" style="color:red;">Inputs</a></h1>
-	<p style="color:red;">Being Developed</p>
-	<ul>
-		<li>Here we're showing a few style overrides, but all markup, classes, etc. are the same as <a href="http://getbootstrap.com/css/#forms">bootstrap</a>, so reference that and see bui style overrides add a bit of our own spice.</li>
-	</ul>
-	<h3>Text Input</h3>
-	<ul>
-		<li>They always span the full width of parent div</li>
-		<li>Always have a label (couldn't get sr-only to hide label, might make special class)</li>
-		<li>labels weight set to semibold</li>
-		<li>Markup is the same as <a href="http://getbootstrap.com/css/#forms">bootstrap</a></li>
-	</ul>
-	<div class="bui-lib-example">
-		<label>Text Input</label>
-		<input type="text" class="form-control" placeholder="Input Example">
-		<label>Disabled Text Input</label>
-		<input type="text" class="form-control" placeholder="Disabled Input Example" disabled>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;label for="demo-input"&gt;Text Input&lt;/label&gt;</code></p>
-		<p><code>&lt;input type="text" id="demo-input" class="<span>form-control</span>" placeholder="Input Example"&gt;</code></p>
-		<code>&lt;label for="demo-input-disabled"&gt;Disabled Text Input&lt;/label&gt;</code></p>
-		<code>&lt;input type="text" id="demo-input-disabled" class="<span>form-control</span>" placeholder="Disabled Input Example" <span><strong>disabled</strong></span>&gt;</code>
-	</div>
+        <p><i></i> icon-sample-source (e863)</p>
 
-	<h3>Text Area</h3>
-	<ul>
-		<li>always spans width of parent container</li>
-		<li>declare number of rows only</li>
-		<li>can also be <code>.disabled</code></li>
-	</ul>
-	<div class="bui-lib-example">
-		<label>Text Area</label>
-		<textarea class="form-control" rows="5"></textarea>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;label&gt;Text Area&lt;/label&gt;</code></p>
-		<p><code>&lt;textarea class="form-control" rows="5"&gt;&lt;/textarea&gt;</code></p>
-	</div>
+        <p><i></i> icon-sample-source-multi (e866)</p>
 
-	<h3>Select Menu</h3>
-	<p style="color:red;"><i>Likely to change as we do some complex things with select boxes.</i></p>
-	<ul>
-		<li>Always spans width of parent</li>
-		<li>Single selecte menu has a wierd looking handle on ff, but we're OK with that as it avoids the need for a robust dropdown plugin.</li>
-		<ul>
-			<li>These might not work with our methods of placing buttons inside select menus.</li>
-		</ul>
-		<li>add <code>.disabled</code> to <code>.form-control</code> to make either of these disabled.</li>
-	</ul>
-	<div class="bui-lib-example">
-		<select class="form-control" style="margin-bottom: 1em;">
-			<option>Example Select Menu</option>
-			<option>Select Option 2</option>
-			<option>Select Option 3</option>
-			<option>Select Option 4</option>
-		</select>
-		<select multiple class="form-control">
-			<option>Example Select Menu</option>
-			<option>Select Option 2</option>
-			<option>Select Option 3</option>
-			<option>Select Option 4</option>
-		</select>
-	</div>
+        <p><i></i> icon-search (e806)</p>
+
+        <p><i></i> icon-action (e82a)</p>
+
+        <p><i></i> icon-settings (e82b)</p>
+
+        <p><i></i> icon-edit (e81d)</p>
+
+        <p><i></i> icon-image (e811)</p>
+
+        <p><i></i> icon-launch (e820)</p>
+
+        <p><i></i> icon-add (e800)</p>
+
+        <p><i></i> icon-remove (e801)</p>
+
+        <p><i></i> icon-close (e802)</p>
+
+        <p><i></i> icon-term (e805)</p>
+
+        <p><i></i> icon-check (e831)</p>
+
+        <p><i></i> icon-go-to (e814)</p>
+
+        <p><i></i> icon-domain (e855)</p>
+
+        <p><i></i> icon-box-up (e837)</p>
+
+        <p><i></i> icon-box-right (e838)</p>
+
+        <p><i></i> icon-box-left (e839)</p>
+
+        <p><i></i> icon-box-down (e836)</p>
+
+        <p><i></i> icon-view (e82c)</p>
+
+        <p><i></i> icon-page-break (e847)</p>
+
+        <p><i></i> icon-library (e846)</p>
+
+        <p><i></i> icon-answer-list (e897)</p>
+
+        <p><i></i> icon-language (e817)</p>
+
+        <p><i></i> icon-single-select (e84d)</p>
+
+        <p><i></i> icon-single-select-grid (e89c)</p>
+
+        <p><i></i> icon-multi-select (e84e)</p>
+
+        <p><i></i> icon-text (e842)</p>
+
+        <p><i></i> icon-number (e843)</p>
+
+        <p><i></i> icon-comment (e849)</p>
+
+        <p><i></i> icon-quota (e84f)</p>
+
+        <p><i></i> icon-autofill (e84a)</p>
+
+        <p><i></i> icon-section (e851)</p>
+
+        <p><i></i> icon-loop (e852)</p>
+
+        <p><i></i> icon-block (e84b)</p>
+
+        <p><i></i> icon-skip (e850)</p>
+
+        <p><i></i> icon-black-box (e89a)</p>
+
+        <p><i></i> icon-exit-page (e848)</p>
+
+        <p><i></i> icon-tasks (e81a)</p>
+
+        <p><i></i> icon-unfinished-task (e81b)</p>
+
+        <p><i></i> icon-recorder (e81c)</p>
+
+        <p><i></i> icon-link (e80d)</p>
+
+        <p><i></i> icon-unlink (e884)</p>
+
+        <p><i></i> icon-print (e81e)</p>
+
+        <p><i></i> icon-mail (e81f)</p>
+
+        <p><i></i> icon-download (e833)</p>
+
+        <p><i></i> icon-upload (e834)</p>
+
+        <p><i></i> icon-mobile (e80e)</p>
+
+        <p><i></i> icon-tablet (e80f)</p>
+
+        <p><i></i> icon-desktop (e810)</p>
+
+        <p><i></i> icon-feature-phone (e89b)</p>
+
+        <p><i></i> icon-code (e821)</p>
+      </div>
+      <div class="col-sm-8">
+        <p><i></i> icon-notification-empty (e825)</p>
+
+        <p><i></i> icon-notification-full (e826)</p>
+
+        <p><i></i> icon-theme (e822)</p>
+
+        <p><i></i> icon-audio (e853)</p>
+
+        <p><i></i> icon-video (e824)</p>
+
+        <p><i></i> icon-return (e812)</p>
+
+        <p><i></i> icon-forward (e813)</p>
+
+        <p><i></i> icon-caret (e835)</p>
+
+        <p><i></i> icon-sort-up-down (e83e)</p>
+
+        <p><i></i> icon-sort-up (e83d)</p>
+
+        <p><i></i> icon-sort-right (e83c)</p>
+
+        <p><i></i> icon-sort-down (e83a)</p>
+
+        <p><i></i> icon-sort-left (e83b)</p>
+
+        <p><i></i> icon-undo (e804)</p>
+
+        <p><i></i> icon-redo (e854)</p>
+
+        <p><i></i> icon-text-input (e88f)</p>
+
+        <p><i></i> icon-essay (e890)</p>
+
+        <p><i></i> icon-dropdown-question (e894)</p>
+
+        <p><i></i> icon-dq (e84c)</p>
+
+        <p><i></i> icon-dq-button-select (e86f)</p>
+
+        <p><i></i> icon-dq-button-multi-select (e870)</p>
+
+        <p><i></i> icon-dq-button-select-grid (e86d)</p>
+
+        <p><i></i> icon-dq-button-multi-select-grid (e871)</p>
+
+        <p><i></i> icon-dq-button-rating (e856)</p>
+
+        <p><i></i> icon-dq-rank-sort (e85d)</p>
+
+        <p><i></i> icon-dq-rating-scale (e85c)</p>
+
+        <p><i></i> icon-dq-card-sort (e869)</p>
+
+        <p><i></i> icon-dq-card-multi-sort (e86c)</p>
+
+        <p><i></i> icon-dq-fancy-boxes (e868)</p>
+
+        <p><i></i> icon-dq-page-turner (e861)</p>
+
+        <p><i></i> icon-dq-image-map (e865)</p>
+
+        <p><i></i> icon-dq-shopping-cart (e85b)</p>
+
+        <p><i></i> icon-dq-quester-itb (e860)</p>
+
+        <p><i></i> icon-dq-timer-ad (e873)</p>
+
+        <p><i></i> icon-dq-star-rating (e857)</p>
+
+        <p><i></i> icon-dq-slider (e858)</p>
+
+        <p><i></i> icon-dq-slider-decimal (e85a)</p>
+
+        <p><i></i> icon-dq-slider-points (e859)</p>
+
+        <p><i></i> icon-dq-this-or-that (e876)</p>
+
+        <p><i></i> icon-dq-text-highlighter (e877)</p>
+
+        <p><i></i> icon-dq-media-evaluator (e864)</p>
+
+        <p><i></i> icon-dq-video-hosted (e872)</p>
+
+        <p><i></i> icon-dq-fulcrum (e86e)</p>
+
+        <p><i></i> icon-dq-fulcrum-quota (e895)</p>
+
+        <p><i></i> icon-cati-phone (e88d)</p>
+
+        <p><i></i> icon-draggable (e88e)</p>
+
+        <p><i></i> icon-calendar (e889)</p>
+
+        <p><i></i> icon-spinner (e893)</p>
+
+        <p><i></i> icon-field-merge (e892)</p>
+
+        <p><i></i> icon-piping (e891)</p>
+      </div>
+    </div>
+    <h2>Spinner</h2>
+
+    <div class="bui-lib-example">
+      <i class="icon-spinner spin-icon"></i>
+    </div>
+    <div class="bui-lib-example-comment">
+      <code>&lt;i class="<span>icon-spinner <strong>spin-icon</strong></span>"&gt;&lt;/i&gt;
+      </code>
+    </div>
+    <!--
+      <h2>Image Handeling</h2>
+      <p>Responsive images &amp; show/hide on different size screens. User profile images, etc.</p> -->
+  </section>
+
+  <!--************* INPUT TYPES *************-->
+
+  <section style="border:1px solid red;">
+    <h1><a name="inputs" style="color:red;">Inputs</a></h1>
+
+    <p style="color:red;">Being Developed</p>
+    <ul>
+      <li>Here we're showing a few style overrides, but all markup, classes,
+        etc. are the same as <a href="http://getbootstrap.com/css/#forms">bootstrap</a>,
+        so reference that and see bui style overrides add a bit of our own
+        spice.
+      </li>
+    </ul>
+    <h3>Text Input</h3>
+    <ul>
+      <li>They always span the full width of parent div</li>
+      <li>Always have a label (couldn't get sr-only to hide label, might make
+        special class)
+      </li>
+      <li>labels weight set to semibold</li>
+      <li>Markup is the same as <a href="http://getbootstrap.com/css/#forms">bootstrap</a>
+      </li>
+    </ul>
+    <div class="bui-lib-example">
+      <label>Text Input</label> <input type="text" class="form-control"
+                                       placeholder="Input Example"> <label>Disabled
+      Text Input</label> <input type="text" class="form-control"
+                                placeholder="Disabled Input Example" disabled>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;label for="demo-input"&gt;Text Input&lt;/label&gt;</code></p>
+
+      <p><code>&lt;input type="text" id="demo-input"
+        class="<span>form-control</span>" placeholder="Input Example"&gt;</code>
+      </p>
+      <code>&lt;label for="demo-input-disabled"&gt;Disabled Text Input&lt;/label&gt;</code></p>
+      <code>&lt;input type="text" id="demo-input-disabled" class="<span>form-control</span>"
+        placeholder="Disabled Input Example"
+        <span><strong>disabled</strong></span>&gt;</code>
+    </div>
+
+    <h3>Text Area</h3>
+    <ul>
+      <li>always spans width of parent container</li>
+      <li>declare number of rows only</li>
+      <li>can also be <code>.disabled</code></li>
+    </ul>
+    <div class="bui-lib-example">
+      <label>Text Area</label> <textarea class="form-control"
+                                         rows="5"></textarea>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;label&gt;Text Area&lt;/label&gt;</code></p>
+
+      <p><code>&lt;textarea class="form-control"
+        rows="5"&gt;&lt;/textarea&gt;</code></p>
+    </div>
+
+    <h3>Select Menu</h3>
+
+    <p style="color:red;"><i>Likely to change as we do some complex things with
+      select boxes.</i></p>
+    <ul>
+      <li>Always spans width of parent</li>
+      <li>Single selecte menu has a wierd looking handle on ff, but we're OK
+        with that as it avoids the need for a robust dropdown plugin.
+      </li>
+      <ul>
+        <li>These might not work with our methods of placing buttons inside
+          select menus.
+        </li>
+      </ul>
+      <li>add <code>.disabled</code> to <code>.form-control</code> to make
+        either of these disabled.
+      </li>
+    </ul>
+    <div class="bui-lib-example">
+      <select class="form-control" style="margin-bottom: 1em;">
+        <option>Example Select Menu</option>
+        <option>Select Option 2</option>
+        <option>Select Option 3</option>
+        <option>Select Option 4</option>
+      </select> <select multiple class="form-control">
+      <option>Example Select Menu</option>
+      <option>Select Option 2</option>
+      <option>Select Option 3</option>
+      <option>Select Option 4</option>
+    </select>
+    </div>
 	<pre class="bui-lib-example-comment">
 <code>&lt;select class="<span>form-control</span>"&gt;</code>
 	<code>&lt;option&gt;Example Select Menu&lt;/option&gt;</code>
@@ -642,7 +914,8 @@
 	<code>&lt;option&gt;Select Option 3&lt;/option&gt;</code>
 	<code>&lt;option&gt;Select Option 4&lt;/option&gt;</code>
 <code>&lt;/select&gt;</code>
-<code>&lt;select <span>multiple</span> class="<span>form-control</span>"&gt;</code>
+<code>&lt;select <span>multiple</span> class="<span>form-control</span>"&gt;
+</code>
 	<code>&lt;option&gt;Example Select Menu&lt;/option&gt;</code>
 	<code>&lt;option&gt;Select Option 2&lt;/option&gt;</code>
 	<code>&lt;option&gt;Select Option 3&lt;/option&gt;</code>
@@ -650,28 +923,33 @@
 <code>&lt;/select&gt;</code>
 	</pre>
 
-	<h3>Validation States</h3>
-	<div class="bui-lib-example">
-		<div class="form-group has-success">
-		  <label class="control-label" for="inputSuccess1">Input with success</label>
-		  <input type="text" class="form-control" id="inputSuccess1">
-		</div>
-		<div class="form-group has-warning">
-		  <label class="control-label" for="inputWarning1">Input with warning</label>
-		  <input type="text" class="form-control" id="inputWarning1">
-		</div>
-		<div class="form-group has-error">
-		  <label class="control-label" for="inputError1">Input with error</label>
-		  <input type="text" class="form-control" id="inputError1">
-		</div>
-	</div>
+    <h3>Validation States</h3>
+
+    <div class="bui-lib-example">
+      <div class="form-group has-success">
+        <label class="control-label" for="inputSuccess1">Input with
+          success</label> <input type="text" class="form-control"
+                                 id="inputSuccess1">
+      </div>
+      <div class="form-group has-warning">
+        <label class="control-label" for="inputWarning1">Input with
+          warning</label> <input type="text" class="form-control"
+                                 id="inputWarning1">
+      </div>
+      <div class="form-group has-error">
+        <label class="control-label" for="inputError1">Input with error</label>
+        <input type="text" class="form-control" id="inputError1">
+      </div>
+    </div>
 	<pre class="bui-lib-example-comment">
 <code>&lt;div class="form-group <span>has-success</span>"&gt;</code>
-  <code>&lt;label class="control-label" for="inputSuccess1"&gt;Input with success&lt;/label&gt;</code>
+  <code>&lt;label class="control-label" for="inputSuccess1"&gt;Input with
+    success&lt;/label&gt;</code>
   <code>&lt;input type="text" class="form-control" id="inputSuccess1"&gt;</code>
 <code>&lt;/div&gt;</code>
 <code>&lt;div class="form-group <span>has-warning</span>"&gt;</code>
-  <code>&lt;label class="control-label" for="inputWarning1"&gt;Input with warning&lt;/label&gt;</code>
+  <code>&lt;label class="control-label" for="inputWarning1"&gt;Input with
+    warning&lt;/label&gt;</code>
   <code>&lt;input type="text" class="form-control" id="inputWarning1"&gt;</code>
 <code>&lt;/div&gt;</code>
 <code>&lt;div class="form-group <span>has-error</span>"&gt;</code>
@@ -679,121 +957,253 @@
   <code>&lt;input type="text" class="form-control" id="inputError1"&gt;</code>
 <code>&lt;/div&gt;</code>
 	</pre>
-</section>
+  </section>
 
 
-<!--************* BUTTONS *************-->
+  <!--************* BUTTONS *************-->
 
-<section>
-	<h1><a name="buttons">Buttons</a></h1>
-	<h2>Button Types</h2>
-	<p>Use as described. Remember that <a href="http://www.karlgroves.com/2013/05/14/links-are-not-buttons-neither-are-divs-and-spans/">links, divs and spans are not buttons</a>.</p>
-	<h3><a name="btnsStandard">Standard</a></h3>
-	<p><strong>Usage:</strong> Used as a generic button. Should have simple text that describes the action.</p>
-	<p><strong>Rules:</strong> May include an appropriate icon with text.</p>
-	<div class="bui-lib-example">
-		<button type="button" title="Standard Button" class="btn btn-default">Standard</button>
-		<button type="button" title="Standard Button when Disabled" class="btn btn-default" disabled="disabled">Disabled</button>
-		<button type="button" title="Standard Button with an Icon" class="btn btn-default icon-add">Icon + Text</button>
-		<button type="button" title="Standard Button with an Icon" class="btn btn-default"><i class="icon-add"></i>Text w/ Icon in &lt;i&gt; tag</button>
-		<div style="background-color: #f5f5f5; border: 1px solid #ddd; margin-top: 1em; padding: 1em; max-width: 20em;">
-			<p style="margin-top: 0;">You can add <code>btn-darken</code> to standard buttons when extra contrast is needed.</p>
-			<button class="btn btn-default btn-darken">Darker Standard Button</button>
-		</div>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-default</span>"&gt;</code>Standard<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-default" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-default <span>icon-add</span>"&gt;</code>Icon + Text<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-default"&gt;</code><code><span>&lt;i class="<strong>icon-add</strong>"&gt;</span></code><code><span>&lt;/i&gt;</span></code>Text w/ Icon in 'i' tag<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-default <span><strong>btn-darken</strong></span>"&gt;</code>Darker Standard Button<code>&lt;/button&gt;</code></p>
-	</div>
-	<p class="small"><strong>Note:</strong> Both an <code>&lt;i&gt;</code> tag or a <code>&lt;span&gt;</code> tag can be used for icon.</p>
+  <section>
+    <h1><a name="buttons">Buttons</a></h1>
 
-	<h3><a name="btnsPrimary">Primary</a></h3>
-	<p><strong>Usage:</strong> Used when there’s a need for a suggested action, like the “Done” button in a modal or an obvious "next step".</p>
-	<p>In situations where the primary button is for an undoable action <em>(this normally occurs in a confirmation modal or tooltip)</em>, you can add the class <code>dangerous</code> to make the button red.</p>
-	<p><strong>Rules:</strong> There shouldn’t be more than one primary button in any dialog/modal/interface.</p>
-	<div class="bui-lib-example">
-		<button type="button" title="Primary Button" class="btn btn-primary">Primary</button>
-		<button type="button" title="Primary Button when Disabled" class="btn btn-primary" disabled="disabled">Disabled</button>
-		<p></p>
-		<button type="button" title="Primary Button" class="btn btn-primary dangerous">Primary</button>
-		<button type="button" title="Primary Button when Disabled" class="btn btn-primary dangerous" disabled="disabled">Disabled</button>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-primary</span>"&gt;</code>Primary<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-primary" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-primary <span>dangerous</span>"&gt;</code>Primary<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-primary dangerous" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
-	</div>
-	
-	<h3><a name="btnsSpecialAction">Special Action</a></h3>
-	<p><strong>Usage:</strong> Used in an application to denote a special action. It has a “go” connotation, so it should be used to initiate a journey of some sort (like “new project”, “new campaign”, “launch campaign”).</p>
-	<p><strong>Rules:</strong> Maximum of one per application (although having none is fine).</p>
-	<div class="bui-lib-example">
-		<button type="button" title="Special Action Button" class="btn btn-special">Special</button>
-		<button type="button" title="Special Action when Disabled" class="btn btn-special" disabled="disabled">Disabled</button>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-special</span>"&gt;</code>Special<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-special" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
-	</div>
+    <h2>Button Types</h2>
 
-	<h3><a name="btnsIconButtons">Icon Buttons</a></h3>
-	<p><strong>Usage:</strong> Only for commonly used and easy to understand actions in the main area of an application, otherwise use a standard or “icon + label” button with descriptive text.</p>
-	<p><strong>Special note on "Edit" icon button:</strong> The edit icon (<span class="icon-edit"></span>) may use <code>btn-text</code> instead, making it a blue icon button, but only when the edit button sends the user away for editing (eg. opens a modal for editing).</p>
-	<p><strong>Rules:</strong> Icon buttons must have descriptive tooltips that appear instantly on hover.</p>
-	<div class="bui-lib-example">
-		<p>Standard:</p>
-			<button role="button" title="Icon Button" class="btn btn-icon"><i class="icon-settings"></i></button>
-		<p>Hover <i>(slightly darker, cursor: pointer)</i>:</p>
-			<button role="button" title="Icon Button" class="btn btn-icon demo-hover"><i class="icon-settings"></i></button>
-		<p>Selected <i>(.selected or .active)</i>:</p>
-			<button role="button" title="Icon Button when Selected" class="btn btn-icon selected"><i class="icon-settings"></i></button>
-		<p>Disabled:</p>
-			<button role="button" title="Icon Button when Disabled" class="btn btn-icon" disabled="disabled"><i class="icon-settings"></i></button>
-		<br>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p>Standard:</p>
-		<p><code>&lt;button class="<span>btn btn-icon</span>"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
-		<p>Hover (slightly darker, cursor: pointer):</p>
-		<p><code>&lt;button class="<span>btn btn-icon</span>"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
-		<p>Selected (.selected or .active):</p>
-		<p><code>&lt;button class="btn btn-icon <span>selected</span>"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
-		<p>Disabled:</p>
-		<p><code>&lt;button class="btn btn-icon" <span>disabled="disabled"</span>&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
-	</div>
+    <p>Use as described. Remember that <a
+        href="http://www.karlgroves.com/2013/05/14/links-are-not-buttons-neither-are-divs-and-spans/">links,
+      divs and spans are not buttons</a>.</p>
 
-	<h3><a name="btnsText">Text Button</a></h3>
-	<p><strong>Usage:</strong> Used to indicate a supporting action, typically inside of a tab or accordion menu.</p>
-	<p><strong>Rules:</strong> To avoid being confused with a standard link, these buttons must always be accompanied with an appropriate icon.</p>
-	<div class="bui-lib-example">
-		<button type="button" title="Icon with Label Button" class="btn btn-text icon-info">Icon + Label</button>
-		<button type="button" title="Icon with Label Button" class="btn btn-text"><span class="icon-info"></span>Label with icon in span</button>
-		<button type="button" title="Icon with Label Button when Disabled" class="btn btn-text icon-info" disabled="disabled">Disabled</button>
-		<button type="button" title="Icon with Label Button Flushed" class="btn btn-text btn-text-flush icon-info">Padding Flushed</button>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-text icon-info</span>"&gt;</code>Icon + Label<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-text"&gt;</code><code><span>&lt;span class="<strong>icon-info</strong>"&gt;</span></code>Label with icon in span<code><span>&lt;/span&gt;</span></code><code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-text icon-info" <span>disabled="disabled"</span>&gt;</code>Disabled<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-text <span>btn-text-flush</span> icon-info"&gt;</code>Padding Flushed<code>&lt;/button&gt;</code></p>
-	</div>
-	<p class="small"><strong>Note:</strong> Both an <code>&lt;i&gt;</code> tag or a <code>&lt;span&gt;</code> tag can be used for icon.</p>
-	
-	<h3><a name="btnsExpandToggle">Expand Toggle Button</a></h3>
-	<p><strong>Usage:</strong> Used for toggeling content in or out of the viewport.</p>
-	<p><strong>Rules:</strong> The caret icon always point towards the text when collapsed, when content is opened, the arrow points towards the content.</p>
-	<div class="bui-lib-example">
-		<button id="example-btn-text-toggle" class="btn btn-text-toggle toggle-right">Click to show content below</button>
-		<div id="example-btn-text-toggle-content" style="display:none;background-color:#bcbcbc;padding:1em;text-align:center;color:#ffffff;">
-			<h3 style="margin-top:1em;">Some fancy content.</h3>
-		</div>
-	</div>
+    <h3><a name="btnsStandard">Standard</a></h3>
+
+    <p><strong>Usage:</strong> Used as a generic button. Should have simple text
+      that describes the action.</p>
+
+    <p><strong>Rules:</strong> May include an appropriate icon with text.</p>
+
+    <div class="bui-lib-example">
+      <button type="button" title="Standard Button" class="btn btn-default">
+        Standard
+      </button>
+      <button type="button" title="Standard Button when Disabled"
+              class="btn btn-default" disabled="disabled">Disabled
+      </button>
+      <button type="button" title="Standard Button with an Icon"
+              class="btn btn-default icon-add">Icon + Text
+      </button>
+      <button type="button" title="Standard Button with an Icon"
+              class="btn btn-default"><i class="icon-add"></i>Text w/ Icon in
+        &lt;i&gt; tag
+      </button>
+      <div
+          style="background-color: #f5f5f5; border: 1px solid #ddd; margin-top: 1em; padding: 1em; max-width: 20em;">
+        <p style="margin-top: 0;">You can add <code>btn-darken</code> to
+          standard buttons when extra contrast is needed.</p>
+        <button class="btn btn-default btn-darken">Darker Standard Button
+        </button>
+      </div>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;button class="<span>btn btn-default</span>"&gt;</code>Standard<code>
+        &lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-default"
+        <span>disabled="disabled"</span>&gt;</code>Disabled<code>
+        &lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-default <span>icon-add</span>"&gt;
+      </code>Icon + Text<code>&lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-default"&gt;</code><code><span>&lt;i class="<strong>icon-add</strong>"&gt;</span></code><code><span>&lt;/i&gt;</span></code>Text
+        w/ Icon in 'i' tag<code>&lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-default
+        <span><strong>btn-darken</strong></span>"&gt;</code>Darker Standard
+        Button<code>&lt;/button&gt;</code></p>
+    </div>
+    <p class="small"><strong>Note:</strong> Both an <code>&lt;i&gt;</code> tag
+      or a <code>&lt;span&gt;</code> tag can be used for icon.</p>
+
+    <h3><a name="btnsPrimary">Primary</a></h3>
+
+    <p><strong>Usage:</strong> Used when there’s a need for a suggested action,
+      like the “Done” button in a modal or an obvious "next step".</p>
+
+    <p>In situations where the primary button is for an undoable action <em>(this
+      normally occurs in a confirmation modal or tooltip)</em>, you can add the
+      class <code>dangerous</code> to make the button red.</p>
+
+    <p><strong>Rules:</strong> There shouldn’t be more than one primary button
+      in any dialog/modal/interface.</p>
+
+    <div class="bui-lib-example">
+      <button type="button" title="Primary Button" class="btn btn-primary">
+        Primary
+      </button>
+      <button type="button" title="Primary Button when Disabled"
+              class="btn btn-primary" disabled="disabled">Disabled
+      </button>
+      <p></p>
+      <button type="button" title="Primary Button"
+              class="btn btn-primary dangerous">Primary
+      </button>
+      <button type="button" title="Primary Button when Disabled"
+              class="btn btn-primary dangerous" disabled="disabled">Disabled
+      </button>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;button class="<span>btn btn-primary</span>"&gt;</code>Primary<code>
+        &lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-primary"
+        <span>disabled="disabled"</span>&gt;</code>Disabled<code>
+        &lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-primary <span>dangerous</span>"&gt;
+      </code>Primary<code>&lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-primary dangerous" <span>disabled="disabled"</span>&gt;
+      </code>Disabled<code>&lt;/button&gt;</code></p>
+    </div>
+
+    <h3><a name="btnsSpecialAction">Special Action</a></h3>
+
+    <p><strong>Usage:</strong> Used in an application to denote a special
+      action. It has a “go” connotation, so it should be used to initiate a
+      journey of some sort (like “new project”, “new campaign”, “launch
+      campaign”).</p>
+
+    <p><strong>Rules:</strong> Maximum of one per application (although having
+      none is fine).</p>
+
+    <div class="bui-lib-example">
+      <button type="button" title="Special Action Button"
+              class="btn btn-special">Special
+      </button>
+      <button type="button" title="Special Action when Disabled"
+              class="btn btn-special" disabled="disabled">Disabled
+      </button>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;button class="<span>btn btn-special</span>"&gt;</code>Special<code>
+        &lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-special"
+        <span>disabled="disabled"</span>&gt;</code>Disabled<code>
+        &lt;/button&gt;</code></p>
+    </div>
+
+    <h3><a name="btnsIconButtons">Icon Buttons</a></h3>
+
+    <p><strong>Usage:</strong> Only for commonly used and easy to understand
+      actions in the main area of an application, otherwise use a standard or
+      “icon + label” button with descriptive text.</p>
+
+    <p><strong>Special note on "Edit" icon button:</strong> The edit icon (<span
+        class="icon-edit"></span>) may use <code>btn-text</code> instead, making
+      it a blue icon button, but only when the edit button sends the user away
+      for editing (eg. opens a modal for editing).</p>
+
+    <p><strong>Rules:</strong> Icon buttons must have descriptive tooltips that
+      appear instantly on hover.</p>
+
+    <div class="bui-lib-example">
+      <p>Standard:</p>
+      <button role="button" title="Icon Button" class="btn btn-icon"><i
+          class="icon-settings"></i></button>
+      <p>Hover <i>(slightly darker, cursor: pointer)</i>:</p>
+      <button role="button" title="Icon Button" class="btn btn-icon demo-hover">
+        <i class="icon-settings"></i></button>
+      <p>Selected <i>(.selected or .active)</i>:</p>
+      <button role="button" title="Icon Button when Selected"
+              class="btn btn-icon selected"><i class="icon-settings"></i>
+      </button>
+      <p>Disabled:</p>
+      <button role="button" title="Icon Button when Disabled"
+              class="btn btn-icon" disabled="disabled"><i
+          class="icon-settings"></i></button>
+      <br>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p>Standard:</p>
+
+      <p><code>&lt;button class="<span>btn btn-icon</span>"&gt;&lt;i
+        class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+
+      <p>Hover (slightly darker, cursor: pointer):</p>
+
+      <p><code>&lt;button class="<span>btn btn-icon</span>"&gt;&lt;i
+        class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+
+      <p>Selected (.selected or .active):</p>
+
+      <p><code>&lt;button class="btn btn-icon <span>selected</span>"&gt;&lt;i
+        class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+
+      <p>Disabled:</p>
+
+      <p><code>&lt;button class="btn btn-icon" <span>disabled="disabled"</span>&gt;&lt;i
+        class="icon-settings"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+    </div>
+
+    <h3><a name="btnsText">Text Button</a></h3>
+
+    <p><strong>Usage:</strong> Used to indicate a supporting action, typically
+      inside of a tab or accordion menu.</p>
+
+    <p><strong>Rules:</strong> To avoid being confused with a standard link,
+      these buttons must always be accompanied with an appropriate icon.</p>
+
+    <div class="bui-lib-example">
+      <button type="button" title="Icon with Label Button"
+              class="btn btn-text icon-info">Icon + Label
+      </button>
+      <button type="button" title="Icon with Label Button" class="btn btn-text">
+        <span class="icon-info"></span>Label with icon in span
+      </button>
+      <button type="button" title="Icon with Label Button when Disabled"
+              class="btn btn-text icon-info" disabled="disabled">Disabled
+      </button>
+      <button type="button" title="Icon with Label Button Flushed"
+              class="btn btn-text btn-text-flush icon-info">Padding Flushed
+      </button>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;button class="<span>btn btn-text icon-info</span>"&gt;</code>Icon
+        + Label<code>&lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-text"&gt;</code><code><span>&lt;span class="<strong>icon-info</strong>"&gt;</span></code>Label
+        with icon in span<code><span>&lt;/span&gt;</span></code><code>&lt;/button&gt;</code>
+      </p>
+
+      <p><code>&lt;button class="btn btn-text icon-info" <span>disabled="disabled"</span>&gt;
+      </code>Disabled<code>&lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-text <span>btn-text-flush</span>
+        icon-info"&gt;</code>Padding Flushed<code>&lt;/button&gt;</code></p>
+    </div>
+    <p class="small"><strong>Note:</strong> Both an <code>&lt;i&gt;</code> tag
+      or a <code>&lt;span&gt;</code> tag can be used for icon.</p>
+
+    <h3><a name="btnsExpandToggle">Expand Toggle Button</a></h3>
+
+    <p><strong>Usage:</strong> Used for toggeling content in or out of the
+      viewport.</p>
+
+    <p><strong>Rules:</strong> The caret icon always point towards the text when
+      collapsed, when content is opened, the arrow points towards the content.
+    </p>
+
+    <div class="bui-lib-example">
+      <button id="example-btn-text-toggle"
+              class="btn btn-text-toggle toggle-right">Click to show content
+        below
+      </button>
+      <div id="example-btn-text-toggle-content"
+           style="display:none;background-color:#bcbcbc;padding:1em;text-align:center;color:#ffffff;">
+        <h3 style="margin-top:1em;">Some fancy content.</h3>
+      </div>
+    </div>
 	<pre class="bui-lib-example-comment">
-<code>&lt;button class="btn <span>btn-text-toggle toggle-right</span>" id="example-toggle-button"&gt;</code>Click to show content below<code>&lt;/button&gt;</code>
+<code>&lt;button class="btn <span>btn-text-toggle toggle-right</span>"
+  id="example-toggle-button"&gt;</code>Click to show content below<code>&lt;/button&gt;</code>
 <code>&lt;div id="example-content"&gt;</code>Some fancy content.<code>&lt;/div&gt;</code>
 
 <code>&lt;script&gt;</code>
@@ -803,149 +1213,288 @@
  <code>});</code>
 <code>&lt;/script&gt;</code>
 	</pre>
-	<p><strong>Code Note:</strong> To animate and change the direction of the arrow box, just add/change it's directional class (arrow points down by default or with now direction declared). <code>.toggle-up</code>, <code>.toggle-right</code>, <code>.toggle-down</code>, and <code>.toggle-left</code> are all available. So in the example above, the button has the <code>.toggle-down</code> class added by default, then when the user clicks, the <code>.toggle-down</code> class is removed and the <code>.toggle-up</code> class is added <em>(sweet css animations built in!)</em>.</p>
+    <p><strong>Code Note:</strong> To animate and change the direction of the
+      arrow box, just add/change it's directional class (arrow points down by
+      default or with now direction declared). <code>.toggle-up</code>, <code>.toggle-right</code>,
+      <code>.toggle-down</code>, and <code>.toggle-left</code> are all
+      available. So in the example above, the button has the
+      <code>.toggle-down</code> class added by default, then when the user
+      clicks, the <code>.toggle-down</code> class is removed and the <code>.toggle-up</code>
+      class is added <em>(sweet css animations built in!)</em>.</p>
 
-	<h3><a name="btnsToggleButtons">Toggle Buttons</a></h3>
-	<p><strong>Usage:</strong> Used like a checkbox to filter viewport information.</p>
-	<div class="bui-lib-example">
-		<button role="button" title="Toggle Button" class="btn btn-toggle" data-toggle="button">Toggle Button</button>
-		<button role="button" title="Toggle Button" class="btn btn-toggle" data-toggle="button" disabled="disabled">Toggle Button</button>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-toggle</span>" data-toggle="button"&gt;</code>Toggle Button<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-toggle" <span>disabled="disabled"</span>&gt;</code>Toggle Button<code>&lt;/button&gt;</code></p>
-	</div>
+    <h3><a name="btnsToggleButtons">Toggle Buttons</a></h3>
 
-	<h3><a name="btnsLinks">Links</a></h3>
-	<p><strong>Usage:</strong> Links send the user away from the current page to somewhere else.</p>
-	<p><strong>Rules:</strong></p>
-	<ul>
-		<li>Links should not look like buttons, they always display an underline on hover.</li>
-		<li>When a link’s destination is to another Beacon application, it may be accompanied with the <code>icon-go-to</code> for internal links (<span class="icon-go-to"></span>), otherwise a link should not have any associated icons.</li>
-		<li>The <code>&lt;a href=”#”&gt;</code> markup is prefered for links, but if for some reason you need to, you can style buttons as links using <code>&lt;btn-link&gt;</code> class. Just note that links with button styling have button padding <i>(so they align nicely to buttons)</i>.</li>
-	</ul>
-	<div class="bui-lib-example">
-		<button type="button" class="btn btn-link">Button Link</button>
-		<a href="#0">A Standard Link</a>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-link</span>"&gt;</code>Button Link<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;a href="#URL"&gt;</code>A Standard Link<code>&lt;/a&gt;</code></p>
-	</div>
+    <p><strong>Usage:</strong> Used like a checkbox to filter viewport
+      information.</p>
 
-	<h3><a name="btnsCancel">Cancel</a></h3>
-	<p><strong>Usage:</strong> Used in any dialog box/modal/menu where actions require a commit button, there should always be an option to cancel as well. Cancel should back out any changes that occurred and leave it in the previous state.</p>
-	<p><strong>Rules:</strong> Should always be placed to the left of a Primary of standard button.</p>
-	<div class="bui-lib-example">
-		<button type="button" title="Cancel Button" class="btn btn-cancel">Cancel</button>
-		<button type="button" title="Cancel Button when Disabled" class="btn btn-cancel" disabled="disabled">Cancel</button>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-cancel</span>"&gt;</code>Cancel<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-cancel" <span>disabled="disabled"</span>&gt;</code>Cancel<code>&lt;/button&gt;</code></p>
-	</div>
+    <div class="bui-lib-example">
+      <button role="button" title="Toggle Button" class="btn btn-toggle"
+              data-toggle="button">Toggle Button
+      </button>
+      <button role="button" title="Toggle Button" class="btn btn-toggle"
+              data-toggle="button" disabled="disabled">Toggle Button
+      </button>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;button class="<span>btn btn-toggle</span>"
+        data-toggle="button"&gt;</code>Toggle Button<code>&lt;/button&gt;</code>
+      </p>
 
-	<h3><a name="btnsDeleteRemove">Delete or Remove</a></h3>
-	<p><strong>Usage:</strong> A stand alone “x” icon (never the letter "x" or "X") used to remove or delete an item.</p>
-	<p><strong>Rules:</strong> Typically placed on the far right side in table rows. It may be appropriate to have a confirmation alert if the action cannot be undone. While the hover state is always @color-red, the default state may need to be a different color depending on what it's containing background color is.</p>
-	<div class="bui-lib-example">
-		<button class="btn btn-remove" title="Delete Button"><i class="icon-remove"></i></button>
-		<button class="btn btn-remove" disabled="disabled" title="Delete Button when Disabled"><i class="icon-remove"></i></button>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;i class="<span>icon-remove</span>"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-remove" <span>disabled="disabled"</span>&gt;&lt;i class="<span>icon-remove</span>"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
-	</div>
+      <p><code>&lt;button class="btn btn-toggle"
+        <span>disabled="disabled"</span>&gt;</code>Toggle Button<code>&lt;/button&gt;</code>
+      </p>
+    </div>
 
-	<h2><a name="btnsSizing">Button Sizing</a></h2>
-	<p>Bootstrap button size classes have been customized for BUI buttons.</p>
-	<div class="bui-lib-example">
-		<button type="button" class="btn btn-default btn-xs">Extra Small</button>
-		<button type="button" class="btn btn-default btn-sm">Small</button>
-		<button type="button" class="btn btn-default">Default</button>
-		<button type="button" class="btn btn-default btn-lg">Large</button>
-		<div class="row bui-lib-example-block">
-			<button type="button" class="btn btn-default btn-block">Block</button>
-		</div>
-		<button role="button" title="" class="btn btn-xs btn-icon icon-user active"></button>
-		<button role="button" title="" class="btn btn-sm btn-icon icon-user active"></button>
-		<button role="button" title="" class="btn btn-icon icon-user active"></button>
-		<button role="button" title="" class="btn btn-lg btn-icon icon-user active"></button>
-		<br>
-		<br>
-		<button class="btn btn-xs btn-remove" title="Delete Button"><i class="icon-remove"></i></button>
-		<button class="btn btn-sm btn-remove" title="Delete Button"><i class="icon-remove"></i></button>
-		<button class="btn btn-remove" title="Delete Button"><i class="icon-remove"></i></button>
-		<button class="btn btn-lg btn-remove" title="Delete Button"><i class="icon-remove"></i></button>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p>&lt;!-- Standard Buttons --&gt;</p>
-		<p><code>&lt;button class="btn btn-default <span>btn-xs</span>"&gt;</code>Extra Small<code>&lt;/button&gt;</code> &lt;!-- equivalent to 10px font-size when body font-size is 14px --&gt;</p>
-		<p><code>&lt;button class="btn btn-default <span>btn-sm</span>"&gt;</code>Small<code>&lt;/button&gt;</code> &lt;!-- equivalent to 12px font-size when body font-size is 14px --&gt;</p>
-		<p><code>&lt;button class="btn btn-default"&gt;</code>Default<code>&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-default <span>btn-lg</span>"&gt;</code>Large<code>&lt;/button&gt;</code> &lt;!-- equivalent to 21px font-size when body font-size is 14px --&gt;</p>
-		<p><code>&lt;button class="btn btn-default <span>btn-block</span>"&gt;</code>Block<code>&lt;/button&gt;</code> &lt;!-- spans the full width of it's parent container --&gt;</p>
-		<br>
-		<p>&lt;!-- Icon Buttons --&gt;</p>
-		<p><code>&lt;button class="btn btn-icon <span>btn-xs</span> active"&gt;&lt;i class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code> &lt;!-- equivalent to 12px font-size when body font-size is 14px --&gt;</p>
-		<p><code>&lt;button class="btn btn-icon <span>btn-sm</span> active"&gt;&lt;i class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code> &lt;!-- equivalent to 14px font-size when body font-size is 14px --&gt;</p>
-		<p><code>&lt;button class="btn btn-icon active"&gt;&lt;i class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code> &lt;!-- equivalent to 17px font-size when body font-size is 14px --&gt;</p>
-		<p><code>&lt;button class="btn btn-icon <span>btn-lg</span> active"&gt;&lt;i class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code>&lt;!-- equivalent to 21px font-size when body font-size is 14px --&gt;</p>
-		<br>
-		<p>&lt;!-- Delete/Remove Buttons (same size equivalencies as icon buttons) --&gt;</p>
-		<p><code>&lt;button class="btn btn-remove <span>btn-xs</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-remove <span>btn-sm</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-remove"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
-		<p><code>&lt;button class="btn btn-remove <span>btn-lg</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
-	</div>
+    <h3><a name="btnsLinks">Links</a></h3>
 
-	<h2><a name="btnsGroups">Button Groups</a></h2>
-	<div class="bui-lib-example">
-		<div class="btn-group" id="exampleBtnGroup">
-		  <button type="button" class="btn btn-default">On</button>
-		  <button type="button" class="btn btn-default active">Off</button>
-		  <button type="button" class="btn btn-default">Auto</button>
-		  <button type="button" class="btn btn-default">Modular</button>
-		  <button type="button" class="btn btn-default">Husked</button>
-		  <button type="button" class="btn btn-default">Bedazzled</button>
-		</div>
-	</div>
-	<div class="bui-lib-example-comment">
+    <p><strong>Usage:</strong> Links send the user away from the current page to
+      somewhere else.</p>
+
+    <p><strong>Rules:</strong></p>
+    <ul>
+      <li>Links should not look like buttons, they always display an underline
+        on hover.
+      </li>
+      <li>When a link’s destination is to another Beacon application, it may be
+        accompanied with the <code>icon-go-to</code> for internal links (<span
+            class="icon-go-to"></span>), otherwise a link should not have any
+        associated icons.
+      </li>
+      <li>The <code>&lt;a href=”#”&gt;</code> markup is prefered for links, but
+        if for some reason you need to, you can style buttons as links using
+        <code>&lt;btn-link&gt;</code> class. Just note that links with button
+        styling have button padding <i>(so they align nicely to buttons)</i>.
+      </li>
+    </ul>
+    <div class="bui-lib-example">
+      <button type="button" class="btn btn-link">Button Link</button>
+      <a href="#0">A Standard Link</a>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;button class="<span>btn btn-link</span>"&gt;</code>Button
+        Link<code>&lt;/button&gt;</code></p>
+
+      <p><code>&lt;a href="#URL"&gt;</code>A Standard Link<code>
+        &lt;/a&gt;</code></p>
+    </div>
+
+    <h3><a name="btnsCancel">Cancel</a></h3>
+
+    <p><strong>Usage:</strong> Used in any dialog box/modal/menu where actions
+      require a commit button, there should always be an option to cancel as
+      well. Cancel should back out any changes that occurred and leave it in the
+      previous state.</p>
+
+    <p><strong>Rules:</strong> Should always be placed to the left of a Primary
+      of standard button.</p>
+
+    <div class="bui-lib-example">
+      <button type="button" title="Cancel Button" class="btn btn-cancel">
+        Cancel
+      </button>
+      <button type="button" title="Cancel Button when Disabled"
+              class="btn btn-cancel" disabled="disabled">Cancel
+      </button>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;button class="<span>btn btn-cancel</span>"&gt;
+      </code>Cancel<code>&lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-cancel"
+        <span>disabled="disabled"</span>&gt;</code>Cancel<code>
+        &lt;/button&gt;</code></p>
+    </div>
+
+    <h3><a name="btnsDeleteRemove">Delete or Remove</a></h3>
+
+    <p><strong>Usage:</strong> A stand alone “x” icon (never the letter "x" or
+      "X") used to remove or delete an item.</p>
+
+    <p><strong>Rules:</strong> Typically placed on the far right side in table
+      rows. It may be appropriate to have a confirmation alert if the action
+      cannot be undone. While the hover state is always @color-red, the default
+      state may need to be a different color depending on what it's containing
+      background color is.</p>
+
+    <div class="bui-lib-example">
+      <button class="btn btn-remove" title="Delete Button"><i
+          class="icon-remove"></i></button>
+      <button class="btn btn-remove" disabled="disabled"
+              title="Delete Button when Disabled"><i class="icon-remove"></i>
+      </button>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;i
+        class="<span>icon-remove</span>"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-remove"
+        <span>disabled="disabled"</span>&gt;&lt;i
+        class="<span>icon-remove</span>"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+    </div>
+
+    <h2><a name="btnsSizing">Button Sizing</a></h2>
+
+    <p>Bootstrap button size classes have been customized for BUI buttons.</p>
+
+    <div class="bui-lib-example">
+      <button type="button" class="btn btn-default btn-xs">Extra Small</button>
+      <button type="button" class="btn btn-default btn-sm">Small</button>
+      <button type="button" class="btn btn-default">Default</button>
+      <button type="button" class="btn btn-default btn-lg">Large</button>
+      <div class="row bui-lib-example-block">
+        <button type="button" class="btn btn-default btn-block">Block</button>
+      </div>
+      <button role="button" title=""
+              class="btn btn-xs btn-icon icon-user active"></button>
+      <button role="button" title=""
+              class="btn btn-sm btn-icon icon-user active"></button>
+      <button role="button" title=""
+              class="btn btn-icon icon-user active"></button>
+      <button role="button" title=""
+              class="btn btn-lg btn-icon icon-user active"></button>
+      <br> <br>
+      <button class="btn btn-xs btn-remove" title="Delete Button"><i
+          class="icon-remove"></i></button>
+      <button class="btn btn-sm btn-remove" title="Delete Button"><i
+          class="icon-remove"></i></button>
+      <button class="btn btn-remove" title="Delete Button"><i
+          class="icon-remove"></i></button>
+      <button class="btn btn-lg btn-remove" title="Delete Button"><i
+          class="icon-remove"></i></button>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p>&lt;!-- Standard Buttons --&gt;</p>
+
+      <p><code>&lt;button class="btn btn-default <span>btn-xs</span>"&gt;</code>Extra
+        Small<code>&lt;/button&gt;</code> &lt;!-- equivalent to 10px font-size
+        when body font-size is 14px --&gt;</p>
+
+      <p><code>&lt;button class="btn btn-default <span>btn-sm</span>"&gt;</code>Small<code>
+        &lt;/button&gt;</code> &lt;!-- equivalent to 12px font-size when body
+        font-size is 14px --&gt;</p>
+
+      <p><code>&lt;button class="btn btn-default"&gt;</code>Default<code>&lt;/button&gt;</code>
+      </p>
+
+      <p><code>&lt;button class="btn btn-default <span>btn-lg</span>"&gt;</code>Large<code>
+        &lt;/button&gt;</code> &lt;!-- equivalent to 21px font-size when body
+        font-size is 14px --&gt;</p>
+
+      <p><code>&lt;button class="btn btn-default <span>btn-block</span>"&gt;
+      </code>Block<code>&lt;/button&gt;</code> &lt;!-- spans the full width of
+        it's parent container --&gt;</p>    <br>
+
+      <p>&lt;!-- Icon Buttons --&gt;</p>
+
+      <p><code>&lt;button class="btn btn-icon <span>btn-xs</span> active"&gt;&lt;i
+        class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code> &lt;!-- equivalent
+        to 12px font-size when body font-size is 14px --&gt;</p>
+
+      <p><code>&lt;button class="btn btn-icon <span>btn-sm</span> active"&gt;&lt;i
+        class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code> &lt;!-- equivalent
+        to 14px font-size when body font-size is 14px --&gt;</p>
+
+      <p><code>&lt;button class="btn btn-icon active"&gt;&lt;i class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code>
+        &lt;!-- equivalent to 17px font-size when body font-size is 14px --&gt;
+      </p>
+
+      <p><code>&lt;button class="btn btn-icon <span>btn-lg</span> active"&gt;&lt;i
+        class="icon-user"&gt;&lt;/i&gt;&lt;/button&gt;</code>&lt;!-- equivalent
+        to 21px font-size when body font-size is 14px --&gt;</p>    <br>
+
+      <p>&lt;!-- Delete/Remove Buttons (same size equivalencies as icon buttons)
+        --&gt;</p>
+
+      <p><code>&lt;button class="btn btn-remove <span>btn-xs</span>"&gt;&lt;i
+        class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-remove <span>btn-sm</span>"&gt;&lt;i
+        class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+
+      <p><code>&lt;button class="btn btn-remove"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code>
+      </p>
+
+      <p><code>&lt;button class="btn btn-remove <span>btn-lg</span>"&gt;&lt;i
+        class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+    </div>
+
+    <h2><a name="btnsGroups">Button Groups</a></h2>
+
+    <div class="bui-lib-example">
+      <div class="btn-group" id="exampleBtnGroup">
+        <button type="button" class="btn btn-default">On</button>
+        <button type="button" class="btn btn-default active">Off</button>
+        <button type="button" class="btn btn-default">Auto</button>
+        <button type="button" class="btn btn-default">Modular</button>
+        <button type="button" class="btn btn-default">Husked</button>
+        <button type="button" class="btn btn-default">Bedazzled</button>
+      </div>
+    </div>
+    <div class="bui-lib-example-comment">
 <pre>
 <code>&lt;div class="<span>btn-group</span>"&gt;</code>
-  <code>&lt;button type="button" class="btn btn-default"&gt;On&lt;/button&gt;</code>
-  <code>&lt;button type="button" class="btn btn-default <span><strong>active</strong></span>"&gt;Off&lt;/button&gt;</code>
-  <code>&lt;button type="button" class="btn btn-default"&gt;Auto&lt;/button&gt;</code>
+  <code>&lt;button type="button" class="btn
+    btn-default"&gt;On&lt;/button&gt;</code>
+  <code>&lt;button type="button" class="btn btn-default
+    <span><strong>active</strong></span>"&gt;Off&lt;/button&gt;</code>
+  <code>&lt;button type="button" class="btn
+    btn-default"&gt;Auto&lt;/button&gt;</code>
 <code>&lt;/div&gt;</code>
-<p>&lt;!-- Use javascript to place the 'active' class on whichever button is pressed --&gt;</p>
+<p>&lt;!-- Use javascript to place the 'active' class on whichever button is
+  pressed --&gt;</p>
 </pre>
-	</div>
+    </div>
 
-	<h2><a name="btnsTags">Tags</a></h2>
-	<h3>Standard Tags</h3>
-	<p><strong>Usage:</strong> Tags are used for representing data attributes on an object of some sort. In the Portal, they're used for classifying and organizing projects, while in other areas of Beacon they may be used for displaying applied filters.</p>
-	<p><strong>Rules:</strong> Tags are modular and must always be removable by hovering over the tag and clicking the remove button.</p>
-	<div class="bui-lib-example">
-		<div class="tag">Decipher Inc<button class="btn btn-remove"><i class="icon-remove"></i></button></div>
-	</div>
-	<div class="bui-lib-example-comment">
-		<code>&lt;div class="<span>tag</span>"&gt;</code>Decipher Inc<code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;</code>
-	</div>
-	<p><strong>Code Note:</strong> You can turn a <code>&lt;div&gt;</code>, <code>&lt;li&gt;</code> or other container into a tag, but a <code>btn-remove</code> needs to exist inside after the tag's name for the remove button to work.</p>
+    <h2><a name="btnsTags">Tags</a></h2>
 
-	<h3>Group Tags</h3>
-	<p><strong>Usage:</strong> Same as a standard tag, only a group tag is meant to represent a pre-defined group of users that can be added to a project all at once using the tag system. They are styled slightly differently so users can distinguish them standard organizational tags.</p>
-	<div class="bui-lib-example">
-		<div class="tag icon-user-group">BUI Group<button class="btn btn-remove"><i class="icon-remove"></i></button></div>
-	</div>
-	<div class="bui-lib-example-comment">
-		<code>&lt;div class="<span>tag <strong>icon-user-group</strong></span>"&gt;</code>BUI Group<code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;</code>
-	</div>
-	<p><strong>Code Note:</strong> All you have to do to turn a tag into group tag is add the <code>icon-user-group</code> class. This adds the icon and comes packaged with some minor css stuff.</p>
-</section>
+    <h3>Standard Tags</h3>
 
-<!--************* TOOLTIPS *************-->
-<!-- 
+    <p><strong>Usage:</strong> Tags are used for representing data attributes on
+      an object of some sort. In the Portal, they're used for classifying and
+      organizing projects, while in other areas of Beacon they may be used for
+      displaying applied filters.</p>
+
+    <p><strong>Rules:</strong> Tags are modular and must always be removable by
+      hovering over the tag and clicking the remove button.</p>
+
+    <div class="bui-lib-example">
+      <div class="tag">Decipher Inc
+        <button class="btn btn-remove"><i class="icon-remove"></i></button>
+      </div>
+    </div>
+    <div class="bui-lib-example-comment">
+      <code>&lt;div class="<span>tag</span>"&gt;</code>Decipher Inc<code>&lt;button
+      class="<span>btn btn-remove</span>"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+    </code>
+    </div>
+    <p><strong>Code Note:</strong> You can turn a <code>&lt;div&gt;</code>,
+      <code>&lt;li&gt;</code> or other container into a tag, but a <code>btn-remove</code>
+      needs to exist inside after the tag's name for the remove button to work.
+    </p>
+
+    <h3>Group Tags</h3>
+
+    <p><strong>Usage:</strong> Same as a standard tag, only a group tag is meant
+      to represent a pre-defined group of users that can be added to a project
+      all at once using the tag system. They are styled slightly differently so
+      users can distinguish them standard organizational tags.</p>
+
+    <div class="bui-lib-example">
+      <div class="tag icon-user-group">BUI Group
+        <button class="btn btn-remove"><i class="icon-remove"></i></button>
+      </div>
+    </div>
+    <div class="bui-lib-example-comment">
+      <code>&lt;div class="<span>tag <strong>icon-user-group</strong></span>"&gt;
+      </code>BUI Group<code>&lt;button class="<span>btn btn-remove</span>"&gt;&lt;i
+      class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;</code>
+    </div>
+    <p><strong>Code Note:</strong> All you have to do to turn a tag into group
+      tag is add the <code>icon-user-group</code> class. This adds the icon and
+      comes packaged with some minor css stuff.</p>
+  </section>
+
+  <!--************* TOOLTIPS *************--><!--
 <section style="border:1px solid red;">
 	<h1><a name="tooltips" style="color:red;">Tooltips</a></h1>
 	<p><em style="color:red;">Being Developed - Will likely switch to using Tipped for all tooltips.</em></p>
@@ -1027,226 +1576,476 @@
 	</pre>
 </section>
 
- -->
-<!--************* MODALS *************-->
+ --><!--************* MODALS *************-->
 
-<section>
-	<h1><a name="modals">Modals</a></h1>
-	<p>The markup for bui modals are very similar to standard bootstrap modals. The close 'x' button and cancel buttons have bui specific classes.</p>
-	<div class="bui-lib-example dark-bg">
-		<div class="modal fade in" style="display:block; position: static; z-index: 5; height:auto;">
-		  <div class="modal-dialog" style="z-index: 10;">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal"></button>
-		        <h4 class="modal-title">Modal title</h4>
-		      </div>
-		      <div class="modal-body">
-		        <p>One fine body&hellip;</p>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
-		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-	</div>
+  <section>
+    <h1><a name="modals">Modals</a></h1>
+
+    <p>The markup for bui modals are very similar to standard bootstrap modals.
+      The close 'x' button and cancel buttons have bui specific classes.</p>
+
+    <div class="bui-lib-example dark-bg">
+      <div class="modal fade in"
+           style="display:block; position: static; z-index: 5; height:auto;">
+        <div class="modal-dialog" style="z-index: 10;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"></button>
+              <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">
+                Cancel
+              </button>
+              <button type="button" class="btn btn-primary">Save changes
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    </div>
 	<pre class="bui-lib-example-comment">
-<code>&lt;div class="<span>modal fade</span>" id="bui-lib-example-modal"&gt;</code>
+<code>&lt;div class="<span>modal fade</span>" id="bui-lib-example-modal"&gt;
+</code>
   <code>&lt;div class="<span>modal-dialog</span>"&gt;</code>
     <code>&lt;div class="<span>modal-content</span>"&gt;</code>
       <code>&lt;div class="<span>modal-header</span>"&gt;</code>
-        <code>&lt;button type="button" class="<span>close</span>" <span>data-dismiss="modal"</span>&gt;&lt;/button&gt;</code>
-        <code>&lt;<span>h4</span> class="<span>modal-title</span>"&gt;</code>Modal title<code>&lt;/h4&gt;</code>
+        <code>&lt;button type="button" class="<span>close</span>" <span>data-dismiss="modal"</span>&gt;&lt;/button&gt;
+        </code>
+        <code>&lt;<span>h4</span> class="<span>modal-title</span>"&gt;</code>Modal title<code>
+    &lt;/h4&gt;</code>
       <code>&lt;/div&gt;</code>
       <code>&lt;div class="<span>modal-body</span>"&gt;</code>
         <code>&lt;p&gt;</code>One fine body<code>&hellip;&lt;/p&gt;</code>
       <code>&lt;/div&gt;</code>
       <code>&lt;div class="<span>modal-footer</span>"&gt;</code>
-        <code>&lt;button type="button" class="<span>btn btn-cancel</span>" <span>data-dismiss="modal"</span>&gt;</code>Cancel<code>&lt;/button&gt;</code>
-        <code>&lt;button type="button" class="<span>btn btn-primary</span>"&gt;</code>Save changes<code>&lt;/button&gt;</code>
+        <code>&lt;button type="button" class="<span>btn btn-cancel</span>"
+          <span>data-dismiss="modal"</span>&gt;</code>Cancel<code>&lt;/button&gt;</code>
+        <code>&lt;button type="button" class="<span>btn btn-primary</span>"&gt;
+        </code>Save changes<code>&lt;/button&gt;</code>
       <code>&lt;/div&gt;</code>
     <code>&lt;/div&gt;</code>&lt;!-- /.modal-content --&gt;
   <code>&lt;/div&gt;</code>&lt;!-- /.modal-dialog --&gt;
 <code>&lt;/div&gt;</code>&lt;!-- /.modal --&gt;
 	</pre>
-	<h2>Header</h2>
-	<h3>Title + Optional Drop-Down Menu:</h3>
-	<p><strong>Usage:</strong> The title should be short and descriptive. This title may be displayed as a Drop-Down menu in situations where the modal features a number of categories (e.g. the project menu in the survey building app).</p>
-	<p>The title may also contain a left aligned icon before the text in situations like a warning dialog.</p>
-	<h3>Help Resources</h3>
-	<p><strong>Usage:</strong> There may be a “Learn More” link or help icon right aligned in the header.</p>
-	<h3>Close "x" Button</h3>
-	<p><strong>Usage:</strong> A stand alone <code>icon-close</code> (never the letter "x" or "X") used to close out of a modal, should always appear in the top right corner.</p>
-	<p><strong>Rules:</strong> Equivalent to cancel, any changes made and not executed should be reverted to the previous state.</p>
-	<h2>Content Area</h2>
-	<p><strong>Usage:</strong> Any associated content should be displayed in here.</p>
-	<p><strong>Rules:</strong> Do not use panel or accordion menus inside modals.</p>
-	<h2>Footer</h2>
-	<p><strong>Usage:</strong> The footer of a modal should contain any buttons related to submitting, canceling, or saving the content. There may also be checkboxes that appear for settings related to the modal (e.g. “Show this screen for new projects”).</p>
-	<p><strong>Rules:</strong> The primary button should always be the furthest right aligned, with secondary buttons to the left of that, and a cancel button to the left of all buttons. Any checkboxes in the footer should be aligned to the left.</p>
+    <h2>Header</h2>
 
-	<h2><a name="modalSizes">Sizes</a></h2>
-	<p>Uses bootstraps native modal sizing classes.</p>
-	<h3>Small</h3>
-	<p>Add <code><span><strong>modal-sm</strong></span></code> class to <code>modal-dialog</code>. These have less padding in the header and footer, so using <code>btn-small</code> works nicely here. You can also center small modals with <code>modal-centered</code> <i>(explained below, under "Placement")</i> if you're creating a small dialog modal.</p>
-	<div class="bui-lib-example dark-bg">
-		<div class="modal fade in" style="display:block; position: static; z-index: 5; height: auto;">
-		  <div class="modal-dialog modal-sm" style="z-index: 10;">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal"></button>
-		        <h4 class="modal-title">Modal title</h4>
-		      </div>
-		      <div class="modal-body">
-		        <p>One small body&hellip;</p>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-sm btn-cancel" data-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-sm btn-primary">Save changes</button>
-		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-	</div>
+    <h3>Title + Optional Drop-Down Menu:</h3>
 
-	<h3>Large</h3>
-	<p>Add <code><span><strong>modal-lg</strong></span></code> class to <code>modal-dialog</code>.</p>
-	<div class="bui-lib-example dark-bg">
-		<div class="modal fade in" style="display:block; position: static; z-index: 5; height: auto;">
-		  <div class="modal-dialog modal-lg" style="z-index: 10;">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal"></button>
-		        <h4 class="modal-title">Modal title</h4>
-		      </div>
-		      <div class="modal-body">
-		        <p>One large body&hellip;</p>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
-		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-	</div>
+    <p><strong>Usage:</strong> The title should be short and descriptive. This
+      title may be displayed as a Drop-Down menu in situations where the modal
+      features a number of categories (e.g. the project menu in the survey
+      building app).</p>
 
-	<h3>Fullscreen</h3>
-	<p>Add <code><span><strong>modal-fullscreen</strong></span></code> class to <code>modal-dialog</code> to create a full-screen modal. The <code>modal-body</code> will scroll when the modal contains lots of content.</p>
-	<div class="bui-lib-example">
-		<button class="btn btn-default" data-toggle="modal" data-target="#bui-modal-demo-full">Launch Fullscreen Modal</button>
-		<div class="modal fade" id="bui-modal-demo-full">
-		  <div class="modal-dialog modal-fullscreen">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal"></button>
-		        <h4 class="modal-title">Modal title</h4>
-		      </div>
-		      <div class="modal-body">
-		        <h4 style="font-size: 3em; text-align: center; margin-top:2em;">A big ol' full screen modal!</h4>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
-		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-	</div>
+    <p>The title may also contain a left aligned icon before the text in
+      situations like a warning dialog.</p>
 
-	<h2><a name="modalPlacement">Placement</a></h2>
-	<p>The standard modal is placed 30px from the top and will allow scrolling if the modals content is long (or if the user is on a device with a small viewport).</p>
-	<p>If your modal has very little content and you're sure the user won't need the ability to scroll, you can apply the custom BUI <code><span>modal-centered</span></code> class to <code>.modal</code>, and center the modal in the window. Don't use this for any modal containing complex menues of any sort. The centered modal uses the transform: translate hack and can cause alignment anomalies. Best to only use this for modals displaying dialog text.</p>
-	<p>If you need your modal to scroll the body of the modal instead of the viewport, add the class <code><span>.modal-scroll-body</span></code> to <code>.modal</code>.</p>
-	<div class="bui-lib-example">
-		<button class="btn btn-default" data-toggle="modal" data-target="#bui-modal-demo-top">Standard Modal With Scroll Demo</button>
-		<button class="btn btn-default" data-toggle="modal" data-target="#bui-modal-demo-centered">Centered Modal Demo</button>
-		<button class="btn btn-default" data-toggle="modal" data-target="#bui-modal-demo-body-scroll">Standard Modal With Scroll on Body Demo</button>
-		<div class="modal fade modal-centered" id="bui-modal-demo-centered">
-		  <div class="modal-dialog modal-sm">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal"></button>
-		        <h4 class="modal-title">Modal title</h4>
-		      </div>
-		      <div class="modal-body">
-		        <p>A tiny modal that will never scroll.</p>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-sm btn-cancel" data-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-sm btn-primary">Save changes</button>
-		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-		<div class="modal fade" id="bui-modal-demo-top">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal"></button>
-		        <h4 class="modal-title">Modal title</h4>
-		      </div>
-		      <div class="modal-body">
-		        <h4>A big long modal!</h4>
-		        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At unde, porro assumenda neque tempore commodi provident sapiente dolorem labore voluptates laboriosam quasi laudantium recusandae quaerat perspiciatis accusantium sit ad quia cupiditate est! Nobis maxime repellat obcaecati sequi dolorum voluptatum tempora dignissimos accusamus magnam nisi eos harum, nesciunt rerum fugit adipisci consectetur laborum vel pariatur reprehenderit consequatur animi neque omnis architecto. Ducimus nemo non dolore cumque corporis dolorum magni earum quasi, ut minus illum distinctio! Ad illum quos esse pariatur, animi sequi enim ullam iste assumenda voluptatem perspiciatis, ducimus delectus. Dolores, nam laboriosam ab assumenda natus consequuntur accusantium esse quo, corrupti iure quasi! Adipisci soluta ratione eos sed pariatur hic nihil aliquam iure incidunt, ducimus ipsam enim facere, libero officia quas animi corporis eveniet magnam. Provident voluptatum sit mollitia, inventore rem doloribus aspernatur eligendi, alias dolores eaque sint, molestiae tenetur perferendis eum obcaecati deserunt sequi reprehenderit cumque maxime facere, modi ex ipsam aut optio! Repellat accusantium accusamus vel, ratione fugit vero possimus ab eum ipsa voluptas ullam suscipit aliquam atque minus! Ut quod, officiis necessitatibus laborum expedita eveniet deleniti. Tempore, ratione provident commodi natus beatae obcaecati explicabo. Expedita cupiditate temporibus fugiat est quos earum necessitatibus autem soluta odio enim quas illum unde dignissimos cumque voluptate ipsa amet labore quis eos commodi dicta vitae quibusdam tempora, maxime. Illo laboriosam quibusdam neque repellendus ab soluta perspiciatis nam deleniti aliquid accusantium omnis alias vero fugiat sunt ex ea, nemo atque dolorem odio, at sapiente. Quae quaerat explicabo veritatis eum, praesentium voluptatum mollitia ratione magni soluta officiis aliquid suscipit unde maiores dolore in possimus et. Debitis laboriosam nostrum perferendis magnam. Harum officia, beatae fugit eos. Illum rerum eum minus accusamus, reprehenderit quas qui similique assumenda ipsum cumque unde, a, sequi veniam ex dolorem doloribus voluptas temporibus deleniti autem consequuntur aliquid maiores voluptate. Magnam, quaerat nihil fugit velit accusantium eligendi pariatur minima consequatur esse, voluptates, dignissimos possimus, facilis sit eos adipisci provident aut dolorem. Laborum libero architecto dicta sunt esse saepe sint mollitia quidem quo minima, voluptatum aperiam error! Tempore aperiam quis repellat doloremque. Quis aliquam quaerat rerum totam qui atque cupiditate, inventore deserunt nihil aliquid animi enim hic vel ducimus dicta beatae voluptate facere voluptates commodi nostrum nemo non, temporibus doloremque. Libero qui aliquam, ad natus unde cupiditate similique, ex eaque. Tenetur corporis hic mollitia dicta velit molestiae consequatur, pariatur dolores voluptate accusamus fugit quisquam porro, omnis possimus explicabo ea id deleniti repudiandae fuga nobis!</p>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
-		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-		<div class="modal modal-scroll-body fade" id="bui-modal-demo-body-scroll">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal"></button>
-		        <h4 class="modal-title">Modal title</h4>
-		      </div>
-		      <div class="modal-body">
-		        <h4>A big long modal that scrolls the body instead of the viewport!</h4>
-		        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At unde, porro assumenda neque tempore commodi provident sapiente dolorem labore voluptates laboriosam quasi laudantium recusandae quaerat perspiciatis accusantium sit ad quia cupiditate est! Nobis maxime repellat obcaecati sequi dolorum voluptatum tempora dignissimos accusamus magnam nisi eos harum, nesciunt rerum fugit adipisci consectetur laborum vel pariatur reprehenderit consequatur animi neque omnis architecto. Ducimus nemo non dolore cumque corporis dolorum magni earum quasi, ut minus illum distinctio! Ad illum quos esse pariatur, animi sequi enim ullam iste assumenda voluptatem perspiciatis, ducimus delectus. Dolores, nam laboriosam ab assumenda natus consequuntur accusantium esse quo, corrupti iure quasi! Adipisci soluta ratione eos sed pariatur hic nihil aliquam iure incidunt, ducimus ipsam enim facere, libero officia quas animi corporis eveniet magnam. Provident voluptatum sit mollitia, inventore rem doloribus aspernatur eligendi, alias dolores eaque sint, molestiae tenetur perferendis eum obcaecati deserunt sequi reprehenderit cumque maxime facere, modi ex ipsam aut optio! Repellat accusantium accusamus vel, ratione fugit vero possimus ab eum ipsa voluptas ullam suscipit aliquam atque minus! Ut quod, officiis necessitatibus laborum expedita eveniet deleniti. Tempore, ratione provident commodi natus beatae obcaecati explicabo. Expedita cupiditate temporibus fugiat est quos earum necessitatibus autem soluta odio enim quas illum unde dignissimos cumque voluptate ipsa amet labore quis eos commodi dicta vitae quibusdam tempora, maxime. Illo laboriosam quibusdam neque repellendus ab soluta perspiciatis nam deleniti aliquid accusantium omnis alias vero fugiat sunt ex ea, nemo atque dolorem odio, at sapiente. Quae quaerat explicabo veritatis eum, praesentium voluptatum mollitia ratione magni soluta officiis aliquid suscipit unde maiores dolore in possimus et. Debitis laboriosam nostrum perferendis magnam. Harum officia, beatae fugit eos. Illum rerum eum minus accusamus, reprehenderit quas qui similique assumenda ipsum cumque unde, a, sequi veniam ex dolorem doloribus voluptas temporibus deleniti autem consequuntur aliquid maiores voluptate. Magnam, quaerat nihil fugit velit accusantium eligendi pariatur minima consequatur esse, voluptates, dignissimos possimus, facilis sit eos adipisci provident aut dolorem. Laborum libero architecto dicta sunt esse saepe sint mollitia quidem quo minima, voluptatum aperiam error! Tempore aperiam quis repellat doloremque. Quis aliquam quaerat rerum totam qui atque cupiditate, inventore deserunt nihil aliquid animi enim hic vel ducimus dicta beatae voluptate facere voluptates commodi nostrum nemo non, temporibus doloremque. Libero qui aliquam, ad natus unde cupiditate similique, ex eaque. Tenetur corporis hic mollitia dicta velit molestiae consequatur, pariatur dolores voluptate accusamus fugit quisquam porro, omnis possimus explicabo ea id deleniti repudiandae fuga nobis!</p>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
-		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-	</div>
+    <h3>Help Resources</h3>
 
-	<h2><a name="modalPaddingFlush">Padding Flush</a></h2>
-	<p>The <code>modal-body</code> includes padding by default.</p>
-	<p>Remove this padding by adding the class <code><span><strong>flush</strong></span></code> to <code>modal-body</code>.</p>
+    <p><strong>Usage:</strong> There may be a “Learn More” link or help icon
+      right aligned in the header.</p>
 
-	<h2><a name="modalFlyOut">Fly Out Modal</a></h2>
-	<p><strong>Usage:</strong> This modal is used for things like adding filters. This is a good option when a modal is appropriate and allowing the user to continue scrolling the main stage with the modal open is useful.</p>
-	<p><strong>Rules:</strong> When the fly-out-modal is visible, your javascript will need to hide it when the user <strong>clicks away from the modal</strong>, like the example below and this web page's main menu. Also when the user takes an action in the modal (e.g. clicks the 'x' close button, primary button.</p>
-	<p>Use javascript to toggle the class <code><span>.fly-out-opened</span></code> on <code>.fly-out-modal</code> to show or hide the modal.</p>
-	<p>Add the class <code><span>.fly-out-scroll</span></code> to <code>.fly-out-menu</code>, if you know scrolling will take place, to add top/bottom shadows on the body of the modal.</p>
-	<p>Add the class <code><span>.flush</span></code> to <code>.fly-out-body</code> to set it's padding to 0.</p>
-	<div class="bui-lib-example" style="padding:0; overflow: hidden; padding-bottom: 0.3em; background-color: #f9f9f9;">
-		<button class="btn btn-default btn-darken demo-fly-out-menu-btn" style="position: absolute; top: 40%; left: 2em;">Reopen Menu</button>
-		<div class="fly-out-menu fly-out-opened demo-fly-out-menu" style="position: relative; min-height: 25em; z-index: 10;">
-			<div class="fly-out-header">
-				<h4>Modal Header</h4>
-				<button class="btn close"></button>
-			</div>
-			<div class="fly-out-body" style="height: 15.75em;">
-				<p>Some body content for the fly out modal.</p>
-			</div>
-			<div class="fly-out-footer">
-				<button class="btn btn-cancel">Cancel</button>
-				<div class="btn btn-primary">Ok</div>
-			</div>
-		</div>
-	</div>
+    <h3>Close "x" Button</h3>
+
+    <p><strong>Usage:</strong> A stand alone <code>icon-close</code> (never the
+      letter "x" or "X") used to close out of a modal, should always appear in
+      the top right corner.</p>
+
+    <p><strong>Rules:</strong> Equivalent to cancel, any changes made and not
+      executed should be reverted to the previous state.</p>
+
+    <h2>Content Area</h2>
+
+    <p><strong>Usage:</strong> Any associated content should be displayed in
+      here.</p>
+
+    <p><strong>Rules:</strong> Do not use panel or accordion menus inside
+      modals.</p>
+
+    <h2>Footer</h2>
+
+    <p><strong>Usage:</strong> The footer of a modal should contain any buttons
+      related to submitting, canceling, or saving the content. There may also be
+      checkboxes that appear for settings related to the modal (e.g. “Show this
+      screen for new projects”).</p>
+
+    <p><strong>Rules:</strong> The primary button should always be the furthest
+      right aligned, with secondary buttons to the left of that, and a cancel
+      button to the left of all buttons. Any checkboxes in the footer should be
+      aligned to the left.</p>
+
+    <h2><a name="modalSizes">Sizes</a></h2>
+
+    <p>Uses bootstraps native modal sizing classes.</p>
+
+    <h3>Small</h3>
+
+    <p>Add <code><span><strong>modal-sm</strong></span></code> class to <code>modal-dialog</code>.
+      These have less padding in the header and footer, so using
+      <code>btn-small</code> works nicely here. You can also center small modals
+      with <code>modal-centered</code> <i>(explained below, under
+        "Placement")</i> if you're creating a small dialog modal.</p>
+
+    <div class="bui-lib-example dark-bg">
+      <div class="modal fade in"
+           style="display:block; position: static; z-index: 5; height: auto;">
+        <div class="modal-dialog modal-sm" style="z-index: 10;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"></button>
+              <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <p>One small body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-sm btn-cancel"
+                      data-dismiss="modal">Cancel
+              </button>
+              <button type="button" class="btn btn-sm btn-primary">Save
+                changes
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    </div>
+
+    <h3>Large</h3>
+
+    <p>Add <code><span><strong>modal-lg</strong></span></code> class to <code>modal-dialog</code>.
+    </p>
+
+    <div class="bui-lib-example dark-bg">
+      <div class="modal fade in"
+           style="display:block; position: static; z-index: 5; height: auto;">
+        <div class="modal-dialog modal-lg" style="z-index: 10;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"></button>
+              <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <p>One large body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">
+                Cancel
+              </button>
+              <button type="button" class="btn btn-primary">Save changes
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    </div>
+
+    <h3>Fullscreen</h3>
+
+    <p>Add <code><span><strong>modal-fullscreen</strong></span></code> class to
+      <code>modal-dialog</code> to create a full-screen modal. The <code>modal-body</code>
+      will scroll when the modal contains lots of content.</p>
+
+    <div class="bui-lib-example">
+      <button class="btn btn-default" data-toggle="modal"
+              data-target="#bui-modal-demo-full">Launch Fullscreen Modal
+      </button>
+      <div class="modal fade" id="bui-modal-demo-full">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"></button>
+              <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <h4 style="font-size: 3em; text-align: center; margin-top:2em;">A
+                big ol' full screen modal!</h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">
+                Cancel
+              </button>
+              <button type="button" class="btn btn-primary">Save changes
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    </div>
+
+    <h2><a name="modalPlacement">Placement</a></h2>
+
+    <p>The standard modal is placed 30px from the top and will allow scrolling
+      if the modals content is long (or if the user is on a device with a small
+      viewport).</p>
+
+    <p>If your modal has very little content and you're sure the user won't need
+      the ability to scroll, you can apply the custom BUI <code><span>modal-centered</span></code>
+      class to <code>.modal</code>, and center the modal in the window. Don't
+      use this for any modal containing complex menues of any sort. The centered
+      modal uses the transform: translate hack and can cause alignment
+      anomalies. Best to only use this for modals displaying dialog text.</p>
+
+    <p>If you need your modal to scroll the body of the modal instead of the
+      viewport, add the class <code><span>.modal-scroll-body</span></code> to
+      <code>.modal</code>.</p>
+
+    <div class="bui-lib-example">
+      <button class="btn btn-default" data-toggle="modal"
+              data-target="#bui-modal-demo-top">Standard Modal With Scroll Demo
+      </button>
+      <button class="btn btn-default" data-toggle="modal"
+              data-target="#bui-modal-demo-centered">Centered Modal Demo
+      </button>
+      <button class="btn btn-default" data-toggle="modal"
+              data-target="#bui-modal-demo-body-scroll">Standard Modal With
+        Scroll on Body Demo
+      </button>
+      <div class="modal fade modal-centered" id="bui-modal-demo-centered">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"></button>
+              <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <p>A tiny modal that will never scroll.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-sm btn-cancel"
+                      data-dismiss="modal">Cancel
+              </button>
+              <button type="button" class="btn btn-sm btn-primary">Save
+                changes
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      <div class="modal fade" id="bui-modal-demo-top">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"></button>
+              <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <h4>A big long modal!</h4>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
+                unde, porro assumenda neque tempore commodi provident sapiente
+                dolorem labore voluptates laboriosam quasi laudantium recusandae
+                quaerat perspiciatis accusantium sit ad quia cupiditate est!
+                Nobis maxime repellat obcaecati sequi dolorum voluptatum tempora
+                dignissimos accusamus magnam nisi eos harum, nesciunt rerum
+                fugit adipisci consectetur laborum vel pariatur reprehenderit
+                consequatur animi neque omnis architecto. Ducimus nemo non
+                dolore cumque corporis dolorum magni earum quasi, ut minus illum
+                distinctio! Ad illum quos esse pariatur, animi sequi enim ullam
+                iste assumenda voluptatem perspiciatis, ducimus delectus.
+                Dolores, nam laboriosam ab assumenda natus consequuntur
+                accusantium esse quo, corrupti iure quasi! Adipisci soluta
+                ratione eos sed pariatur hic nihil aliquam iure incidunt,
+                ducimus ipsam enim facere, libero officia quas animi corporis
+                eveniet magnam. Provident voluptatum sit mollitia, inventore rem
+                doloribus aspernatur eligendi, alias dolores eaque sint,
+                molestiae tenetur perferendis eum obcaecati deserunt sequi
+                reprehenderit cumque maxime facere, modi ex ipsam aut optio!
+                Repellat accusantium accusamus vel, ratione fugit vero possimus
+                ab eum ipsa voluptas ullam suscipit aliquam atque minus! Ut
+                quod, officiis necessitatibus laborum expedita eveniet deleniti.
+                Tempore, ratione provident commodi natus beatae obcaecati
+                explicabo. Expedita cupiditate temporibus fugiat est quos earum
+                necessitatibus autem soluta odio enim quas illum unde
+                dignissimos cumque voluptate ipsa amet labore quis eos commodi
+                dicta vitae quibusdam tempora, maxime. Illo laboriosam quibusdam
+                neque repellendus ab soluta perspiciatis nam deleniti aliquid
+                accusantium omnis alias vero fugiat sunt ex ea, nemo atque
+                dolorem odio, at sapiente. Quae quaerat explicabo veritatis eum,
+                praesentium voluptatum mollitia ratione magni soluta officiis
+                aliquid suscipit unde maiores dolore in possimus et. Debitis
+                laboriosam nostrum perferendis magnam. Harum officia, beatae
+                fugit eos. Illum rerum eum minus accusamus, reprehenderit quas
+                qui similique assumenda ipsum cumque unde, a, sequi veniam ex
+                dolorem doloribus voluptas temporibus deleniti autem
+                consequuntur aliquid maiores voluptate. Magnam, quaerat nihil
+                fugit velit accusantium eligendi pariatur minima consequatur
+                esse, voluptates, dignissimos possimus, facilis sit eos adipisci
+                provident aut dolorem. Laborum libero architecto dicta sunt esse
+                saepe sint mollitia quidem quo minima, voluptatum aperiam error!
+                Tempore aperiam quis repellat doloremque. Quis aliquam quaerat
+                rerum totam qui atque cupiditate, inventore deserunt nihil
+                aliquid animi enim hic vel ducimus dicta beatae voluptate facere
+                voluptates commodi nostrum nemo non, temporibus doloremque.
+                Libero qui aliquam, ad natus unde cupiditate similique, ex
+                eaque. Tenetur corporis hic mollitia dicta velit molestiae
+                consequatur, pariatur dolores voluptate accusamus fugit quisquam
+                porro, omnis possimus explicabo ea id deleniti repudiandae fuga
+                nobis!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">
+                Cancel
+              </button>
+              <button type="button" class="btn btn-primary">Save changes
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      <div class="modal modal-scroll-body fade" id="bui-modal-demo-body-scroll">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"></button>
+              <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <h4>A big long modal that scrolls the body instead of the
+                viewport!</h4>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
+                unde, porro assumenda neque tempore commodi provident sapiente
+                dolorem labore voluptates laboriosam quasi laudantium recusandae
+                quaerat perspiciatis accusantium sit ad quia cupiditate est!
+                Nobis maxime repellat obcaecati sequi dolorum voluptatum tempora
+                dignissimos accusamus magnam nisi eos harum, nesciunt rerum
+                fugit adipisci consectetur laborum vel pariatur reprehenderit
+                consequatur animi neque omnis architecto. Ducimus nemo non
+                dolore cumque corporis dolorum magni earum quasi, ut minus illum
+                distinctio! Ad illum quos esse pariatur, animi sequi enim ullam
+                iste assumenda voluptatem perspiciatis, ducimus delectus.
+                Dolores, nam laboriosam ab assumenda natus consequuntur
+                accusantium esse quo, corrupti iure quasi! Adipisci soluta
+                ratione eos sed pariatur hic nihil aliquam iure incidunt,
+                ducimus ipsam enim facere, libero officia quas animi corporis
+                eveniet magnam. Provident voluptatum sit mollitia, inventore rem
+                doloribus aspernatur eligendi, alias dolores eaque sint,
+                molestiae tenetur perferendis eum obcaecati deserunt sequi
+                reprehenderit cumque maxime facere, modi ex ipsam aut optio!
+                Repellat accusantium accusamus vel, ratione fugit vero possimus
+                ab eum ipsa voluptas ullam suscipit aliquam atque minus! Ut
+                quod, officiis necessitatibus laborum expedita eveniet deleniti.
+                Tempore, ratione provident commodi natus beatae obcaecati
+                explicabo. Expedita cupiditate temporibus fugiat est quos earum
+                necessitatibus autem soluta odio enim quas illum unde
+                dignissimos cumque voluptate ipsa amet labore quis eos commodi
+                dicta vitae quibusdam tempora, maxime. Illo laboriosam quibusdam
+                neque repellendus ab soluta perspiciatis nam deleniti aliquid
+                accusantium omnis alias vero fugiat sunt ex ea, nemo atque
+                dolorem odio, at sapiente. Quae quaerat explicabo veritatis eum,
+                praesentium voluptatum mollitia ratione magni soluta officiis
+                aliquid suscipit unde maiores dolore in possimus et. Debitis
+                laboriosam nostrum perferendis magnam. Harum officia, beatae
+                fugit eos. Illum rerum eum minus accusamus, reprehenderit quas
+                qui similique assumenda ipsum cumque unde, a, sequi veniam ex
+                dolorem doloribus voluptas temporibus deleniti autem
+                consequuntur aliquid maiores voluptate. Magnam, quaerat nihil
+                fugit velit accusantium eligendi pariatur minima consequatur
+                esse, voluptates, dignissimos possimus, facilis sit eos adipisci
+                provident aut dolorem. Laborum libero architecto dicta sunt esse
+                saepe sint mollitia quidem quo minima, voluptatum aperiam error!
+                Tempore aperiam quis repellat doloremque. Quis aliquam quaerat
+                rerum totam qui atque cupiditate, inventore deserunt nihil
+                aliquid animi enim hic vel ducimus dicta beatae voluptate facere
+                voluptates commodi nostrum nemo non, temporibus doloremque.
+                Libero qui aliquam, ad natus unde cupiditate similique, ex
+                eaque. Tenetur corporis hic mollitia dicta velit molestiae
+                consequatur, pariatur dolores voluptate accusamus fugit quisquam
+                porro, omnis possimus explicabo ea id deleniti repudiandae fuga
+                nobis!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">
+                Cancel
+              </button>
+              <button type="button" class="btn btn-primary">Save changes
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    </div>
+
+    <h2><a name="modalPaddingFlush">Padding Flush</a></h2>
+
+    <p>The <code>modal-body</code> includes padding by default.</p>
+
+    <p>Remove this padding by adding the class
+      <code><span><strong>flush</strong></span></code> to
+      <code>modal-body</code>.</p>
+
+    <h2><a name="modalFlyOut">Fly Out Modal</a></h2>
+
+    <p><strong>Usage:</strong> This modal is used for things like adding
+      filters. This is a good option when a modal is appropriate and allowing
+      the user to continue scrolling the main stage with the modal open is
+      useful.</p>
+
+    <p><strong>Rules:</strong> When the fly-out-modal is visible, your
+      javascript will need to hide it when the user <strong>clicks away from the
+        modal</strong>, like the example below and this web page's main menu.
+      Also when the user takes an action in the modal (e.g. clicks the 'x' close
+      button, primary button.</p>
+
+    <p>Use javascript to toggle the class
+      <code><span>.fly-out-opened</span></code> on <code>.fly-out-modal</code>
+      to show or hide the modal.</p>
+
+    <p>Add the class <code><span>.fly-out-scroll</span></code> to <code>.fly-out-menu</code>,
+      if you know scrolling will take place, to add top/bottom shadows on the
+      body of the modal.</p>
+
+    <p>Add the class <code><span>.flush</span></code> to
+      <code>.fly-out-body</code> to set it's padding to 0.</p>
+
+    <div class="bui-lib-example"
+         style="padding:0; overflow: hidden; padding-bottom: 0.3em; background-color: #f9f9f9;">
+      <button class="btn btn-default btn-darken demo-fly-out-menu-btn"
+              style="position: absolute; top: 40%; left: 2em;">Reopen Menu
+      </button>
+      <div class="fly-out-menu fly-out-opened demo-fly-out-menu"
+           style="position: relative; min-height: 25em; z-index: 10;">
+        <div class="fly-out-header">
+          <h4>Modal Header</h4>
+          <button class="btn close"></button>
+        </div>
+        <div class="fly-out-body" style="height: 15.75em;">
+          <p>Some body content for the fly out modal.</p>
+        </div>
+        <div class="fly-out-footer">
+          <button class="btn btn-cancel">Cancel</button>
+          <div class="btn btn-primary">Ok</div>
+        </div>
+      </div>
+    </div>
 <pre class="bui-lib-example-comment">
-<code>&lt;div class="<span>fly-out-menu <strong>fly-out-opened</strong></span>"&gt;</code> &lt;!-- toggle ".fly-out-open" with js to show/hide the modal --&gt;
+<code>&lt;div class="<span>fly-out-menu <strong>fly-out-opened</strong></span>"&gt;
+</code> &lt;!-- toggle ".fly-out-open" with js to show/hide the modal --&gt;
 	<code>&lt;div class="<span>fly-out-header</span>"&gt;</code>
 		<code>&lt;h4&gt;Modal Header&lt;/h4&gt;</code>
 		<code>&lt;button class="<span>btn close</span>"&gt;&lt;/button&gt;</code>
@@ -1261,42 +2060,55 @@
 <code>&lt;/div&gt;</code>
 </pre>
 
-</section>
+  </section>
 
 
-<!-- <section>
+  <!-- <section>
 
-			CIRCULAR PROGRESS BAR MARKUP USING ANGULAR.
-			-THE GT-50 CLASS NEEDS TO TOGGLE WHEN PROGRESS > 50%
-			-THE INLINE ROTATE PROPERTY GETS UPDATED WITH PERCENTAGE
-			- THE PROGRESS TEXT GETS UPDATED WITH PERCENTAGE
-	    <div class="circle-loading-modal" ng-class="{'in' : loadStatus == 0}">
-        <div class="clm-body">
-            <div class="progress-circle" ng-class="{'gt-50' : loadProgress > 50}">
-              <div class="pc-progress">
-                <div class="pc-progress-fill" style="transform: rotate({{360 * loadProgress / 100}}deg)"></div>
-              </div>
-              <div class="pc-percents">
-                <div class="pc-percents-wrapper">
-                  <span>{{loadProgress}}%</span>
+        CIRCULAR PROGRESS BAR MARKUP USING ANGULAR.
+        -THE GT-50 CLASS NEEDS TO TOGGLE WHEN PROGRESS > 50%
+        -THE INLINE ROTATE PROPERTY GETS UPDATED WITH PERCENTAGE
+        - THE PROGRESS TEXT GETS UPDATED WITH PERCENTAGE
+        <div class="circle-loading-modal" ng-class="{'in' : loadStatus == 0}">
+          <div class="clm-body">
+              <div class="progress-circle" ng-class="{'gt-50' : loadProgress > 50}">
+                <div class="pc-progress">
+                  <div class="pc-progress-fill" style="transform: rotate({{360 * loadProgress / 100}}deg)"></div>
+                </div>
+                <div class="pc-percents">
+                  <div class="pc-percents-wrapper">
+                    <span>{{loadProgress}}%</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <h1>Loading data...</h1>
-        </div>
-    </div>
+              <h1>Loading data...</h1>
+          </div>
+      </div>
 
 
-</section> -->
+  </section> -->
 
-<!--************* TYPOGRAPHY *************-->
+  <!--************* TYPOGRAPHY *************-->
 
-<section>
-	<h1><a name="typography">Typography</a></h1>
-	<p>Most of this uses the same markup as bootstrap, but it's worth reading through as it also provides some best practice tips.</p>
-	<h2>Font</h2>
-	<p>BUI uses <code>em</code> units heavily to maintain proportionality of design elements to the text. Applications in Beacon have been built on inconsistent root font sizes, so nothing in BUI relies on <code>rem</code> units and should scale appropriately to the previously set <code>body</code> font size.</p>
-	<p>When adding BUI typography, the root <code>&lt;html&gt;</code> font-size is set to 87.5% <i>(14px on standard 16px based browsers)</i>, and the <code>&lt;body&gt;</code> font-size to 14px. If the application you're working on needs to override these default BUI font-size settings, you'll need to match the level of BUI specificity in an override like so:</p>
+  <section>
+    <h1><a name="typography">Typography</a></h1>
+
+    <p>Most of this uses the same markup as bootstrap, but it's worth reading
+      through as it also provides some best practice tips.</p>
+
+    <h2>Font</h2>
+
+    <p>BUI uses <code>em</code> units heavily to maintain proportionality of
+      design elements to the text. Applications in Beacon have been built on
+      inconsistent root font sizes, so nothing in BUI relies on <code>rem</code>
+      units and should scale appropriately to the previously set
+      <code>body</code> font size.</p>
+
+    <p>When adding BUI typography, the root <code>&lt;html&gt;</code> font-size
+      is set to 87.5% <i>(14px on standard 16px based browsers)</i>, and the
+      <code>&lt;body&gt;</code> font-size to 14px. If the application you're
+      working on needs to override these default BUI font-size settings, you'll
+      need to match the level of BUI specificity in an override like so:</p>
 
 	<pre class="bui-lib-example">
 <code>.bui-typography {</code>
@@ -1307,165 +2119,219 @@
 <code>}</code>
 	</pre>
 
-	<p>The font family used in BUI is <strong>Open Sans</strong>.</p>
-	<p>The font weights available are <strong>400</strong> <i>(+ italic)</i>, <strong>600</strong> <i>(semi-bold)</i>, and <strong>700</strong> <i>(bold)</i>.</p>
+    <p>The font family used in BUI is <strong>Open Sans</strong>.</p>
 
-	<h2>Headings</h2>
-	<p>Other than the font family and weight, header styles are inherited from bootstrap. At some point in the future we'll provide some standard heading styles.</p>
-	<div class="bui-lib-example">
-		<h1>H1 Heading</h1>
-		<h2>H2 Heading</h2>
-		<h3>H3 Heading</h3>
-		<h4>H4 Heading</h4>
-		<h5>H5 Heading</h5>
-		<h6>H6 Heading</h6>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;h1&gt;</code>H1 Heading<code>&lt;/h1&gt;</code></p>
-		<p><code>&lt;h2&gt;</code>H2 Heading<code>&lt;/h2&gt;</code></p>
-		<p><code>&lt;h3&gt;</code>H3 Heading<code>&lt;/h3&gt;</code></p>
-		<p><code>&lt;h4&gt;</code>H4 Heading<code>&lt;/h4&gt;</code></p>
-		<p><code>&lt;h5&gt;</code>H5 Heading<code>&lt;/h5&gt;</code></p>
-		<p><code>&lt;h6&gt;</code>H6 Heading<code>&lt;/h6&gt;</code></p>
-	</div>
+    <p>The font weights available are <strong>400</strong> <i>(+ italic)</i>,
+      <strong>600</strong> <i>(semi-bold)</i>, and <strong>700</strong> <i>(bold)</i>.
+    </p>
 
-	<h3>Unbold Headings</h3>
-	<p>Some designs may call for an unbolded heading. Add the class <code><span><strong>unbold</strong></span></code> to the <code>&lt;h*&gt;</code> tag.</p>
-	<div class="bui-lib-example">
-		<h1 class="unbold">H1 Heading</h1>
-		<h2 class="unbold">H2 Heading</h2>
-		<h3 class="unbold">H3 Heading</h3>
-		<p>etc . . .</p>
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;h1 class="<span>unbold</span>"&gt;</code>H1 Heading<code>&lt;/h1&gt;</code></p>
-		<p><code>&lt;h2 class="<span>unbold</span>"&gt;</code>H2 Heading<code>&lt;/h2&gt;</code></p>
-		<p><code>&lt;h3 class="<span>unbold</span>"&gt;</code>H3 Heading<code>&lt;/h3&gt;</code></p>
-	</div>
+    <h2>Headings</h2>
 
-	<p>All headers and titles should be written using <strong>title casing</strong>. As there are a few different ways of applying title casing, <a href="http://titlecapitalization.com/">you can use this handy tool</a> to make sure you’ve got it right. The rules we use for title casing come from the Chicago Manual of Style.</p>
+    <p>Other than the font family and weight, header styles are inherited from
+      bootstrap. At some point in the future we'll provide some standard heading
+      styles.</p>
 
-	<h2>Emphasis</h2>
-	<p>You can use HTML's default emphasis tags.</p>
-	<h3>Small</h3>
-	<p>Use the <code>&lt;small&gt;</code> tag for de-emphasizing text.</p>
-	<div class="bui-lib-example">
-		<p><small>This might be useful for fine print text.</small></p>
-	</div>
-	<div class="bui-lib-example-comment">
-		<code>&lt;small&gt;</code> . . . <code>&lt;/small&gt;</code>
-	</div>
+    <div class="bui-lib-example">
+      <h1>H1 Heading</h1>
 
-	<h3>Bold</h3>
-	<p>Use the <code>&lt;strong&gt;</code> tag for bold emphasis.</p>
-	<div class="bui-lib-example">
-		<p>Making text <strong>bold</strong> is great for emphasis. Just remember, if too much text is <strong>bold</strong>, no text is <strong>bold</strong>.</p>
-	</div>
-	<div class="bui-lib-example-comment">
-		<code>&lt;strong&gt;</code> . . . <code>&lt;/strong&gt;</code>
-	</div>
+      <h2>H2 Heading</h2>
 
-	<h3>Italic</h3>
-	<p>Use the <code>&lt;em&gt;</code> tag for italic emphasis.</p>
-	<div class="bui-lib-example">
-		<p><em>Italic text is good for emphasising a single word, or a whole phrase.</em></p>
-	</div>
-	<div class="bui-lib-example-comment">
-		<code>&lt;em&gt;</code> . . . <code>&lt;/em&gt;</code>
-	</div>
+      <h3>H3 Heading</h3>
+      <h4>H4 Heading</h4>
+      <h5>H5 Heading</h5>
+      <h6>H6 Heading</h6>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;h1&gt;</code>H1 Heading<code>&lt;/h1&gt;</code></p>
 
-	<h3>All Caps</h3>
-	<p>Add <code>class="caps"</code> for all caps.</p>
-	<div class="bui-lib-example">
-		<p class="caps">All caps may be good for certain section titles - they're loud, so use sparingly</p>
-	</div>
-	<div class="bui-lib-example-comment">
-		<code>&lt;h4 class="<span>caps</span>"&gt;</code> . . . <code>&lt;/h4&gt;</code>
-	</div>
+      <p><code>&lt;h2&gt;</code>H2 Heading<code>&lt;/h2&gt;</code></p>
 
-	<h3>Underline</h3>
-	<p>Never use underline. Links underline themselves on hover, that's it.</p>
+      <p><code>&lt;h3&gt;</code>H3 Heading<code>&lt;/h3&gt;</code></p>
 
-	<h2>State Labels</h2>
-	<p>Style "state labels" by adding a <code>class=”state-label”</code>. State labels show the survey's survey state (dev, test, live, closed).</p>
-	<div class="bui-lib-example">
-		<p><span class="state-label">Dev</span> <span class="state-label">Test</span> <span class="state-label">Live</span> <span class="state-label">Closed</span></p>	
-	</div>
-	<div class="bui-lib-example-comment">
-		<p><code>&lt;span class="<span>state-label</span>"&gt;</code> . . . <code>&lt;/span&gt;</code></p>
-	</div>
-</section>
+      <p><code>&lt;h4&gt;</code>H4 Heading<code>&lt;/h4&gt;</code></p>
+
+      <p><code>&lt;h5&gt;</code>H5 Heading<code>&lt;/h5&gt;</code></p>
+
+      <p><code>&lt;h6&gt;</code>H6 Heading<code>&lt;/h6&gt;</code></p>
+    </div>
+
+    <h3>Unbold Headings</h3>
+
+    <p>Some designs may call for an unbolded heading. Add the class <code><span><strong>unbold</strong></span></code>
+      to the <code>&lt;h*&gt;</code> tag.</p>
+
+    <div class="bui-lib-example">
+      <h1 class="unbold">H1 Heading</h1>
+
+      <h2 class="unbold">H2 Heading</h2>
+
+      <h3 class="unbold">H3 Heading</h3>
+
+      <p>etc . . .</p>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;h1 class="<span>unbold</span>"&gt;</code>H1 Heading<code>&lt;/h1&gt;</code>
+      </p>
+
+      <p><code>&lt;h2 class="<span>unbold</span>"&gt;</code>H2 Heading<code>&lt;/h2&gt;</code>
+      </p>
+
+      <p><code>&lt;h3 class="<span>unbold</span>"&gt;</code>H3 Heading<code>&lt;/h3&gt;</code>
+      </p>
+    </div>
+
+    <p>All headers and titles should be written using <strong>title
+      casing</strong>. As there are a few different ways of applying title
+      casing, <a href="http://titlecapitalization.com/">you can use this handy
+        tool</a> to make sure you’ve got it right. The rules we use for title
+      casing come from the Chicago Manual of Style.</p>
+
+    <h2>Emphasis</h2>
+
+    <p>You can use HTML's default emphasis tags.</p>
+
+    <h3>Small</h3>
+
+    <p>Use the <code>&lt;small&gt;</code> tag for de-emphasizing text.</p>
+
+    <div class="bui-lib-example">
+      <p>
+        <small>This might be useful for fine print text.</small>
+      </p>
+    </div>
+    <div class="bui-lib-example-comment">
+      <code>&lt;small&gt;</code> . . . <code>&lt;/small&gt;</code>
+    </div>
+
+    <h3>Bold</h3>
+
+    <p>Use the <code>&lt;strong&gt;</code> tag for bold emphasis.</p>
+
+    <div class="bui-lib-example">
+      <p>Making text <strong>bold</strong> is great for emphasis. Just remember,
+        if too much text is <strong>bold</strong>, no text is
+        <strong>bold</strong>.</p>
+    </div>
+    <div class="bui-lib-example-comment">
+      <code>&lt;strong&gt;</code> . . . <code>&lt;/strong&gt;</code>
+    </div>
+
+    <h3>Italic</h3>
+
+    <p>Use the <code>&lt;em&gt;</code> tag for italic emphasis.</p>
+
+    <div class="bui-lib-example">
+      <p><em>Italic text is good for emphasising a single word, or a whole
+        phrase.</em></p>
+    </div>
+    <div class="bui-lib-example-comment">
+      <code>&lt;em&gt;</code> . . . <code>&lt;/em&gt;</code>
+    </div>
+
+    <h3>All Caps</h3>
+
+    <p>Add <code>class="caps"</code> for all caps.</p>
+
+    <div class="bui-lib-example">
+      <p class="caps">All caps may be good for certain section titles - they're
+        loud, so use sparingly</p>
+    </div>
+    <div class="bui-lib-example-comment">
+      <code>&lt;h4 class="<span>caps</span>"&gt;</code> . . . <code>
+      &lt;/h4&gt;</code>
+    </div>
+
+    <h3>Underline</h3>
+
+    <p>Never use underline. Links underline themselves on hover, that's it.</p>
+
+    <h2>State Labels</h2>
+
+    <p>Style "state labels" by adding a <code>class=”state-label”</code>. State
+      labels show the survey's survey state (dev, test, live, closed).</p>
+
+    <div class="bui-lib-example">
+      <p><span class="state-label">Dev</span> <span
+          class="state-label">Test</span> <span class="state-label">Live</span>
+        <span class="state-label">Closed</span></p>
+    </div>
+    <div class="bui-lib-example-comment">
+      <p><code>&lt;span class="<span>state-label</span>"&gt;</code> . . . <code>
+        &lt;/span&gt;</code></p>
+    </div>
+  </section>
 
 
-</div> <!-- end container -->
+</div>
+<!-- end container -->
 <footer>
-<script src="../support/jquery/dist/jquery.min.js"></script>
-<script src="../support/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        // main menu button
-        var demoSiteMenuOpened = false;
-        var mousedOffMenu = false;
-				$(".menu-btn").on('click', function() {
-					$('.demo-site-menu').addClass('fly-out-opened');
-					demoSiteMenuOpened = true;
-					mousedOffMenu = false;
-					clickAwayCloseMenu();
-				});
-				$('.demo-site-menu').on('click', function(e) {
-					e.stopImmediatePropagation();
-				})
-				$('.demo-site-menu .close').on('click', function() {
-					$('.demo-site-menu').removeClass('fly-out-opened');
-					demoSiteMenuOpened = false;
-					$(document).off('.modalHider');
-				});
+  <script src="../support/jquery/dist/jquery.min.js"></script>
+  <script src="../support/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    // main menu button
+    var demoSiteMenuOpened = false;
+    var mousedOffMenu = false;
+    $(".menu-btn").on('click', function () {
+      $('.demo-site-menu').addClass('fly-out-opened');
+      demoSiteMenuOpened = true;
+      mousedOffMenu = false;
+      clickAwayCloseMenu();
+    });
+    $('.demo-site-menu').on('click', function (e) {
+      e.stopImmediatePropagation();
+    })
+    $('.demo-site-menu .close').on('click', function () {
+      $('.demo-site-menu').removeClass('fly-out-opened');
+      demoSiteMenuOpened = false;
+      $(document).off('.modalHider');
+    });
 
-				function clickAwayCloseMenu() {
-					$('.demo-site-menu').mouseleave(function() {
-						mousedOffMenu = true;
-					});
-					$('.demo-site-menu').mouseenter(function() {
-						mousedOffMenu = false;
-					});
-					$(document).on('click.modalHider', function() {
-						console.log($(this));
-						if (mousedOffMenu == true) {
-							$('.demo-site-menu').removeClass('fly-out-opened');
-							demoSiteMenuOpened = false;
-							$(document).off('.modalHider');
-						}
-					});
-				}
+    function clickAwayCloseMenu() {
+      $('.demo-site-menu').mouseleave(function () {
+        mousedOffMenu = true;
+      });
+      $('.demo-site-menu').mouseenter(function () {
+        mousedOffMenu = false;
+      });
+      $(document).on('click.modalHider', function () {
+        console.log($(this));
+        if (mousedOffMenu == true) {
+          $('.demo-site-menu').removeClass('fly-out-opened');
+          demoSiteMenuOpened = false;
+          $(document).off('.modalHider');
+        }
+      });
+    }
 
-				// show / hide toggle button
-				$('#example-btn-text-toggle').on('click', function() {
-					$(this).toggleClass('toggle-right').toggleClass('toggle-down');
-					$('#example-btn-text-toggle-content').slideToggle('fast');
-				});
+    // show / hide toggle button
+    $('#example-btn-text-toggle').on('click', function () {
+      $(this).toggleClass('toggle-right').toggleClass('toggle-down');
+      $('#example-btn-text-toggle-content').slideToggle('fast');
+    });
 
-				// button groups
-				$('#exampleBtnGroup .btn').on('click', function() {
-					$('#exampleBtnGroup button').removeClass('active');
-					$(this).addClass('active');
-				});
+    // button groups
+    $('#exampleBtnGroup .btn').on('click', function () {
+      $('#exampleBtnGroup button').removeClass('active');
+      $(this).addClass('active');
+    });
 
-				// fly out menu modal
-				$('.demo-fly-out-menu').on('click', function(e) {
-					e.stopImmediatePropagation();
-				});
-				$('.demo-fly-out-menu').parent().on('click', function() {
-					if ($('.demo-fly-out-menu').hasClass('fly-out-opened') == true) {
-						$('.demo-fly-out-menu').removeClass('fly-out-opened');
-					}
-				})
-				$('.demo-fly-out-menu-btn').on('click', function(e) {
-					e.stopImmediatePropagation();
-					$('.demo-fly-out-menu').addClass('fly-out-opened');
-				});
-				$('.demo-fly-out-menu .btn').on('click', function() {
-					$('.demo-fly-out-menu').removeClass('fly-out-opened');
-				});
-    </script>
+    // fly out menu modal
+    $('.demo-fly-out-menu').on('click', function (e) {
+      e.stopImmediatePropagation();
+    });
+    $('.demo-fly-out-menu').parent().on('click', function () {
+      if ($('.demo-fly-out-menu').hasClass('fly-out-opened') == true) {
+        $('.demo-fly-out-menu').removeClass('fly-out-opened');
+      }
+    })
+    $('.demo-fly-out-menu-btn').on('click', function (e) {
+      e.stopImmediatePropagation();
+      $('.demo-fly-out-menu').addClass('fly-out-opened');
+    });
+    $('.demo-fly-out-menu .btn').on('click', function () {
+      $('.demo-fly-out-menu').removeClass('fly-out-opened');
+    });
+  </script>
 </footer>
 </body>
 </html>

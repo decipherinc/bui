@@ -586,10 +586,8 @@
   border-radius: 3px;
   outline: 0;
   text-shadow: none;
-  cursor: pointer;
   -webkit-box-shadow: none;
   box-shadow: none;
-  padding: 5px 10px 4px;
 }
 .bui-buttons .btn:active,
 .bui-buttons .btn.active {
@@ -600,8 +598,6 @@
 .bui-buttons .btn.disabled,
 .bui-buttons .btn[disabled],
 fieldset[disabled] .bui-buttons .btn {
-  cursor: pointer;
-  pointer-events: none;
   opacity: 0.45;
   filter: alpha(opacity=45);
 }
@@ -616,6 +612,7 @@ fieldset[disabled] .bui-buttons .btn {
   color: #333333;
   border: 0;
   border-bottom: 1px solid #cbcbcb;
+  padding: 5px 10px;
 }
 .bui-buttons .btn-default:hover,
 .bui-buttons .btn-default:focus {
@@ -630,15 +627,6 @@ fieldset[disabled] .bui-buttons .btn {
 .bui-buttons .btn-default.btn-darken {
   background: #dddddd;
 }
-.bui-buttons .btn-default.btn-darken:hover,
-.bui-buttons .btn-default.btn-darken:focus {
-  background-color: #e7e7e7;
-}
-.bui-buttons .btn-default.btn-darken:active,
-.bui-buttons .btn-default.btn-darken.active {
-  background: #dfdfdf;
-  color: #333333;
-}
 .bui-buttons .btn-primary {
   background: #0086ab;
   background-image: -webkit-linear-gradient(top, #008eb5 0%, #007ea1 100%);
@@ -646,8 +634,7 @@ fieldset[disabled] .bui-buttons .btn {
   background-image: linear-gradient(to bottom, #008eb5 0%, #007ea1 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff008eb5', endColorstr='#ff007ea1', GradientType=0);
-  border: 0;
-  border-bottom: 1px solid #005e78;
+  border: 1px solid #007ea1;
   color: #fff;
 }
 .bui-buttons .btn-primary:hover,
@@ -675,7 +662,7 @@ fieldset[disabled] .bui-buttons .btn {
   background-image: linear-gradient(to bottom, #a80c10 0%, #940a0e 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa80c10', endColorstr='#ff940a0e', GradientType=0);
-  border-bottom: 1px solid #6e080a;
+  border: 1px solid #940a0e;
 }
 .bui-buttons .btn-primary.dangerous:hover,
 .bui-buttons .btn-primary.dangerous:focus {
@@ -704,7 +691,7 @@ fieldset[disabled] .bui-buttons .btn-primary.dangerous {
   background-image: linear-gradient(to bottom, #a80c10 0%, #940a0e 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa80c10', endColorstr='#ff940a0e', GradientType=0);
-  border-bottom: 1px solid #940a0e;
+  border: 1px solid #940a0e;
 }
 .bui-buttons .btn-primary.disabled,
 .bui-buttons .btn-primary[disabled],
@@ -715,7 +702,7 @@ fieldset[disabled] .bui-buttons .btn-primary {
   background-image: linear-gradient(to bottom, #008eb5 0%, #007ea1 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff008eb5', endColorstr='#ff007ea1', GradientType=0);
-  border-bottom: 1px solid #007ea1;
+  border: 1px solid #007ea1;
   color: #fff;
 }
 .bui-buttons .btn-special {
@@ -725,8 +712,7 @@ fieldset[disabled] .bui-buttons .btn-primary {
   background-image: linear-gradient(to bottom, #7bc625 0%, #71b421 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7bc625', endColorstr='#ff71b421', GradientType=0);
-  border: 0;
-  border-bottom: 1px solid #69a71f;
+  border: 1px solid #73b922;
   color: #fff;
 }
 .bui-buttons .btn-special:hover,
@@ -750,7 +736,7 @@ fieldset[disabled] .bui-buttons .btn-primary {
   border: 0;
   color: #0086ab;
   text-decoration: none;
-  padding: 5px 10px;
+  cursor: pointer;
 }
 .bui-buttons .btn-text:hover,
 .bui-buttons .btn-text:focus {
@@ -770,16 +756,13 @@ fieldset[disabled] .bui-buttons .btn-text {
 .bui-buttons .btn-text.btn-text-flush {
   padding: 0;
 }
-.bui-buttons .btn-text.btn-text-flush:before {
-  margin: 0;
-}
 .bui-buttons .btn-text-toggle {
   background: transparent;
   border: 0;
   outline: 0;
   color: #0086ab;
   text-decoration: none;
-  padding: 5px 10px;
+  cursor: pointer;
 }
 .bui-buttons .btn-text-toggle:hover,
 .bui-buttons .btn-text-toggle:focus {
@@ -850,7 +833,7 @@ fieldset[disabled] .bui-buttons .btn-text-toggle {
 .bui-buttons .btn-icon:before,
 .bui-buttons .btn-icon i:before,
 .bui-buttons .btn-icon span:before {
-  margin: 1px;
+  margin: 1px 0;
   line-height: 1em;
 }
 .bui-buttons .btn-icon:hover,
@@ -883,7 +866,7 @@ fieldset[disabled] .bui-buttons .btn-icon {
   border: 0;
   background: #e7e7e7;
   font-size: 0.8em;
-  padding: 3px 6px 4px;
+  padding: 3px 6px;
 }
 .bui-buttons .btn-toggle:hover,
 .bui-buttons .btn-toggle:focus {
@@ -904,6 +887,7 @@ fieldset[disabled] .bui-buttons .btn-icon {
 }
 .bui-buttons .btn-cancel:hover,
 .bui-buttons .btn-cancel:focus {
+  cursor: pointer;
   background: transparent;
   color: #9e0b0f;
   text-decoration: underline;
@@ -944,7 +928,7 @@ fieldset[disabled] .bui-buttons .btn-cancel:active {
 .bui-buttons .btn-remove:before,
 .bui-buttons .btn-remove i:before,
 .bui-buttons .btn-remove span:before {
-  margin: 1px;
+  margin: 1px 0;
   line-height: 1em;
 }
 .bui-buttons .btn-remove:hover,
@@ -968,7 +952,6 @@ fieldset[disabled] .bui-buttons .btn-remove {
   font-weight: 300;
   border: 0;
   border-radius: 0;
-  padding: 0;
 }
 .bui-buttons .btn-link,
 .bui-buttons .btn-link:active,
@@ -1000,62 +983,6 @@ fieldset[disabled] .bui-buttons .btn-link {
   opacity: 1;
   filter: alpha(opacity=100);
 }
-.bui-buttons .btn-group .btn {
-  border-left: 1px solid #bcbcbc;
-  z-index: 0;
-}
-.bui-buttons .btn-group .btn:active,
-.bui-buttons .btn-group .btn.active {
-  background-color: #bbbbbb;
-  top: 1px;
-  border-bottom: 0;
-  margin-bottom: 1px;
-  -webkit-box-shadow: inset 3px 0px 2px -2px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 3px 0px 2px -2px rgba(0, 0, 0, 0.2);
-}
-.bui-buttons .btn-group .btn:active + .btn,
-.bui-buttons .btn-group .btn.active + .btn {
-  border-left-color: transparent;
-}
-.bui-buttons .btn-group .btn:first-child {
-  border-left: 0;
-}
-.bui-buttons .btn-group .btn:first-child:active,
-.bui-buttons .btn-group .btn:first-child.active {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.bui-buttons .btn-group .btn.btn:nth-last-of-type(1) {
-  -webkit-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
-.bui-buttons .btn-xs {
-  font-size: 0.714em;
-  padding: 2px 6px 1px;
-}
-.bui-buttons .btn-xs.btn-icon,
-.bui-buttons .btn-xs.btn-remove {
-  font-size: 0.857em;
-  padding: 2px 0;
-}
-.bui-buttons .btn-sm {
-  font-size: 0.875em;
-  padding: 2px 6px 1px;
-}
-.bui-buttons .btn-sm.btn-icon,
-.bui-buttons .btn-sm.btn-remove {
-  font-size: 1em;
-  padding: 3px 0;
-}
-.bui-buttons .btn-lg {
-  font-size: 1.2em;
-  padding: 7px 14px 6px;
-}
-.bui-buttons .btn-lg.btn-icon,
-.bui-buttons .btn-lg.btn-remove {
-  font-size: 1.618em;
-  padding: 4px 0;
-}
 .bui-buttons .tag {
   border: 0;
   background: #b8e3f4;
@@ -1075,6 +1002,10 @@ fieldset[disabled] .bui-buttons .btn-link {
   -webkit-transition: opacity 100ms ease 500ms, margin-left 200ms ease 500ms;
   transition: opacity 50ms ease 500ms, margin-left 200ms ease 500ms;
 }
+.bui-buttons .tag:hover,
+.bui-buttons .tag:focus {
+  cursor: default;
+}
 .bui-buttons .tag:hover .btn-remove,
 .bui-buttons .tag:focus .btn-remove {
   opacity: 1;
@@ -1085,6 +1016,33 @@ fieldset[disabled] .bui-buttons .btn-link {
 .bui-buttons .tag.icon-user-group:before {
   margin-right: 0.4em;
   margin-left: 1px;
+}
+.bui-buttons .btn-xs {
+  font-size: 0.714em;
+  padding: 2px 6px;
+}
+.bui-buttons .btn-xs.btn-icon,
+.bui-buttons .btn-xs.btn-remove {
+  font-size: 0.857em;
+  padding: 2px 0;
+}
+.bui-buttons .btn-sm {
+  font-size: 0.875em;
+  padding: 2px 6px;
+}
+.bui-buttons .btn-sm.btn-icon,
+.bui-buttons .btn-sm.btn-remove {
+  font-size: 1em;
+  padding: 3px 0;
+}
+.bui-buttons .btn-lg {
+  font-size: 1.2em;
+  padding: 0.5em 1em;
+}
+.bui-buttons .btn-lg.btn-icon,
+.bui-buttons .btn-lg.btn-remove {
+  font-size: 1.618em;
+  padding: 4px 0;
 }
 .bui-inputs label {
   margin-bottom: 0.4em;

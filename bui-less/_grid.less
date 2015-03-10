@@ -1,4 +1,4 @@
-@{grid-prefix} { 
+@{grid-prefix} {
   .row.no-gutters {
     margin-left: 0;
     margin-right: 0;
@@ -7,7 +7,6 @@
       padding-right: 0;
     }
   }
-
 
   // **************************************************
   // bui 24 col grid generator (fork of bootstrap grid)
@@ -31,7 +30,6 @@
     }
   }
 
-
   // Fluid container
   //
   // Utilizes the mixin meant for fixed width containers, but without any defined
@@ -41,7 +39,6 @@
     .bui-container-fixed();
   }
 
-
   // Row
   //
   // Rows contain and clear the floats of your columns.
@@ -50,13 +47,11 @@
     .bui-make-row();
   }
 
-
   // Columns
   //
   // Common styles for small and large grid columns
 
   .bui-make-grid-columns();
-
 
   // Extra small grid
   //
@@ -64,7 +59,6 @@
   // smartphones.
 
   .bui-make-grid(xs);
-
 
   // Small grid
   //
@@ -75,7 +69,6 @@
     .bui-make-grid(sm);
   }
 
-
   // Medium grid
   //
   // Columns, offsets, pushes, and pulls for the desktop device range.
@@ -84,7 +77,6 @@
     .bui-make-grid(md);
   }
 
-
   // Large grid
   //
   // Columns, offsets, pushes, and pulls for the large desktop device range.
@@ -92,9 +84,9 @@
   @media (min-width: @screen-lg-min) {
     .bui-make-grid(lg);
   }
-} // end @{grid-prefix}
+}
 
-
+// end @{grid-prefix}
 
 // Grid System Generation
 // !!! Copied from bootstrap/less/mixens.less so that @grid-columns variable can be replaced with @bui-grid-columns & bui prefix can be applied to functions, there by building a second grid system.
@@ -104,14 +96,14 @@
 .bui-container-fixed() {
   margin-right: auto;
   margin-left: auto;
-  padding-left:  (@grid-gutter-width / 2);
+  padding-left: (@grid-gutter-width / 2);
   padding-right: (@grid-gutter-width / 2);
   &:extend(.clearfix all);
 }
 
 // Creates a wrapper for a series of columns
 .bui-make-row(@gutter: @grid-gutter-width) {
-  margin-left:  (@gutter / -2);
+  margin-left: (@gutter / -2);
   margin-right: (@gutter / -2);
   &:extend(.clearfix all);
 }
@@ -122,31 +114,33 @@
   float: left;
   width: percentage((@columns / @bui-grid-columns));
   min-height: 1px;
-  padding-left:  (@gutter / 2);
+  padding-left: (@gutter / 2);
   padding-right: (@gutter / 2);
 }
+
 .bui-make-xs-column-offset(@columns) {
   @media (min-width: @screen-xs-min) {
     margin-left: percentage((@columns / @bui-grid-columns));
   }
 }
+
 .bui-make-xs-column-push(@columns) {
   @media (min-width: @screen-xs-min) {
     left: percentage((@columns / @bui-grid-columns));
   }
 }
+
 .bui-make-xs-column-pull(@columns) {
   @media (min-width: @screen-xs-min) {
     right: percentage((@columns / @bui-grid-columns));
   }
 }
 
-
 // Generate the small columns
 .bui-make-sm-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-left:  (@gutter / 2);
+  padding-left: (@gutter / 2);
   padding-right: (@gutter / 2);
 
   @media (min-width: @screen-sm-min) {
@@ -154,28 +148,30 @@
     width: percentage((@columns / @bui-grid-columns));
   }
 }
+
 .bui-make-sm-column-offset(@columns) {
   @media (min-width: @screen-sm-min) {
     margin-left: percentage((@columns / @bui-grid-columns));
   }
 }
+
 .bui-make-sm-column-push(@columns) {
   @media (min-width: @screen-sm-min) {
     left: percentage((@columns / @bui-grid-columns));
   }
 }
+
 .bui-make-sm-column-pull(@columns) {
   @media (min-width: @screen-sm-min) {
     right: percentage((@columns / @bui-grid-columns));
   }
 }
 
-
 // Generate the medium columns
 .bui-make-md-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-left:  (@gutter / 2);
+  padding-left: (@gutter / 2);
   padding-right: (@gutter / 2);
 
   @media (min-width: @screen-md-min) {
@@ -183,28 +179,30 @@
     width: percentage((@columns / @bui-grid-columns));
   }
 }
+
 .bui-make-md-column-offset(@columns) {
   @media (min-width: @screen-md-min) {
     margin-left: percentage((@columns / @bui-grid-columns));
   }
 }
+
 .bui-make-md-column-push(@columns) {
   @media (min-width: @screen-md-min) {
     left: percentage((@columns / @bui-grid-columns));
   }
 }
+
 .bui-make-md-column-pull(@columns) {
   @media (min-width: @screen-md-min) {
     right: percentage((@columns / @bui-grid-columns));
   }
 }
 
-
 // Generate the large columns
 .bui-make-lg-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   min-height: 1px;
-  padding-left:  (@gutter / 2);
+  padding-left: (@gutter / 2);
   padding-right: (@gutter / 2);
 
   @media (min-width: @screen-lg-min) {
@@ -212,22 +210,24 @@
     width: percentage((@columns / @bui-grid-columns));
   }
 }
+
 .bui-make-lg-column-offset(@columns) {
   @media (min-width: @screen-lg-min) {
     margin-left: percentage((@columns / @bui-grid-columns));
   }
 }
+
 .bui-make-lg-column-push(@columns) {
   @media (min-width: @screen-lg-min) {
     left: percentage((@columns / @bui-grid-columns));
   }
 }
+
 .bui-make-lg-column-pull(@columns) {
   @media (min-width: @screen-lg-min) {
     right: percentage((@columns / @bui-grid-columns));
   }
 }
-
 
 // Framework grid generation
 //
@@ -236,21 +236,24 @@
 
 .bui-make-grid-columns() {
   // Common styles for all sizes of grid columns, widths 1-12
-  .col(@index) when (@index = 1) { // initial
+  .col(@index) when (@index = 1) {
+    // initial
     @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
     .col((@index + 1), @item);
   }
-  .col(@index, @list) when (@index =< @bui-grid-columns) { // general; "=<" isn't a typo
+  .col(@index, @list) when (@index =< @bui-grid-columns) {
+    // general; "=<" isn't a typo
     @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
     .col((@index + 1), ~"@{list}, @{item}");
   }
-  .col(@index, @list) when (@index > @bui-grid-columns) { // terminal
+  .col(@index, @list) when (@index > @bui-grid-columns) {
+    // terminal
     @{list} {
       position: relative;
       // Prevent columns from collapsing when empty
       min-height: 1px;
       // Inner gutter via padding
-      padding-left:  (@grid-gutter-width / 2);
+      padding-left: (@grid-gutter-width / 2);
       padding-right: (@grid-gutter-width / 2);
     }
   }
@@ -258,15 +261,18 @@
 }
 
 .bui-float-grid-columns(@class) {
-  .col(@index) when (@index = 1) { // initial
+  .col(@index) when (@index = 1) {
+    // initial
     @item: ~".col-@{class}-@{index}";
     .col((@index + 1), @item);
   }
-  .col(@index, @list) when (@index =< @bui-grid-columns) { // general
+  .col(@index, @list) when (@index =< @bui-grid-columns) {
+    // general
     @item: ~".col-@{class}-@{index}";
     .col((@index + 1), ~"@{list}, @{item}");
   }
-  .col(@index, @list) when (@index > @bui-grid-columns) { // terminal
+  .col(@index, @list) when (@index > @bui-grid-columns) {
+    // terminal
     @{list} {
       float: left;
     }
@@ -279,16 +285,19 @@
     width: percentage((@index / @bui-grid-columns));
   }
 }
+
 .bui-calc-grid-column(@index, @class, @type) when (@type = push) {
   .col-@{class}-push-@{index} {
     left: percentage((@index / @bui-grid-columns));
   }
 }
+
 .bui-calc-grid-column(@index, @class, @type) when (@type = pull) {
   .col-@{class}-pull-@{index} {
     right: percentage((@index / @bui-grid-columns));
   }
 }
+
 .bui-calc-grid-column(@index, @class, @type) when (@type = offset) {
   .col-@{class}-offset-@{index} {
     margin-left: percentage((@index / @bui-grid-columns));
