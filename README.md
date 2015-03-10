@@ -55,19 +55,15 @@ bui-grid bui-typography bui-icons bui-buttons bui-modals
 
 ### Development Installation (for Decipher Employees)
 
-Ask [Christopher Hiller](https://github.com/boneskull) or [Brandon Reid](https://github.com/brandonreid) where to clone from, then follow steps #2 and #3 above as necessary.
+Ask [Christopher Hiller](https://github.com/boneskull) or [Dick DeLeon](https://github.com/dickdeleon) where to clone from, then follow steps #2 and #3 above as necessary.
 
 ## Notes
 
-### `.codekit-config`?  
-
-Don't worry about the `.codekit-config` or `cache` folder, Brandon uses it only for running a local server and seeing results update in the browser. Nothing is compiled with it, compiling less and js is done by using `grunt`.
-
-When editing: Make sure the style.less file references the bootstrap variables and mixens.
+TDB
     
 ## Copyright
 
-2014 Decipher, Inc.
+2014-2015 Decipher, Inc.
 
 ## License
 
@@ -75,4 +71,4 @@ MIT
 
 ## Author
 
-[Brandon Reid](https://github.com/brandonreid)
+[Dick DeLeon](https://github.com/dickdeleon)
