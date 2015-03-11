@@ -1,6 +1,6 @@
 #BUI - Beacon User Interface
 
-To add BUI styles to bootstrap, just link to the bui-styles.css file in bui-css. The style overrides have been built using bootstrap 3.1.1.
+To add BUI styles to bootstrap, just link to the bui-styles.css file in bui-css. The style overrides have been built using bootstrap 3.2.0.
 
 BUI is built to be modular. An application can load regular bootstrap, then when ready, adding override classes will activate the bui style overrides. You can add these override classes to the ```<html>``` tag or localize them to a specific ```<div>```.
 
@@ -31,31 +31,35 @@ bui-grid bui-typography bui-icons bui-buttons bui-modals
 
 3. If that didn't work, you probably don't have [Node.js](http://nodejs.org) installed, so [download and install it](http://nodejs.org/download/), then repeat step #2, then repeat step #1.  Fun!
 
-### Development Installation (for Non-[Decipher](http://decipherinc.com) Employees)
+### Development Installation (for Non-[FocusVision](http://www.focusvision.com) Employees)
 
 1.  Clone
 
     ```sh
-    git clone git://github.com/decipherinc/bui.git && cd bui
+    $ git clone git://github.com/decipherinc/bui.git && cd bui
     ```
+    
+2.  Install development dependencies
 
-    The above command will install client-side dependencies.  If you're having problems with `npm`, [install Node.js](http://nodejs.org/download/).
+    ```sh
+    $ npm install
+    ```
  
-2.  From there, you can build the `.css` files by executing:
+3.  Build the `.css` files by executing:
 
     ```sh
-    npm run-script build
+    $ grunt
     ```
 
-3.  To automatically compile `.less` files as you work, execute:
+4.  To automatically compile `.less` files as you work, execute:
 
     ```sh
-    npm run-script watch
+    $ grunt watch:main
     ```
 
-### Development Installation (for Decipher Employees)
+### Development Installation (for FocusVision Employees)
 
-Ask [Christopher Hiller](https://github.com/boneskull) or [Dick DeLeon](https://github.com/dickdeleon) where to clone from, then follow steps #2 and #3 above as necessary.
+Ask [Christopher Hiller](https://github.com/boneskull) or [Dick DeLeon](https://github.com/dickdeleon) where to clone from, then follow above steps #2-onward.
 
 ## Notes
 
