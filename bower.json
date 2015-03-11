@@ -19,7 +19,6 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "support",
     "Gruntfile.js",
     "demo",
     "package.json"
