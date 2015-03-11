@@ -63,7 +63,7 @@ TDB
     
 ## Copyright
 
-2014-2015 Decipher, Inc.
+2014-2015 FocusVision Worldwide
 
 ## License
 
