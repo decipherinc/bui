@@ -17,8 +17,11 @@ module.exports = function (grunt) {
         outputSourceFiles: true
       },
       demo: {
+        options: {
+          sourceMapFilename: 'demo/css/demo-page-styles.css.map'
+        },
         files: {
-          'demo-site/styles/demo-page-styles.css': 'demo/styles/demo-' +
+          'demo/css/demo-page-styles.css': 'demo/less/demo-' +
           'page-specific.less'
         }
       },
@@ -78,11 +81,34 @@ module.exports = function (grunt) {
         push: false,
         gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d'
       }
+    },
+    clean: {
+      demo: 'demo/support/'
+    },
+    copy: {
+      demo: {
+        files: [
+          {
+            cwd: 'node_modules/bootstrap/dist/',
+            src: 'css/**',
+            dest: 'demo/support/bootstrap/',
+            expand: true
+          },
+          {
+            src: '**',
+            cwd: 'dist/',
+            dest: 'demo/support/bui/',
+            expand: true
+          }
+        ]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-dev-update');
   grunt.loadNpmTasks('grunt-bump');
 
@@ -97,9 +123,11 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', 'Compile LESS', ['build']);
-  grunt.registerTask('demo', 'Compile demo LESS', [
+  grunt.registerTask('demo', 'Build demo', [
     'build',
-    'less:demo'
+    'less:demo',
+    'clean:demo',
+    'copy:demo'
   ]);
   grunt.registerTask('build', 'Compile LESS', [
     'less:main',

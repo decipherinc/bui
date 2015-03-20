@@ -8,10 +8,11 @@
     "grunt-cli": "^0.1.13",
     "grunt-contrib-less": "^1.0.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-dev-update": "^1.1.0"
+    "grunt-dev-update": "^1.1.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0"
   },
   "license": "MIT",
-  "private": true,
   "dependencies": {
     "bootstrap": "3.2.0"
   }
