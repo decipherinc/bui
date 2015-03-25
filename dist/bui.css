@@ -1,5 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700);
-/*! bui - v1.3.1 - 2015-03-20 - (c) 2014-2015 FocusVision Worldwide - Licensed MIT */
+/*! bui - v1.3.1 - 2015-03-25 - (c) 2014-2015 FocusVision Worldwide - Licensed MIT */
 @font-face {
   font-family: 'beacon-icons';
   src: url('beacon-icons.eot');
@@ -2863,4 +2863,3 @@ fieldset[disabled] .bui-modals .fly-out-menu .fly-out-header .close:active {
     margin-left: 0%;
   }
 }
-/*# sourceMappingURL=dist/bui-styles.css.map */

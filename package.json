@@ -1,19 +1,32 @@
 {
   "name": "bui",
-  "description": "Beacon User Interface",
   "version": "1.3.1",
+  "homepage": "http://decipherinc.github.io/bui",
+  "authors": [
+    "Christopher Hiller <chiller@decipherinc.com>",
+    "Dick DeLeon <ddleon@decipherinc.com>",
+    "Dan Mendoza <dan@decipherinc.com>"
+  ],
+  "description": "Beacon User Interface",
+  "main": "dist/bui.css",
+  "keywords": [
+    "decipher",
+    "decipherinc",
+    "bootstrap",
+    "bui",
+    "styles",
+    "focusvision"
+  ],
+  "license": "MIT",
   "devDependencies": {
+    "bootstrap": "3.2.0",
     "grunt": "^0.4.5",
     "grunt-bump": "^0.3.0",
     "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-less": "^1.0.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-dev-update": "^1.1.0",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-copy": "^0.8.0"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "bootstrap": "3.2.0"
+    "grunt-dev-update": "^1.1.0"
   }
 }

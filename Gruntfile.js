@@ -11,15 +11,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: pkg,
     less: {
-      options: {
-        syncImport: true,
-        sourceMap: true,
-        outputSourceFiles: true
-      },
       demo: {
-        options: {
-          sourceMapFilename: 'demo/css/demo-page-styles.css.map'
-        },
         files: {
           'demo/css/demo-page-styles.css': 'demo/less/demo-' +
           'page-specific.less'
@@ -27,31 +19,29 @@ module.exports = function (grunt) {
       },
       main: {
         options: {
-          banner: BANNER,
-          sourceMapFilename: 'dist/bui-styles.css.map'
+          banner: BANNER
         },
         files: {
-          'dist/bui-styles.css': 'bui-less/bui-styles.less'
+          'dist/bui.css': 'less/bui.less'
         }
       },
       min: {
         options: {
           compress: true,
-          banner: BANNER,
-          sourceMapFilename: 'dist/bui-styles.min.css.map'
+          banner: BANNER
         },
         files: {
-          'dist/bui-styles.min.css': 'bui-less/bui-styles.less'
+          'dist/bui.min.css': 'less/bui.less'
         }
       }
     },
     watch: {
       demo: {
-        files: ['demo/styles/demo-page-specific.less', 'bui-less/*.less'],
+        files: ['demo/less/demo-page-specific.less', 'less/*.less'],
         tasks: ['less:main', 'less:demo']
       },
       main: {
-        files: ['bui-less/*.less'],
+        files: ['less/*.less'],
         tasks: ['less:main']
       }
     },
