@@ -7,7 +7,7 @@ BUI is built to be modular. An application can load regular bootstrap, then when
 
 ## Demo
  
-[http://decipher-design.com/bui/]()
+[http://decipherinc.github.io/bui](http://decipherinc.github.io/bui)
 
 ## Currently Available Overrides
 
