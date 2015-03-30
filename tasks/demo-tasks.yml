@@ -1,0 +1,32 @@
+---
+clean: demo/support/
+
+copy:
+  files:
+    -
+      cwd: dist/
+      src: '*'
+      dest: demo/support/bui/
+      expand: true
+
+less:
+  files:
+    demo/css/demo-page-styles.css: demo/less/demo-page-specific.less
+
+watch:
+  files:
+    - demo/less/demo-page-specific.less
+    - less/*.less
+  tasks:
+    - less:main
+    - less:demo
+
+gh-pages:
+  options:
+    base: demo
+  src:
+    - css/**
+    - img/**
+    - support/**
+    - '*'
+

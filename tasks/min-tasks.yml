@@ -1,0 +1,7 @@
+---
+less:
+  options:
+    compress: true
+    banner: <%= banner %>
+  files:
+    dist/bui.min.css: less/bui.less

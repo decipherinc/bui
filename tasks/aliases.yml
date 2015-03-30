@@ -1,0 +1,23 @@
+---
+default:
+  - build
+
+demo:
+  - build
+  - clean:demo
+  - less:demo
+  - copy:demo
+
+publish-demo:
+  - demo
+  - gh-pages:demo
+
+build:
+  - less:main
+  - less:min
+
+watch-demo:
+  - watch:demo
+
+watch-main:
+  - watch:main

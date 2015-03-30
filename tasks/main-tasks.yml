@@ -1,0 +1,12 @@
+---
+less:
+  options:
+    banner: <%= banner %>
+  files:
+    dist/bui.css: less/bui.less
+
+watch:
+  files:
+    - less/*.less
+  tasks:
+    - less:main
