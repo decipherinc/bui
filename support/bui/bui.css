@@ -1,5 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700);
-/*! bui - v1.3.0 - 2015-03-19 - (c) 2014-2015 FocusVision Worldwide - Licensed MIT */
+/*! beacon-user-interface - v1.4.1 - 2015-03-30 - (c) 2014-2015 FocusVision Worldwide - Licensed MIT */
 @font-face {
   font-family: 'beacon-icons';
   src: url('beacon-icons.eot');
@@ -572,6 +572,7 @@
   border-radius: 3px;
   outline: 0;
   text-shadow: none;
+  cursor: pointer;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -815,6 +816,7 @@ fieldset[disabled] .bui-buttons .btn-text-toggle {
   width: 1.4em;
   padding: 3px 0;
   line-height: 1em;
+  cursor: pointer;
 }
 .bui-buttons .btn-icon:before,
 .bui-buttons .btn-icon i:before,
@@ -2861,4 +2863,3 @@ fieldset[disabled] .bui-modals .fly-out-menu .fly-out-header .close:active {
     margin-left: 0%;
   }
 }
-/*# sourceMappingURL=dist/bui-styles.css.map */
